@@ -1,0 +1,51 @@
+{
+  "EntryNodeKey": "88DB3D207E0B7B74",
+  "CleanupEntryNodeKey": "",
+  "Nodes": {
+    "88DB3D207E0B7B74": {
+      "Key": "88DB3D207E0B7B74",
+      "Title": "Send Snapshot Email",
+      "NodeType": "EmailSendSnapshot",
+      "LocationX": -9500,
+      "LocationY": -4148,
+      "Properties": {
+        "Recipients": {
+          "Type": "TypeString",
+          "Value": "[DEFAULT_RECIPIENTS]"
+        },
+        "Priority": {
+          "Type": "TypeItemSwitch",
+          "Value": "Normal"
+        },
+        "Subject": {
+          "Type": "TypeString",
+          "Value": "Power outage detected!"
+        },
+        "Body": {
+          "Type": "TypeString",
+          "Value": "Power outage detected shutting down systems"
+        }
+      }
+    },
+    "88DB3D20DDF585F0": {
+      "Key": "88DB3D20DDF585F0",
+      "Title": "Client System Send Shutdown",
+      "NodeType": "ClientSystemSendShutdown",
+      "LocationX": -9500,
+      "LocationY": -3851,
+      "Properties": {}
+    }
+  },
+  "Connections": [
+    {
+      "FromNodeKey": "88DB3D207E0B7B74",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DB3D20DDF585F0"
+    },
+    {
+      "FromNodeKey": "88DB3D207E0B7B74",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB3D20DDF585F0"
+    }
+  ]
+}

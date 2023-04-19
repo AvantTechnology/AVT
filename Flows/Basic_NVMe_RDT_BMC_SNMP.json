@@ -52,8 +52,8 @@
       "Key": "88DAFDA0A1DDF3A5",
       "Title": "System off for 1 minute",
       "NodeType": "GeneralWait",
-      "LocationX": -740,
-      "LocationY": 1434,
+      "LocationX": -738,
+      "LocationY": 1418,
       "Properties": {
         "Timeout Seconds": {
           "Type": "TypeInteger",
@@ -87,7 +87,7 @@
       "Title": "Allowing Time for System to Shut Down",
       "NodeType": "GeneralWait",
       "LocationX": -770,
-      "LocationY": 814,
+      "LocationY": 776,
       "Properties": {
         "Timeout Seconds": {
           "Type": "TypeInteger",
@@ -559,8 +559,8 @@
       "Key": "88DB3ACB26F918A9",
       "Title": "Waiting for client connection...",
       "NodeType": "ClientConnectionWaitAlive",
-      "LocationX": -738,
-      "LocationY": 2583,
+      "LocationX": -739,
+      "LocationY": 2611,
       "Properties": {
         "Timeout Seconds": {
           "Type": "TypeInteger",
@@ -777,8 +777,8 @@
       "Key": "88DB3B894159A5CD",
       "Title": "Stop Flow With Status",
       "NodeType": "GeneralStopFlowWithStatus",
-      "LocationX": -404,
-      "LocationY": 2600,
+      "LocationX": -402,
+      "LocationY": 2611,
       "Properties": {
         "Status Message": {
           "Type": "TypeString",
@@ -820,7 +820,7 @@
       "Title": "BMC Send Shutdown",
       "NodeType": "ASRockBMCSendShutdown",
       "LocationX": -771,
-      "LocationY": 563,
+      "LocationY": 510,
       "Properties": {
         "BMC IP": {
           "Type": "TypeString",
@@ -833,6 +833,10 @@
         "Password": {
           "Type": "TypeString",
           "Value": "engineer1"
+        },
+        "Retries": {
+          "Type": "TypeInteger",
+          "Value": 5
         },
         "Timeout Seconds": {
           "Type": "TypeInteger",
@@ -844,8 +848,8 @@
       "Key": "88DB3C468720E4DE",
       "Title": "BMC Get Power Status",
       "NodeType": "ASRockBMCGetPowerStatus",
-      "LocationX": -771,
-      "LocationY": 960,
+      "LocationX": -769,
+      "LocationY": 915,
       "Properties": {
         "BMC IP": {
           "Type": "TypeString",
@@ -858,6 +862,10 @@
         "Password": {
           "Type": "TypeString",
           "Value": "engineer1"
+        },
+        "Retries": {
+          "Type": "TypeInteger",
+          "Value": 5
         },
         "Timeout Seconds": {
           "Type": "TypeInteger",
@@ -869,8 +877,8 @@
       "Key": "88DB3C46966AC565",
       "Title": "BMC Send Power On",
       "NodeType": "ASRockBMCSendPowerOn",
-      "LocationX": -738,
-      "LocationY": 1953,
+      "LocationX": -740,
+      "LocationY": 1932,
       "Properties": {
         "BMC IP": {
           "Type": "TypeString",
@@ -883,6 +891,10 @@
         "Password": {
           "Type": "TypeString",
           "Value": "engineer1"
+        },
+        "Retries": {
+          "Type": "TypeInteger",
+          "Value": 5
         },
         "Timeout Seconds": {
           "Type": "TypeInteger",
@@ -909,6 +921,10 @@
           "Type": "TypeString",
           "Value": "engineer1"
         },
+        "Retries": {
+          "Type": "TypeInteger",
+          "Value": 5
+        },
         "Timeout Seconds": {
           "Type": "TypeInteger",
           "Value": 15
@@ -933,6 +949,10 @@
         "Password": {
           "Type": "TypeString",
           "Value": "engineer1"
+        },
+        "Retries": {
+          "Type": "TypeInteger",
+          "Value": 5
         },
         "Timeout Seconds": {
           "Type": "TypeInteger",
@@ -1007,8 +1027,8 @@
       "Key": "88DB3CF49A9D1645",
       "Title": "Turn off backplane",
       "NodeType": "SNMPSetOutletStatus",
-      "LocationX": -741,
-      "LocationY": 1196,
+      "LocationX": -739,
+      "LocationY": 1181,
       "Properties": {
         "SNMP Device IP": {
           "Type": "TypeString",
@@ -1032,8 +1052,8 @@
       "Key": "88DB3CF4DF5EDA69",
       "Title": "Turn on backplane",
       "NodeType": "SNMPSetOutletStatus",
-      "LocationX": -739,
-      "LocationY": 1574,
+      "LocationX": -738,
+      "LocationY": 1560,
       "Properties": {
         "SNMP Device IP": {
           "Type": "TypeString",
@@ -1265,8 +1285,8 @@
       "Key": "88DB3F5169B44AC0",
       "Title": "Allow some time to force power down",
       "NodeType": "GeneralWait",
-      "LocationX": -1394,
-      "LocationY": 1792,
+      "LocationX": -1395,
+      "LocationY": 1820,
       "Properties": {
         "Timeout Seconds": {
           "Type": "TypeInteger",
@@ -1279,7 +1299,7 @@
       "Title": "Allow time for backplane to power on",
       "NodeType": "GeneralWait",
       "LocationX": -739,
-      "LocationY": 1811,
+      "LocationY": 1795,
       "Properties": {
         "Timeout Seconds": {
           "Type": "TypeInteger",

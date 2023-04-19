@@ -33,7 +33,7 @@
       "Title": "Allowing Time for System to Shut Down",
       "NodeType": "GeneralWait",
       "LocationX": 752,
-      "LocationY": 844,
+      "LocationY": 829,
       "Properties": {
         "Timeout Seconds": {
           "Type": "TypeInteger",
@@ -79,8 +79,8 @@
       "Key": "88DAFE31C6AEE013",
       "Title": "Allowing Time for System to Turn On",
       "NodeType": "GeneralWait",
-      "LocationX": 785,
-      "LocationY": 2609,
+      "LocationX": 786,
+      "LocationY": 2635,
       "Properties": {
         "Timeout Seconds": {
           "Type": "TypeInteger",
@@ -185,7 +185,7 @@
       "Title": "Waiting for client connection...",
       "NodeType": "ClientConnectionWaitAlive",
       "LocationX": 786,
-      "LocationY": 2994,
+      "LocationY": 3045,
       "Properties": {
         "Timeout Seconds": {
           "Type": "TypeInteger",
@@ -373,8 +373,8 @@
       "Key": "88DB3B894159A5CD",
       "Title": "Stop Flow With Status",
       "NodeType": "GeneralStopFlowWithStatus",
-      "LocationX": 1120,
-      "LocationY": 3011,
+      "LocationX": 1125,
+      "LocationY": 3045,
       "Properties": {
         "Status Message": {
           "Type": "TypeString",
@@ -415,8 +415,8 @@
       "Key": "88DB3C46687A8FAC",
       "Title": "BMC Send Shutdown",
       "NodeType": "ASRockBMCSendShutdown",
-      "LocationX": 751,
-      "LocationY": 593,
+      "LocationX": 752,
+      "LocationY": 565,
       "Properties": {
         "BMC IP": {
           "Type": "TypeString",
@@ -429,6 +429,10 @@
         "Password": {
           "Type": "TypeString",
           "Value": "engineer1"
+        },
+        "Retries": {
+          "Type": "TypeInteger",
+          "Value": 5
         },
         "Timeout Seconds": {
           "Type": "TypeInteger",
@@ -440,8 +444,8 @@
       "Key": "88DB3C468720E4DE",
       "Title": "BMC Get Power Status",
       "NodeType": "ASRockBMCGetPowerStatus",
-      "LocationX": 751,
-      "LocationY": 990,
+      "LocationX": 752,
+      "LocationY": 966,
       "Properties": {
         "BMC IP": {
           "Type": "TypeString",
@@ -454,6 +458,10 @@
         "Password": {
           "Type": "TypeString",
           "Value": "engineer1"
+        },
+        "Retries": {
+          "Type": "TypeInteger",
+          "Value": 5
         },
         "Timeout Seconds": {
           "Type": "TypeInteger",
@@ -480,6 +488,10 @@
           "Type": "TypeString",
           "Value": "engineer1"
         },
+        "Retries": {
+          "Type": "TypeInteger",
+          "Value": 5
+        },
         "Timeout Seconds": {
           "Type": "TypeInteger",
           "Value": 30
@@ -490,8 +502,8 @@
       "Key": "88DB3C46A2BC4A64",
       "Title": "BMC Get Power Status",
       "NodeType": "ASRockBMCGetPowerStatus",
-      "LocationX": 786,
-      "LocationY": 2755,
+      "LocationX": 787,
+      "LocationY": 2775,
       "Properties": {
         "BMC IP": {
           "Type": "TypeString",
@@ -504,6 +516,10 @@
         "Password": {
           "Type": "TypeString",
           "Value": "engineer1"
+        },
+        "Retries": {
+          "Type": "TypeInteger",
+          "Value": 5
         },
         "Timeout Seconds": {
           "Type": "TypeInteger",
@@ -529,6 +545,10 @@
         "Password": {
           "Type": "TypeString",
           "Value": "engineer1"
+        },
+        "Retries": {
+          "Type": "TypeInteger",
+          "Value": 5
         },
         "Timeout Seconds": {
           "Type": "TypeInteger",
@@ -604,7 +624,7 @@
       "Title": "Turn off backplane",
       "NodeType": "SNMPSetOutletStatus",
       "LocationX": 781,
-      "LocationY": 1224,
+      "LocationY": 1228,
       "Properties": {
         "SNMP Device IP": {
           "Type": "TypeString",
@@ -811,8 +831,8 @@
       "Key": "88DB3F5169B44AC0",
       "Title": "Allow some time to force power down",
       "NodeType": "GeneralWait",
-      "LocationX": 128,
-      "LocationY": 1822,
+      "LocationX": 129,
+      "LocationY": 1851,
       "Properties": {
         "Timeout Seconds": {
           "Type": "TypeInteger",

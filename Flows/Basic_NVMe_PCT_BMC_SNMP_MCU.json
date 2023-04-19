@@ -1191,7 +1191,7 @@
       "Properties": {
         "Timeout Seconds": {
           "Type": "TypeInteger",
-          "Value": 30
+          "Value": 120
         }
       }
     },
@@ -1204,7 +1204,7 @@
       "Properties": {
         "Timeout Seconds": {
           "Type": "TypeInteger",
-          "Value": 30
+          "Value": 120
         }
       }
     },
@@ -1504,7 +1504,7 @@
       "Properties": {
         "Timeout Seconds": {
           "Type": "TypeInteger",
-          "Value": 30
+          "Value": 120
         }
       }
     },
@@ -1517,7 +1517,7 @@
       "Properties": {
         "Timeout Seconds": {
           "Type": "TypeInteger",
-          "Value": 30
+          "Value": 120
         }
       }
     },

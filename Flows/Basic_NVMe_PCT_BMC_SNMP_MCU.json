@@ -197,8 +197,8 @@
       "Key": "88DB3ACBB6902E82",
       "Title": "Check if cycle 0",
       "NodeType": "CycleCheck",
-      "LocationX": 22,
-      "LocationY": 7470,
+      "LocationX": 19,
+      "LocationY": 7081,
       "Properties": {
         "Compare Operation": {
           "Type": "TypeItemSwitch",
@@ -214,8 +214,8 @@
       "Key": "88DB3ACC0B12A29D",
       "Title": "Increment Step",
       "NodeType": "StepIncrement",
-      "LocationX": 61,
-      "LocationY": 7642,
+      "LocationX": 58,
+      "LocationY": 7253,
       "Properties": {
         "Increment Amount": {
           "Type": "TypeInteger",
@@ -227,8 +227,8 @@
       "Key": "88DB3ACC1B4D7726",
       "Title": "Check if step out of range",
       "NodeType": "StepCheck",
-      "LocationX": 61,
-      "LocationY": 7802,
+      "LocationX": 58,
+      "LocationY": 7413,
       "Properties": {
         "Compare Operation": {
           "Type": "TypeItemSwitch",
@@ -244,8 +244,8 @@
       "Key": "88DB3ACC3058A1A7",
       "Title": "Increment Cycle",
       "NodeType": "CycleIncrement",
-      "LocationX": -347,
-      "LocationY": 8039,
+      "LocationX": -350,
+      "LocationY": 7650,
       "Properties": {
         "Increment Amount": {
           "Type": "TypeInteger",
@@ -257,8 +257,8 @@
       "Key": "88DB3ACC47550C12",
       "Title": "Set Step",
       "NodeType": "StepSet",
-      "LocationX": -346,
-      "LocationY": 8201,
+      "LocationX": -349,
+      "LocationY": 7812,
       "Properties": {
         "Set Value": {
           "Type": "TypeInteger",
@@ -270,8 +270,8 @@
       "Key": "88DB3ACC771A8C8D",
       "Title": "Go To Entry Node",
       "NodeType": "GeneralGoToEntry",
-      "LocationX": 101,
-      "LocationY": 8396,
+      "LocationX": 98,
+      "LocationY": 8007,
       "Properties": {}
     },
     "88DB3ACE1CCF8B37": {
@@ -670,62 +670,12 @@
         }
       }
     },
-    "88DB3D1D7B1C7E7D": {
-      "Key": "88DB3D1D7B1C7E7D",
-      "Title": "Check Unsafe Shutdowns",
-      "NodeType": "DrivesCheckSmartAttributeValueChanged",
-      "LocationX": 20,
-      "LocationY": 6241,
-      "Properties": {
-        "Only Check Found Drives": {
-          "Type": "TypeBoolean",
-          "Value": true
-        },
-        "SMART Attribute ID": {
-          "Type": "TypeString",
-          "Value": "unsafe_shutdowns"
-        },
-        "Ignore Missing Attribute ID": {
-          "Type": "TypeBoolean",
-          "Value": true
-        },
-        "Log Errors (Changed/Missing Values)": {
-          "Type": "TypeBoolean",
-          "Value": true
-        }
-      }
-    },
-    "88DB3D1D96342A5B": {
-      "Key": "88DB3D1D96342A5B",
-      "Title": "Send email about unsafe shutdowns",
-      "NodeType": "EmailSendSnapshot",
-      "LocationX": 577,
-      "LocationY": 6297,
-      "Properties": {
-        "Recipients": {
-          "Type": "TypeString",
-          "Value": "[DEFAULT_RECIPIENTS]"
-        },
-        "Priority": {
-          "Type": "TypeItemSwitch",
-          "Value": "Normal"
-        },
-        "Subject": {
-          "Type": "TypeString",
-          "Value": "Unsafe shutdowns changed"
-        },
-        "Body": {
-          "Type": "TypeString",
-          "Value": "At least one drive has new unsafe shutdowns"
-        }
-      }
-    },
     "88DB3D1DCEE3A24D": {
       "Key": "88DB3D1DCEE3A24D",
       "Title": "Check MDIE",
       "NodeType": "DrivesCheckSmartAttributeValueChanged",
-      "LocationX": 21,
-      "LocationY": 6653,
+      "LocationX": 18,
+      "LocationY": 6264,
       "Properties": {
         "Only Check Found Drives": {
           "Type": "TypeBoolean",
@@ -749,8 +699,8 @@
       "Key": "88DB3D1DEDADEA4A",
       "Title": "Stop flow because of MDIE",
       "NodeType": "GeneralStopFlowWithStatus",
-      "LocationX": 583,
-      "LocationY": 6685,
+      "LocationX": 580,
+      "LocationY": 6296,
       "Properties": {
         "Status Message": {
           "Type": "TypeString",
@@ -778,8 +728,8 @@
       "Key": "88DB3D1E0BED74A9",
       "Title": "Check Available Spare",
       "NodeType": "DrivesCheckSmartAttributeValueChanged",
-      "LocationX": 21,
-      "LocationY": 7052,
+      "LocationX": 18,
+      "LocationY": 6663,
       "Properties": {
         "Only Check Found Drives": {
           "Type": "TypeBoolean",
@@ -803,8 +753,8 @@
       "Key": "88DB3D1E14BF7776",
       "Title": "Stop flow because of available spare",
       "NodeType": "GeneralStopFlowWithStatus",
-      "LocationX": 581,
-      "LocationY": 7084,
+      "LocationX": 578,
+      "LocationY": 6695,
       "Properties": {
         "Status Message": {
           "Type": "TypeString",
@@ -1893,31 +1843,6 @@
       "ToNodeKey": "88DAFE2C0B639BE5"
     },
     {
-      "FromNodeKey": "88DB3C59971F43CE",
-      "FromNodePort": "All Drive Transfer Modes Okay",
-      "ToNodeKey": "88DB3D1D7B1C7E7D"
-    },
-    {
-      "FromNodeKey": "88DB3D1D7B1C7E7D",
-      "FromNodePort": "Some Drives Attribute Changed",
-      "ToNodeKey": "88DB3D1D96342A5B"
-    },
-    {
-      "FromNodeKey": "88DB3D1D7B1C7E7D",
-      "FromNodePort": "All Drives Attribute Unchanged",
-      "ToNodeKey": "88DB3D1DCEE3A24D"
-    },
-    {
-      "FromNodeKey": "88DB3D1D96342A5B",
-      "FromNodePort": "Success",
-      "ToNodeKey": "88DB3D1DCEE3A24D"
-    },
-    {
-      "FromNodeKey": "88DB3D1D96342A5B",
-      "FromNodePort": "Errors",
-      "ToNodeKey": "88DB3D1DCEE3A24D"
-    },
-    {
       "FromNodeKey": "88DB3D1DCEE3A24D",
       "FromNodePort": "Some Drives Attribute Changed",
       "ToNodeKey": "88DB3D1DEDADEA4A"
@@ -2221,6 +2146,11 @@
       "FromNodeKey": "88DB404930BB1010",
       "FromNodePort": "Errors",
       "ToNodeKey": "88DB4049B2F225D3"
+    },
+    {
+      "FromNodeKey": "88DB3C59971F43CE",
+      "FromNodePort": "All Drive Transfer Modes Okay",
+      "ToNodeKey": "88DB3D1DCEE3A24D"
     }
   ]
 }

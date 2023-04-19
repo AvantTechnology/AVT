@@ -1116,7 +1116,7 @@
         },
         "Subject": {
           "Type": "TypeString",
-          "Value": "Unsave shutdowns changed"
+          "Value": "Unsafe shutdowns changed"
         },
         "Body": {
           "Type": "TypeString",

@@ -1248,7 +1248,7 @@
       "Title": "JustIO Read 10GB Block",
       "NodeType": "WorkloadRunJustIOPCTPreset10GBBlock",
       "LocationX": 2854,
-      "LocationY": 2051,
+      "LocationY": 2052,
       "Properties": {
         "Map File Prefix": {
           "Type": "TypeString",
@@ -1428,8 +1428,8 @@
       "Key": "88DB4045CA56E9D2",
       "Title": "Disable regulators",
       "NodeType": "MCUSetPin",
-      "LocationX": 4555,
-      "LocationY": 1889,
+      "LocationX": 4556,
+      "LocationY": 1874,
       "Properties": {
         "Pin": {
           "Type": "TypeInteger",
@@ -1523,7 +1523,7 @@
       "Properties": {
         "Divisor": {
           "Type": "TypeInteger",
-          "Value": 20
+          "Value": 40
         }
       }
     },
@@ -2038,18 +2038,8 @@
       "ToNodeKey": "88DB4043727626F2"
     },
     {
-      "FromNodeKey": "88DB403B53FE188A",
-      "FromNodePort": "Some Drives Failed",
-      "ToNodeKey": "88DAFE2BA9FB0B2F"
-    },
-    {
       "FromNodeKey": "88DB4040431564A9",
       "FromNodePort": "All Drives Passed",
-      "ToNodeKey": "88DAFE2BA9FB0B2F"
-    },
-    {
-      "FromNodeKey": "88DB4040431564A9",
-      "FromNodePort": "Some Drives Failed",
       "ToNodeKey": "88DAFE2BA9FB0B2F"
     },
     {
@@ -2129,11 +2119,6 @@
     },
     {
       "FromNodeKey": "88DB404930BB1010",
-      "FromNodePort": "Some Drives Failed",
-      "ToNodeKey": "88DAFE2BA9FB0B2F"
-    },
-    {
-      "FromNodeKey": "88DB404930BB1010",
       "FromNodePort": "Errors",
       "ToNodeKey": "88DB4049B2F225D3"
     },
@@ -2151,6 +2136,21 @@
       "FromNodeKey": "88DB0611415A2E90",
       "FromNodePort": "Alive",
       "ToNodeKey": "88DB056E76324D2A"
+    },
+    {
+      "FromNodeKey": "88DB403B53FE188A",
+      "FromNodePort": "Some Drives Failed",
+      "ToNodeKey": "88DB403C1C675289"
+    },
+    {
+      "FromNodeKey": "88DB4040431564A9",
+      "FromNodePort": "Some Drives Failed",
+      "ToNodeKey": "88DB4043727626F2"
+    },
+    {
+      "FromNodeKey": "88DB404930BB1010",
+      "FromNodePort": "Some Drives Failed",
+      "ToNodeKey": "88DB4049B2F225D3"
     }
   ]
 }

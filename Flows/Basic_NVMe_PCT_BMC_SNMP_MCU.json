@@ -236,7 +236,7 @@
         },
         "Compare Value": {
           "Type": "TypeInteger",
-          "Value": 6
+          "Value": 12
         }
       }
     },
@@ -712,7 +712,7 @@
         },
         "Subject": {
           "Type": "TypeString",
-          "Value": "Unsave shutdowns changed"
+          "Value": "Unsafe shutdowns changed"
         },
         "Body": {
           "Type": "TypeString",

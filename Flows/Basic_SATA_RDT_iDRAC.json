@@ -700,8 +700,8 @@
       "Key": "88DB056E76324D2A",
       "Title": "Client System Set Time",
       "NodeType": "ClientSystemSetTime",
-      "LocationX": -1223,
-      "LocationY": -1070,
+      "LocationX": -1222,
+      "LocationY": -805,
       "Properties": {}
     },
     "88DB0611415A2E90": {
@@ -716,8 +716,8 @@
       "Key": "88DB0611569B8752",
       "Title": "Stop Flow With Status",
       "NodeType": "GeneralStopFlowWithStatus",
-      "LocationX": -877,
-      "LocationY": -936,
+      "LocationX": -874,
+      "LocationY": -888,
       "Properties": {
         "Status Message": {
           "Type": "TypeString",
@@ -1291,16 +1291,6 @@
     },
     {
       "FromNodeKey": "88DB0611415A2E90",
-      "FromNodePort": "Alive",
-      "ToNodeKey": "88DAFE2BC4161974"
-    },
-    {
-      "FromNodeKey": "88DB056E76324D2A",
-      "FromNodePort": "Success",
-      "ToNodeKey": "88DB0611415A2E90"
-    },
-    {
-      "FromNodeKey": "88DB0611415A2E90",
       "FromNodePort": "Dead",
       "ToNodeKey": "88DB0611569B8752"
     },
@@ -1478,6 +1468,16 @@
       "FromNodeKey": "88DB3ACB26F918A9",
       "FromNodePort": "Errors",
       "ToNodeKey": "88DB3B894159A5CD"
+    },
+    {
+      "FromNodeKey": "88DB0611415A2E90",
+      "FromNodePort": "Alive",
+      "ToNodeKey": "88DB056E76324D2A"
+    },
+    {
+      "FromNodeKey": "88DB056E76324D2A",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DAFE2BC4161974"
     }
   ]
 }

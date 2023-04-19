@@ -127,7 +127,7 @@
       "Title": "Client System Set Time",
       "NodeType": "ClientSystemSetTime",
       "LocationX": -1221,
-      "LocationY": -798,
+      "LocationY": -799,
       "Properties": {}
     },
     "88DB0611415A2E90": {
@@ -142,8 +142,8 @@
       "Key": "88DB0611569B8752",
       "Title": "Stop Flow With Status",
       "NodeType": "GeneralStopFlowWithStatus",
-      "LocationX": -877,
-      "LocationY": -891,
+      "LocationX": -868,
+      "LocationY": -903,
       "Properties": {
         "Status Message": {
           "Type": "TypeString",
@@ -197,8 +197,8 @@
       "Key": "88DB3ACBB6902E82",
       "Title": "Check if cycle 0",
       "NodeType": "CycleCheck",
-      "LocationX": 19,
-      "LocationY": 7081,
+      "LocationX": 22,
+      "LocationY": 7470,
       "Properties": {
         "Compare Operation": {
           "Type": "TypeItemSwitch",
@@ -214,8 +214,8 @@
       "Key": "88DB3ACC0B12A29D",
       "Title": "Increment Step",
       "NodeType": "StepIncrement",
-      "LocationX": 58,
-      "LocationY": 7253,
+      "LocationX": 61,
+      "LocationY": 7642,
       "Properties": {
         "Increment Amount": {
           "Type": "TypeInteger",
@@ -227,8 +227,8 @@
       "Key": "88DB3ACC1B4D7726",
       "Title": "Check if step out of range",
       "NodeType": "StepCheck",
-      "LocationX": 58,
-      "LocationY": 7413,
+      "LocationX": 61,
+      "LocationY": 7802,
       "Properties": {
         "Compare Operation": {
           "Type": "TypeItemSwitch",
@@ -244,8 +244,8 @@
       "Key": "88DB3ACC3058A1A7",
       "Title": "Increment Cycle",
       "NodeType": "CycleIncrement",
-      "LocationX": -350,
-      "LocationY": 7650,
+      "LocationX": -347,
+      "LocationY": 8039,
       "Properties": {
         "Increment Amount": {
           "Type": "TypeInteger",
@@ -257,8 +257,8 @@
       "Key": "88DB3ACC47550C12",
       "Title": "Set Step",
       "NodeType": "StepSet",
-      "LocationX": -349,
-      "LocationY": 7812,
+      "LocationX": -346,
+      "LocationY": 8201,
       "Properties": {
         "Set Value": {
           "Type": "TypeInteger",
@@ -270,8 +270,8 @@
       "Key": "88DB3ACC771A8C8D",
       "Title": "Go To Entry Node",
       "NodeType": "GeneralGoToEntry",
-      "LocationX": 98,
-      "LocationY": 8007,
+      "LocationX": 101,
+      "LocationY": 8396,
       "Properties": {}
     },
     "88DB3ACE1CCF8B37": {
@@ -670,12 +670,62 @@
         }
       }
     },
+    "88DB3D1D7B1C7E7D": {
+      "Key": "88DB3D1D7B1C7E7D",
+      "Title": "Check Unsafe Shutdowns",
+      "NodeType": "DrivesCheckSmartAttributeValueChanged",
+      "LocationX": 20,
+      "LocationY": 6241,
+      "Properties": {
+        "Only Check Found Drives": {
+          "Type": "TypeBoolean",
+          "Value": true
+        },
+        "SMART Attribute ID": {
+          "Type": "TypeString",
+          "Value": "unsafe_shutdowns"
+        },
+        "Ignore Missing Attribute ID": {
+          "Type": "TypeBoolean",
+          "Value": true
+        },
+        "Log Errors (Changed/Missing Values)": {
+          "Type": "TypeBoolean",
+          "Value": true
+        }
+      }
+    },
+    "88DB3D1D96342A5B": {
+      "Key": "88DB3D1D96342A5B",
+      "Title": "Send email about unsafe shutdowns",
+      "NodeType": "EmailSendSnapshot",
+      "LocationX": 577,
+      "LocationY": 6297,
+      "Properties": {
+        "Recipients": {
+          "Type": "TypeString",
+          "Value": "[DEFAULT_RECIPIENTS]"
+        },
+        "Priority": {
+          "Type": "TypeItemSwitch",
+          "Value": "Normal"
+        },
+        "Subject": {
+          "Type": "TypeString",
+          "Value": "Unsafe shutdowns changed"
+        },
+        "Body": {
+          "Type": "TypeString",
+          "Value": "At least one drive has new unsafe shutdowns"
+        }
+      }
+    },
     "88DB3D1DCEE3A24D": {
       "Key": "88DB3D1DCEE3A24D",
       "Title": "Check MDIE",
       "NodeType": "DrivesCheckSmartAttributeValueChanged",
-      "LocationX": 18,
-      "LocationY": 6264,
+      "LocationX": 21,
+      "LocationY": 6653,
       "Properties": {
         "Only Check Found Drives": {
           "Type": "TypeBoolean",
@@ -699,8 +749,8 @@
       "Key": "88DB3D1DEDADEA4A",
       "Title": "Stop flow because of MDIE",
       "NodeType": "GeneralStopFlowWithStatus",
-      "LocationX": 580,
-      "LocationY": 6296,
+      "LocationX": 583,
+      "LocationY": 6685,
       "Properties": {
         "Status Message": {
           "Type": "TypeString",
@@ -728,8 +778,8 @@
       "Key": "88DB3D1E0BED74A9",
       "Title": "Check Available Spare",
       "NodeType": "DrivesCheckSmartAttributeValueChanged",
-      "LocationX": 18,
-      "LocationY": 6663,
+      "LocationX": 21,
+      "LocationY": 7052,
       "Properties": {
         "Only Check Found Drives": {
           "Type": "TypeBoolean",
@@ -753,8 +803,8 @@
       "Key": "88DB3D1E14BF7776",
       "Title": "Stop flow because of available spare",
       "NodeType": "GeneralStopFlowWithStatus",
-      "LocationX": 578,
-      "LocationY": 6695,
+      "LocationX": 581,
+      "LocationY": 7084,
       "Properties": {
         "Status Message": {
           "Type": "TypeString",
@@ -850,7 +900,7 @@
         },
         "Data Pattern File Path": {
           "Type": "TypeString",
-          "Value": "C:\\JustIO\\pattern_8mb.bin"
+          "Value": ""
         },
         "Transfer Type": {
           "Type": "TypeItemSwitch",
@@ -950,14 +1000,14 @@
     },
     "88DB40258828E15B": {
       "Key": "88DB40258828E15B",
-      "Title": "Check If Clean Step",
+      "Title": "Check If Cold Boot Step",
       "NodeType": "StepCheckList",
       "LocationX": 750,
       "LocationY": 352,
       "Properties": {
         "Compare List": {
           "Type": "TypeString",
-          "Value": "1,2,4,5,7,8"
+          "Value": "2,6,10,14"
         }
       }
     },
@@ -1085,92 +1135,6 @@
         }
       }
     },
-    "88DB403D4F62058D": {
-      "Key": "88DB403D4F62058D",
-      "Title": "Check If Dirty Step",
-      "NodeType": "StepCheckList",
-      "LocationX": 1735,
-      "LocationY": 538,
-      "Properties": {
-        "Compare List": {
-          "Type": "TypeString",
-          "Value": "3,6,9"
-        }
-      }
-    },
-    "88DB403DA388B522": {
-      "Key": "88DB403DA388B522",
-      "Title": "Wait 10 seconds before dirty",
-      "NodeType": "GeneralWait",
-      "LocationX": 1733,
-      "LocationY": 918,
-      "Properties": {
-        "Timeout Seconds": {
-          "Type": "TypeInteger",
-          "Value": 10
-        }
-      }
-    },
-    "88DB403DBAD5618E": {
-      "Key": "88DB403DBAD5618E",
-      "Title": "Disable regulators",
-      "NodeType": "MCUSetPin",
-      "LocationX": 1734,
-      "LocationY": 1063,
-      "Properties": {
-        "Pin": {
-          "Type": "TypeInteger",
-          "ReferenceKey": "MCURegulatorEnablePin"
-        },
-        "Pin State": {
-          "Type": "TypeItemSwitch",
-          "Value": "LOW"
-        },
-        "Timeout Milliseconds": {
-          "Type": "TypeInteger",
-          "Value": 5000
-        }
-      }
-    },
-    "88DB403E4A67389B": {
-      "Key": "88DB403E4A67389B",
-      "Title": "DevCon Remove Drive Models",
-      "NodeType": "DevConRemoveDriveModels",
-      "LocationX": 1734,
-      "LocationY": 1274,
-      "Properties": {
-        "Timeout Seconds": {
-          "Type": "TypeInteger",
-          "Value": 120
-        }
-      }
-    },
-    "88DB403E5378C718": {
-      "Key": "88DB403E5378C718",
-      "Title": "DevCon Rescan",
-      "NodeType": "DevConRescan",
-      "LocationX": 1735,
-      "LocationY": 1439,
-      "Properties": {
-        "Timeout Seconds": {
-          "Type": "TypeInteger",
-          "Value": 120
-        }
-      }
-    },
-    "88DB403E6593DA83": {
-      "Key": "88DB403E6593DA83",
-      "Title": "Wait 5 seconds",
-      "NodeType": "GeneralWait",
-      "LocationX": 1735,
-      "LocationY": 1601,
-      "Properties": {
-        "Timeout Seconds": {
-          "Type": "TypeInteger",
-          "Value": 5
-        }
-      }
-    },
     "88DB403EC2B3A092": {
       "Key": "88DB403EC2B3A092",
       "Title": "Enable regulators",
@@ -1210,448 +1174,6 @@
         "Timeout Milliseconds": {
           "Type": "TypeInteger",
           "Value": 5000
-        }
-      }
-    },
-    "88DB403F550C4B02": {
-      "Key": "88DB403F550C4B02",
-      "Title": "Go To Clean Power Cycle",
-      "NodeType": "GeneralGoToNode",
-      "LocationX": 1736,
-      "LocationY": 1743,
-      "Properties": {
-        "Go To Node Key": {
-          "Type": "TypeString",
-          "Value": "88DB3C46687A8FAC"
-        }
-      }
-    },
-    "88DB40402E8F2E24": {
-      "Key": "88DB40402E8F2E24",
-      "Title": "Check If Read 10GB Step",
-      "NodeType": "StepCheck",
-      "LocationX": 2858,
-      "LocationY": 669,
-      "Properties": {
-        "Compare Operation": {
-          "Type": "TypeItemSwitch",
-          "Value": "="
-        },
-        "Compare Value": {
-          "Type": "TypeInteger",
-          "Value": 10
-        }
-      }
-    },
-    "88DB4040431564A9": {
-      "Key": "88DB4040431564A9",
-      "Title": "JustIO Read 10GB Block",
-      "NodeType": "WorkloadRunJustIOPCTPreset10GBBlock",
-      "LocationX": 2854,
-      "LocationY": 2051,
-      "Properties": {
-        "Map File Prefix": {
-          "Type": "TypeString",
-          "Value": "10GBRead"
-        },
-        "Log File Prefix": {
-          "Type": "TypeString",
-          "Value": "10GBRead"
-        },
-        "Data Pattern File Path": {
-          "Type": "TypeString",
-          "Value": "C:\\JustIO\\pattern_8mb.bin"
-        },
-        "Transfer Type": {
-          "Type": "TypeItemSwitch",
-          "Value": "Read"
-        },
-        "Transfer Size Bytes": {
-          "Type": "TypeInteger",
-          "Value": 8388608
-        },
-        "Transfer Rate IOPS": {
-          "Type": "TypeString",
-          "Value": "MAX"
-        },
-        "Random Data Seed": {
-          "Type": "TypeString",
-          "Value": "457237016880"
-        },
-        "Random Data Entropy": {
-          "Type": "TypeInteger",
-          "Value": 10
-        },
-        "Reporting Interval Seconds": {
-          "Type": "TypeInteger",
-          "Value": 120
-        },
-        "Timeout Minutes": {
-          "Type": "TypeInteger",
-          "Value": 30
-        },
-        "Log Results": {
-          "Type": "TypeBoolean",
-          "Value": true
-        },
-        "Interval Minutes": {
-          "Type": "TypeInteger",
-          "Value": 5
-        }
-      }
-    },
-    "88DB404095BF0C60": {
-      "Key": "88DB404095BF0C60",
-      "Title": "Rescan Drives",
-      "NodeType": "DrivesRescan",
-      "LocationX": 3037,
-      "LocationY": 2660,
-      "Properties": {
-        "Timeout Seconds": {
-          "Type": "TypeInteger",
-          "Value": 30
-        }
-      }
-    },
-    "88DB40409A5323FF": {
-      "Key": "88DB40409A5323FF",
-      "Title": "Drives Log Temperature",
-      "NodeType": "DrivesLogTemperature",
-      "LocationX": 3037,
-      "LocationY": 2797,
-      "Properties": {}
-    },
-    "88DB4043727626F2": {
-      "Key": "88DB4043727626F2",
-      "Title": "Stop Flow With Status",
-      "NodeType": "GeneralStopFlowWithStatus",
-      "LocationX": 3497,
-      "LocationY": 2686,
-      "Properties": {
-        "Status Message": {
-          "Type": "TypeString",
-          "Value": "Error running JustIO read 10GB block"
-        },
-        "Status Color": {
-          "Type": "TypeItemSwitch",
-          "Value": "RED"
-        },
-        "Send Email": {
-          "Type": "TypeBoolean",
-          "Value": true
-        },
-        "Recipients": {
-          "Type": "TypeString",
-          "Value": "[DEFAULT_RECIPIENTS]"
-        },
-        "Priority": {
-          "Type": "TypeItemSwitch",
-          "Value": "Normal"
-        }
-      }
-    },
-    "88DB404466E81AD1": {
-      "Key": "88DB404466E81AD1",
-      "Title": "Check If Async Step",
-      "NodeType": "StepCheck",
-      "LocationX": 4325,
-      "LocationY": 1020,
-      "Properties": {
-        "Compare Operation": {
-          "Type": "TypeItemSwitch",
-          "Value": "="
-        },
-        "Compare Value": {
-          "Type": "TypeInteger",
-          "Value": 11
-        }
-      }
-    },
-    "88DB4044B6DA003B": {
-      "Key": "88DB4044B6DA003B",
-      "Title": "JustIO Write 10GB Block For Async ",
-      "NodeType": "WorkloadRunJustIOPCTPreset10GBBlock",
-      "LocationX": 4325,
-      "LocationY": 1291,
-      "Properties": {
-        "Map File Prefix": {
-          "Type": "TypeString",
-          "Value": "10GBWriteAsync"
-        },
-        "Log File Prefix": {
-          "Type": "TypeString",
-          "Value": "10GBWriteAsync"
-        },
-        "Data Pattern File Path": {
-          "Type": "TypeString",
-          "Value": "C:\\JustIO\\pattern_512.bin"
-        },
-        "Transfer Type": {
-          "Type": "TypeItemSwitch",
-          "Value": "Write"
-        },
-        "Transfer Size Bytes": {
-          "Type": "TypeInteger",
-          "Value": 512
-        },
-        "Transfer Rate IOPS": {
-          "Type": "TypeString",
-          "Value": "MAX"
-        },
-        "Random Data Seed": {
-          "Type": "TypeString",
-          "Value": "457237016880"
-        },
-        "Random Data Entropy": {
-          "Type": "TypeInteger",
-          "Value": 10
-        },
-        "Reporting Interval Seconds": {
-          "Type": "TypeInteger",
-          "Value": 10
-        },
-        "Timeout Minutes": {
-          "Type": "TypeInteger",
-          "Value": 5
-        },
-        "Log Results": {
-          "Type": "TypeBoolean",
-          "Value": false
-        },
-        "Interval Minutes": {
-          "Type": "TypeInteger",
-          "Value": 1
-        }
-      }
-    },
-    "88DB4045CA56E9D2": {
-      "Key": "88DB4045CA56E9D2",
-      "Title": "Disable regulators",
-      "NodeType": "MCUSetPin",
-      "LocationX": 4555,
-      "LocationY": 1889,
-      "Properties": {
-        "Pin": {
-          "Type": "TypeInteger",
-          "ReferenceKey": "MCURegulatorEnablePin"
-        },
-        "Pin State": {
-          "Type": "TypeItemSwitch",
-          "Value": "LOW"
-        },
-        "Timeout Milliseconds": {
-          "Type": "TypeInteger",
-          "Value": 5000
-        }
-      }
-    },
-    "88DB4046385485EB": {
-      "Key": "88DB4046385485EB",
-      "Title": "DevCon Remove Drive Models",
-      "NodeType": "DevConRemoveDriveModels",
-      "LocationX": 4378,
-      "LocationY": 2130,
-      "Properties": {
-        "Timeout Seconds": {
-          "Type": "TypeInteger",
-          "Value": 120
-        }
-      }
-    },
-    "88DB40464877A689": {
-      "Key": "88DB40464877A689",
-      "Title": "DevCon Rescan",
-      "NodeType": "DevConRescan",
-      "LocationX": 4378,
-      "LocationY": 2296,
-      "Properties": {
-        "Timeout Seconds": {
-          "Type": "TypeInteger",
-          "Value": 120
-        }
-      }
-    },
-    "88DB40465FC1695C": {
-      "Key": "88DB40465FC1695C",
-      "Title": "Wait 5 Seconds",
-      "NodeType": "GeneralWait",
-      "LocationX": 4378,
-      "LocationY": 2465,
-      "Properties": {
-        "Timeout Seconds": {
-          "Type": "TypeInteger",
-          "Value": 5
-        }
-      }
-    },
-    "88DB40466B527906": {
-      "Key": "88DB40466B527906",
-      "Title": "Go To Clean Power Cycle",
-      "NodeType": "GeneralGoToNode",
-      "LocationX": 4379,
-      "LocationY": 2611,
-      "Properties": {
-        "Go To Node Key": {
-          "Type": "TypeString",
-          "Value": "88DB3C46687A8FAC"
-        }
-      }
-    },
-    "88DB4048B3C41159": {
-      "Key": "88DB4048B3C41159",
-      "Title": "Check If Full Verify Step",
-      "NodeType": "StepCheck",
-      "LocationX": 5383,
-      "LocationY": 1254,
-      "Properties": {
-        "Compare Operation": {
-          "Type": "TypeItemSwitch",
-          "Value": "="
-        },
-        "Compare Value": {
-          "Type": "TypeInteger",
-          "Value": 12
-        }
-      }
-    },
-    "88DB4048CFC240F4": {
-      "Key": "88DB4048CFC240F4",
-      "Title": "Only run full verify if cycle is multiple of 20",
-      "NodeType": "CycleCheckDivisible",
-      "LocationX": 5382,
-      "LocationY": 1429,
-      "Properties": {
-        "Divisor": {
-          "Type": "TypeInteger",
-          "Value": 20
-        }
-      }
-    },
-    "88DB404904954572": {
-      "Key": "88DB404904954572",
-      "Title": "Go To Increment Step",
-      "NodeType": "GeneralGoToNode",
-      "LocationX": 5421,
-      "LocationY": 1592,
-      "Properties": {
-        "Go To Node Key": {
-          "Type": "TypeString",
-          "Value": "88DB3ACC0B12A29D"
-        }
-      }
-    },
-    "88DB404930BB1010": {
-      "Key": "88DB404930BB1010",
-      "Title": "JustIO Full Read",
-      "NodeType": "WorkloadRunJustIO",
-      "LocationX": 5384,
-      "LocationY": 2076,
-      "Properties": {
-        "Map File Prefix": {
-          "Type": "TypeString",
-          "Value": "FullRead"
-        },
-        "Log File Prefix": {
-          "Type": "TypeString",
-          "Value": "FullRead"
-        },
-        "Data Pattern File Path": {
-          "Type": "TypeString",
-          "Value": "C:\\JustIO\\pattern_8mb.bin"
-        },
-        "Transfer Type": {
-          "Type": "TypeItemSwitch",
-          "Value": "Read"
-        },
-        "Transfer Size Bytes": {
-          "Type": "TypeInteger",
-          "Value": 8388608
-        },
-        "Transfer Rate IOPS": {
-          "Type": "TypeString",
-          "Value": "MAX"
-        },
-        "Transfer Start Offset Bytes": {
-          "Type": "TypeString",
-          "Value": "0"
-        },
-        "Transfer End Offset Bytes": {
-          "Type": "TypeString",
-          "Value": "MAX"
-        },
-        "Random Data Seed": {
-          "Type": "TypeString",
-          "Value": "457237016880"
-        },
-        "Random Data Entropy": {
-          "Type": "TypeInteger",
-          "Value": 10
-        },
-        "Reporting Interval Seconds": {
-          "Type": "TypeInteger",
-          "Value": 120
-        },
-        "Timeout Minutes": {
-          "Type": "TypeInteger",
-          "Value": 720
-        },
-        "Log Results": {
-          "Type": "TypeBoolean",
-          "Value": true
-        },
-        "Interval Minutes": {
-          "Type": "TypeInteger",
-          "Value": 5
-        }
-      }
-    },
-    "88DB404968A02654": {
-      "Key": "88DB404968A02654",
-      "Title": "Rescan Drives",
-      "NodeType": "DrivesRescan",
-      "LocationX": 5627,
-      "LocationY": 2686,
-      "Properties": {
-        "Timeout Seconds": {
-          "Type": "TypeInteger",
-          "Value": 30
-        }
-      }
-    },
-    "88DB404973A22AAE": {
-      "Key": "88DB404973A22AAE",
-      "Title": "Drives Log Temperature",
-      "NodeType": "DrivesLogTemperature",
-      "LocationX": 5627,
-      "LocationY": 2830,
-      "Properties": {}
-    },
-    "88DB4049B2F225D3": {
-      "Key": "88DB4049B2F225D3",
-      "Title": "Stop Flow With Status",
-      "NodeType": "GeneralStopFlowWithStatus",
-      "LocationX": 6112,
-      "LocationY": 2614,
-      "Properties": {
-        "Status Message": {
-          "Type": "TypeString",
-          "Value": "Error running full verify"
-        },
-        "Status Color": {
-          "Type": "TypeItemSwitch",
-          "Value": "RED"
-        },
-        "Send Email": {
-          "Type": "TypeBoolean",
-          "Value": true
-        },
-        "Recipients": {
-          "Type": "TypeString",
-          "Value": "[DEFAULT_RECIPIENTS]"
-        },
-        "Priority": {
-          "Type": "TypeItemSwitch",
-          "Value": "Normal"
         }
       }
     }
@@ -1833,6 +1355,31 @@
       "ToNodeKey": "88DAFE2C0B639BE5"
     },
     {
+      "FromNodeKey": "88DB3C59971F43CE",
+      "FromNodePort": "All Drive Transfer Modes Okay",
+      "ToNodeKey": "88DB3D1D7B1C7E7D"
+    },
+    {
+      "FromNodeKey": "88DB3D1D7B1C7E7D",
+      "FromNodePort": "Some Drives Attribute Changed",
+      "ToNodeKey": "88DB3D1D96342A5B"
+    },
+    {
+      "FromNodeKey": "88DB3D1D7B1C7E7D",
+      "FromNodePort": "All Drives Attribute Unchanged",
+      "ToNodeKey": "88DB3D1DCEE3A24D"
+    },
+    {
+      "FromNodeKey": "88DB3D1D96342A5B",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DB3D1DCEE3A24D"
+    },
+    {
+      "FromNodeKey": "88DB3D1D96342A5B",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB3D1DCEE3A24D"
+    },
+    {
       "FromNodeKey": "88DB3D1DCEE3A24D",
       "FromNodePort": "Some Drives Attribute Changed",
       "ToNodeKey": "88DB3D1DEDADEA4A"
@@ -1953,39 +1500,9 @@
       "ToNodeKey": "88DB40258828E15B"
     },
     {
-      "FromNodeKey": "88DB40258828E15B",
-      "FromNodePort": "False",
-      "ToNodeKey": "88DB403D4F62058D"
-    },
-    {
-      "FromNodeKey": "88DB403D4F62058D",
-      "FromNodePort": "True",
-      "ToNodeKey": "88DB403DA388B522"
-    },
-    {
-      "FromNodeKey": "88DB403DA388B522",
-      "FromNodePort": "Time Elapsed",
-      "ToNodeKey": "88DB403DBAD5618E"
-    },
-    {
       "FromNodeKey": "88DB401EDDA231B7",
       "FromNodePort": "All Drives Passed",
       "ToNodeKey": "88DAFE2BA9FB0B2F"
-    },
-    {
-      "FromNodeKey": "88DB403DBAD5618E",
-      "FromNodePort": "Success",
-      "ToNodeKey": "88DB403E4A67389B"
-    },
-    {
-      "FromNodeKey": "88DB403E4A67389B",
-      "FromNodePort": "Success",
-      "ToNodeKey": "88DB403E5378C718"
-    },
-    {
-      "FromNodeKey": "88DB403E5378C718",
-      "FromNodePort": "Success",
-      "ToNodeKey": "88DB403E6593DA83"
     },
     {
       "FromNodeKey": "88DAFDA0A1DDF3A5",
@@ -2008,139 +1525,9 @@
       "ToNodeKey": "88DAFDA0A1DDF3A5"
     },
     {
-      "FromNodeKey": "88DB403E6593DA83",
-      "FromNodePort": "Time Elapsed",
-      "ToNodeKey": "88DB403F550C4B02"
-    },
-    {
-      "FromNodeKey": "88DB403D4F62058D",
-      "FromNodePort": "False",
-      "ToNodeKey": "88DB40402E8F2E24"
-    },
-    {
-      "FromNodeKey": "88DB40402E8F2E24",
-      "FromNodePort": "True",
-      "ToNodeKey": "88DB4040431564A9"
-    },
-    {
-      "FromNodeKey": "88DB404095BF0C60",
-      "FromNodePort": "Success",
-      "ToNodeKey": "88DB40409A5323FF"
-    },
-    {
-      "FromNodeKey": "88DB4040431564A9",
-      "FromNodePort": "Interval",
-      "ToNodeKey": "88DB404095BF0C60"
-    },
-    {
-      "FromNodeKey": "88DB4040431564A9",
-      "FromNodePort": "Errors",
-      "ToNodeKey": "88DB4043727626F2"
-    },
-    {
       "FromNodeKey": "88DB403B53FE188A",
       "FromNodePort": "Some Drives Failed",
       "ToNodeKey": "88DAFE2BA9FB0B2F"
-    },
-    {
-      "FromNodeKey": "88DB4040431564A9",
-      "FromNodePort": "All Drives Passed",
-      "ToNodeKey": "88DAFE2BA9FB0B2F"
-    },
-    {
-      "FromNodeKey": "88DB4040431564A9",
-      "FromNodePort": "Some Drives Failed",
-      "ToNodeKey": "88DAFE2BA9FB0B2F"
-    },
-    {
-      "FromNodeKey": "88DB4044B6DA003B",
-      "FromNodePort": "Interval",
-      "ToNodeKey": "88DB4045CA56E9D2"
-    },
-    {
-      "FromNodeKey": "88DB404466E81AD1",
-      "FromNodePort": "True",
-      "ToNodeKey": "88DB4044B6DA003B"
-    },
-    {
-      "FromNodeKey": "88DB4044B6DA003B",
-      "FromNodePort": "All Drives Passed",
-      "ToNodeKey": "88DB4046385485EB"
-    },
-    {
-      "FromNodeKey": "88DB4044B6DA003B",
-      "FromNodePort": "Some Drives Failed",
-      "ToNodeKey": "88DB4046385485EB"
-    },
-    {
-      "FromNodeKey": "88DB4046385485EB",
-      "FromNodePort": "Success",
-      "ToNodeKey": "88DB40464877A689"
-    },
-    {
-      "FromNodeKey": "88DB40464877A689",
-      "FromNodePort": "Success",
-      "ToNodeKey": "88DB40465FC1695C"
-    },
-    {
-      "FromNodeKey": "88DB40465FC1695C",
-      "FromNodePort": "Time Elapsed",
-      "ToNodeKey": "88DB40466B527906"
-    },
-    {
-      "FromNodeKey": "88DB40402E8F2E24",
-      "FromNodePort": "False",
-      "ToNodeKey": "88DB404466E81AD1"
-    },
-    {
-      "FromNodeKey": "88DB404466E81AD1",
-      "FromNodePort": "False",
-      "ToNodeKey": "88DB4048B3C41159"
-    },
-    {
-      "FromNodeKey": "88DB4048B3C41159",
-      "FromNodePort": "True",
-      "ToNodeKey": "88DB4048CFC240F4"
-    },
-    {
-      "FromNodeKey": "88DB4048CFC240F4",
-      "FromNodePort": "False",
-      "ToNodeKey": "88DB404904954572"
-    },
-    {
-      "FromNodeKey": "88DB4048CFC240F4",
-      "FromNodePort": "True",
-      "ToNodeKey": "88DB404930BB1010"
-    },
-    {
-      "FromNodeKey": "88DB404968A02654",
-      "FromNodePort": "Success",
-      "ToNodeKey": "88DB404973A22AAE"
-    },
-    {
-      "FromNodeKey": "88DB404930BB1010",
-      "FromNodePort": "Interval",
-      "ToNodeKey": "88DB404968A02654"
-    },
-    {
-      "FromNodeKey": "88DB404930BB1010",
-      "FromNodePort": "All Drives Passed",
-      "ToNodeKey": "88DAFE2BA9FB0B2F"
-    },
-    {
-      "FromNodeKey": "88DB404930BB1010",
-      "FromNodePort": "Some Drives Failed",
-      "ToNodeKey": "88DAFE2BA9FB0B2F"
-    },
-    {
-      "FromNodeKey": "88DB404930BB1010",
-      "FromNodePort": "Errors",
-      "ToNodeKey": "88DB4049B2F225D3"
-    },
-    {
-      "FromNodeKey": "88DB3C59971F43CE",
-      "FromNodePort": "All Drive Transfer Modes Okay",
-      "ToNodeKey": "88DB3D1DCEE3A24D"
     },
     {
       "FromNodeKey": "88DB056E76324D2A",

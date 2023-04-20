@@ -393,7 +393,7 @@
         },
         "Timeout Seconds": {
           "Type": "TypeInteger",
-          "Value": 30
+          "Value": 60
         }
       }
     },
@@ -422,7 +422,7 @@
         },
         "Timeout Seconds": {
           "Type": "TypeInteger",
-          "Value": 30
+          "Value": 60
         }
       }
     },
@@ -451,7 +451,7 @@
         },
         "Timeout Seconds": {
           "Type": "TypeInteger",
-          "Value": 30
+          "Value": 60
         }
       }
     },
@@ -2296,7 +2296,7 @@
         },
         "Timeout Seconds": {
           "Type": "TypeInteger",
-          "Value": 15
+          "Value": 120
         }
       }
     },
@@ -2329,7 +2329,7 @@
         },
         "Timeout Seconds": {
           "Type": "TypeInteger",
-          "Value": 15
+          "Value": 60
         }
       }
     }
@@ -3099,6 +3099,11 @@
       "FromNodeKey": "88DB41D09C15E2A2",
       "FromNodePort": "Errors",
       "ToNodeKey": "88DB3B889BB3C130"
+    },
+    {
+      "FromNodeKey": "88DB411C82522158",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DB411AAC95A0DE"
     }
   ]
 }

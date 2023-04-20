@@ -751,8 +751,8 @@
       "Key": "88DB3B894159A5CD",
       "Title": "Stop Flow With Status",
       "NodeType": "GeneralStopFlowWithStatus",
-      "LocationX": -409,
-      "LocationY": 2490,
+      "LocationX": -411,
+      "LocationY": 2504,
       "Properties": {
         "Status Message": {
           "Type": "TypeString",
@@ -814,7 +814,7 @@
         },
         "Timeout Seconds": {
           "Type": "TypeInteger",
-          "Value": 30
+          "Value": 60
         }
       }
     },
@@ -843,7 +843,7 @@
         },
         "Timeout Seconds": {
           "Type": "TypeInteger",
-          "Value": 30
+          "Value": 60
         }
       }
     },
@@ -872,7 +872,7 @@
         },
         "Timeout Seconds": {
           "Type": "TypeInteger",
-          "Value": 30
+          "Value": 60
         }
       }
     },
@@ -1252,7 +1252,7 @@
         },
         "Timeout Seconds": {
           "Type": "TypeInteger",
-          "Value": 15
+          "Value": 60
         }
       }
     },
@@ -1285,7 +1285,7 @@
         },
         "Timeout Seconds": {
           "Type": "TypeInteger",
-          "Value": 15
+          "Value": 60
         }
       }
     }

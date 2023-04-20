@@ -410,7 +410,7 @@
         },
         "Timeout Seconds": {
           "Type": "TypeInteger",
-          "Value": 30
+          "Value": 60
         }
       }
     },
@@ -439,7 +439,7 @@
         },
         "Timeout Seconds": {
           "Type": "TypeInteger",
-          "Value": 30
+          "Value": 60
         }
       }
     },
@@ -468,7 +468,7 @@
         },
         "Timeout Seconds": {
           "Type": "TypeInteger",
-          "Value": 30
+          "Value": 60
         }
       }
     },
@@ -1653,7 +1653,7 @@
         },
         "Timeout Seconds": {
           "Type": "TypeInteger",
-          "Value": 15
+          "Value": 60
         }
       }
     }

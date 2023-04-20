@@ -19,21 +19,8 @@
       "Key": "88DAFDA0A1DDF3A5",
       "Title": "System off for 1 minute",
       "NodeType": "GeneralWait",
-      "LocationX": 3041,
-      "LocationY": 1755,
-      "Properties": {
-        "Timeout Seconds": {
-          "Type": "TypeInteger",
-          "Value": 60
-        }
-      }
-    },
-    "88DAFDA3432BCA5F": {
-      "Key": "88DAFDA3432BCA5F",
-      "Title": "Allowing Time for System to Shut Down",
-      "NodeType": "GeneralWait",
-      "LocationX": 3010,
-      "LocationY": 908,
+      "LocationX": 3036,
+      "LocationY": 1698,
       "Properties": {
         "Timeout Seconds": {
           "Type": "TypeInteger",
@@ -74,19 +61,6 @@
       "LocationX": 18,
       "LocationY": 5718,
       "Properties": {}
-    },
-    "88DAFE31C6AEE013": {
-      "Key": "88DAFE31C6AEE013",
-      "Title": "Allowing Time for System to Turn On",
-      "NodeType": "GeneralWait",
-      "LocationX": 3044,
-      "LocationY": 2730,
-      "Properties": {
-        "Timeout Seconds": {
-          "Type": "TypeInteger",
-          "Value": 10
-        }
-      }
     },
     "88DAFF08969051E4": {
       "Key": "88DAFF08969051E4",
@@ -154,8 +128,8 @@
       "Key": "88DB3AC9F1098B14",
       "Title": "Go To Send Power On",
       "NodeType": "GeneralGoToNode",
-      "LocationX": 2393,
-      "LocationY": 3215,
+      "LocationX": 2402,
+      "LocationY": 3035,
       "Properties": {
         "Go To Node Key": {
           "Type": "TypeString",
@@ -167,8 +141,8 @@
       "Key": "88DB3ACB26F918A9",
       "Title": "Waiting for client connection...",
       "NodeType": "ClientConnectionWaitAlive",
-      "LocationX": 3045,
-      "LocationY": 3142,
+      "LocationX": 3036,
+      "LocationY": 3021,
       "Properties": {
         "Timeout Seconds": {
           "Type": "TypeInteger",
@@ -306,8 +280,8 @@
       "Key": "88DB3B880D86146F",
       "Title": "Send email about issue shutting down",
       "NodeType": "EmailSendSnapshot",
-      "LocationX": 2386,
-      "LocationY": 1387,
+      "LocationX": 2389,
+      "LocationY": 1292,
       "Properties": {
         "Recipients": {
           "Type": "TypeString",
@@ -331,8 +305,8 @@
       "Key": "88DB3B889BB3C130",
       "Title": "Send email about issue turning on",
       "NodeType": "EmailSendSnapshot",
-      "LocationX": 2365,
-      "LocationY": 2914,
+      "LocationX": 2379,
+      "LocationY": 2733,
       "Properties": {
         "Recipients": {
           "Type": "TypeString",
@@ -356,8 +330,8 @@
       "Key": "88DB3B894159A5CD",
       "Title": "Stop Flow With Status",
       "NodeType": "GeneralStopFlowWithStatus",
-      "LocationX": 3382,
-      "LocationY": 3141,
+      "LocationX": 3362,
+      "LocationY": 3043,
       "Properties": {
         "Status Message": {
           "Type": "TypeString",
@@ -423,41 +397,12 @@
         }
       }
     },
-    "88DB3C468720E4DE": {
-      "Key": "88DB3C468720E4DE",
-      "Title": "BMC Get Power Status",
-      "NodeType": "ASRockBMCGetPowerStatus",
-      "LocationX": 3011,
-      "LocationY": 1052,
-      "Properties": {
-        "BMC IP": {
-          "Type": "TypeString",
-          "ReferenceKey": "BMCIP"
-        },
-        "User Name": {
-          "Type": "TypeString",
-          "Value": "engineer"
-        },
-        "Password": {
-          "Type": "TypeString",
-          "Value": "engineer1"
-        },
-        "Retries": {
-          "Type": "TypeInteger",
-          "Value": 5
-        },
-        "Timeout Seconds": {
-          "Type": "TypeInteger",
-          "Value": 15
-        }
-      }
-    },
     "88DB3C46966AC565": {
       "Key": "88DB3C46966AC565",
       "Title": "BMC Send Power On",
       "NodeType": "ASRockBMCSendPowerOn",
-      "LocationX": 3044,
-      "LocationY": 2466,
+      "LocationX": 3036,
+      "LocationY": 2417,
       "Properties": {
         "BMC IP": {
           "Type": "TypeString",
@@ -478,35 +423,6 @@
         "Timeout Seconds": {
           "Type": "TypeInteger",
           "Value": 30
-        }
-      }
-    },
-    "88DB3C46A2BC4A64": {
-      "Key": "88DB3C46A2BC4A64",
-      "Title": "BMC Get Power Status",
-      "NodeType": "ASRockBMCGetPowerStatus",
-      "LocationX": 3044,
-      "LocationY": 2870,
-      "Properties": {
-        "BMC IP": {
-          "Type": "TypeString",
-          "ReferenceKey": "BMCIP"
-        },
-        "User Name": {
-          "Type": "TypeString",
-          "Value": "engineer"
-        },
-        "Password": {
-          "Type": "TypeString",
-          "Value": "engineer1"
-        },
-        "Retries": {
-          "Type": "TypeInteger",
-          "Value": 5
-        },
-        "Timeout Seconds": {
-          "Type": "TypeInteger",
-          "Value": 15
         }
       }
     },
@@ -606,8 +522,8 @@
       "Key": "88DB3CF49A9D1645",
       "Title": "Turn off backplane",
       "NodeType": "SNMPSetOutletStatus",
-      "LocationX": 3039,
-      "LocationY": 1321,
+      "LocationX": 3035,
+      "LocationY": 1261,
       "Properties": {
         "SNMP Device IP": {
           "Type": "TypeString",
@@ -631,8 +547,8 @@
       "Key": "88DB3CF4DF5EDA69",
       "Title": "Turn on backplane",
       "NodeType": "SNMPSetOutletStatus",
-      "LocationX": 3043,
-      "LocationY": 2092,
+      "LocationX": 3036,
+      "LocationY": 2038,
       "Properties": {
         "SNMP Device IP": {
           "Type": "TypeString",
@@ -877,8 +793,8 @@
       "Key": "88DB3F51ED9A859C",
       "Title": "Allow time for backplane to power on",
       "NodeType": "GeneralWait",
-      "LocationX": 3044,
-      "LocationY": 2324,
+      "LocationX": 3036,
+      "LocationY": 2275,
       "Properties": {
         "Timeout Seconds": {
           "Type": "TypeInteger",
@@ -1068,8 +984,8 @@
       "Key": "88DB403EC2B3A092",
       "Title": "Enable regulators",
       "NodeType": "MCUSetPin",
-      "LocationX": 3041,
-      "LocationY": 1893,
+      "LocationX": 3036,
+      "LocationY": 1836,
       "Properties": {
         "Pin": {
           "Type": "TypeInteger",
@@ -1089,8 +1005,8 @@
       "Key": "88DB403F060F2A26",
       "Title": "Disable regulators",
       "NodeType": "MCUSetPin",
-      "LocationX": 3039,
-      "LocationY": 1555,
+      "LocationX": 3035,
+      "LocationY": 1496,
       "Properties": {
         "Pin": {
           "Type": "TypeInteger",
@@ -2350,6 +2266,72 @@
           "Value": 5000
         }
       }
+    },
+    "88DB41D073B2491E": {
+      "Key": "88DB41D073B2491E",
+      "Title": "BMC Wait For Power Status",
+      "NodeType": "ASRockBMCWaitForPowerStatus",
+      "LocationX": 3009,
+      "LocationY": 906,
+      "Properties": {
+        "BMC IP": {
+          "Type": "TypeString",
+          "ReferenceKey": "BMCIP"
+        },
+        "User Name": {
+          "Type": "TypeString",
+          "Value": "engineer"
+        },
+        "Password": {
+          "Type": "TypeString",
+          "Value": "engineer1"
+        },
+        "Retries": {
+          "Type": "TypeInteger",
+          "Value": 5
+        },
+        "Target Power Status": {
+          "Type": "TypeItemSwitch",
+          "Value": "Off"
+        },
+        "Timeout Seconds": {
+          "Type": "TypeInteger",
+          "Value": 15
+        }
+      }
+    },
+    "88DB41D09C15E2A2": {
+      "Key": "88DB41D09C15E2A2",
+      "Title": "BMC Wait For Power Status",
+      "NodeType": "ASRockBMCWaitForPowerStatus",
+      "LocationX": 3036,
+      "LocationY": 2685,
+      "Properties": {
+        "BMC IP": {
+          "Type": "TypeString",
+          "ReferenceKey": "BMCIP"
+        },
+        "User Name": {
+          "Type": "TypeString",
+          "Value": "engineer"
+        },
+        "Password": {
+          "Type": "TypeString",
+          "Value": "engineer1"
+        },
+        "Retries": {
+          "Type": "TypeInteger",
+          "Value": 5
+        },
+        "Target Power Status": {
+          "Type": "TypeItemSwitch",
+          "Value": "On"
+        },
+        "Timeout Seconds": {
+          "Type": "TypeInteger",
+          "Value": 15
+        }
+      }
     }
   },
   "Connections": [
@@ -2429,41 +2411,6 @@
       "ToNodeKey": "88DB3B894159A5CD"
     },
     {
-      "FromNodeKey": "88DB3C46687A8FAC",
-      "FromNodePort": "Success",
-      "ToNodeKey": "88DAFDA3432BCA5F"
-    },
-    {
-      "FromNodeKey": "88DAFDA3432BCA5F",
-      "FromNodePort": "Time Elapsed",
-      "ToNodeKey": "88DB3C468720E4DE"
-    },
-    {
-      "FromNodeKey": "88DB3C468720E4DE",
-      "FromNodePort": "On",
-      "ToNodeKey": "88DB3B880D86146F"
-    },
-    {
-      "FromNodeKey": "88DB3C46966AC565",
-      "FromNodePort": "Success",
-      "ToNodeKey": "88DAFE31C6AEE013"
-    },
-    {
-      "FromNodeKey": "88DAFE31C6AEE013",
-      "FromNodePort": "Time Elapsed",
-      "ToNodeKey": "88DB3C46A2BC4A64"
-    },
-    {
-      "FromNodeKey": "88DB3C46A2BC4A64",
-      "FromNodePort": "On",
-      "ToNodeKey": "88DB3ACB26F918A9"
-    },
-    {
-      "FromNodeKey": "88DB3C46A2BC4A64",
-      "FromNodePort": "Off",
-      "ToNodeKey": "88DB3B889BB3C130"
-    },
-    {
       "FromNodeKey": "88DB3B880D86146F",
       "FromNodePort": "Success",
       "ToNodeKey": "88DB3C46BB4B42BF"
@@ -2492,11 +2439,6 @@
       "FromNodeKey": "88DB3C5B6D193B8D",
       "FromNodePort": "All Drives Found",
       "ToNodeKey": "88DB3B698FF9742A"
-    },
-    {
-      "FromNodeKey": "88DB3C468720E4DE",
-      "FromNodePort": "Off",
-      "ToNodeKey": "88DB3CF49A9D1645"
     },
     {
       "FromNodeKey": "88DB3B6991720D25",
@@ -2567,11 +2509,6 @@
       "FromNodeKey": "88DB3C46BB4B42BF",
       "FromNodePort": "Success",
       "ToNodeKey": "88DB3F5169B44AC0"
-    },
-    {
-      "FromNodeKey": "88DB3F5169B44AC0",
-      "FromNodePort": "Time Elapsed",
-      "ToNodeKey": "88DB3C468720E4DE"
     },
     {
       "FromNodeKey": "88DB3CF4DF5EDA69",
@@ -3127,6 +3064,41 @@
       "FromNodeKey": "88DB3B898832CC1C",
       "FromNodePort": "Success",
       "ToNodeKey": "88DB4123ACF0F9EC"
+    },
+    {
+      "FromNodeKey": "88DB3C46687A8FAC",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DB41D073B2491E"
+    },
+    {
+      "FromNodeKey": "88DB41D073B2491E",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DB3CF49A9D1645"
+    },
+    {
+      "FromNodeKey": "88DB41D073B2491E",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB3B880D86146F"
+    },
+    {
+      "FromNodeKey": "88DB3F5169B44AC0",
+      "FromNodePort": "Time Elapsed",
+      "ToNodeKey": "88DB41D073B2491E"
+    },
+    {
+      "FromNodeKey": "88DB3C46966AC565",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DB41D09C15E2A2"
+    },
+    {
+      "FromNodeKey": "88DB41D09C15E2A2",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DB3ACB26F918A9"
+    },
+    {
+      "FromNodeKey": "88DB41D09C15E2A2",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB3B889BB3C130"
     }
   ]
 }

@@ -2254,8 +2254,8 @@
       "Key": "88DB4123ACF0F9EC",
       "Title": "Thermal Chamber Set Nominal Temp",
       "NodeType": "ThermalChamberSetSetPoint",
-      "LocationX": -3508,
-      "LocationY": -3756,
+      "LocationX": -3507,
+      "LocationY": -3597,
       "Properties": {
         "Set Point Celsius": {
           "Type": "TypeDouble",
@@ -2330,6 +2330,23 @@
         "Timeout Seconds": {
           "Type": "TypeInteger",
           "Value": 60
+        }
+      }
+    },
+    "88DB44E593DC95F9": {
+      "Key": "88DB44E593DC95F9",
+      "Title": "Kill Process",
+      "NodeType": "ClientSystemProcessKill",
+      "LocationX": -3507,
+      "LocationY": -3774,
+      "Properties": {
+        "Process Name": {
+          "Type": "TypeString",
+          "Value": "java.exe"
+        },
+        "Timeout Seconds": {
+          "Type": "TypeInteger",
+          "Value": 5
         }
       }
     }
@@ -3061,11 +3078,6 @@
       "ToNodeKey": "88DB411AAC95A0DE"
     },
     {
-      "FromNodeKey": "88DB3B898832CC1C",
-      "FromNodePort": "Success",
-      "ToNodeKey": "88DB4123ACF0F9EC"
-    },
-    {
       "FromNodeKey": "88DB3C46687A8FAC",
       "FromNodePort": "Success",
       "ToNodeKey": "88DB41D073B2491E"
@@ -3104,6 +3116,16 @@
       "FromNodeKey": "88DB411C82522158",
       "FromNodePort": "Success",
       "ToNodeKey": "88DB411AAC95A0DE"
+    },
+    {
+      "FromNodeKey": "88DB3B898832CC1C",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DB44E593DC95F9"
+    },
+    {
+      "FromNodeKey": "88DB44E593DC95F9",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DB4123ACF0F9EC"
     }
   ]
 }

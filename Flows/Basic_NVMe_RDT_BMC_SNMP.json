@@ -1288,6 +1288,35 @@
           "Value": 60
         }
       }
+    },
+    "88DB44E520018A55": {
+      "Key": "88DB44E520018A55",
+      "Title": "Stop Flow With Status",
+      "NodeType": "GeneralStopFlowWithStatus",
+      "LocationX": 2296,
+      "LocationY": 1994,
+      "Properties": {
+        "Status Message": {
+          "Type": "TypeString",
+          "Value": "Errors running IOMeter"
+        },
+        "Status Color": {
+          "Type": "TypeItemSwitch",
+          "Value": "RED"
+        },
+        "Send Email": {
+          "Type": "TypeBoolean",
+          "Value": true
+        },
+        "Recipients": {
+          "Type": "TypeString",
+          "Value": "[DEFAULT_RECIPIENTS]"
+        },
+        "Priority": {
+          "Type": "TypeItemSwitch",
+          "Value": "Normal"
+        }
+      }
     }
   },
   "Connections": [
@@ -1715,6 +1744,16 @@
       "FromNodeKey": "88DB41D04402A9E8",
       "FromNodePort": "Errors",
       "ToNodeKey": "88DB3B889BB3C130"
+    },
+    {
+      "FromNodeKey": "88DAFDA003B477D6",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB44E520018A55"
+    },
+    {
+      "FromNodeKey": "88DAFE4CDE90BE6A",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB44E520018A55"
     }
   ]
 }

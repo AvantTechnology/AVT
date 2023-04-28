@@ -385,35 +385,6 @@
         }
       }
     },
-    "88DB3C46687A8FAC": {
-      "Key": "88DB3C46687A8FAC",
-      "Title": "BMC Send Shutdown",
-      "NodeType": "ASRockBMCSendShutdown",
-      "LocationX": 752,
-      "LocationY": 565,
-      "Properties": {
-        "BMC IP": {
-          "Type": "TypeString",
-          "ReferenceKey": "BMCIP"
-        },
-        "User Name": {
-          "Type": "TypeString",
-          "Value": "engineer"
-        },
-        "Password": {
-          "Type": "TypeString",
-          "Value": "engineer1"
-        },
-        "Retries": {
-          "Type": "TypeInteger",
-          "Value": 5
-        },
-        "Timeout Seconds": {
-          "Type": "TypeInteger",
-          "Value": 60
-        }
-      }
-    },
     "88DB3C46966AC565": {
       "Key": "88DB3C46966AC565",
       "Title": "BMC Send Power On",
@@ -482,10 +453,6 @@
         "Only Check Found Drives": {
           "Type": "TypeBoolean",
           "Value": true
-        },
-        "Target Transfer Mode": {
-          "Type": "TypeString",
-          "Value": "PCIe 4.0 x4 | PCIe 4.0 x4"
         },
         "Log Errors": {
           "Type": "TypeBoolean",
@@ -1158,7 +1125,7 @@
       "Properties": {
         "Go To Node Key": {
           "Type": "TypeString",
-          "Value": "88DB3C46687A8FAC"
+          "Value": "88DB480728007D37"
         }
       }
     },
@@ -1429,7 +1396,7 @@
       "Properties": {
         "Go To Node Key": {
           "Type": "TypeString",
-          "Value": "88DB3C46687A8FAC"
+          "Value": "88DB480728007D37"
         }
       }
     },
@@ -1656,6 +1623,14 @@
           "Value": 60
         }
       }
+    },
+    "88DB480728007D37": {
+      "Key": "88DB480728007D37",
+      "Title": "Client System Send Shutdown",
+      "NodeType": "ClientSystemSendShutdown",
+      "LocationX": 755,
+      "LocationY": 714,
+      "Properties": {}
     }
   },
   "Connections": [
@@ -1868,11 +1843,6 @@
       "FromNodeKey": "88DB401EDDA231B7",
       "FromNodePort": "Interval",
       "ToNodeKey": "88DB40233EEE9DF8"
-    },
-    {
-      "FromNodeKey": "88DB40258828E15B",
-      "FromNodePort": "True",
-      "ToNodeKey": "88DB3C46687A8FAC"
     },
     {
       "FromNodeKey": "88DB403B4193F536",
@@ -2110,11 +2080,6 @@
       "ToNodeKey": "88DB4049B2F225D3"
     },
     {
-      "FromNodeKey": "88DB3C46687A8FAC",
-      "FromNodePort": "Success",
-      "ToNodeKey": "88DB41C23415B837"
-    },
-    {
       "FromNodeKey": "88DB41C23415B837",
       "FromNodePort": "Success",
       "ToNodeKey": "88DB3CF49A9D1645"
@@ -2143,6 +2108,16 @@
       "FromNodeKey": "88DB41C275E7A8A8",
       "FromNodePort": "Errors",
       "ToNodeKey": "88DB3B889BB3C130"
+    },
+    {
+      "FromNodeKey": "88DB480728007D37",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DB41C23415B837"
+    },
+    {
+      "FromNodeKey": "88DB40258828E15B",
+      "FromNodePort": "True",
+      "ToNodeKey": "88DB480728007D37"
     }
   ]
 }

@@ -760,35 +760,6 @@
         }
       }
     },
-    "88DB3C46687A8FAC": {
-      "Key": "88DB3C46687A8FAC",
-      "Title": "BMC Send Shutdown",
-      "NodeType": "ASRockBMCSendShutdown",
-      "LocationX": -771,
-      "LocationY": 510,
-      "Properties": {
-        "BMC IP": {
-          "Type": "TypeString",
-          "ReferenceKey": "BMCIP"
-        },
-        "User Name": {
-          "Type": "TypeString",
-          "Value": "engineer"
-        },
-        "Password": {
-          "Type": "TypeString",
-          "Value": "engineer1"
-        },
-        "Retries": {
-          "Type": "TypeInteger",
-          "Value": 5
-        },
-        "Timeout Seconds": {
-          "Type": "TypeInteger",
-          "Value": 60
-        }
-      }
-    },
     "88DB3C46966AC565": {
       "Key": "88DB3C46966AC565",
       "Title": "BMC Send Power On",
@@ -857,10 +828,6 @@
         "Only Check Found Drives": {
           "Type": "TypeBoolean",
           "Value": true
-        },
-        "Target Transfer Mode": {
-          "Type": "TypeString",
-          "Value": "PCIe 4.0 x4 | PCIe 4.0 x4"
         },
         "Log Errors": {
           "Type": "TypeBoolean",
@@ -1368,6 +1335,14 @@
           "Value": "88DB3CF4DF5EDA69"
         }
       }
+    },
+    "88DB48067ABE8754": {
+      "Key": "88DB48067ABE8754",
+      "Title": "Client System Send Shutdown",
+      "NodeType": "ClientSystemSendShutdown",
+      "LocationX": -770,
+      "LocationY": 643,
+      "Properties": {}
     }
   },
   "Connections": [
@@ -1612,11 +1587,6 @@
       "ToNodeKey": "88DB3B894159A5CD"
     },
     {
-      "FromNodeKey": "88DAFE3107F3FB6F",
-      "FromNodePort": "True",
-      "ToNodeKey": "88DB3C46687A8FAC"
-    },
-    {
       "FromNodeKey": "88DB3B880D86146F",
       "FromNodePort": "Success",
       "ToNodeKey": "88DB3C46BB4B42BF"
@@ -1752,11 +1722,6 @@
       "ToNodeKey": "88DAFE2BC4161974"
     },
     {
-      "FromNodeKey": "88DB3C46687A8FAC",
-      "FromNodePort": "Success",
-      "ToNodeKey": "88DB41D01D7B60B1"
-    },
-    {
       "FromNodeKey": "88DB41D01D7B60B1",
       "FromNodePort": "Success",
       "ToNodeKey": "88DB3CF49A9D1645"
@@ -1830,6 +1795,16 @@
       "FromNodeKey": "88DAFE3674ABE3DC",
       "FromNodePort": "Errors",
       "ToNodeKey": "88DB4665648CFA10"
+    },
+    {
+      "FromNodeKey": "88DB48067ABE8754",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DB41D01D7B60B1"
+    },
+    {
+      "FromNodeKey": "88DAFE3107F3FB6F",
+      "FromNodePort": "True",
+      "ToNodeKey": "88DB48067ABE8754"
     }
   ]
 }

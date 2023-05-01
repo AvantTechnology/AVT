@@ -171,8 +171,8 @@
       "Key": "88DB3ACBB6902E82",
       "Title": "Check if cycle 0",
       "NodeType": "CycleCheck",
-      "LocationX": 24,
-      "LocationY": 8318,
+      "LocationX": 37,
+      "LocationY": 9462,
       "Properties": {
         "Compare Operation": {
           "Type": "TypeItemSwitch",
@@ -188,8 +188,8 @@
       "Key": "88DB3ACC0B12A29D",
       "Title": "Increment Step",
       "NodeType": "StepIncrement",
-      "LocationX": 63,
-      "LocationY": 8490,
+      "LocationX": 76,
+      "LocationY": 9634,
       "Properties": {
         "Increment Amount": {
           "Type": "TypeInteger",
@@ -201,8 +201,8 @@
       "Key": "88DB3ACC1B4D7726",
       "Title": "Check if step out of range",
       "NodeType": "StepCheck",
-      "LocationX": 63,
-      "LocationY": 8648,
+      "LocationX": 76,
+      "LocationY": 9792,
       "Properties": {
         "Compare Operation": {
           "Type": "TypeItemSwitch",
@@ -218,8 +218,8 @@
       "Key": "88DB3ACC3058A1A7",
       "Title": "Increment Cycle",
       "NodeType": "CycleIncrement",
-      "LocationX": -348,
-      "LocationY": 8883,
+      "LocationX": -335,
+      "LocationY": 10027,
       "Properties": {
         "Increment Amount": {
           "Type": "TypeInteger",
@@ -231,8 +231,8 @@
       "Key": "88DB3ACC47550C12",
       "Title": "Set Step",
       "NodeType": "StepSet",
-      "LocationX": -347,
-      "LocationY": 9045,
+      "LocationX": -334,
+      "LocationY": 10189,
       "Properties": {
         "Set Value": {
           "Type": "TypeInteger",
@@ -244,8 +244,8 @@
       "Key": "88DB3ACC771A8C8D",
       "Title": "Go To Entry Node",
       "NodeType": "GeneralGoToEntry",
-      "LocationX": 103,
-      "LocationY": 9240,
+      "LocationX": 116,
+      "LocationY": 10384,
       "Properties": {}
     },
     "88DB3ACE1CCF8B37": {
@@ -1748,6 +1748,168 @@
           "Value": "Normal"
         }
       }
+    },
+    "88DB4A8A7C99B90F": {
+      "Key": "88DB4A8A7C99B90F",
+      "Title": "Check Ext SMART GBB",
+      "NodeType": "DrivesCheckSmartAttributeValueChanged",
+      "LocationX": 26,
+      "LocationY": 8323,
+      "Properties": {
+        "Only Check Found Drives": {
+          "Type": "TypeBoolean",
+          "Value": true
+        },
+        "SMART Attribute ID": {
+          "Type": "TypeString",
+          "Value": "ext_total_later_bad_block_count"
+        },
+        "Ignore Missing Attribute ID": {
+          "Type": "TypeBoolean",
+          "Value": true
+        },
+        "Log Errors (Changed/Missing Values)": {
+          "Type": "TypeBoolean",
+          "Value": true
+        }
+      }
+    },
+    "88DB4A8AD07AB3BB": {
+      "Key": "88DB4A8AD07AB3BB",
+      "Title": "Check Ext SMART Erase Fail Count",
+      "NodeType": "DrivesCheckSmartAttributeValueChanged",
+      "LocationX": 26,
+      "LocationY": 8689,
+      "Properties": {
+        "Only Check Found Drives": {
+          "Type": "TypeBoolean",
+          "Value": true
+        },
+        "SMART Attribute ID": {
+          "Type": "TypeString",
+          "Value": "ext_erase_failure_count"
+        },
+        "Ignore Missing Attribute ID": {
+          "Type": "TypeBoolean",
+          "Value": true
+        },
+        "Log Errors (Changed/Missing Values)": {
+          "Type": "TypeBoolean",
+          "Value": true
+        }
+      }
+    },
+    "88DB4A8AED0B1BE8": {
+      "Key": "88DB4A8AED0B1BE8",
+      "Title": "Check Ext SMART Program Fail Count",
+      "NodeType": "DrivesCheckSmartAttributeValueChanged",
+      "LocationX": 26,
+      "LocationY": 9048,
+      "Properties": {
+        "Only Check Found Drives": {
+          "Type": "TypeBoolean",
+          "Value": true
+        },
+        "SMART Attribute ID": {
+          "Type": "TypeString",
+          "Value": "ext_program_fail_count"
+        },
+        "Ignore Missing Attribute ID": {
+          "Type": "TypeBoolean",
+          "Value": true
+        },
+        "Log Errors (Changed/Missing Values)": {
+          "Type": "TypeBoolean",
+          "Value": true
+        }
+      }
+    },
+    "88DB4A8B40BE7C9A": {
+      "Key": "88DB4A8B40BE7C9A",
+      "Title": "Stop Flow With Status",
+      "NodeType": "GeneralStopFlowWithStatus",
+      "LocationX": 584,
+      "LocationY": 8349,
+      "Properties": {
+        "Status Message": {
+          "Type": "TypeString",
+          "Value": "At least one drive has GBB attribute changed"
+        },
+        "Status Color": {
+          "Type": "TypeItemSwitch",
+          "Value": "RED"
+        },
+        "Send Email": {
+          "Type": "TypeBoolean",
+          "Value": false
+        },
+        "Recipients": {
+          "Type": "TypeString",
+          "Value": "[DEFAULT_RECIPIENTS]"
+        },
+        "Priority": {
+          "Type": "TypeItemSwitch",
+          "Value": "Normal"
+        }
+      }
+    },
+    "88DB4A8B5065ED7C": {
+      "Key": "88DB4A8B5065ED7C",
+      "Title": "Stop Flow With Status",
+      "NodeType": "GeneralStopFlowWithStatus",
+      "LocationX": 580,
+      "LocationY": 8701,
+      "Properties": {
+        "Status Message": {
+          "Type": "TypeString",
+          "Value": "At least one drive has erase fail count changed"
+        },
+        "Status Color": {
+          "Type": "TypeItemSwitch",
+          "Value": "RED"
+        },
+        "Send Email": {
+          "Type": "TypeBoolean",
+          "Value": false
+        },
+        "Recipients": {
+          "Type": "TypeString",
+          "Value": "[DEFAULT_RECIPIENTS]"
+        },
+        "Priority": {
+          "Type": "TypeItemSwitch",
+          "Value": "Normal"
+        }
+      }
+    },
+    "88DB4A8B5CFC8CDC": {
+      "Key": "88DB4A8B5CFC8CDC",
+      "Title": "Stop Flow With Status",
+      "NodeType": "GeneralStopFlowWithStatus",
+      "LocationX": 579,
+      "LocationY": 9069,
+      "Properties": {
+        "Status Message": {
+          "Type": "TypeString",
+          "Value": "At least one drive has program fail count changed"
+        },
+        "Status Color": {
+          "Type": "TypeItemSwitch",
+          "Value": "RED"
+        },
+        "Send Email": {
+          "Type": "TypeBoolean",
+          "Value": false
+        },
+        "Recipients": {
+          "Type": "TypeString",
+          "Value": "[DEFAULT_RECIPIENTS]"
+        },
+        "Priority": {
+          "Type": "TypeItemSwitch",
+          "Value": "Normal"
+        }
+      }
     }
   },
   "Connections": [
@@ -1890,11 +2052,6 @@
       "FromNodeKey": "88DB3D1E0BED74A9",
       "FromNodePort": "Some Drives Attribute Changed",
       "ToNodeKey": "88DB3D1E14BF7776"
-    },
-    {
-      "FromNodeKey": "88DB3D1E0BED74A9",
-      "FromNodePort": "All Drives Attribute Unchanged",
-      "ToNodeKey": "88DB3ACBB6902E82"
     },
     {
       "FromNodeKey": "88DB3C5B6D193B8D",
@@ -2275,6 +2432,41 @@
       "FromNodeKey": "88DB4A82BFE9AF3B",
       "FromNodePort": "Some Drive Checks False",
       "ToNodeKey": "88DB4A82F1923858"
+    },
+    {
+      "FromNodeKey": "88DB4A8A7C99B90F",
+      "FromNodePort": "Some Drives Attribute Changed",
+      "ToNodeKey": "88DB4A8B40BE7C9A"
+    },
+    {
+      "FromNodeKey": "88DB4A8AD07AB3BB",
+      "FromNodePort": "Some Drives Attribute Changed",
+      "ToNodeKey": "88DB4A8B5065ED7C"
+    },
+    {
+      "FromNodeKey": "88DB4A8AED0B1BE8",
+      "FromNodePort": "Some Drives Attribute Changed",
+      "ToNodeKey": "88DB4A8B5CFC8CDC"
+    },
+    {
+      "FromNodeKey": "88DB4A8AD07AB3BB",
+      "FromNodePort": "All Drives Attribute Unchanged",
+      "ToNodeKey": "88DB4A8AED0B1BE8"
+    },
+    {
+      "FromNodeKey": "88DB4A8A7C99B90F",
+      "FromNodePort": "All Drives Attribute Unchanged",
+      "ToNodeKey": "88DB4A8AD07AB3BB"
+    },
+    {
+      "FromNodeKey": "88DB3D1E0BED74A9",
+      "FromNodePort": "All Drives Attribute Unchanged",
+      "ToNodeKey": "88DB4A8A7C99B90F"
+    },
+    {
+      "FromNodeKey": "88DB4A8AED0B1BE8",
+      "FromNodePort": "All Drives Attribute Unchanged",
+      "ToNodeKey": "88DB3ACBB6902E82"
     }
   ]
 }

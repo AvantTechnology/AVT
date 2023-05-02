@@ -623,7 +623,7 @@
         },
         "Status Color": {
           "Type": "TypeItemSwitch",
-          "Value": "GREY"
+          "Value": "RED"
         },
         "Send Email": {
           "Type": "TypeBoolean",
@@ -677,7 +677,7 @@
         },
         "Status Color": {
           "Type": "TypeItemSwitch",
-          "Value": "GREY"
+          "Value": "RED"
         },
         "Send Email": {
           "Type": "TypeBoolean",
@@ -2367,7 +2367,7 @@
         },
         "Send Email": {
           "Type": "TypeBoolean",
-          "Value": false
+          "Value": true
         },
         "Recipients": {
           "Type": "TypeString",
@@ -2471,7 +2471,7 @@
         },
         "Send Email": {
           "Type": "TypeBoolean",
-          "Value": false
+          "Value": true
         },
         "Recipients": {
           "Type": "TypeString",
@@ -2500,7 +2500,7 @@
         },
         "Send Email": {
           "Type": "TypeBoolean",
-          "Value": false
+          "Value": true
         },
         "Recipients": {
           "Type": "TypeString",
@@ -2529,7 +2529,7 @@
         },
         "Send Email": {
           "Type": "TypeBoolean",
-          "Value": false
+          "Value": true
         },
         "Recipients": {
           "Type": "TypeString",

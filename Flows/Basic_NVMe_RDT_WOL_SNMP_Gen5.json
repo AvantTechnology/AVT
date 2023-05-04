@@ -44,8 +44,8 @@
       "Key": "88DAFDA0368B22E1",
       "Title": "Rebooting System",
       "NodeType": "ClientSystemSendReboot",
-      "LocationX": 5,
-      "LocationY": 1026,
+      "LocationX": 11,
+      "LocationY": 963,
       "Properties": {}
     },
     "88DAFDA0A1DDF3A5": {
@@ -65,8 +65,8 @@
       "Key": "88DAFDA0C184F6DE",
       "Title": "Waiting for client connection...",
       "NodeType": "ClientConnectionWaitAlive",
-      "LocationX": 6,
-      "LocationY": 1286,
+      "LocationX": 12,
+      "LocationY": 1223,
       "Properties": {
         "Timeout Seconds": {
           "Type": "TypeInteger",
@@ -146,7 +146,7 @@
       "Key": "88DAFE3107DB8E6D",
       "Title": "Check if Warm Boot Step",
       "NodeType": "StepCheckRange",
-      "LocationX": 4,
+      "LocationX": 12,
       "LocationY": 599,
       "Properties": {
         "From Value": {
@@ -163,7 +163,7 @@
       "Key": "88DAFE3107F3FB6F",
       "Title": "Check if Cold Boot Step",
       "NodeType": "StepCheckRange",
-      "LocationX": -771,
+      "LocationX": -742,
       "LocationY": 258,
       "Properties": {
         "From Value": {
@@ -214,8 +214,8 @@
       "Key": "88DAFE3674ABE3DC",
       "Title": "Waiting for client to disconnect...",
       "NodeType": "ClientConnectionWaitDead",
-      "LocationX": 6,
-      "LocationY": 1140,
+      "LocationX": 12,
+      "LocationY": 1077,
       "Properties": {
         "Timeout Seconds": {
           "Type": "TypeInteger",
@@ -520,8 +520,8 @@
       "Key": "88DB3AC9F1098B14",
       "Title": "Go To Send WOL",
       "NodeType": "GeneralGoToNode",
-      "LocationX": -1366,
-      "LocationY": 2785,
+      "LocationX": -1387,
+      "LocationY": 2658,
       "Properties": {
         "Go To Node Key": {
           "Type": "TypeString",
@@ -533,8 +533,8 @@
       "Key": "88DB3ACB26F918A9",
       "Title": "Waiting for client connection...",
       "NodeType": "ClientConnectionWaitAlive",
-      "LocationX": -741,
-      "LocationY": 2492,
+      "LocationX": -738,
+      "LocationY": 2367,
       "Properties": {
         "Timeout Seconds": {
           "Type": "TypeInteger",
@@ -697,8 +697,8 @@
       "Key": "88DB3B889BB3C130",
       "Title": "Send email about issue turning on",
       "NodeType": "EmailSendSnapshot",
-      "LocationX": -1389,
-      "LocationY": 2489,
+      "LocationX": -1386,
+      "LocationY": 2367,
       "Properties": {
         "Recipients": {
           "Type": "TypeString",
@@ -722,8 +722,8 @@
       "Key": "88DB3B894159A5CD",
       "Title": "Stop Flow With Status",
       "NodeType": "GeneralStopFlowWithStatus",
-      "LocationX": -411,
-      "LocationY": 2504,
+      "LocationX": -401,
+      "LocationY": 2379,
       "Properties": {
         "Status Message": {
           "Type": "TypeString",
@@ -1115,8 +1115,8 @@
       "Key": "88DB4665648CFA10",
       "Title": "Send email about warm boot error",
       "NodeType": "EmailSendSnapshot",
-      "LocationX": 132,
-      "LocationY": 1461,
+      "LocationX": 138,
+      "LocationY": 1398,
       "Properties": {
         "Recipients": {
           "Type": "TypeString",
@@ -1140,12 +1140,12 @@
       "Key": "88DB46659735F522",
       "Title": "Go To Force Power Down",
       "NodeType": "GeneralGoToNode",
-      "LocationX": 161,
-      "LocationY": 2213,
+      "LocationX": 167,
+      "LocationY": 2150,
       "Properties": {
         "Go To Node Key": {
           "Type": "TypeString",
-          "Value": "88DB4C25385C08021"
+          "Value": "88DB4C25385C0802"
         }
       }
     },
@@ -1153,8 +1153,8 @@
       "Key": "88DB4665C286052A",
       "Title": "Go To Turn on backplane",
       "NodeType": "GeneralGoToNode",
-      "LocationX": 250,
-      "LocationY": 2036,
+      "LocationX": 256,
+      "LocationY": 1973,
       "Properties": {
         "Go To Node Key": {
           "Type": "TypeString",
@@ -1528,8 +1528,8 @@
       "Key": "88DB4C22EAA7D1AC",
       "Title": "SNMP Get Outlet Current Draw",
       "NodeType": "SNMPGetOutletCurrentDraw",
-      "LocationX": 161,
-      "LocationY": 1759,
+      "LocationX": 167,
+      "LocationY": 1696,
       "Properties": {
         "SNMP Device IP": {
           "Type": "TypeString",

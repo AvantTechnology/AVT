@@ -37,7 +37,7 @@
       "Properties": {
         "Timeout Seconds": {
           "Type": "TypeInteger",
-          "Value": 30
+          "Value": 60
         }
       }
     },
@@ -50,7 +50,7 @@
       "Properties": {
         "Timeout Seconds": {
           "Type": "TypeInteger",
-          "Value": 30
+          "Value": 60
         }
       }
     },
@@ -851,7 +851,7 @@
       "Properties": {
         "Timeout Seconds": {
           "Type": "TypeInteger",
-          "Value": 30
+          "Value": 60
         }
       }
     },
@@ -885,7 +885,7 @@
       "Properties": {
         "Timeout Seconds": {
           "Type": "TypeInteger",
-          "Value": 30
+          "Value": 60
         }
       }
     },
@@ -1340,7 +1340,7 @@
       "Properties": {
         "Timeout Seconds": {
           "Type": "TypeInteger",
-          "Value": 30
+          "Value": 60
         }
       }
     },
@@ -1715,7 +1715,7 @@
       "Properties": {
         "Timeout Seconds": {
           "Type": "TypeInteger",
-          "Value": 30
+          "Value": 60
         }
       }
     },
@@ -1834,7 +1834,7 @@
       "Properties": {
         "Set Point Celsius": {
           "Type": "TypeDouble",
-          "Value": 50.0
+          "Value": 44.0
         },
         "Timeout Milliseconds": {
           "Type": "TypeInteger",
@@ -1851,7 +1851,7 @@
       "Properties": {
         "Set Point Celsius": {
           "Type": "TypeDouble",
-          "Value": 0.0
+          "Value": -10.0
         },
         "Timeout Milliseconds": {
           "Type": "TypeInteger",
@@ -1868,7 +1868,7 @@
       "Properties": {
         "Target": {
           "Type": "TypeDouble",
-          "Value": 0.0
+          "Value": -10.0
         },
         "Threshold": {
           "Type": "TypeDouble",
@@ -1889,7 +1889,7 @@
       "Properties": {
         "Target": {
           "Type": "TypeDouble",
-          "Value": 50.0
+          "Value": 44.0
         },
         "Threshold": {
           "Type": "TypeDouble",
@@ -2550,7 +2550,7 @@
       "Properties": {
         "Timeout Seconds": {
           "Type": "TypeInteger",
-          "Value": 30
+          "Value": 60
         }
       }
     },
@@ -2589,7 +2589,7 @@
       "Properties": {
         "Timeout Seconds": {
           "Type": "TypeInteger",
-          "Value": 30
+          "Value": 60
         }
       }
     },
@@ -2628,7 +2628,7 @@
       "Properties": {
         "Timeout Seconds": {
           "Type": "TypeInteger",
-          "Value": 30
+          "Value": 60
         }
       }
     },
@@ -2667,7 +2667,7 @@
       "Properties": {
         "Timeout Seconds": {
           "Type": "TypeInteger",
-          "Value": 30
+          "Value": 60
         }
       }
     },

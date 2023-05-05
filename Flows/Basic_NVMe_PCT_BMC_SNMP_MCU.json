@@ -37,7 +37,7 @@
       "Properties": {
         "Timeout Seconds": {
           "Type": "TypeInteger",
-          "Value": 30
+          "Value": 60
         }
       }
     },
@@ -50,7 +50,7 @@
       "Properties": {
         "Timeout Seconds": {
           "Type": "TypeInteger",
-          "Value": 30
+          "Value": 60
         }
       }
     },
@@ -818,7 +818,7 @@
       "Properties": {
         "Timeout Seconds": {
           "Type": "TypeInteger",
-          "Value": 30
+          "Value": 60
         }
       }
     },
@@ -926,7 +926,7 @@
       "Properties": {
         "Timeout Seconds": {
           "Type": "TypeInteger",
-          "Value": 30
+          "Value": 60
         }
       }
     },
@@ -1191,7 +1191,7 @@
       "Properties": {
         "Timeout Seconds": {
           "Type": "TypeInteger",
-          "Value": 30
+          "Value": 60
         }
       }
     },
@@ -1496,7 +1496,7 @@
       "Properties": {
         "Timeout Seconds": {
           "Type": "TypeInteger",
-          "Value": 30
+          "Value": 60
         }
       }
     },
@@ -1920,7 +1920,7 @@
       "Properties": {
         "Timeout Seconds": {
           "Type": "TypeInteger",
-          "Value": 30
+          "Value": 60
         }
       }
     },
@@ -1959,7 +1959,7 @@
       "Properties": {
         "Timeout Seconds": {
           "Type": "TypeInteger",
-          "Value": 30
+          "Value": 60
         }
       }
     },
@@ -1998,7 +1998,7 @@
       "Properties": {
         "Timeout Seconds": {
           "Type": "TypeInteger",
-          "Value": 30
+          "Value": 60
         }
       }
     },
@@ -2037,7 +2037,7 @@
       "Properties": {
         "Timeout Seconds": {
           "Type": "TypeInteger",
-          "Value": 30
+          "Value": 60
         }
       }
     },

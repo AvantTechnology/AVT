@@ -120,7 +120,7 @@
         },
         "Priority": {
           "Type": "TypeItemSwitch",
-          "Value": "Normal"
+          "Value": "High"
         }
       }
     },
@@ -256,7 +256,7 @@
         },
         "Priority": {
           "Type": "TypeItemSwitch",
-          "Value": "Normal"
+          "Value": "High"
         }
       }
     },
@@ -351,7 +351,7 @@
         },
         "Priority": {
           "Type": "TypeItemSwitch",
-          "Value": "Normal"
+          "Value": "High"
         }
       }
     },
@@ -468,7 +468,7 @@
         },
         "Priority": {
           "Type": "TypeItemSwitch",
-          "Value": "Normal"
+          "Value": "High"
         }
       }
     },
@@ -635,7 +635,7 @@
         },
         "Priority": {
           "Type": "TypeItemSwitch",
-          "Value": "Normal"
+          "Value": "High"
         }
       }
     },
@@ -689,7 +689,7 @@
         },
         "Priority": {
           "Type": "TypeItemSwitch",
-          "Value": "Normal"
+          "Value": "High"
         }
       }
     },
@@ -718,7 +718,7 @@
         },
         "Priority": {
           "Type": "TypeItemSwitch",
-          "Value": "Normal"
+          "Value": "High"
         }
       }
     },
@@ -838,7 +838,7 @@
         },
         "Priority": {
           "Type": "TypeItemSwitch",
-          "Value": "Normal"
+          "Value": "High"
         }
       }
     },
@@ -922,7 +922,7 @@
         },
         "Priority": {
           "Type": "TypeItemSwitch",
-          "Value": "Normal"
+          "Value": "High"
         }
       }
     },
@@ -1377,7 +1377,7 @@
         },
         "Priority": {
           "Type": "TypeItemSwitch",
-          "Value": "Normal"
+          "Value": "High"
         }
       }
     },
@@ -1752,7 +1752,7 @@
         },
         "Priority": {
           "Type": "TypeItemSwitch",
-          "Value": "Normal"
+          "Value": "High"
         }
       }
     },
@@ -1952,7 +1952,7 @@
         },
         "Priority": {
           "Type": "TypeItemSwitch",
-          "Value": "Normal"
+          "Value": "High"
         }
       }
     },
@@ -2375,7 +2375,7 @@
         },
         "Priority": {
           "Type": "TypeItemSwitch",
-          "Value": "Normal"
+          "Value": "High"
         }
       }
     },
@@ -2479,7 +2479,7 @@
         },
         "Priority": {
           "Type": "TypeItemSwitch",
-          "Value": "Normal"
+          "Value": "High"
         }
       }
     },
@@ -2508,7 +2508,7 @@
         },
         "Priority": {
           "Type": "TypeItemSwitch",
-          "Value": "Normal"
+          "Value": "High"
         }
       }
     },
@@ -2537,7 +2537,7 @@
         },
         "Priority": {
           "Type": "TypeItemSwitch",
-          "Value": "Normal"
+          "Value": "High"
         }
       }
     },

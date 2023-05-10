@@ -418,8 +418,8 @@
       "Key": "88DB3C59971F43CE",
       "Title": "Check Drives Transfer Modes",
       "NodeType": "DrivesCheckTransferMode",
-      "LocationX": 18,
-      "LocationY": 5868,
+      "LocationX": 48,
+      "LocationY": 5888,
       "Properties": {
         "Only Check Found Drives": {
           "Type": "TypeBoolean",
@@ -2538,6 +2538,64 @@
           "Value": "Attempting to recover all not found drives with a power cycle"
         }
       }
+    },
+    "88DB518E7848C3A4": {
+      "Key": "88DB518E7848C3A4",
+      "Title": "Stop Flow With Status",
+      "NodeType": "GeneralStopFlowWithStatus",
+      "LocationX": 97,
+      "LocationY": 2447,
+      "Properties": {
+        "Status Message": {
+          "Type": "TypeString",
+          "Value": "Unable to send BMC commands"
+        },
+        "Status Color": {
+          "Type": "TypeItemSwitch",
+          "Value": "RED"
+        },
+        "Send Email": {
+          "Type": "TypeBoolean",
+          "Value": false
+        },
+        "Recipients": {
+          "Type": "TypeString",
+          "Value": "[DEFAULT_RECIPIENTS]"
+        },
+        "Priority": {
+          "Type": "TypeItemSwitch",
+          "Value": "High"
+        }
+      }
+    },
+    "88DB518E8B1E7EAF": {
+      "Key": "88DB518E8B1E7EAF",
+      "Title": "Stop Flow With Status",
+      "NodeType": "GeneralStopFlowWithStatus",
+      "LocationX": 6953,
+      "LocationY": 1823,
+      "Properties": {
+        "Status Message": {
+          "Type": "TypeString",
+          "Value": "Unable to send BMC commands"
+        },
+        "Status Color": {
+          "Type": "TypeItemSwitch",
+          "Value": "RED"
+        },
+        "Send Email": {
+          "Type": "TypeBoolean",
+          "Value": false
+        },
+        "Recipients": {
+          "Type": "TypeString",
+          "Value": "[DEFAULT_RECIPIENTS]"
+        },
+        "Priority": {
+          "Type": "TypeItemSwitch",
+          "Value": "High"
+        }
+      }
     }
   },
   "Connections": [
@@ -2640,11 +2698,6 @@
       "FromNodeKey": "88DB3B880D86146F",
       "FromNodePort": "Errors",
       "ToNodeKey": "88DB3C46BB4B42BF"
-    },
-    {
-      "FromNodeKey": "88DAFE2C0B639BE5",
-      "FromNodePort": "Success",
-      "ToNodeKey": "88DB3C59971F43CE"
     },
     {
       "FromNodeKey": "88DAFE2BA9FB0B2F",
@@ -2970,11 +3023,6 @@
       "FromNodeKey": "88DB4A82ADF6EDC5",
       "FromNodePort": "Success",
       "ToNodeKey": "88DAFE2C0B639BE5"
-    },
-    {
-      "FromNodeKey": "88DB3C59971F43CE",
-      "FromNodePort": "All Drive Transfer Modes Okay",
-      "ToNodeKey": "88DB4A82BFE9AF3B"
     },
     {
       "FromNodeKey": "88DB4A82BFE9AF3B",
@@ -3405,6 +3453,36 @@
       "FromNodeKey": "88DB4FE4EBDB5F7C",
       "FromNodePort": "Errors",
       "ToNodeKey": "88DB4FE504D0EC8D"
+    },
+    {
+      "FromNodeKey": "88DAFE2C0B639BE5",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DB4A82BFE9AF3B"
+    },
+    {
+      "FromNodeKey": "88DB3C59971F43CE",
+      "FromNodePort": "All Drive Transfer Modes Okay",
+      "ToNodeKey": "88DB4A82BFE9AF3B"
+    },
+    {
+      "FromNodeKey": "88DB3C46BB4B42BF",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB518E7848C3A4"
+    },
+    {
+      "FromNodeKey": "88DB3C46966AC565",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB518E7848C3A4"
+    },
+    {
+      "FromNodeKey": "88DB4FE532CD08E0",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB518E8B1E7EAF"
+    },
+    {
+      "FromNodeKey": "88DB4FE5330F6C1E",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB518E8B1E7EAF"
     }
   ]
 }

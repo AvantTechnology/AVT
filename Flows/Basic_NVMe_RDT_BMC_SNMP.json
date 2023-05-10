@@ -877,7 +877,7 @@
       "Key": "88DB3CF4DF5EDA69",
       "Title": "Turn on backplane",
       "NodeType": "SNMPSetOutletStatus",
-      "LocationX": -740,
+      "LocationX": -741,
       "LocationY": 1494,
       "Properties": {
         "SNMP Device IP": {
@@ -1958,7 +1958,7 @@
       "Key": "88DB4FE5D1E67753",
       "Title": "BMC Send Power Off",
       "NodeType": "ASRockBMCSendPowerOff",
-      "LocationX": 3550,
+      "LocationX": 3549,
       "LocationY": 1100,
       "Properties": {
         "BMC IP": {
@@ -2026,6 +2026,64 @@
         "Body": {
           "Type": "TypeString",
           "Value": "Attempting to recover all not found drives with a power cycle"
+        }
+      }
+    },
+    "88DB518D8EE49BFA": {
+      "Key": "88DB518D8EE49BFA",
+      "Title": "Stop Flow With Status",
+      "NodeType": "GeneralStopFlowWithStatus",
+      "LocationX": -1415,
+      "LocationY": 2109,
+      "Properties": {
+        "Status Message": {
+          "Type": "TypeString",
+          "Value": "Errors sending BMC commands"
+        },
+        "Status Color": {
+          "Type": "TypeItemSwitch",
+          "Value": "RED"
+        },
+        "Send Email": {
+          "Type": "TypeBoolean",
+          "Value": false
+        },
+        "Recipients": {
+          "Type": "TypeString",
+          "Value": "[DEFAULT_RECIPIENTS]"
+        },
+        "Priority": {
+          "Type": "TypeItemSwitch",
+          "Value": "High"
+        }
+      }
+    },
+    "88DB518DABE6F435": {
+      "Key": "88DB518DABE6F435",
+      "Title": "Stop Flow With Status",
+      "NodeType": "GeneralStopFlowWithStatus",
+      "LocationX": 3534,
+      "LocationY": 1666,
+      "Properties": {
+        "Status Message": {
+          "Type": "TypeString",
+          "Value": "Errors sending BMC commands"
+        },
+        "Status Color": {
+          "Type": "TypeItemSwitch",
+          "Value": "RED"
+        },
+        "Send Email": {
+          "Type": "TypeBoolean",
+          "Value": false
+        },
+        "Recipients": {
+          "Type": "TypeString",
+          "Value": "[DEFAULT_RECIPIENTS]"
+        },
+        "Priority": {
+          "Type": "TypeItemSwitch",
+          "Value": "High"
         }
       }
     }
@@ -2740,6 +2798,26 @@
       "FromNodeKey": "88DAFD9E409B4C4D",
       "FromNodePort": "All Drives Not Found",
       "ToNodeKey": "88DB4FE5E4E28338"
+    },
+    {
+      "FromNodeKey": "88DB3C46BB4B42BF",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB518D8EE49BFA"
+    },
+    {
+      "FromNodeKey": "88DB3C46966AC565",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB518D8EE49BFA"
+    },
+    {
+      "FromNodeKey": "88DB4FE5D1AE4BD3",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB518DABE6F435"
+    },
+    {
+      "FromNodeKey": "88DB4FE5D1E67753",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB518DABE6F435"
     }
   ]
 }

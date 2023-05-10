@@ -3168,6 +3168,64 @@
       "LocationX": -2972,
       "LocationY": -746,
       "Properties": {}
+    },
+    "88DB518E2C2E3BA9": {
+      "Key": "88DB518E2C2E3BA9",
+      "Title": "Stop Flow With Status",
+      "NodeType": "GeneralStopFlowWithStatus",
+      "LocationX": -3663,
+      "LocationY": -1764,
+      "Properties": {
+        "Status Message": {
+          "Type": "TypeString",
+          "Value": "Unable to send BMC command"
+        },
+        "Status Color": {
+          "Type": "TypeItemSwitch",
+          "Value": "RED"
+        },
+        "Send Email": {
+          "Type": "TypeBoolean",
+          "Value": false
+        },
+        "Recipients": {
+          "Type": "TypeString",
+          "Value": "[DEFAULT_RECIPIENTS]"
+        },
+        "Priority": {
+          "Type": "TypeItemSwitch",
+          "Value": "High"
+        }
+      }
+    },
+    "88DB518E40415B8A": {
+      "Key": "88DB518E40415B8A",
+      "Title": "Stop Flow With Status",
+      "NodeType": "GeneralStopFlowWithStatus",
+      "LocationX": 2355,
+      "LocationY": 2375,
+      "Properties": {
+        "Status Message": {
+          "Type": "TypeString",
+          "Value": "Unable to send BMC command"
+        },
+        "Status Color": {
+          "Type": "TypeItemSwitch",
+          "Value": "RED"
+        },
+        "Send Email": {
+          "Type": "TypeBoolean",
+          "Value": false
+        },
+        "Recipients": {
+          "Type": "TypeString",
+          "Value": "[DEFAULT_RECIPIENTS]"
+        },
+        "Priority": {
+          "Type": "TypeItemSwitch",
+          "Value": "High"
+        }
+      }
     }
   },
   "Connections": [
@@ -4295,6 +4353,26 @@
       "FromNodeKey": "88DB4FE474E3CDD7",
       "FromNodePort": "Connection Alive",
       "ToNodeKey": "88DB4FE4A4D349EA"
+    },
+    {
+      "FromNodeKey": "88DB4FE47539DEB4",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB518E2C2E3BA9"
+    },
+    {
+      "FromNodeKey": "88DB4FE474FE81C5",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB518E2C2E3BA9"
+    },
+    {
+      "FromNodeKey": "88DB3C46966AC565",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB518E40415B8A"
+    },
+    {
+      "FromNodeKey": "88DB3C46BB4B42BF",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB518E40415B8A"
     }
   ]
 }

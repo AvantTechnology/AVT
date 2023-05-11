@@ -1178,8 +1178,8 @@
       "Key": "88DB404466E81AD1",
       "Title": "Check If Async Step",
       "NodeType": "StepCheck",
-      "LocationX": 4325,
-      "LocationY": 1020,
+      "LocationX": 4055,
+      "LocationY": 977,
       "Properties": {
         "Compare Operation": {
           "Type": "TypeItemSwitch",
@@ -1195,8 +1195,8 @@
       "Key": "88DB4044B6DA003B",
       "Title": "JustIO Write 10GB Block For Async ",
       "NodeType": "WorkloadRunJustIOPCTPreset10GBBlock",
-      "LocationX": 4325,
-      "LocationY": 1291,
+      "LocationX": 4055,
+      "LocationY": 1248,
       "Properties": {
         "Map File Prefix": {
           "Type": "TypeString",
@@ -1252,8 +1252,8 @@
       "Key": "88DB4045CA56E9D2",
       "Title": "Disable regulators",
       "NodeType": "MCUSetPin",
-      "LocationX": 4556,
-      "LocationY": 1874,
+      "LocationX": 4184,
+      "LocationY": 1878,
       "Properties": {
         "Pin": {
           "Type": "TypeInteger",
@@ -1273,8 +1273,8 @@
       "Key": "88DB4046385485EB",
       "Title": "DevCon Remove Drive Models",
       "NodeType": "DevConRemoveDriveModels",
-      "LocationX": 4378,
-      "LocationY": 2130,
+      "LocationX": 4108,
+      "LocationY": 2087,
       "Properties": {
         "Timeout Seconds": {
           "Type": "TypeInteger",
@@ -1286,8 +1286,8 @@
       "Key": "88DB40464877A689",
       "Title": "DevCon Rescan",
       "NodeType": "DevConRescan",
-      "LocationX": 4378,
-      "LocationY": 2296,
+      "LocationX": 4108,
+      "LocationY": 2253,
       "Properties": {
         "Timeout Seconds": {
           "Type": "TypeInteger",
@@ -1299,8 +1299,8 @@
       "Key": "88DB40465FC1695C",
       "Title": "Wait 5 Seconds",
       "NodeType": "GeneralWait",
-      "LocationX": 4378,
-      "LocationY": 2465,
+      "LocationX": 4108,
+      "LocationY": 2422,
       "Properties": {
         "Timeout Seconds": {
           "Type": "TypeInteger",
@@ -1312,8 +1312,8 @@
       "Key": "88DB40466B527906",
       "Title": "Go To Clean Power Cycle",
       "NodeType": "GeneralGoToNode",
-      "LocationX": 4379,
-      "LocationY": 2611,
+      "LocationX": 4109,
+      "LocationY": 2568,
       "Properties": {
         "Go To Node Key": {
           "Type": "TypeString",
@@ -2596,6 +2596,73 @@
           "Value": "High"
         }
       }
+    },
+    "88DB5230B25F2420": {
+      "Key": "88DB5230B25F2420",
+      "Title": "Send Snapshot Email",
+      "NodeType": "EmailSendSnapshot",
+      "LocationX": 4608,
+      "LocationY": 1857,
+      "Properties": {
+        "Recipients": {
+          "Type": "TypeString",
+          "Value": "[DEFAULT_RECIPIENTS]"
+        },
+        "Priority": {
+          "Type": "TypeItemSwitch",
+          "Value": "Normal"
+        },
+        "Subject": {
+          "Type": "TypeString",
+          "Value": "Errors running async power cycle (bluescreen likely) "
+        },
+        "Body": {
+          "Type": "TypeString",
+          "Value": "Errors running async power cycle (bluescreen likely) attempting recovery"
+        }
+      }
+    },
+    "88DB5230DD310406": {
+      "Key": "88DB5230DD310406",
+      "Title": "Client Connection Wait Until Alive",
+      "NodeType": "ClientConnectionWaitAlive",
+      "LocationX": 4608,
+      "LocationY": 2153,
+      "Properties": {
+        "Timeout Seconds": {
+          "Type": "TypeInteger",
+          "Value": 180
+        }
+      }
+    },
+    "88DB5230EE34B8E0": {
+      "Key": "88DB5230EE34B8E0",
+      "Title": "Stop Flow With Status",
+      "NodeType": "GeneralStopFlowWithStatus",
+      "LocationX": 4717,
+      "LocationY": 2286,
+      "Properties": {
+        "Status Message": {
+          "Type": "TypeString",
+          "Value": "Unable to recover after async errors"
+        },
+        "Status Color": {
+          "Type": "TypeItemSwitch",
+          "Value": "RED"
+        },
+        "Send Email": {
+          "Type": "TypeBoolean",
+          "Value": false
+        },
+        "Recipients": {
+          "Type": "TypeString",
+          "Value": "[DEFAULT_RECIPIENTS]"
+        },
+        "Priority": {
+          "Type": "TypeItemSwitch",
+          "Value": "High"
+        }
+      }
     }
   },
   "Connections": [
@@ -3483,6 +3550,31 @@
       "FromNodeKey": "88DB4FE5330F6C1E",
       "FromNodePort": "Errors",
       "ToNodeKey": "88DB518E8B1E7EAF"
+    },
+    {
+      "FromNodeKey": "88DB4044B6DA003B",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB5230B25F2420"
+    },
+    {
+      "FromNodeKey": "88DB5230B25F2420",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DB5230DD310406"
+    },
+    {
+      "FromNodeKey": "88DB5230B25F2420",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB5230DD310406"
+    },
+    {
+      "FromNodeKey": "88DB5230DD310406",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB5230EE34B8E0"
+    },
+    {
+      "FromNodeKey": "88DB5230DD310406",
+      "FromNodePort": "Connection Alive",
+      "ToNodeKey": "88DB40466B527906"
     }
   ]
 }

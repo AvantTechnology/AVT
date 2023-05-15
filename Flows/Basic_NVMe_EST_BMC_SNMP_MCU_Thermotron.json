@@ -58,8 +58,8 @@
       "Key": "88DAFE2C0B639BE5",
       "Title": "Drives Log Temperature",
       "NodeType": "DrivesLogTemperature",
-      "LocationX": 18,
-      "LocationY": 5695,
+      "LocationX": 19,
+      "LocationY": 5736,
       "Properties": {}
     },
     "88DAFF08969051E4": {
@@ -401,8 +401,8 @@
       "Key": "88DB3C59971F43CE",
       "Title": "Check Drives Transfer Modes",
       "NodeType": "DrivesCheckTransferMode",
-      "LocationX": 19,
-      "LocationY": 5845,
+      "LocationX": 20,
+      "LocationY": 5886,
       "Properties": {
         "Only Check Found Drives": {
           "Type": "TypeBoolean",
@@ -418,8 +418,8 @@
       "Key": "88DB3C59E8DDA06F",
       "Title": "Stop Flow With Status",
       "NodeType": "GeneralStopFlowWithStatus",
-      "LocationX": 967,
-      "LocationY": 5842,
+      "LocationX": 968,
+      "LocationY": 5883,
       "Properties": {
         "Status Message": {
           "Type": "TypeString",
@@ -2263,8 +2263,8 @@
       "Key": "88DB4A8373634578",
       "Title": "Check SMART Critical Warning",
       "NodeType": "DrivesCheckSmartAttributeBitwise",
-      "LocationX": 21,
-      "LocationY": 6213,
+      "LocationX": 22,
+      "LocationY": 6235,
       "Properties": {
         "Only Check Found Drives": {
           "Type": "TypeBoolean",
@@ -2296,8 +2296,8 @@
       "Key": "88DB4A8385D49E7D",
       "Title": "Stop Flow With Status",
       "NodeType": "GeneralStopFlowWithStatus",
-      "LocationX": 1181,
-      "LocationY": 6209,
+      "LocationX": 1182,
+      "LocationY": 6231,
       "Properties": {
         "Status Message": {
           "Type": "TypeString",
@@ -2643,8 +2643,8 @@
       "Key": "88DB4B2E98D9B155",
       "Title": "Create SMART Snapshot CSV",
       "NodeType": "DrivesCreateSmartSnapshotCsv",
-      "LocationX": 492,
-      "LocationY": 5843,
+      "LocationX": 493,
+      "LocationY": 5884,
       "Properties": {
         "Directory Suffix": {
           "Type": "TypeString",
@@ -2656,8 +2656,8 @@
       "Key": "88DB4B2EA3DBAA91",
       "Title": "Create SMART Snapshot CSV",
       "NodeType": "DrivesCreateSmartSnapshotCsv",
-      "LocationX": 707,
-      "LocationY": 6212,
+      "LocationX": 708,
+      "LocationY": 6234,
       "Properties": {
         "Directory Suffix": {
           "Type": "TypeString",
@@ -3208,6 +3208,35 @@
         "Status Message": {
           "Type": "TypeString",
           "Value": "Unable to send BMC command"
+        },
+        "Status Color": {
+          "Type": "TypeItemSwitch",
+          "Value": "RED"
+        },
+        "Send Email": {
+          "Type": "TypeBoolean",
+          "Value": false
+        },
+        "Recipients": {
+          "Type": "TypeString",
+          "Value": "[DEFAULT_RECIPIENTS]"
+        },
+        "Priority": {
+          "Type": "TypeItemSwitch",
+          "Value": "High"
+        }
+      }
+    },
+    "88DB5573321D8D46": {
+      "Key": "88DB5573321D8D46",
+      "Title": "Stop Flow With Status",
+      "NodeType": "GeneralStopFlowWithStatus",
+      "LocationX": 676,
+      "LocationY": 5483,
+      "Properties": {
+        "Status Message": {
+          "Type": "TypeString",
+          "Value": "Unable to get extended SMART on all drives"
         },
         "Status Color": {
           "Type": "TypeItemSwitch",
@@ -4373,6 +4402,11 @@
       "FromNodeKey": "88DB3C46BB4B42BF",
       "FromNodePort": "Errors",
       "ToNodeKey": "88DB518E40415B8A"
+    },
+    {
+      "FromNodeKey": "88DB4A83582C337A",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB5573321D8D46"
     }
   ]
 }

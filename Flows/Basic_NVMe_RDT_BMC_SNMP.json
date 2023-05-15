@@ -139,7 +139,7 @@
       "Title": "Drives Log Temperature",
       "NodeType": "DrivesLogTemperature",
       "LocationX": 17,
-      "LocationY": 4253,
+      "LocationY": 4286,
       "Properties": {}
     },
     "88DAFE3107DB8E6D": {
@@ -794,7 +794,7 @@
       "Title": "Check Drives Transfer Modes",
       "NodeType": "DrivesCheckTransferMode",
       "LocationX": 18,
-      "LocationY": 4405,
+      "LocationY": 4438,
       "Properties": {
         "Only Check Found Drives": {
           "Type": "TypeBoolean",
@@ -811,7 +811,7 @@
       "Title": "Stop Flow With Status",
       "NodeType": "GeneralStopFlowWithStatus",
       "LocationX": 979,
-      "LocationY": 4406,
+      "LocationY": 4439,
       "Properties": {
         "Status Message": {
           "Type": "TypeString",
@@ -1546,7 +1546,7 @@
       "Title": "Create SMART Snapshot CSV",
       "NodeType": "DrivesCreateSmartSnapshotCsv",
       "LocationX": 503,
-      "LocationY": 4405,
+      "LocationY": 4438,
       "Properties": {
         "Directory Suffix": {
           "Type": "TypeString",
@@ -2068,6 +2068,35 @@
         "Status Message": {
           "Type": "TypeString",
           "Value": "Errors sending BMC commands"
+        },
+        "Status Color": {
+          "Type": "TypeItemSwitch",
+          "Value": "RED"
+        },
+        "Send Email": {
+          "Type": "TypeBoolean",
+          "Value": false
+        },
+        "Recipients": {
+          "Type": "TypeString",
+          "Value": "[DEFAULT_RECIPIENTS]"
+        },
+        "Priority": {
+          "Type": "TypeItemSwitch",
+          "Value": "High"
+        }
+      }
+    },
+    "88DB5572BE446D46": {
+      "Key": "88DB5572BE446D46",
+      "Title": "Stop Flow With Status",
+      "NodeType": "GeneralStopFlowWithStatus",
+      "LocationX": 664,
+      "LocationY": 4039,
+      "Properties": {
+        "Status Message": {
+          "Type": "TypeString",
+          "Value": "Unable to get extended SMART on all drives"
         },
         "Status Color": {
           "Type": "TypeItemSwitch",
@@ -2818,6 +2847,11 @@
       "FromNodeKey": "88DB4FE5D1E67753",
       "FromNodePort": "Errors",
       "ToNodeKey": "88DB518DABE6F435"
+    },
+    {
+      "FromNodeKey": "88DB4A7F9E489232",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB5572BE446D46"
     }
   ]
 }

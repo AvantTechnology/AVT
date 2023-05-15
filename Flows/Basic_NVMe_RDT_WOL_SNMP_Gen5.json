@@ -138,8 +138,8 @@
       "Key": "88DAFE2C0B639BE5",
       "Title": "Drives Log Temperature",
       "NodeType": "DrivesLogTemperature",
-      "LocationX": 17,
-      "LocationY": 4253,
+      "LocationX": 19,
+      "LocationY": 4305,
       "Properties": {}
     },
     "88DAFE3107DB8E6D": {
@@ -735,8 +735,8 @@
       "Key": "88DB3C59971F43CE",
       "Title": "Check Drives Transfer Modes",
       "NodeType": "DrivesCheckTransferMode",
-      "LocationX": 18,
-      "LocationY": 4405,
+      "LocationX": 20,
+      "LocationY": 4451,
       "Properties": {
         "Only Check Found Drives": {
           "Type": "TypeBoolean",
@@ -752,8 +752,8 @@
       "Key": "88DB3C59E8DDA06F",
       "Title": "Stop Flow With Status",
       "NodeType": "GeneralStopFlowWithStatus",
-      "LocationX": 979,
-      "LocationY": 4406,
+      "LocationX": 981,
+      "LocationY": 4452,
       "Properties": {
         "Status Message": {
           "Type": "TypeString",
@@ -1366,8 +1366,8 @@
       "Key": "88DB4B264A38689D",
       "Title": "Create SMART Snapshot CSV",
       "NodeType": "DrivesCreateSmartSnapshotCsv",
-      "LocationX": 503,
-      "LocationY": 4405,
+      "LocationX": 505,
+      "LocationY": 4451,
       "Properties": {
         "Directory Suffix": {
           "Type": "TypeString",
@@ -2090,6 +2090,35 @@
         "Body": {
           "Type": "TypeString",
           "Value": "Attempting to recover all not found drives with a power cycle"
+        }
+      }
+    },
+    "88DB5571A673D85F": {
+      "Key": "88DB5571A673D85F",
+      "Title": "Stop Flow With Status",
+      "NodeType": "GeneralStopFlowWithStatus",
+      "LocationX": 668,
+      "LocationY": 4035,
+      "Properties": {
+        "Status Message": {
+          "Type": "TypeString",
+          "Value": "Unable to get extended SMART on all drives"
+        },
+        "Status Color": {
+          "Type": "TypeItemSwitch",
+          "Value": "RED"
+        },
+        "Send Email": {
+          "Type": "TypeBoolean",
+          "Value": false
+        },
+        "Recipients": {
+          "Type": "TypeString",
+          "Value": "[DEFAULT_RECIPIENTS]"
+        },
+        "Priority": {
+          "Type": "TypeItemSwitch",
+          "Value": "High"
         }
       }
     }
@@ -2854,6 +2883,11 @@
       "FromNodeKey": "88DAFD9E409B4C4D",
       "FromNodePort": "All Drives Not Found",
       "ToNodeKey": "88DB524497D112C4"
+    },
+    {
+      "FromNodeKey": "88DB4C261A1DFD23",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB5571A673D85F"
     }
   ]
 }

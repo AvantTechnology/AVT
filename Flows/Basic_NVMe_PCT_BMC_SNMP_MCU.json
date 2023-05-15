@@ -59,7 +59,7 @@
       "Title": "Drives Log Temperature",
       "NodeType": "DrivesLogTemperature",
       "LocationX": 16,
-      "LocationY": 5684,
+      "LocationY": 5747,
       "Properties": {}
     },
     "88DAFE335BB7675B": {
@@ -261,7 +261,7 @@
       "Title": "Drives Log SMART",
       "NodeType": "DrivesLogSmart",
       "LocationX": 17,
-      "LocationY": 5326,
+      "LocationY": 5333,
       "Properties": {}
     },
     "88DB3B880D86146F": {
@@ -418,8 +418,8 @@
       "Key": "88DB3C59971F43CE",
       "Title": "Check Drives Transfer Modes",
       "NodeType": "DrivesCheckTransferMode",
-      "LocationX": 48,
-      "LocationY": 5888,
+      "LocationX": 90,
+      "LocationY": 5897,
       "Properties": {
         "Only Check Found Drives": {
           "Type": "TypeBoolean",
@@ -435,8 +435,8 @@
       "Key": "88DB3C59E8DDA06F",
       "Title": "Stop Flow With Status",
       "NodeType": "GeneralStopFlowWithStatus",
-      "LocationX": 976,
-      "LocationY": 5866,
+      "LocationX": 1055,
+      "LocationY": 5898,
       "Properties": {
         "Status Message": {
           "Type": "TypeString",
@@ -2013,8 +2013,8 @@
       "Key": "88DB4B299EDC663D",
       "Title": "Create SMART Snapshot CSV",
       "NodeType": "DrivesCreateSmartSnapshotCsv",
-      "LocationX": 498,
-      "LocationY": 5868,
+      "LocationX": 575,
+      "LocationY": 5900,
       "Properties": {
         "Directory Suffix": {
           "Type": "TypeString",
@@ -2645,6 +2645,35 @@
         "Status Message": {
           "Type": "TypeString",
           "Value": "Unable to recover after async errors"
+        },
+        "Status Color": {
+          "Type": "TypeItemSwitch",
+          "Value": "RED"
+        },
+        "Send Email": {
+          "Type": "TypeBoolean",
+          "Value": false
+        },
+        "Recipients": {
+          "Type": "TypeString",
+          "Value": "[DEFAULT_RECIPIENTS]"
+        },
+        "Priority": {
+          "Type": "TypeItemSwitch",
+          "Value": "High"
+        }
+      }
+    },
+    "88DB5572E71F7304": {
+      "Key": "88DB5572E71F7304",
+      "Title": "Stop Flow With Status",
+      "NodeType": "GeneralStopFlowWithStatus",
+      "LocationX": 668,
+      "LocationY": 5472,
+      "Properties": {
+        "Status Message": {
+          "Type": "TypeString",
+          "Value": "Unable to get extended SMART on all drives"
         },
         "Status Color": {
           "Type": "TypeItemSwitch",
@@ -3575,6 +3604,11 @@
       "FromNodeKey": "88DB5230DD310406",
       "FromNodePort": "Connection Alive",
       "ToNodeKey": "88DB40466B527906"
+    },
+    {
+      "FromNodeKey": "88DB4A82ADF6EDC5",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB5572E71F7304"
     }
   ]
 }

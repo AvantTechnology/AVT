@@ -416,24 +416,24 @@
       "Key": "88DB056E76324D2A",
       "Title": "Client System Set Time",
       "NodeType": "ClientSystemSetTime",
-      "LocationX": -1222,
-      "LocationY": -799,
+      "LocationX": -1223,
+      "LocationY": -1160,
       "Properties": {}
     },
     "88DB0611415A2E90": {
       "Key": "88DB0611415A2E90",
       "Title": "Client Connection Check Status",
       "NodeType": "ClientConnectionCheckStatus",
-      "LocationX": -1222,
-      "LocationY": -938,
+      "LocationX": -1223,
+      "LocationY": -1299,
       "Properties": {}
     },
     "88DB0611569B8752": {
       "Key": "88DB0611569B8752",
       "Title": "Stop Flow With Status",
       "NodeType": "GeneralStopFlowWithStatus",
-      "LocationX": -875,
-      "LocationY": -884,
+      "LocationX": -876,
+      "LocationY": -1245,
       "Properties": {
         "Status Message": {
           "Type": "TypeString",
@@ -722,8 +722,8 @@
       "Key": "88DB3B898832CC1C",
       "Title": "Kill All Spawned Processes",
       "NodeType": "ClientSystemProcessKillAllSpawned",
-      "LocationX": 33,
-      "LocationY": -925,
+      "LocationX": 72,
+      "LocationY": -1296,
       "Properties": {
         "Timeout Seconds": {
           "Type": "TypeInteger",
@@ -1645,8 +1645,8 @@
       "Key": "88DB4C26CC979765",
       "Title": "Send Rhoads ERS Vendor Command",
       "NodeType": "MicronVendorCommandsRhoadsERS",
-      "LocationX": -398,
-      "LocationY": 7936,
+      "LocationX": -988,
+      "LocationY": 7933,
       "Properties": {
         "File Name Prefix": {
           "Type": "TypeString",
@@ -1666,8 +1666,8 @@
       "Key": "88DB4C26D107A4DF",
       "Title": "Send Rhoads UEL Vendor Command",
       "NodeType": "MicronVendorCommandsRhoadsUEL",
-      "LocationX": -400,
-      "LocationY": 7710,
+      "LocationX": -990,
+      "LocationY": 7707,
       "Properties": {
         "File Name Prefix": {
           "Type": "TypeString",
@@ -1687,8 +1687,8 @@
       "Key": "88DB4C26D27EBB8B",
       "Title": "Send Rhoads Background Scan Vendor Command",
       "NodeType": "MicronVendorCommandsRhoadsBackgroundScan",
-      "LocationX": -398,
-      "LocationY": 8163,
+      "LocationX": -988,
+      "LocationY": 8161,
       "Properties": {
         "File Name Prefix": {
           "Type": "TypeString",
@@ -2121,6 +2121,89 @@
           "Value": "High"
         }
       }
+    },
+    "88DB557C28004B18": {
+      "Key": "88DB557C28004B18",
+      "Title": "Ensure Micron driver is installed",
+      "NodeType": "ClientSystemProcessStart",
+      "LocationX": -1221,
+      "LocationY": -897,
+      "Properties": {
+        "Process Name": {
+          "Type": "TypeString",
+          "Value": "C:\\temp\\microndriver\\rhoadsdriverupdate\\rhoads_mtdriver.bat"
+        },
+        "Arguments": {
+          "Type": "TypeString",
+          "Value": ""
+        },
+        "Wait For Exit": {
+          "Type": "TypeBoolean",
+          "Value": true
+        },
+        "Timeout Seconds": {
+          "Type": "TypeInteger",
+          "Value": 30
+        }
+      }
+    },
+    "88DB557C40595D04": {
+      "Key": "88DB557C40595D04",
+      "Title": "Stop Flow With Status",
+      "NodeType": "GeneralStopFlowWithStatus",
+      "LocationX": -718,
+      "LocationY": -902,
+      "Properties": {
+        "Status Message": {
+          "Type": "TypeString",
+          "Value": "Errors ensuring Micron driver is installed "
+        },
+        "Status Color": {
+          "Type": "TypeItemSwitch",
+          "Value": "RED"
+        },
+        "Send Email": {
+          "Type": "TypeBoolean",
+          "Value": false
+        },
+        "Recipients": {
+          "Type": "TypeString",
+          "Value": "[DEFAULT_RECIPIENTS]"
+        },
+        "Priority": {
+          "Type": "TypeItemSwitch",
+          "Value": "High"
+        }
+      }
+    },
+    "88DB557C5699A2A3": {
+      "Key": "88DB557C5699A2A3",
+      "Title": "Stop Flow With Status",
+      "NodeType": "GeneralStopFlowWithStatus",
+      "LocationX": -585,
+      "LocationY": 7817,
+      "Properties": {
+        "Status Message": {
+          "Type": "TypeString",
+          "Value": "Errors getting VU data"
+        },
+        "Status Color": {
+          "Type": "TypeItemSwitch",
+          "Value": "RED"
+        },
+        "Send Email": {
+          "Type": "TypeBoolean",
+          "Value": false
+        },
+        "Recipients": {
+          "Type": "TypeString",
+          "Value": "[DEFAULT_RECIPIENTS]"
+        },
+        "Priority": {
+          "Type": "TypeItemSwitch",
+          "Value": "High"
+        }
+      }
     }
   },
   "Connections": [
@@ -2403,11 +2486,6 @@
       "FromNodeKey": "88DB0611415A2E90",
       "FromNodePort": "Alive",
       "ToNodeKey": "88DB056E76324D2A"
-    },
-    {
-      "FromNodeKey": "88DB056E76324D2A",
-      "FromNodePort": "Success",
-      "ToNodeKey": "88DAFE2BC4161974"
     },
     {
       "FromNodeKey": "88DAFDA0C184F6DE",
@@ -2720,18 +2798,8 @@
       "ToNodeKey": "88DB4C26CC979765"
     },
     {
-      "FromNodeKey": "88DB4C26D107A4DF",
-      "FromNodePort": "Errors",
-      "ToNodeKey": "88DB4C26CC979765"
-    },
-    {
       "FromNodeKey": "88DB4C26CC979765",
       "FromNodePort": "Success",
-      "ToNodeKey": "88DB4C26D27EBB8B"
-    },
-    {
-      "FromNodeKey": "88DB4C26CC979765",
-      "FromNodePort": "Errors",
       "ToNodeKey": "88DB4C26D27EBB8B"
     },
     {
@@ -2742,11 +2810,6 @@
     {
       "FromNodeKey": "88DB4C26D27EBB8B",
       "FromNodePort": "Success",
-      "ToNodeKey": "88DB3ACBB6902E82"
-    },
-    {
-      "FromNodeKey": "88DB4C26D27EBB8B",
-      "FromNodePort": "Errors",
       "ToNodeKey": "88DB3ACBB6902E82"
     },
     {
@@ -2888,6 +2951,36 @@
       "FromNodeKey": "88DB4C261A1DFD23",
       "FromNodePort": "Errors",
       "ToNodeKey": "88DB5571A673D85F"
+    },
+    {
+      "FromNodeKey": "88DB056E76324D2A",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DB557C28004B18"
+    },
+    {
+      "FromNodeKey": "88DB557C28004B18",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DAFE2BC4161974"
+    },
+    {
+      "FromNodeKey": "88DB557C28004B18",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB557C40595D04"
+    },
+    {
+      "FromNodeKey": "88DB4C26D107A4DF",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB557C5699A2A3"
+    },
+    {
+      "FromNodeKey": "88DB4C26CC979765",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB557C5699A2A3"
+    },
+    {
+      "FromNodeKey": "88DB4C26D27EBB8B",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB557C5699A2A3"
     }
   ]
 }

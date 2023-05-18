@@ -2230,7 +2230,7 @@
       "Key": "88DB5633A6DB7358",
       "Title": "Stop Flow With Status",
       "NodeType": "GeneralStopFlowWithStatus",
-      "LocationX": -984,
+      "LocationX": -983,
       "LocationY": -1511,
       "Properties": {
         "Status Message": {
@@ -2257,7 +2257,7 @@
     },
     "88DB5633B6C92FDA": {
       "Key": "88DB5633B6C92FDA",
-      "Title": "Send Snapshot Email",
+      "Title": "Send email about Micron driver not installed",
       "NodeType": "EmailSendSnapshot",
       "LocationX": -293,
       "LocationY": -1551,
@@ -2318,8 +2318,8 @@
       "Key": "88DB563409546FA7",
       "Title": "Stop Flow With Status",
       "NodeType": "GeneralStopFlowWithStatus",
-      "LocationX": -165,
-      "LocationY": -627,
+      "LocationX": 191,
+      "LocationY": -890,
       "Properties": {
         "Status Message": {
           "Type": "TypeString",
@@ -2347,8 +2347,8 @@
       "Key": "88DB563418EF660A",
       "Title": "Go To Entry Node",
       "NodeType": "GeneralGoToEntry",
-      "LocationX": -289,
-      "LocationY": -297,
+      "LocationX": -292,
+      "LocationY": -596,
       "Properties": {}
     }
   },
@@ -3177,6 +3177,11 @@
       "FromNodeKey": "88DB5633E94C4835",
       "FromNodePort": "Connection Alive",
       "ToNodeKey": "88DB563418EF660A"
+    },
+    {
+      "FromNodeKey": "88DB5633E94EE30F",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB563409546FA7"
     }
   ]
 }

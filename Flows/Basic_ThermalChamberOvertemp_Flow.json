@@ -1,0 +1,51 @@
+{
+  "EntryNodeKey": "88DB57D58FEC3A0B",
+  "CleanupEntryNodeKey": "",
+  "Nodes": {
+    "88DB57D58FEC3A0B": {
+      "Key": "88DB57D58FEC3A0B",
+      "Title": "Send Snapshot Email",
+      "NodeType": "EmailSendSnapshot",
+      "LocationX": 1268,
+      "LocationY": 225,
+      "Properties": {
+        "Recipients": {
+          "Type": "TypeString",
+          "Value": "[DEFAULT_RECIPIENTS]"
+        },
+        "Priority": {
+          "Type": "TypeItemSwitch",
+          "Value": "Normal"
+        },
+        "Subject": {
+          "Type": "TypeString",
+          "Value": "Thermal chamber overtemp!"
+        },
+        "Body": {
+          "Type": "TypeString",
+          "Value": "The thermal chamber has exceeded the overtemp limit"
+        }
+      }
+    },
+    "88DB57D5BC4F7330": {
+      "Key": "88DB57D5BC4F7330",
+      "Title": "Client System Send Shutdown",
+      "NodeType": "ClientSystemSendShutdown",
+      "LocationX": 1267,
+      "LocationY": 527,
+      "Properties": {}
+    }
+  },
+  "Connections": [
+    {
+      "FromNodeKey": "88DB57D58FEC3A0B",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DB57D5BC4F7330"
+    },
+    {
+      "FromNodeKey": "88DB57D58FEC3A0B",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB57D5BC4F7330"
+    }
+  ]
+}

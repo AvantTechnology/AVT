@@ -547,7 +547,7 @@
       "Title": "Check if cycle 0",
       "NodeType": "CycleCheck",
       "LocationX": 25,
-      "LocationY": 7439,
+      "LocationY": 7505,
       "Properties": {
         "Compare Operation": {
           "Type": "TypeItemSwitch",
@@ -564,7 +564,7 @@
       "Title": "Increment Step",
       "NodeType": "StepIncrement",
       "LocationX": 64,
-      "LocationY": 7611,
+      "LocationY": 7677,
       "Properties": {
         "Increment Amount": {
           "Type": "TypeInteger",
@@ -577,7 +577,7 @@
       "Title": "Check if step out of range",
       "NodeType": "StepCheck",
       "LocationX": 64,
-      "LocationY": 7771,
+      "LocationY": 7837,
       "Properties": {
         "Compare Operation": {
           "Type": "TypeItemSwitch",
@@ -594,7 +594,7 @@
       "Title": "Increment Cycle",
       "NodeType": "CycleIncrement",
       "LocationX": -344,
-      "LocationY": 8008,
+      "LocationY": 8074,
       "Properties": {
         "Increment Amount": {
           "Type": "TypeInteger",
@@ -607,7 +607,7 @@
       "Title": "Set Step",
       "NodeType": "StepSet",
       "LocationX": -345,
-      "LocationY": 8173,
+      "LocationY": 8239,
       "Properties": {
         "Set Value": {
           "Type": "TypeInteger",
@@ -620,7 +620,7 @@
       "Title": "Go To Entry Node",
       "NodeType": "GeneralGoToEntry",
       "LocationX": 102,
-      "LocationY": 8365,
+      "LocationY": 8431,
       "Properties": {}
     },
     "88DB3B698FF9742A": {
@@ -953,7 +953,7 @@
       "Title": "Check MDIE",
       "NodeType": "DrivesCheckSmartAttributeValueChanged",
       "LocationX": 21,
-      "LocationY": 5608,
+      "LocationY": 5576,
       "Properties": {
         "Only Check Found Drives": {
           "Type": "TypeBoolean",
@@ -978,7 +978,7 @@
       "Title": "Stop flow because of MDIE",
       "NodeType": "GeneralStopFlowWithStatus",
       "LocationX": 1047,
-      "LocationY": 5607,
+      "LocationY": 5575,
       "Properties": {
         "Status Message": {
           "Type": "TypeString",
@@ -1006,8 +1006,8 @@
       "Key": "88DB3D1E0BED74A9",
       "Title": "Check Available Spare",
       "NodeType": "DrivesCheckSmartAttributeValueChanged",
-      "LocationX": 65,
-      "LocationY": 5968,
+      "LocationX": 21,
+      "LocationY": 5931,
       "Properties": {
         "Only Check Found Drives": {
           "Type": "TypeBoolean",
@@ -1024,35 +1024,6 @@
         "Log Errors (Changed/Missing Values)": {
           "Type": "TypeBoolean",
           "Value": true
-        }
-      }
-    },
-    "88DB3D1E14BF7776": {
-      "Key": "88DB3D1E14BF7776",
-      "Title": "Stop flow because of available spare",
-      "NodeType": "GeneralStopFlowWithStatus",
-      "LocationX": 1078,
-      "LocationY": 5977,
-      "Properties": {
-        "Status Message": {
-          "Type": "TypeString",
-          "Value": "At least one drive has new available spare changes"
-        },
-        "Status Color": {
-          "Type": "TypeItemSwitch",
-          "Value": "RED"
-        },
-        "Send Email": {
-          "Type": "TypeBoolean",
-          "Value": true
-        },
-        "Recipients": {
-          "Type": "TypeString",
-          "Value": "[DEFAULT_RECIPIENTS]"
-        },
-        "Priority": {
-          "Type": "TypeItemSwitch",
-          "Value": "High"
         }
       }
     },
@@ -1357,8 +1328,8 @@
       "Key": "88DB4A8A7C99B90F",
       "Title": "Check Ext SMART GBB",
       "NodeType": "DrivesCheckSmartAttributeValueChanged",
-      "LocationX": 66,
-      "LocationY": 6337,
+      "LocationX": 23,
+      "LocationY": 6353,
       "Properties": {
         "Only Check Found Drives": {
           "Type": "TypeBoolean",
@@ -1383,7 +1354,7 @@
       "Title": "Check Ext SMART Erase Fail Count",
       "NodeType": "DrivesCheckSmartAttributeValueChanged",
       "LocationX": 22,
-      "LocationY": 6702,
+      "LocationY": 6768,
       "Properties": {
         "Only Check Found Drives": {
           "Type": "TypeBoolean",
@@ -1408,7 +1379,7 @@
       "Title": "Check Ext SMART Program Fail Count",
       "NodeType": "DrivesCheckSmartAttributeValueChanged",
       "LocationX": 23,
-      "LocationY": 7069,
+      "LocationY": 7135,
       "Properties": {
         "Only Check Found Drives": {
           "Type": "TypeBoolean",
@@ -1428,41 +1399,12 @@
         }
       }
     },
-    "88DB4A8B40BE7C9A": {
-      "Key": "88DB4A8B40BE7C9A",
-      "Title": "Stop Flow With Status",
-      "NodeType": "GeneralStopFlowWithStatus",
-      "LocationX": 1076,
-      "LocationY": 6339,
-      "Properties": {
-        "Status Message": {
-          "Type": "TypeString",
-          "Value": "At least one drive has GBB attribute changed"
-        },
-        "Status Color": {
-          "Type": "TypeItemSwitch",
-          "Value": "RED"
-        },
-        "Send Email": {
-          "Type": "TypeBoolean",
-          "Value": true
-        },
-        "Recipients": {
-          "Type": "TypeString",
-          "Value": "[DEFAULT_RECIPIENTS]"
-        },
-        "Priority": {
-          "Type": "TypeItemSwitch",
-          "Value": "High"
-        }
-      }
-    },
     "88DB4A8B5065ED7C": {
       "Key": "88DB4A8B5065ED7C",
       "Title": "Stop Flow With Status",
       "NodeType": "GeneralStopFlowWithStatus",
       "LocationX": 1034,
-      "LocationY": 6704,
+      "LocationY": 6770,
       "Properties": {
         "Status Message": {
           "Type": "TypeString",
@@ -1491,7 +1433,7 @@
       "Title": "Stop Flow With Status",
       "NodeType": "GeneralStopFlowWithStatus",
       "LocationX": 1039,
-      "LocationY": 7073,
+      "LocationY": 7139,
       "Properties": {
         "Status Message": {
           "Type": "TypeString",
@@ -1572,37 +1514,11 @@
       "Title": "Create SMART Snapshot CSV",
       "NodeType": "DrivesCreateSmartSnapshotCsv",
       "LocationX": 564,
-      "LocationY": 5608,
+      "LocationY": 5576,
       "Properties": {
         "Directory Suffix": {
           "Type": "TypeString",
           "Value": "MDIE_changed"
-        }
-      }
-    },
-    "88DB4B268EE5B057": {
-      "Key": "88DB4B268EE5B057",
-      "Title": "Create SMART Snapshot CSV",
-      "NodeType": "DrivesCreateSmartSnapshotCsv",
-      "LocationX": 601,
-      "LocationY": 5970,
-      "Properties": {
-        "Directory Suffix": {
-          "Type": "TypeString",
-          "Value": "available_spare_changed"
-        }
-      }
-    },
-    "88DB4B26A4070DCE": {
-      "Key": "88DB4B26A4070DCE",
-      "Title": "Create SMART Snapshot CSV",
-      "NodeType": "DrivesCreateSmartSnapshotCsv",
-      "LocationX": 599,
-      "LocationY": 6337,
-      "Properties": {
-        "Directory Suffix": {
-          "Type": "TypeString",
-          "Value": "GBB_changed"
         }
       }
     },
@@ -1611,7 +1527,7 @@
       "Title": "Create SMART Snapshot CSV",
       "NodeType": "DrivesCreateSmartSnapshotCsv",
       "LocationX": 558,
-      "LocationY": 6703,
+      "LocationY": 6769,
       "Properties": {
         "Directory Suffix": {
           "Type": "TypeString",
@@ -1624,7 +1540,7 @@
       "Title": "Create SMART Snapshot CSV",
       "NodeType": "DrivesCreateSmartSnapshotCsv",
       "LocationX": 560,
-      "LocationY": 7071,
+      "LocationY": 7137,
       "Properties": {
         "Directory Suffix": {
           "Type": "TypeString",
@@ -2113,6 +2029,56 @@
         "Priority": {
           "Type": "TypeItemSwitch",
           "Value": "High"
+        }
+      }
+    },
+    "88DB57D9E0CC3DEC": {
+      "Key": "88DB57D9E0CC3DEC",
+      "Title": "Send Snapshot Email",
+      "NodeType": "EmailSendSnapshot",
+      "LocationX": 557,
+      "LocationY": 6403,
+      "Properties": {
+        "Recipients": {
+          "Type": "TypeString",
+          "Value": "[DEFAULT_RECIPIENTS]"
+        },
+        "Priority": {
+          "Type": "TypeItemSwitch",
+          "Value": "Normal"
+        },
+        "Subject": {
+          "Type": "TypeString",
+          "Value": "At least one drive has GBB attribute changed"
+        },
+        "Body": {
+          "Type": "TypeString",
+          "Value": "At least one drive has GBB attribute changed"
+        }
+      }
+    },
+    "88DB57D9E44E3ABE": {
+      "Key": "88DB57D9E44E3ABE",
+      "Title": "Send Snapshot Email",
+      "NodeType": "EmailSendSnapshot",
+      "LocationX": 555,
+      "LocationY": 5956,
+      "Properties": {
+        "Recipients": {
+          "Type": "TypeString",
+          "Value": "[DEFAULT_RECIPIENTS]"
+        },
+        "Priority": {
+          "Type": "TypeItemSwitch",
+          "Value": "Normal"
+        },
+        "Subject": {
+          "Type": "TypeString",
+          "Value": "At least one drive has new available spare changes"
+        },
+        "Body": {
+          "Type": "TypeString",
+          "Value": "At least one drive has new available spare changes"
         }
       }
     }
@@ -2634,36 +2600,6 @@
       "ToNodeKey": "88DB4B2674449484"
     },
     {
-      "FromNodeKey": "88DB4B268EE5B057",
-      "FromNodePort": "Success",
-      "ToNodeKey": "88DB3D1E14BF7776"
-    },
-    {
-      "FromNodeKey": "88DB4B268EE5B057",
-      "FromNodePort": "Errors",
-      "ToNodeKey": "88DB3D1E14BF7776"
-    },
-    {
-      "FromNodeKey": "88DB3D1E0BED74A9",
-      "FromNodePort": "Some Drives Attribute Changed",
-      "ToNodeKey": "88DB4B268EE5B057"
-    },
-    {
-      "FromNodeKey": "88DB4A8A7C99B90F",
-      "FromNodePort": "Some Drives Attribute Changed",
-      "ToNodeKey": "88DB4B26A4070DCE"
-    },
-    {
-      "FromNodeKey": "88DB4B26A4070DCE",
-      "FromNodePort": "Success",
-      "ToNodeKey": "88DB4A8B40BE7C9A"
-    },
-    {
-      "FromNodeKey": "88DB4B26A4070DCE",
-      "FromNodePort": "Errors",
-      "ToNodeKey": "88DB4A8B40BE7C9A"
-    },
-    {
       "FromNodeKey": "88DB4B26F079A395",
       "FromNodePort": "Success",
       "ToNodeKey": "88DB4A8B5065ED7C"
@@ -2851,7 +2787,37 @@
     {
       "FromNodeKey": "88DB3D1DCEE3A24D",
       "FromNodePort": "All Drives Attribute Unchanged",
+      "ToNodeKey": "88DB3D1E0BED74A9"
+    },
+    {
+      "FromNodeKey": "88DB4A8A7C99B90F",
+      "FromNodePort": "Some Drives Attribute Changed",
+      "ToNodeKey": "88DB57D9E0CC3DEC"
+    },
+    {
+      "FromNodeKey": "88DB57D9E0CC3DEC",
+      "FromNodePort": "Success",
       "ToNodeKey": "88DB4A8AD07AB3BB"
+    },
+    {
+      "FromNodeKey": "88DB57D9E0CC3DEC",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB4A8AD07AB3BB"
+    },
+    {
+      "FromNodeKey": "88DB57D9E44E3ABE",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DB4A8A7C99B90F"
+    },
+    {
+      "FromNodeKey": "88DB57D9E44E3ABE",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB4A8A7C99B90F"
+    },
+    {
+      "FromNodeKey": "88DB3D1E0BED74A9",
+      "FromNodePort": "Some Drives Attribute Changed",
+      "ToNodeKey": "88DB57D9E44E3ABE"
     }
   ]
 }

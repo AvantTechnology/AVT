@@ -1958,8 +1958,8 @@
       "Key": "88DB557C28004B18",
       "Title": "Ensure Micron driver is installed",
       "NodeType": "ClientSystemProcessStart",
-      "LocationX": -292,
-      "LocationY": -1259,
+      "LocationX": -307,
+      "LocationY": -1534,
       "Properties": {
         "Process Name": {
           "Type": "TypeString",
@@ -1983,8 +1983,8 @@
       "Key": "88DB557C40595D04",
       "Title": "Stop Flow With Status",
       "NodeType": "GeneralStopFlowWithStatus",
-      "LocationX": 210,
-      "LocationY": -1258,
+      "LocationX": 195,
+      "LocationY": -1533,
       "Properties": {
         "Status Message": {
           "Type": "TypeString",
@@ -2058,37 +2058,12 @@
         }
       }
     },
-    "88DB5633B6C92FDA": {
-      "Key": "88DB5633B6C92FDA",
-      "Title": "Send email about Micron driver not installed",
-      "NodeType": "EmailSendSnapshot",
-      "LocationX": -293,
-      "LocationY": -1551,
-      "Properties": {
-        "Recipients": {
-          "Type": "TypeString",
-          "Value": "[DEFAULT_RECIPIENTS]"
-        },
-        "Priority": {
-          "Type": "TypeItemSwitch",
-          "Value": "Normal"
-        },
-        "Subject": {
-          "Type": "TypeString",
-          "Value": "Micron driver not installed"
-        },
-        "Body": {
-          "Type": "TypeString",
-          "Value": "Attempting to install driver and reboot"
-        }
-      }
-    },
     "88DB5633E94C4835": {
       "Key": "88DB5633E94C4835",
       "Title": "Waiting for client connection...",
       "NodeType": "ClientConnectionWaitAlive",
-      "LocationX": -293,
-      "LocationY": -760,
+      "LocationX": -308,
+      "LocationY": -1035,
       "Properties": {
         "Timeout Seconds": {
           "Type": "TypeInteger",
@@ -2100,8 +2075,8 @@
       "Key": "88DB5633E94DAAF5",
       "Title": "Waiting for client to disconnect...",
       "NodeType": "ClientConnectionWaitDead",
-      "LocationX": -293,
-      "LocationY": -897,
+      "LocationX": -308,
+      "LocationY": -1172,
       "Properties": {
         "Timeout Seconds": {
           "Type": "TypeInteger",
@@ -2113,16 +2088,16 @@
       "Key": "88DB5633E94EE30F",
       "Title": "Rebooting System",
       "NodeType": "ClientSystemSendReboot",
-      "LocationX": -293,
-      "LocationY": -1001,
+      "LocationX": -308,
+      "LocationY": -1276,
       "Properties": {}
     },
     "88DB563409546FA7": {
       "Key": "88DB563409546FA7",
       "Title": "Stop Flow With Status",
       "NodeType": "GeneralStopFlowWithStatus",
-      "LocationX": 190,
-      "LocationY": -889,
+      "LocationX": 175,
+      "LocationY": -1164,
       "Properties": {
         "Status Message": {
           "Type": "TypeString",
@@ -2150,8 +2125,8 @@
       "Key": "88DB563418EF660A",
       "Title": "Go To Entry Node",
       "NodeType": "GeneralGoToEntry",
-      "LocationX": -292,
-      "LocationY": -596,
+      "LocationX": -307,
+      "LocationY": -871,
       "Properties": {}
     },
     "88DB57E29A914DDF": {
@@ -2283,8 +2258,8 @@
       "Key": "88DB5ADFA59AB665",
       "Title": "Stop Flow With Status",
       "NodeType": "GeneralStopFlowWithStatus",
-      "LocationX": 1430,
-      "LocationY": 3775,
+      "LocationX": 1416,
+      "LocationY": 3527,
       "Properties": {
         "Status Message": {
           "Type": "TypeString",
@@ -2312,8 +2287,8 @@
       "Key": "88DB5ADFA59ADD74",
       "Title": "Stop Flow With Status",
       "NodeType": "GeneralStopFlowWithStatus",
-      "LocationX": 1450,
-      "LocationY": 3406,
+      "LocationX": 1436,
+      "LocationY": 3158,
       "Properties": {
         "Status Message": {
           "Type": "TypeString",
@@ -2341,8 +2316,8 @@
       "Key": "88DB5ADFA59B2B9D",
       "Title": "Ensure Micron driver is installed",
       "NodeType": "ClientSystemProcessStart",
-      "LocationX": 948,
-      "LocationY": 3405,
+      "LocationX": 934,
+      "LocationY": 3157,
       "Properties": {
         "Process Name": {
           "Type": "TypeString",
@@ -2366,16 +2341,16 @@
       "Key": "88DB5ADFA59B79B3",
       "Title": "Rebooting System",
       "NodeType": "ClientSystemSendReboot",
-      "LocationX": 947,
-      "LocationY": 3663,
+      "LocationX": 933,
+      "LocationY": 3415,
       "Properties": {}
     },
     "88DB5ADFA59BC7D2": {
       "Key": "88DB5ADFA59BC7D2",
       "Title": "Waiting for client to disconnect...",
       "NodeType": "ClientConnectionWaitDead",
-      "LocationX": 947,
-      "LocationY": 3767,
+      "LocationX": 933,
+      "LocationY": 3519,
       "Properties": {
         "Timeout Seconds": {
           "Type": "TypeInteger",
@@ -2387,37 +2362,12 @@
       "Key": "88DB5ADFA59C15F3",
       "Title": "Waiting for client connection...",
       "NodeType": "ClientConnectionWaitAlive",
-      "LocationX": 947,
-      "LocationY": 3904,
+      "LocationX": 933,
+      "LocationY": 3656,
       "Properties": {
         "Timeout Seconds": {
           "Type": "TypeInteger",
           "Value": 900
-        }
-      }
-    },
-    "88DB5ADFA59CB24A": {
-      "Key": "88DB5ADFA59CB24A",
-      "Title": "Send email about Micron driver not installed",
-      "NodeType": "EmailSendSnapshot",
-      "LocationX": 947,
-      "LocationY": 3113,
-      "Properties": {
-        "Recipients": {
-          "Type": "TypeString",
-          "Value": "[DEFAULT_RECIPIENTS]"
-        },
-        "Priority": {
-          "Type": "TypeItemSwitch",
-          "Value": "Normal"
-        },
-        "Subject": {
-          "Type": "TypeString",
-          "Value": "Micron driver not installed (after step)"
-        },
-        "Body": {
-          "Type": "TypeString",
-          "Value": "Attempting to install driver and reboot"
         }
       }
     },
@@ -3164,21 +3114,6 @@
       "ToNodeKey": "88DB5633A6DB7358"
     },
     {
-      "FromNodeKey": "88DB56333D2AE610",
-      "FromNodePort": "Some Drivers Mismatch",
-      "ToNodeKey": "88DB5633B6C92FDA"
-    },
-    {
-      "FromNodeKey": "88DB5633B6C92FDA",
-      "FromNodePort": "Success",
-      "ToNodeKey": "88DB557C28004B18"
-    },
-    {
-      "FromNodeKey": "88DB5633B6C92FDA",
-      "FromNodePort": "Errors",
-      "ToNodeKey": "88DB557C28004B18"
-    },
-    {
       "FromNodeKey": "88DB5633E94EE30F",
       "FromNodePort": "Success",
       "ToNodeKey": "88DB5633E94DAAF5"
@@ -3309,21 +3244,6 @@
       "ToNodeKey": "88DB5ADFA59D0066"
     },
     {
-      "FromNodeKey": "88DB5ADFA59D4E85",
-      "FromNodePort": "Some Drivers Mismatch",
-      "ToNodeKey": "88DB5ADFA59CB24A"
-    },
-    {
-      "FromNodeKey": "88DB5ADFA59CB24A",
-      "FromNodePort": "Success",
-      "ToNodeKey": "88DB5ADFA59B2B9D"
-    },
-    {
-      "FromNodeKey": "88DB5ADFA59CB24A",
-      "FromNodePort": "Errors",
-      "ToNodeKey": "88DB5ADFA59B2B9D"
-    },
-    {
       "FromNodeKey": "88DB5ADFA59B79B3",
       "FromNodePort": "Success",
       "ToNodeKey": "88DB5ADFA59BC7D2"
@@ -3377,6 +3297,16 @@
       "FromNodeKey": "88DB5ADFA59C15F3",
       "FromNodePort": "Connection Alive",
       "ToNodeKey": "88DAFE2BA9FB0B2F"
+    },
+    {
+      "FromNodeKey": "88DB5ADFA59D4E85",
+      "FromNodePort": "Some Drivers Mismatch",
+      "ToNodeKey": "88DB5ADFA59B2B9D"
+    },
+    {
+      "FromNodeKey": "88DB56333D2AE610",
+      "FromNodePort": "Some Drivers Mismatch",
+      "ToNodeKey": "88DB557C28004B18"
     }
   ]
 }

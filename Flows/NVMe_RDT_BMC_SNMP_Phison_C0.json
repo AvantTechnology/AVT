@@ -1399,64 +1399,6 @@
         }
       }
     },
-    "88DB4A8B5065ED7C": {
-      "Key": "88DB4A8B5065ED7C",
-      "Title": "Stop Flow With Status",
-      "NodeType": "GeneralStopFlowWithStatus",
-      "LocationX": 1034,
-      "LocationY": 6770,
-      "Properties": {
-        "Status Message": {
-          "Type": "TypeString",
-          "Value": "At least one drive has erase fail count changed"
-        },
-        "Status Color": {
-          "Type": "TypeItemSwitch",
-          "Value": "RED"
-        },
-        "Send Email": {
-          "Type": "TypeBoolean",
-          "Value": true
-        },
-        "Recipients": {
-          "Type": "TypeString",
-          "Value": "[DEFAULT_RECIPIENTS]"
-        },
-        "Priority": {
-          "Type": "TypeItemSwitch",
-          "Value": "High"
-        }
-      }
-    },
-    "88DB4A8B5CFC8CDC": {
-      "Key": "88DB4A8B5CFC8CDC",
-      "Title": "Stop Flow With Status",
-      "NodeType": "GeneralStopFlowWithStatus",
-      "LocationX": 1039,
-      "LocationY": 7139,
-      "Properties": {
-        "Status Message": {
-          "Type": "TypeString",
-          "Value": "At least one drive has program fail count changed"
-        },
-        "Status Color": {
-          "Type": "TypeItemSwitch",
-          "Value": "RED"
-        },
-        "Send Email": {
-          "Type": "TypeBoolean",
-          "Value": true
-        },
-        "Recipients": {
-          "Type": "TypeString",
-          "Value": "[DEFAULT_RECIPIENTS]"
-        },
-        "Priority": {
-          "Type": "TypeItemSwitch",
-          "Value": "High"
-        }
-      }
-    },
     "88DB4B2352CC6470": {
       "Key": "88DB4B2352CC6470",
       "Title": "SMARTCTL Get Extended SMART (0xC0, Phison)",
@@ -1519,32 +1461,6 @@
         "Directory Suffix": {
           "Type": "TypeString",
           "Value": "MDIE_changed"
-        }
-      }
-    },
-    "88DB4B26F079A395": {
-      "Key": "88DB4B26F079A395",
-      "Title": "Create SMART Snapshot CSV",
-      "NodeType": "DrivesCreateSmartSnapshotCsv",
-      "LocationX": 558,
-      "LocationY": 6769,
-      "Properties": {
-        "Directory Suffix": {
-          "Type": "TypeString",
-          "Value": "erase_fail_count_changed"
-        }
-      }
-    },
-    "88DB4B271393F981": {
-      "Key": "88DB4B271393F981",
-      "Title": "Create SMART Snapshot CSV",
-      "NodeType": "DrivesCreateSmartSnapshotCsv",
-      "LocationX": 560,
-      "LocationY": 7137,
-      "Properties": {
-        "Directory Suffix": {
-          "Type": "TypeString",
-          "Value": "program_fail_count_changed"
         }
       }
     },
@@ -2036,8 +1952,8 @@
       "Key": "88DB57D9E0CC3DEC",
       "Title": "Send Snapshot Email",
       "NodeType": "EmailSendSnapshot",
-      "LocationX": 557,
-      "LocationY": 6403,
+      "LocationX": 558,
+      "LocationY": 6386,
       "Properties": {
         "Recipients": {
           "Type": "TypeString",
@@ -2079,6 +1995,56 @@
         "Body": {
           "Type": "TypeString",
           "Value": "At least one drive has new available spare changes"
+        }
+      }
+    },
+    "88DB5885D074ECEC": {
+      "Key": "88DB5885D074ECEC",
+      "Title": "Send Snapshot Email",
+      "NodeType": "EmailSendSnapshot",
+      "LocationX": 569,
+      "LocationY": 7144,
+      "Properties": {
+        "Recipients": {
+          "Type": "TypeString",
+          "Value": "[DEFAULT_RECIPIENTS]"
+        },
+        "Priority": {
+          "Type": "TypeItemSwitch",
+          "Value": "Normal"
+        },
+        "Subject": {
+          "Type": "TypeString",
+          "Value": "At least one drive has program fail count changed"
+        },
+        "Body": {
+          "Type": "TypeString",
+          "Value": "At least one drive has program fail count changed"
+        }
+      }
+    },
+    "88DB5885D0753B54": {
+      "Key": "88DB5885D0753B54",
+      "Title": "Send Snapshot Email",
+      "NodeType": "EmailSendSnapshot",
+      "LocationX": 569,
+      "LocationY": 6779,
+      "Properties": {
+        "Recipients": {
+          "Type": "TypeString",
+          "Value": "[DEFAULT_RECIPIENTS]"
+        },
+        "Priority": {
+          "Type": "TypeItemSwitch",
+          "Value": "Normal"
+        },
+        "Subject": {
+          "Type": "TypeString",
+          "Value": "At least one drive has erase fail count changed"
+        },
+        "Body": {
+          "Type": "TypeString",
+          "Value": "At least one drive has erase fail count changed"
         }
       }
     }
@@ -2600,36 +2566,6 @@
       "ToNodeKey": "88DB4B2674449484"
     },
     {
-      "FromNodeKey": "88DB4B26F079A395",
-      "FromNodePort": "Success",
-      "ToNodeKey": "88DB4A8B5065ED7C"
-    },
-    {
-      "FromNodeKey": "88DB4B26F079A395",
-      "FromNodePort": "Errors",
-      "ToNodeKey": "88DB4A8B5065ED7C"
-    },
-    {
-      "FromNodeKey": "88DB4A8AD07AB3BB",
-      "FromNodePort": "Some Drives Attribute Changed",
-      "ToNodeKey": "88DB4B26F079A395"
-    },
-    {
-      "FromNodeKey": "88DB4B271393F981",
-      "FromNodePort": "Success",
-      "ToNodeKey": "88DB4A8B5CFC8CDC"
-    },
-    {
-      "FromNodeKey": "88DB4B271393F981",
-      "FromNodePort": "Errors",
-      "ToNodeKey": "88DB4A8B5CFC8CDC"
-    },
-    {
-      "FromNodeKey": "88DB4A8AED0B1BE8",
-      "FromNodePort": "Some Drives Attribute Changed",
-      "ToNodeKey": "88DB4B271393F981"
-    },
-    {
       "FromNodeKey": "88DB3C5B6D193B8D",
       "FromNodePort": "Some Drives Not Found",
       "ToNodeKey": "88DB3B698FF9742A"
@@ -2818,6 +2754,36 @@
       "FromNodeKey": "88DB3D1E0BED74A9",
       "FromNodePort": "Some Drives Attribute Changed",
       "ToNodeKey": "88DB57D9E44E3ABE"
+    },
+    {
+      "FromNodeKey": "88DB4A8AD07AB3BB",
+      "FromNodePort": "Some Drives Attribute Changed",
+      "ToNodeKey": "88DB5885D0753B54"
+    },
+    {
+      "FromNodeKey": "88DB5885D0753B54",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DB4A8AED0B1BE8"
+    },
+    {
+      "FromNodeKey": "88DB5885D0753B54",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB4A8AED0B1BE8"
+    },
+    {
+      "FromNodeKey": "88DB4A8AED0B1BE8",
+      "FromNodePort": "Some Drives Attribute Changed",
+      "ToNodeKey": "88DB5885D074ECEC"
+    },
+    {
+      "FromNodeKey": "88DB5885D074ECEC",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DB3ACBB6902E82"
+    },
+    {
+      "FromNodeKey": "88DB5885D074ECEC",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB3ACBB6902E82"
     }
   ]
 }

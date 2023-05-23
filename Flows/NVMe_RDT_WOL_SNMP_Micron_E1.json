@@ -546,8 +546,8 @@
       "Key": "88DB3ACBB6902E82",
       "Title": "Check if cycle 0",
       "NodeType": "CycleCheck",
-      "LocationX": 61,
-      "LocationY": 9393,
+      "LocationX": 53,
+      "LocationY": 9827,
       "Properties": {
         "Compare Operation": {
           "Type": "TypeItemSwitch",
@@ -563,8 +563,8 @@
       "Key": "88DB3ACC0B12A29D",
       "Title": "Increment Step",
       "NodeType": "StepIncrement",
-      "LocationX": 100,
-      "LocationY": 9565,
+      "LocationX": 92,
+      "LocationY": 9999,
       "Properties": {
         "Increment Amount": {
           "Type": "TypeInteger",
@@ -576,8 +576,8 @@
       "Key": "88DB3ACC1B4D7726",
       "Title": "Check if step out of range",
       "NodeType": "StepCheck",
-      "LocationX": 100,
-      "LocationY": 9725,
+      "LocationX": 92,
+      "LocationY": 10159,
       "Properties": {
         "Compare Operation": {
           "Type": "TypeItemSwitch",
@@ -593,8 +593,8 @@
       "Key": "88DB3ACC3058A1A7",
       "Title": "Increment Cycle",
       "NodeType": "CycleIncrement",
-      "LocationX": -308,
-      "LocationY": 9962,
+      "LocationX": -316,
+      "LocationY": 10396,
       "Properties": {
         "Increment Amount": {
           "Type": "TypeInteger",
@@ -606,8 +606,8 @@
       "Key": "88DB3ACC47550C12",
       "Title": "Set Step",
       "NodeType": "StepSet",
-      "LocationX": -309,
-      "LocationY": 10127,
+      "LocationX": -317,
+      "LocationY": 10561,
       "Properties": {
         "Set Value": {
           "Type": "TypeInteger",
@@ -619,8 +619,8 @@
       "Key": "88DB3ACC771A8C8D",
       "Title": "Go To Entry Node",
       "NodeType": "GeneralGoToEntry",
-      "LocationX": 138,
-      "LocationY": 10319,
+      "LocationX": 130,
+      "LocationY": 10753,
       "Properties": {}
     },
     "88DB3B698FF9742A": {
@@ -1477,8 +1477,8 @@
       "Key": "88DB4C26CC979765",
       "Title": "Send Rhoads ERS Vendor Command",
       "NodeType": "MicronVendorCommandsRhoadsERS",
-      "LocationX": -992,
-      "LocationY": 8849,
+      "LocationX": -1056,
+      "LocationY": 8952,
       "Properties": {
         "File Name Prefix": {
           "Type": "TypeString",
@@ -1490,7 +1490,7 @@
         },
         "Timeout Seconds": {
           "Type": "TypeInteger",
-          "Value": 45
+          "Value": 120
         }
       }
     },
@@ -1498,8 +1498,8 @@
       "Key": "88DB4C26D107A4DF",
       "Title": "Send Rhoads UEL Vendor Command",
       "NodeType": "MicronVendorCommandsRhoadsUEL",
-      "LocationX": -994,
-      "LocationY": 8623,
+      "LocationX": -1053,
+      "LocationY": 8568,
       "Properties": {
         "File Name Prefix": {
           "Type": "TypeString",
@@ -1511,7 +1511,7 @@
         },
         "Timeout Seconds": {
           "Type": "TypeInteger",
-          "Value": 45
+          "Value": 120
         }
       }
     },
@@ -1519,8 +1519,8 @@
       "Key": "88DB4C26D27EBB8B",
       "Title": "Send Rhoads Background Scan Vendor Command",
       "NodeType": "MicronVendorCommandsRhoadsBackgroundScan",
-      "LocationX": -992,
-      "LocationY": 9077,
+      "LocationX": -1057,
+      "LocationY": 9320,
       "Properties": {
         "File Name Prefix": {
           "Type": "TypeString",
@@ -1532,7 +1532,7 @@
         },
         "Timeout Seconds": {
           "Type": "TypeInteger",
-          "Value": 45
+          "Value": 120
         }
       }
     },
@@ -2233,8 +2233,8 @@
       "Key": "88DB5ADF6FD5B042",
       "Title": "Send email about errors getting VU data",
       "NodeType": "EmailSendSnapshot",
-      "LocationX": -590,
-      "LocationY": 8774,
+      "LocationX": -665,
+      "LocationY": 8570,
       "Properties": {
         "Recipients": {
           "Type": "TypeString",
@@ -2246,11 +2246,11 @@
         },
         "Subject": {
           "Type": "TypeString",
-          "Value": "Errors getting VU data"
+          "Value": "Errors getting VU data (UEL)"
         },
         "Body": {
           "Type": "TypeString",
-          "Value": "Errors getting VU data"
+          "Value": "Errors getting VU data (UEL)"
         }
       }
     },
@@ -2418,6 +2418,69 @@
         "Timeout Seconds": {
           "Type": "TypeInteger",
           "Value": 120
+        }
+      }
+    },
+    "88DB5B0CC1E6A977": {
+      "Key": "88DB5B0CC1E6A977",
+      "Title": "Go To Check if we are using the Micron driver",
+      "NodeType": "GeneralGoToNode",
+      "LocationX": 932,
+      "LocationY": 3823,
+      "Properties": {
+        "Go To Node Key": {
+          "Type": "TypeString",
+          "Value": "88DB5ADFA59D4E85"
+        }
+      }
+    },
+    "88DB5BA2F197C223": {
+      "Key": "88DB5BA2F197C223",
+      "Title": "Send email about errors getting VU data",
+      "NodeType": "EmailSendSnapshot",
+      "LocationX": -672,
+      "LocationY": 8948,
+      "Properties": {
+        "Recipients": {
+          "Type": "TypeString",
+          "Value": "[DEFAULT_RECIPIENTS]"
+        },
+        "Priority": {
+          "Type": "TypeItemSwitch",
+          "Value": "Normal"
+        },
+        "Subject": {
+          "Type": "TypeString",
+          "Value": "Errors getting VU data (ERS)"
+        },
+        "Body": {
+          "Type": "TypeString",
+          "Value": "Errors getting VU data (ERS)"
+        }
+      }
+    },
+    "88DB5BA2F5DBF337": {
+      "Key": "88DB5BA2F5DBF337",
+      "Title": "Send email about errors getting VU data",
+      "NodeType": "EmailSendSnapshot",
+      "LocationX": -606,
+      "LocationY": 9324,
+      "Properties": {
+        "Recipients": {
+          "Type": "TypeString",
+          "Value": "[DEFAULT_RECIPIENTS]"
+        },
+        "Priority": {
+          "Type": "TypeItemSwitch",
+          "Value": "Normal"
+        },
+        "Subject": {
+          "Type": "TypeString",
+          "Value": "Errors getting VU data (BS)"
+        },
+        "Body": {
+          "Type": "TypeString",
+          "Value": "Errors getting VU data (BS)"
         }
       }
     }
@@ -3209,26 +3272,6 @@
       "ToNodeKey": "88DB4C26A5523F38"
     },
     {
-      "FromNodeKey": "88DB5ADF6FD5B042",
-      "FromNodePort": "Success",
-      "ToNodeKey": "88DB3ACBB6902E82"
-    },
-    {
-      "FromNodeKey": "88DB5ADF6FD5B042",
-      "FromNodePort": "Errors",
-      "ToNodeKey": "88DB3ACBB6902E82"
-    },
-    {
-      "FromNodeKey": "88DB4C26D27EBB8B",
-      "FromNodePort": "Errors",
-      "ToNodeKey": "88DB5ADF6FD5B042"
-    },
-    {
-      "FromNodeKey": "88DB4C26CC979765",
-      "FromNodePort": "Errors",
-      "ToNodeKey": "88DB5ADF6FD5B042"
-    },
-    {
       "FromNodeKey": "88DB4C26D107A4DF",
       "FromNodePort": "Errors",
       "ToNodeKey": "88DB5ADF6FD5B042"
@@ -3294,11 +3337,6 @@
       "ToNodeKey": "88DAFE2BA9FB0B2F"
     },
     {
-      "FromNodeKey": "88DB5ADFA59C15F3",
-      "FromNodePort": "Connection Alive",
-      "ToNodeKey": "88DAFE2BA9FB0B2F"
-    },
-    {
       "FromNodeKey": "88DB5ADFA59D4E85",
       "FromNodePort": "Some Drivers Mismatch",
       "ToNodeKey": "88DB5ADFA59B2B9D"
@@ -3307,6 +3345,51 @@
       "FromNodeKey": "88DB56333D2AE610",
       "FromNodePort": "Some Drivers Mismatch",
       "ToNodeKey": "88DB557C28004B18"
+    },
+    {
+      "FromNodeKey": "88DB5ADFA59C15F3",
+      "FromNodePort": "Connection Alive",
+      "ToNodeKey": "88DB5B0CC1E6A977"
+    },
+    {
+      "FromNodeKey": "88DB5ADF6FD5B042",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DB4C26CC979765"
+    },
+    {
+      "FromNodeKey": "88DB5ADF6FD5B042",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB4C26CC979765"
+    },
+    {
+      "FromNodeKey": "88DB4C26CC979765",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB5BA2F197C223"
+    },
+    {
+      "FromNodeKey": "88DB4C26D27EBB8B",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB5BA2F5DBF337"
+    },
+    {
+      "FromNodeKey": "88DB5BA2F197C223",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DB4C26D27EBB8B"
+    },
+    {
+      "FromNodeKey": "88DB5BA2F197C223",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB4C26D27EBB8B"
+    },
+    {
+      "FromNodeKey": "88DB5BA2F5DBF337",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DB3ACBB6902E82"
+    },
+    {
+      "FromNodeKey": "88DB5BA2F5DBF337",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB3ACBB6902E82"
     }
   ]
 }

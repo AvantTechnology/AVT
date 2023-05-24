@@ -1127,7 +1127,7 @@
       "Properties": {
         "Timeout Minutes": {
           "Type": "TypeInteger",
-          "Value": 10
+          "Value": 20
         }
       }
     },

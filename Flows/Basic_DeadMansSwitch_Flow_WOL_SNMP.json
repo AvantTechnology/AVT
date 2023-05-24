@@ -1,0 +1,125 @@
+{
+  "EntryNodeKey": "88DB5C724685941C",
+  "CleanupEntryNodeKey": "",
+  "Nodes": {
+    "88DB57E2C5DC69DD": {
+      "Key": "88DB57E2C5DC69DD",
+      "Title": "Client System Send Shutdown",
+      "NodeType": "ClientSystemSendShutdown",
+      "LocationX": 1267,
+      "LocationY": 524,
+      "Properties": {}
+    },
+    "88DB57E2C5DC8DA9": {
+      "Key": "88DB57E2C5DC8DA9",
+      "Title": "SNMP Wait For System To Power Off",
+      "NodeType": "SNMPWaitForOutletCurrentDrawCondition",
+      "LocationX": 1268,
+      "LocationY": 635,
+      "Properties": {
+        "SNMP Device IP": {
+          "Type": "TypeString",
+          "ReferenceKey": "SNMPIPSystem"
+        },
+        "Outlet Number": {
+          "Type": "TypeInteger",
+          "ReferenceKey": "SNMPOutletSystem"
+        },
+        "Current Draw Compare Operation": {
+          "Type": "TypeItemSwitch",
+          "Value": "<"
+        },
+        "Current Draw Compare Value": {
+          "Type": "TypeDouble",
+          "Value": 0.2
+        },
+        "Timeout Seconds": {
+          "Type": "TypeInteger",
+          "Value": 60
+        }
+      }
+    },
+    "88DB57E2C5DCDE98": {
+      "Key": "88DB57E2C5DCDE98",
+      "Title": "Turn off backplane",
+      "NodeType": "SNMPSetOutletStatus",
+      "LocationX": 1268,
+      "LocationY": 939,
+      "Properties": {
+        "SNMP Device IP": {
+          "Type": "TypeString",
+          "ReferenceKey": "SNMPIPBackplane"
+        },
+        "Outlet Number": {
+          "Type": "TypeInteger",
+          "ReferenceKey": "SNMPOutletBackplane"
+        },
+        "Outlet Status": {
+          "Type": "TypeItemSwitch",
+          "Value": "Off"
+        },
+        "Timeout Seconds": {
+          "Type": "TypeInteger",
+          "Value": 5
+        }
+      }
+    },
+    "88DB5C724685941C": {
+      "Key": "88DB5C724685941C",
+      "Title": "Send Snapshot Email",
+      "NodeType": "EmailSendSnapshot",
+      "LocationX": 1267,
+      "LocationY": 231,
+      "Properties": {
+        "Recipients": {
+          "Type": "TypeString",
+          "Value": "[DEFAULT_RECIPIENTS]"
+        },
+        "Priority": {
+          "Type": "TypeItemSwitch",
+          "Value": "Normal"
+        },
+        "Subject": {
+          "Type": "TypeString",
+          "Value": "Power outage detected!"
+        },
+        "Body": {
+          "Type": "TypeString",
+          "Value": "Power outage detected shutting down systems"
+        }
+      }
+    }
+  },
+  "Connections": [
+    {
+      "FromNodeKey": "88DB57E2C5DC8DA9",
+      "FromNodePort": "Condition Met",
+      "ToNodeKey": "88DB57E2C5DCDE98"
+    },
+    {
+      "FromNodeKey": "88DB57E2C5DC69DD",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DB57E2C5DC8DA9"
+    },
+    {
+      "FromNodeKey": "88DB57E2C5DC69DD",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB57E2C5DC8DA9"
+    },
+    {
+      "FromNodeKey": "88DB57E2C5DC8DA9",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB57E2C5DCDE98"
+    },
+    {
+      "FromNodeKey": "88DB5C724685941C",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DB57E2C5DC69DD"
+    },
+    {
+      "FromNodeKey": "88DB5C724685941C",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB57E2C5DC69DD"
+    }
+  ]
+}

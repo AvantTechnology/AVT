@@ -1,0 +1,125 @@
+{
+  "EntryNodeKey": "88DB5C72212B5452",
+  "CleanupEntryNodeKey": "",
+  "Nodes": {
+    "88DB57D5BC4F7330": {
+      "Key": "88DB57D5BC4F7330",
+      "Title": "Client System Send Shutdown",
+      "NodeType": "ClientSystemSendShutdown",
+      "LocationX": 1267,
+      "LocationY": 527,
+      "Properties": {}
+    },
+    "88DB57D6288AE74F": {
+      "Key": "88DB57D6288AE74F",
+      "Title": "Wait for system to turn off",
+      "NodeType": "ASRockBMCWaitForPowerStatus",
+      "LocationX": 1268,
+      "LocationY": 640,
+      "Properties": {
+        "BMC IP": {
+          "Type": "TypeString",
+          "ReferenceKey": "BMCIP"
+        },
+        "User Name": {
+          "Type": "TypeString",
+          "Value": "engineer"
+        },
+        "Password": {
+          "Type": "TypeString",
+          "Value": "engineer1"
+        },
+        "Retries": {
+          "Type": "TypeInteger",
+          "Value": 5
+        },
+        "Target Power Status": {
+          "Type": "TypeItemSwitch",
+          "Value": "Off"
+        },
+        "Timeout Seconds": {
+          "Type": "TypeInteger",
+          "Value": 60
+        }
+      }
+    },
+    "88DB5C7146424164": {
+      "Key": "88DB5C7146424164",
+      "Title": "Turn off backplane",
+      "NodeType": "MQTTSetOutletPowerState",
+      "LocationX": 1268,
+      "LocationY": 944,
+      "Properties": {
+        "Outlet Topic": {
+          "Type": "TypeString",
+          "ReferenceKey": "MQTTOutletTopicBackplane"
+        },
+        "Power State": {
+          "Type": "TypeItemSwitch",
+          "Value": "OFF"
+        },
+        "Timeout Milliseconds": {
+          "Type": "TypeInteger",
+          "Value": 5000
+        }
+      }
+    },
+    "88DB5C72212B5452": {
+      "Key": "88DB5C72212B5452",
+      "Title": "Send Snapshot Email",
+      "NodeType": "EmailSendSnapshot",
+      "LocationX": 1267,
+      "LocationY": 229,
+      "Properties": {
+        "Recipients": {
+          "Type": "TypeString",
+          "Value": "[DEFAULT_RECIPIENTS]"
+        },
+        "Priority": {
+          "Type": "TypeItemSwitch",
+          "Value": "Normal"
+        },
+        "Subject": {
+          "Type": "TypeString",
+          "Value": "Power outage detected!"
+        },
+        "Body": {
+          "Type": "TypeString",
+          "Value": "Power outage detected shutting down systems"
+        }
+      }
+    }
+  },
+  "Connections": [
+    {
+      "FromNodeKey": "88DB57D5BC4F7330",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DB57D6288AE74F"
+    },
+    {
+      "FromNodeKey": "88DB57D5BC4F7330",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB57D6288AE74F"
+    },
+    {
+      "FromNodeKey": "88DB57D6288AE74F",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DB5C7146424164"
+    },
+    {
+      "FromNodeKey": "88DB57D6288AE74F",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB5C7146424164"
+    },
+    {
+      "FromNodeKey": "88DB5C72212B5452",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DB57D5BC4F7330"
+    },
+    {
+      "FromNodeKey": "88DB5C72212B5452",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB57D5BC4F7330"
+    }
+  ]
+}

@@ -20,7 +20,7 @@
       "Title": "System off for 1 minute",
       "NodeType": "GeneralWait",
       "LocationX": 3036,
-      "LocationY": 1698,
+      "LocationY": 1596,
       "Properties": {
         "Timeout Seconds": {
           "Type": "TypeInteger",
@@ -129,7 +129,7 @@
       "Title": "Go To Send Power On",
       "NodeType": "GeneralGoToNode",
       "LocationX": 2402,
-      "LocationY": 3035,
+      "LocationY": 2751,
       "Properties": {
         "Go To Node Key": {
           "Type": "TypeString",
@@ -142,7 +142,7 @@
       "Title": "Waiting for client connection...",
       "NodeType": "ClientConnectionWaitAlive",
       "LocationX": 3036,
-      "LocationY": 3021,
+      "LocationY": 2737,
       "Properties": {
         "Timeout Seconds": {
           "Type": "TypeInteger",
@@ -277,7 +277,7 @@
       "Title": "Send email about issue turning on",
       "NodeType": "EmailSendSnapshot",
       "LocationX": 2379,
-      "LocationY": 2733,
+      "LocationY": 2449,
       "Properties": {
         "Recipients": {
           "Type": "TypeString",
@@ -302,7 +302,7 @@
       "Title": "Stop Flow With Status",
       "NodeType": "GeneralStopFlowWithStatus",
       "LocationX": 3362,
-      "LocationY": 3043,
+      "LocationY": 2759,
       "Properties": {
         "Status Message": {
           "Type": "TypeString",
@@ -344,7 +344,7 @@
       "Title": "BMC Send Power On",
       "NodeType": "ASRockBMCSendPowerOn",
       "LocationX": 3036,
-      "LocationY": 2417,
+      "LocationY": 2133,
       "Properties": {
         "BMC IP": {
           "Type": "TypeString",
@@ -372,8 +372,8 @@
       "Key": "88DB3C46BB4B42BF",
       "Title": "BMC Send Power Off",
       "NodeType": "ASRockBMCSendPowerOff",
-      "LocationX": 2386,
-      "LocationY": 1679,
+      "LocationX": 2392,
+      "LocationY": 1601,
       "Properties": {
         "BMC IP": {
           "Type": "TypeString",
@@ -486,7 +486,7 @@
       "Title": "Turn on backplane",
       "NodeType": "SNMPSetOutletStatus",
       "LocationX": 3036,
-      "LocationY": 2038,
+      "LocationY": 1754,
       "Properties": {
         "SNMP Device IP": {
           "Type": "TypeString",
@@ -639,8 +639,8 @@
       "Key": "88DB3F5169B44AC0",
       "Title": "Allow some time to force power down",
       "NodeType": "GeneralWait",
-      "LocationX": 2387,
-      "LocationY": 1946,
+      "LocationX": 2393,
+      "LocationY": 1868,
       "Properties": {
         "Timeout Seconds": {
           "Type": "TypeInteger",
@@ -653,7 +653,7 @@
       "Title": "Allow time for backplane to power on",
       "NodeType": "GeneralWait",
       "LocationX": 3036,
-      "LocationY": 2275,
+      "LocationY": 1991,
       "Properties": {
         "Timeout Seconds": {
           "Type": "TypeInteger",
@@ -836,48 +836,6 @@
         "Priority": {
           "Type": "TypeItemSwitch",
           "Value": "High"
-        }
-      }
-    },
-    "88DB403EC2B3A092": {
-      "Key": "88DB403EC2B3A092",
-      "Title": "Enable regulators",
-      "NodeType": "MCUSetPin",
-      "LocationX": 3036,
-      "LocationY": 1836,
-      "Properties": {
-        "Pin": {
-          "Type": "TypeInteger",
-          "ReferenceKey": "MCURegulatorEnablePin"
-        },
-        "Pin State": {
-          "Type": "TypeItemSwitch",
-          "Value": "FLOATING"
-        },
-        "Timeout Milliseconds": {
-          "Type": "TypeInteger",
-          "Value": 5000
-        }
-      }
-    },
-    "88DB403F060F2A26": {
-      "Key": "88DB403F060F2A26",
-      "Title": "Disable regulators",
-      "NodeType": "MCUSetPin",
-      "LocationX": 3035,
-      "LocationY": 1496,
-      "Properties": {
-        "Pin": {
-          "Type": "TypeInteger",
-          "ReferenceKey": "MCURegulatorEnablePin"
-        },
-        "Pin State": {
-          "Type": "TypeItemSwitch",
-          "Value": "LOW"
-        },
-        "Timeout Milliseconds": {
-          "Type": "TypeInteger",
-          "Value": 5000
         }
       }
     },
@@ -2164,7 +2122,7 @@
       "Title": "BMC Wait For Power Status",
       "NodeType": "ASRockBMCWaitForPowerStatus",
       "LocationX": 3036,
-      "LocationY": 2685,
+      "LocationY": 2401,
       "Properties": {
         "BMC IP": {
           "Type": "TypeString",
@@ -2567,7 +2525,7 @@
       "Title": "Stop Flow With Status",
       "NodeType": "GeneralStopFlowWithStatus",
       "LocationX": 2355,
-      "LocationY": 2375,
+      "LocationY": 2080,
       "Properties": {
         "Status Message": {
           "Type": "TypeString",
@@ -2929,26 +2887,6 @@
       "FromNodeKey": "88DB403BFA3674ED",
       "FromNodePort": "Success",
       "ToNodeKey": "88DB403BFCDD9F71"
-    },
-    {
-      "FromNodeKey": "88DAFDA0A1DDF3A5",
-      "FromNodePort": "Time Elapsed",
-      "ToNodeKey": "88DB403EC2B3A092"
-    },
-    {
-      "FromNodeKey": "88DB403EC2B3A092",
-      "FromNodePort": "Success",
-      "ToNodeKey": "88DB3CF4DF5EDA69"
-    },
-    {
-      "FromNodeKey": "88DB3CF49A9D1645",
-      "FromNodePort": "Success",
-      "ToNodeKey": "88DB403F060F2A26"
-    },
-    {
-      "FromNodeKey": "88DB403F060F2A26",
-      "FromNodePort": "Success",
-      "ToNodeKey": "88DAFDA0A1DDF3A5"
     },
     {
       "FromNodeKey": "88DB056E76324D2A",
@@ -3799,6 +3737,16 @@
       "FromNodeKey": "88DB3C5B6D193B8D",
       "FromNodePort": "All Drives Not Found",
       "ToNodeKey": "88DB5C889162B0A5"
+    },
+    {
+      "FromNodeKey": "88DB3CF49A9D1645",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DAFDA0A1DDF3A5"
+    },
+    {
+      "FromNodeKey": "88DAFDA0A1DDF3A5",
+      "FromNodePort": "Time Elapsed",
+      "ToNodeKey": "88DB3CF4DF5EDA69"
     }
   ]
 }

@@ -1,0 +1,333 @@
+{
+  "EntryNodeKey": "88DB5C6F4A5C47A5",
+  "CleanupEntryNodeKey": "",
+  "Nodes": {
+    "88DB5C6F253A6EC9": {
+      "Key": "88DB5C6F253A6EC9",
+      "Title": "Ensure outlet is on",
+      "NodeType": "MQTTGetOutletPowerState",
+      "LocationX": -421,
+      "LocationY": 99,
+      "Properties": {
+        "Outlet Topic": {
+          "Type": "TypeString",
+          "ReferenceKey": "MQTTOutletTopicBackplane"
+        },
+        "Timeout Milliseconds": {
+          "Type": "TypeInteger",
+          "Value": 5000
+        }
+      }
+    },
+    "88DB5C6F4A5C47A5": {
+      "Key": "88DB5C6F4A5C47A5",
+      "Title": "Turn on outlet",
+      "NodeType": "MQTTSetOutletPowerState",
+      "LocationX": -412,
+      "LocationY": -307,
+      "Properties": {
+        "Outlet Topic": {
+          "Type": "TypeString",
+          "ReferenceKey": "MQTTOutletTopicBackplane"
+        },
+        "Power State": {
+          "Type": "TypeItemSwitch",
+          "Value": "ON"
+        },
+        "Timeout Milliseconds": {
+          "Type": "TypeInteger",
+          "Value": 5000
+        }
+      }
+    },
+    "88DB5C6F59B95130": {
+      "Key": "88DB5C6F59B95130",
+      "Title": "Wait 2 seconds",
+      "NodeType": "GeneralWait",
+      "LocationX": -576,
+      "LocationY": -61,
+      "Properties": {
+        "Timeout Seconds": {
+          "Type": "TypeInteger",
+          "Value": 2
+        }
+      }
+    },
+    "88DB5C6F69733118": {
+      "Key": "88DB5C6F69733118",
+      "Title": "Stop Flow With Status",
+      "NodeType": "GeneralStopFlowWithStatus",
+      "LocationX": 171,
+      "LocationY": 200,
+      "Properties": {
+        "Status Message": {
+          "Type": "TypeString",
+          "Value": "Errors testing MQTT"
+        },
+        "Status Color": {
+          "Type": "TypeItemSwitch",
+          "Value": "RED"
+        },
+        "Send Email": {
+          "Type": "TypeBoolean",
+          "Value": false
+        },
+        "Recipients": {
+          "Type": "TypeString",
+          "Value": "[DEFAULT_RECIPIENTS]"
+        },
+        "Priority": {
+          "Type": "TypeItemSwitch",
+          "Value": "High"
+        }
+      }
+    },
+    "88DB5C6F784165BD": {
+      "Key": "88DB5C6F784165BD",
+      "Title": "Wait 10 seconds",
+      "NodeType": "GeneralWait",
+      "LocationX": -424,
+      "LocationY": 1334,
+      "Properties": {
+        "Timeout Seconds": {
+          "Type": "TypeInteger",
+          "Value": 10
+        }
+      }
+    },
+    "88DB5C6F84AFA0E2": {
+      "Key": "88DB5C6F84AFA0E2",
+      "Title": "Ensure outlet is off",
+      "NodeType": "MQTTGetOutletPowerState",
+      "LocationX": -422,
+      "LocationY": 1993,
+      "Properties": {
+        "Outlet Topic": {
+          "Type": "TypeString",
+          "ReferenceKey": "MQTTOutletTopicBackplane"
+        },
+        "Timeout Milliseconds": {
+          "Type": "TypeInteger",
+          "Value": 5000
+        }
+      }
+    },
+    "88DB5C6F84AFEEF8": {
+      "Key": "88DB5C6F84AFEEF8",
+      "Title": "Wait 2 seconds",
+      "NodeType": "GeneralWait",
+      "LocationX": -559,
+      "LocationY": 1831,
+      "Properties": {
+        "Timeout Seconds": {
+          "Type": "TypeInteger",
+          "Value": 2
+        }
+      }
+    },
+    "88DB5C6F84B03D12": {
+      "Key": "88DB5C6F84B03D12",
+      "Title": "Turn off outlet",
+      "NodeType": "MQTTSetOutletPowerState",
+      "LocationX": -423,
+      "LocationY": 1586,
+      "Properties": {
+        "Outlet Topic": {
+          "Type": "TypeString",
+          "ReferenceKey": "MQTTOutletTopicBackplane"
+        },
+        "Power State": {
+          "Type": "TypeItemSwitch",
+          "Value": "OFF"
+        },
+        "Timeout Milliseconds": {
+          "Type": "TypeInteger",
+          "Value": 5000
+        }
+      }
+    },
+    "88DB5C6FA35702C1": {
+      "Key": "88DB5C6FA35702C1",
+      "Title": "Stop Flow With Status",
+      "NodeType": "GeneralStopFlowWithStatus",
+      "LocationX": -387,
+      "LocationY": 531,
+      "Properties": {
+        "Status Message": {
+          "Type": "TypeString",
+          "Value": "Outlet is not on!"
+        },
+        "Status Color": {
+          "Type": "TypeItemSwitch",
+          "Value": "RED"
+        },
+        "Send Email": {
+          "Type": "TypeBoolean",
+          "Value": false
+        },
+        "Recipients": {
+          "Type": "TypeString",
+          "Value": "[DEFAULT_RECIPIENTS]"
+        },
+        "Priority": {
+          "Type": "TypeItemSwitch",
+          "Value": "High"
+        }
+      }
+    },
+    "88DB5C6FB3AA7EA9": {
+      "Key": "88DB5C6FB3AA7EA9",
+      "Title": "Stop Flow With Status",
+      "NodeType": "GeneralStopFlowWithStatus",
+      "LocationX": 177,
+      "LocationY": 2119,
+      "Properties": {
+        "Status Message": {
+          "Type": "TypeString",
+          "Value": "Errors testing MQTT"
+        },
+        "Status Color": {
+          "Type": "TypeItemSwitch",
+          "Value": "RED"
+        },
+        "Send Email": {
+          "Type": "TypeBoolean",
+          "Value": false
+        },
+        "Recipients": {
+          "Type": "TypeString",
+          "Value": "[DEFAULT_RECIPIENTS]"
+        },
+        "Priority": {
+          "Type": "TypeItemSwitch",
+          "Value": "High"
+        }
+      }
+    },
+    "88DB5C6FB8EBE03E": {
+      "Key": "88DB5C6FB8EBE03E",
+      "Title": "Stop Flow With Status",
+      "NodeType": "GeneralStopFlowWithStatus",
+      "LocationX": -1091,
+      "LocationY": 2244,
+      "Properties": {
+        "Status Message": {
+          "Type": "TypeString",
+          "Value": "Outlet is not off!"
+        },
+        "Status Color": {
+          "Type": "TypeItemSwitch",
+          "Value": "RED"
+        },
+        "Send Email": {
+          "Type": "TypeBoolean",
+          "Value": false
+        },
+        "Recipients": {
+          "Type": "TypeString",
+          "Value": "[DEFAULT_RECIPIENTS]"
+        },
+        "Priority": {
+          "Type": "TypeItemSwitch",
+          "Value": "High"
+        }
+      }
+    },
+    "88DB5C6FC7A39FA2": {
+      "Key": "88DB5C6FC7A39FA2",
+      "Title": "Stop Flow With Status",
+      "NodeType": "GeneralStopFlowWithStatus",
+      "LocationX": -383,
+      "LocationY": 2453,
+      "Properties": {
+        "Status Message": {
+          "Type": "TypeString",
+          "Value": "Test Pass!"
+        },
+        "Status Color": {
+          "Type": "TypeItemSwitch",
+          "Value": "GREEN"
+        },
+        "Send Email": {
+          "Type": "TypeBoolean",
+          "Value": false
+        },
+        "Recipients": {
+          "Type": "TypeString",
+          "Value": "[DEFAULT_RECIPIENTS]"
+        },
+        "Priority": {
+          "Type": "TypeItemSwitch",
+          "Value": "High"
+        }
+      }
+    }
+  },
+  "Connections": [
+    {
+      "FromNodeKey": "88DB5C6F4A5C47A5",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DB5C6F59B95130"
+    },
+    {
+      "FromNodeKey": "88DB5C6F59B95130",
+      "FromNodePort": "Time Elapsed",
+      "ToNodeKey": "88DB5C6F253A6EC9"
+    },
+    {
+      "FromNodeKey": "88DB5C6F4A5C47A5",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB5C6F69733118"
+    },
+    {
+      "FromNodeKey": "88DB5C6F253A6EC9",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB5C6F69733118"
+    },
+    {
+      "FromNodeKey": "88DB5C6F253A6EC9",
+      "FromNodePort": "ON",
+      "ToNodeKey": "88DB5C6F784165BD"
+    },
+    {
+      "FromNodeKey": "88DB5C6F84B03D12",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DB5C6F84AFEEF8"
+    },
+    {
+      "FromNodeKey": "88DB5C6F84AFEEF8",
+      "FromNodePort": "Time Elapsed",
+      "ToNodeKey": "88DB5C6F84AFA0E2"
+    },
+    {
+      "FromNodeKey": "88DB5C6F784165BD",
+      "FromNodePort": "Time Elapsed",
+      "ToNodeKey": "88DB5C6F84B03D12"
+    },
+    {
+      "FromNodeKey": "88DB5C6F253A6EC9",
+      "FromNodePort": "OFF",
+      "ToNodeKey": "88DB5C6FA35702C1"
+    },
+    {
+      "FromNodeKey": "88DB5C6F84B03D12",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB5C6FB3AA7EA9"
+    },
+    {
+      "FromNodeKey": "88DB5C6F84AFA0E2",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB5C6FB3AA7EA9"
+    },
+    {
+      "FromNodeKey": "88DB5C6F84AFA0E2",
+      "FromNodePort": "ON",
+      "ToNodeKey": "88DB5C6FB8EBE03E"
+    },
+    {
+      "FromNodeKey": "88DB5C6F84AFA0E2",
+      "FromNodePort": "OFF",
+      "ToNodeKey": "88DB5C6FC7A39FA2"
+    }
+  ]
+}

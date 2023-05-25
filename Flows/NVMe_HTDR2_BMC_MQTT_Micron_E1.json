@@ -7,7 +7,7 @@
       "Title": "Check if we are using the Micron driver",
       "NodeType": "DevConCheckDeviceDriver",
       "LocationX": 958,
-      "LocationY": 598,
+      "LocationY": 1006,
       "Properties": {
         "Device ID": {
           "Type": "TypeString",
@@ -28,7 +28,7 @@
       "Title": "Client System Set Time",
       "NodeType": "ClientSystemSetTime",
       "LocationX": 958,
-      "LocationY": 343,
+      "LocationY": 751,
       "Properties": {}
     },
     "88DB57EF82F6220A": {
@@ -36,7 +36,7 @@
       "Title": "Stop Flow With Status",
       "NodeType": "GeneralStopFlowWithStatus",
       "LocationX": 1305,
-      "LocationY": 258,
+      "LocationY": 666,
       "Properties": {
         "Status Message": {
           "Type": "TypeString",
@@ -65,40 +65,15 @@
       "Title": "Client Connection Check Status",
       "NodeType": "ClientConnectionCheckStatus",
       "LocationX": 958,
-      "LocationY": 204,
+      "LocationY": 612,
       "Properties": {}
-    },
-    "88DB57EF82F6BB58": {
-      "Key": "88DB57EF82F6BB58",
-      "Title": "Send email about Micron driver not installed",
-      "NodeType": "EmailSendSnapshot",
-      "LocationX": 1888,
-      "LocationY": 850,
-      "Properties": {
-        "Recipients": {
-          "Type": "TypeString",
-          "Value": "[DEFAULT_RECIPIENTS]"
-        },
-        "Priority": {
-          "Type": "TypeItemSwitch",
-          "Value": "Normal"
-        },
-        "Subject": {
-          "Type": "TypeString",
-          "Value": "Micron driver not installed"
-        },
-        "Body": {
-          "Type": "TypeString",
-          "Value": "Attempting to install driver and reboot"
-        }
-      }
     },
     "88DB57EF82F70C42": {
       "Key": "88DB57EF82F70C42",
       "Title": "Ensure Micron driver is installed",
       "NodeType": "ClientSystemProcessStart",
-      "LocationX": 1889,
-      "LocationY": 1142,
+      "LocationX": 1874,
+      "LocationY": 1302,
       "Properties": {
         "Process Name": {
           "Type": "TypeString",
@@ -122,8 +97,8 @@
       "Key": "88DB57EF82F757B4",
       "Title": "Stop Flow With Status",
       "NodeType": "GeneralStopFlowWithStatus",
-      "LocationX": 2392,
-      "LocationY": 1143,
+      "LocationX": 2377,
+      "LocationY": 1303,
       "Properties": {
         "Status Message": {
           "Type": "TypeString",
@@ -151,8 +126,8 @@
       "Key": "88DB57EF82F7A8A8",
       "Title": "Stop Flow With Status",
       "NodeType": "GeneralStopFlowWithStatus",
-      "LocationX": 2372,
-      "LocationY": 1511,
+      "LocationX": 2357,
+      "LocationY": 1671,
       "Properties": {
         "Status Message": {
           "Type": "TypeString",
@@ -180,16 +155,16 @@
       "Key": "88DB57EF82F7F6BE",
       "Title": "Rebooting System",
       "NodeType": "ClientSystemSendReboot",
-      "LocationX": 1889,
-      "LocationY": 1399,
+      "LocationX": 1874,
+      "LocationY": 1559,
       "Properties": {}
     },
     "88DB57EF82F844D0": {
       "Key": "88DB57EF82F844D0",
       "Title": "Waiting for client to disconnect...",
       "NodeType": "ClientConnectionWaitDead",
-      "LocationX": 1889,
-      "LocationY": 1503,
+      "LocationX": 1874,
+      "LocationY": 1663,
       "Properties": {
         "Timeout Seconds": {
           "Type": "TypeInteger",
@@ -201,8 +176,8 @@
       "Key": "88DB57EF82F89313",
       "Title": "Waiting for client connection...",
       "NodeType": "ClientConnectionWaitAlive",
-      "LocationX": 1889,
-      "LocationY": 1640,
+      "LocationX": 1874,
+      "LocationY": 1800,
       "Properties": {
         "Timeout Seconds": {
           "Type": "TypeInteger",
@@ -214,8 +189,8 @@
       "Key": "88DB57EF82F8E123",
       "Title": "Go To Entry Node",
       "NodeType": "GeneralGoToEntry",
-      "LocationX": 1889,
-      "LocationY": 1805,
+      "LocationX": 1874,
+      "LocationY": 1965,
       "Properties": {}
     },
     "88DB57EF82F92C5A": {
@@ -223,7 +198,7 @@
       "Title": "Stop Flow With Status",
       "NodeType": "GeneralStopFlowWithStatus",
       "LocationX": 1200,
-      "LocationY": 890,
+      "LocationY": 1298,
       "Properties": {
         "Status Message": {
           "Type": "TypeString",
@@ -252,7 +227,7 @@
       "Title": "Kill All Spawned Processes",
       "NodeType": "ClientSystemProcessKillAllSpawned",
       "LocationX": 2478,
-      "LocationY": 196,
+      "LocationY": 604,
       "Properties": {
         "Timeout Seconds": {
           "Type": "TypeInteger",
@@ -2403,21 +2378,6 @@
       "ToNodeKey": "88DB57EF82F92C5A"
     },
     {
-      "FromNodeKey": "88DB57EF82F582EA",
-      "FromNodePort": "Some Drivers Mismatch",
-      "ToNodeKey": "88DB57EF82F6BB58"
-    },
-    {
-      "FromNodeKey": "88DB57EF82F6BB58",
-      "FromNodePort": "Success",
-      "ToNodeKey": "88DB57EF82F70C42"
-    },
-    {
-      "FromNodeKey": "88DB57EF82F6BB58",
-      "FromNodePort": "Errors",
-      "ToNodeKey": "88DB57EF82F70C42"
-    },
-    {
       "FromNodeKey": "88DB57EF82F7F6BE",
       "FromNodePort": "Success",
       "ToNodeKey": "88DB57EF82F844D0"
@@ -3181,6 +3141,11 @@
       "FromNodeKey": "88DB5D31A3087B2A",
       "FromNodePort": "Connection Alive",
       "ToNodeKey": "88DB5C9003FBE363"
+    },
+    {
+      "FromNodeKey": "88DB57EF82F582EA",
+      "FromNodePort": "Some Drivers Mismatch",
+      "ToNodeKey": "88DB57EF82F70C42"
     }
   ]
 }

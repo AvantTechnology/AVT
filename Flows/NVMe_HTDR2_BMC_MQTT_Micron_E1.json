@@ -278,7 +278,7 @@
         },
         "SMART Attribute ID": {
           "Type": "TypeString",
-          "Value": "ext_d2_d3_average_erase_count"
+          "Value": "ext_user_block_average_erase_count"
         },
         "Compare Operation": {
           "Type": "TypeItemSwitch",

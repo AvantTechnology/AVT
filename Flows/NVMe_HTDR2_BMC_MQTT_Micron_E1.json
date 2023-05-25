@@ -1391,7 +1391,7 @@
         },
         "Body": {
           "Type": "TypeString",
-          "Value": "Some drives JustIO (pahse 1)"
+          "Value": "Some drives JustIO (pahse 2)"
         }
       }
     },
@@ -1468,7 +1468,7 @@
     },
     "88DB5D2FD50D59E1": {
       "Key": "88DB5D2FD50D59E1",
-      "Title": "Run JustIO Write (Phase 1)",
+      "Title": "Run JustIO Write (Phase 2)",
       "NodeType": "WorkloadRunJustIO",
       "LocationX": 1708,
       "LocationY": 3934,
@@ -1533,7 +1533,7 @@
     },
     "88DB5D2FD50DA843": {
       "Key": "88DB5D2FD50DA843",
-      "Title": "Run JustIO Read (Phase 1)",
+      "Title": "Run JustIO Read (Phase 2)",
       "NodeType": "WorkloadRunJustIO",
       "LocationX": 2441,
       "LocationY": 3928,

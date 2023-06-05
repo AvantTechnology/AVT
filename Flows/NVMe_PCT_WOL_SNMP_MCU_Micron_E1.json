@@ -66,8 +66,8 @@
       "Key": "88DB3ACC0B12A29D",
       "Title": "Increment Step",
       "NodeType": "StepIncrement",
-      "LocationX": 317,
-      "LocationY": 11417,
+      "LocationX": 328,
+      "LocationY": 11706,
       "Properties": {
         "Increment Amount": {
           "Type": "TypeInteger",
@@ -79,8 +79,8 @@
       "Key": "88DB3ACC1B4D7726",
       "Title": "Check if step out of range",
       "NodeType": "StepCheck",
-      "LocationX": 317,
-      "LocationY": 11575,
+      "LocationX": 328,
+      "LocationY": 11864,
       "Properties": {
         "Compare Operation": {
           "Type": "TypeItemSwitch",
@@ -96,8 +96,8 @@
       "Key": "88DB3ACC3058A1A7",
       "Title": "Increment Cycle",
       "NodeType": "CycleIncrement",
-      "LocationX": -94,
-      "LocationY": 11810,
+      "LocationX": -83,
+      "LocationY": 12099,
       "Properties": {
         "Increment Amount": {
           "Type": "TypeInteger",
@@ -109,8 +109,8 @@
       "Key": "88DB3ACC47550C12",
       "Title": "Set Step",
       "NodeType": "StepSet",
-      "LocationX": -93,
-      "LocationY": 11972,
+      "LocationX": -82,
+      "LocationY": 12261,
       "Properties": {
         "Set Value": {
           "Type": "TypeInteger",
@@ -122,8 +122,8 @@
       "Key": "88DB3ACC771A8C8D",
       "Title": "Go To Entry Node",
       "NodeType": "GeneralGoToEntry",
-      "LocationX": 357,
-      "LocationY": 12167,
+      "LocationX": 368,
+      "LocationY": 12456,
       "Properties": {}
     },
     "88DB3B898832CC1C": {
@@ -2094,8 +2094,8 @@
       "Key": "88DB5C8E344CC61E",
       "Title": "Check if cycle 0",
       "NodeType": "CycleCheck",
-      "LocationX": 279,
-      "LocationY": 11242,
+      "LocationX": 290,
+      "LocationY": 11531,
       "Properties": {
         "Compare Operation": {
           "Type": "TypeItemSwitch",
@@ -2178,8 +2178,8 @@
       "Key": "88DB5C8E345614FB",
       "Title": "Send email about errors getting VU data",
       "NodeType": "EmailSendSnapshot",
-      "LocationX": -380,
-      "LocationY": 10739,
+      "LocationX": -369,
+      "LocationY": 11028,
       "Properties": {
         "Recipients": {
           "Type": "TypeString",
@@ -2253,8 +2253,8 @@
       "Key": "88DB5C8E345D40F1",
       "Title": "Send email about errors getting VU data",
       "NodeType": "EmailSendSnapshot",
-      "LocationX": -439,
-      "LocationY": 9985,
+      "LocationX": -428,
+      "LocationY": 10274,
       "Properties": {
         "Recipients": {
           "Type": "TypeString",
@@ -2278,8 +2278,8 @@
       "Key": "88DB5C8E345FB534",
       "Title": "Send email about errors getting VU data",
       "NodeType": "EmailSendSnapshot",
-      "LocationX": -446,
-      "LocationY": 10363,
+      "LocationX": -435,
+      "LocationY": 10652,
       "Properties": {
         "Recipients": {
           "Type": "TypeString",
@@ -2720,8 +2720,8 @@
       "Key": "88DB5C8E3492D31F",
       "Title": "Send Rhoads Background Scan Vendor Command",
       "NodeType": "MicronVendorCommandsRhoadsBackgroundScan",
-      "LocationX": -831,
-      "LocationY": 10735,
+      "LocationX": -820,
+      "LocationY": 11024,
       "Properties": {
         "File Name Prefix": {
           "Type": "TypeString",
@@ -2754,8 +2754,8 @@
       "Key": "88DB5C8E3497B52C",
       "Title": "Send Rhoads UEL Vendor Command",
       "NodeType": "MicronVendorCommandsRhoadsUEL",
-      "LocationX": -827,
-      "LocationY": 9983,
+      "LocationX": -816,
+      "LocationY": 10272,
       "Properties": {
         "File Name Prefix": {
           "Type": "TypeString",
@@ -2775,8 +2775,8 @@
       "Key": "88DB5C8E349A2634",
       "Title": "Send Rhoads ERS Vendor Command",
       "NodeType": "MicronVendorCommandsRhoadsERS",
-      "LocationX": -830,
-      "LocationY": 10367,
+      "LocationX": -819,
+      "LocationY": 10656,
       "Properties": {
         "File Name Prefix": {
           "Type": "TypeString",
@@ -3020,6 +3020,31 @@
         "Priority": {
           "Type": "TypeItemSwitch",
           "Value": "High"
+        }
+      }
+    },
+    "88DB6613031781EE": {
+      "Key": "88DB6613031781EE",
+      "Title": "Ensure Micron driver is installed",
+      "NodeType": "ClientSystemProcessStart",
+      "LocationX": -817,
+      "LocationY": 10019,
+      "Properties": {
+        "Process Name": {
+          "Type": "TypeString",
+          "Value": "C:\\temp\\microndriver\\rhoadsdriverupdate\\rhoads_mtdriver.bat"
+        },
+        "Arguments": {
+          "Type": "TypeString",
+          "Value": ""
+        },
+        "Wait For Exit": {
+          "Type": "TypeBoolean",
+          "Value": true
+        },
+        "Timeout Seconds": {
+          "Type": "TypeInteger",
+          "Value": 30
         }
       }
     }
@@ -3861,11 +3886,6 @@
       "ToNodeKey": "88DB5C8E3492D31F"
     },
     {
-      "FromNodeKey": "88DB5C8E345132F6",
-      "FromNodePort": "True",
-      "ToNodeKey": "88DB5C8E3497B52C"
-    },
-    {
       "FromNodeKey": "88DB5C8E3492D31F",
       "FromNodePort": "Success",
       "ToNodeKey": "88DB5C8E344CC61E"
@@ -4089,6 +4109,21 @@
       "FromNodeKey": "88DB401EDDA231B7",
       "FromNodePort": "All Drives Passed",
       "ToNodeKey": "88DB5C8E34B26991"
+    },
+    {
+      "FromNodeKey": "88DB5C8E345132F6",
+      "FromNodePort": "True",
+      "ToNodeKey": "88DB6613031781EE"
+    },
+    {
+      "FromNodeKey": "88DB6613031781EE",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DB5C8E3497B52C"
+    },
+    {
+      "FromNodeKey": "88DB6613031781EE",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB5C8E3497B52C"
     }
   ]
 }

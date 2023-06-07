@@ -1942,7 +1942,7 @@
         },
         "Send Email": {
           "Type": "TypeBoolean",
-          "Value": false
+          "Value": true
         },
         "Recipients": {
           "Type": "TypeString",
@@ -1996,7 +1996,7 @@
         },
         "Send Email": {
           "Type": "TypeBoolean",
-          "Value": false
+          "Value": true
         },
         "Recipients": {
           "Type": "TypeString",
@@ -2046,7 +2046,7 @@
         },
         "Send Email": {
           "Type": "TypeBoolean",
-          "Value": false
+          "Value": true
         },
         "Recipients": {
           "Type": "TypeString",
@@ -2109,7 +2109,7 @@
         },
         "Send Email": {
           "Type": "TypeBoolean",
-          "Value": false
+          "Value": true
         },
         "Recipients": {
           "Type": "TypeString",
@@ -2271,7 +2271,7 @@
         },
         "Send Email": {
           "Type": "TypeBoolean",
-          "Value": false
+          "Value": true
         },
         "Recipients": {
           "Type": "TypeString",
@@ -2300,7 +2300,7 @@
         },
         "Send Email": {
           "Type": "TypeBoolean",
-          "Value": false
+          "Value": true
         },
         "Recipients": {
           "Type": "TypeString",
@@ -2388,7 +2388,7 @@
         },
         "Send Email": {
           "Type": "TypeBoolean",
-          "Value": false
+          "Value": true
         },
         "Recipients": {
           "Type": "TypeString",

@@ -1698,35 +1698,6 @@
         }
       }
     },
-    "88DB5C789974439B": {
-      "Key": "88DB5C789974439B",
-      "Title": "Stop Flow With Status",
-      "NodeType": "GeneralStopFlowWithStatus",
-      "LocationX": -4591,
-      "LocationY": -4482,
-      "Properties": {
-        "Status Message": {
-          "Type": "TypeString",
-          "Value": "Errors checking if the micron driver is installed"
-        },
-        "Status Color": {
-          "Type": "TypeItemSwitch",
-          "Value": "RED"
-        },
-        "Send Email": {
-          "Type": "TypeBoolean",
-          "Value": true
-        },
-        "Recipients": {
-          "Type": "TypeString",
-          "Value": "[DEFAULT_RECIPIENTS]"
-        },
-        "Priority": {
-          "Type": "TypeItemSwitch",
-          "Value": "High"
-        }
-      }
-    },
     "88DB5C7899767B7E": {
       "Key": "88DB5C7899767B7E",
       "Title": "Ensure Micron driver is installed",
@@ -2875,35 +2846,6 @@
         }
       }
     },
-    "88DB5C87B8035789": {
-      "Key": "88DB5C87B8035789",
-      "Title": "Stop Flow With Status",
-      "NodeType": "GeneralStopFlowWithStatus",
-      "LocationX": 205,
-      "LocationY": 4710,
-      "Properties": {
-        "Status Message": {
-          "Type": "TypeString",
-          "Value": "Errors checking if the micron driver is installed (after step)"
-        },
-        "Status Color": {
-          "Type": "TypeItemSwitch",
-          "Value": "RED"
-        },
-        "Send Email": {
-          "Type": "TypeBoolean",
-          "Value": true
-        },
-        "Recipients": {
-          "Type": "TypeString",
-          "Value": "[DEFAULT_RECIPIENTS]"
-        },
-        "Priority": {
-          "Type": "TypeItemSwitch",
-          "Value": "High"
-        }
-      }
-    },
     "88DB5C87B8058687": {
       "Key": "88DB5C87B8058687",
       "Title": "Rebooting System",
@@ -2970,8 +2912,8 @@
       "Key": "88DB5C87B80CC3EC",
       "Title": "Check if we are using the Micron driver",
       "NodeType": "DevConCheckDeviceDriver",
-      "LocationX": -35,
-      "LocationY": 4418,
+      "LocationX": -42,
+      "LocationY": 4419,
       "Properties": {
         "Device ID": {
           "Type": "TypeString",
@@ -3222,6 +3164,56 @@
         "Compare Value": {
           "Type": "TypeInteger",
           "Value": 1
+        }
+      }
+    },
+    "88DB6866B4E72D43": {
+      "Key": "88DB6866B4E72D43",
+      "Title": "Send Snapshot Email",
+      "NodeType": "EmailSendSnapshot",
+      "LocationX": -4589,
+      "LocationY": -4463,
+      "Properties": {
+        "Recipients": {
+          "Type": "TypeString",
+          "Value": "[DEFAULT_RECIPIENTS]"
+        },
+        "Priority": {
+          "Type": "TypeItemSwitch",
+          "Value": "Normal"
+        },
+        "Subject": {
+          "Type": "TypeString",
+          "Value": "Errors checking if the micron driver is installed"
+        },
+        "Body": {
+          "Type": "TypeString",
+          "Value": "Continuing flow"
+        }
+      }
+    },
+    "88DB6866CCCE8F8A": {
+      "Key": "88DB6866CCCE8F8A",
+      "Title": "Send Snapshot Email",
+      "NodeType": "EmailSendSnapshot",
+      "LocationX": 202,
+      "LocationY": 4715,
+      "Properties": {
+        "Recipients": {
+          "Type": "TypeString",
+          "Value": "[DEFAULT_RECIPIENTS]"
+        },
+        "Priority": {
+          "Type": "TypeItemSwitch",
+          "Value": "Normal"
+        },
+        "Subject": {
+          "Type": "TypeString",
+          "Value": "Errors checking if the micron driver is installed"
+        },
+        "Body": {
+          "Type": "TypeString",
+          "Value": "Continuing flow"
         }
       }
     }
@@ -3808,11 +3800,6 @@
       "ToNodeKey": "88DB5C789971B366"
     },
     {
-      "FromNodeKey": "88DB5C789971B366",
-      "FromNodePort": "Errors",
-      "ToNodeKey": "88DB5C789974439B"
-    },
-    {
       "FromNodeKey": "88DB5C78997B426C",
       "FromNodePort": "Success",
       "ToNodeKey": "88DB5C789978D89D"
@@ -4253,11 +4240,6 @@
       "ToNodeKey": "88DB5C87B807F927"
     },
     {
-      "FromNodeKey": "88DB5C87B80CC3EC",
-      "FromNodePort": "Errors",
-      "ToNodeKey": "88DB5C87B8035789"
-    },
-    {
       "FromNodeKey": "88DB5C87B8058687",
       "FromNodePort": "Success",
       "ToNodeKey": "88DB5C87B80334D5"
@@ -4416,6 +4398,36 @@
       "FromNodeKey": "88DB5C87B7D47132",
       "FromNodePort": "Errors",
       "ToNodeKey": "88DB66151BDFDB87"
+    },
+    {
+      "FromNodeKey": "88DB5C789971B366",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB6866B4E72D43"
+    },
+    {
+      "FromNodeKey": "88DB6866B4E72D43",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DAFE2BC4161974"
+    },
+    {
+      "FromNodeKey": "88DB6866B4E72D43",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DAFE2BC4161974"
+    },
+    {
+      "FromNodeKey": "88DB5C87B80CC3EC",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB6866CCCE8F8A"
+    },
+    {
+      "FromNodeKey": "88DB6866CCCE8F8A",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DB5C87B7F9D113"
+    },
+    {
+      "FromNodeKey": "88DB6866CCCE8F8A",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB5C87B7F9D113"
     }
   ]
 }

@@ -507,8 +507,8 @@
       "Key": "88DB3ACBB6902E82",
       "Title": "Check if cycle 0",
       "NodeType": "CycleCheck",
-      "LocationX": 66,
-      "LocationY": 10154,
+      "LocationX": 23,
+      "LocationY": 8457,
       "Properties": {
         "Compare Operation": {
           "Type": "TypeItemSwitch",
@@ -524,8 +524,8 @@
       "Key": "88DB3ACC0B12A29D",
       "Title": "Increment Step",
       "NodeType": "StepIncrement",
-      "LocationX": 105,
-      "LocationY": 10326,
+      "LocationX": 62,
+      "LocationY": 8629,
       "Properties": {
         "Increment Amount": {
           "Type": "TypeInteger",
@@ -537,8 +537,8 @@
       "Key": "88DB3ACC1B4D7726",
       "Title": "Check if step out of range",
       "NodeType": "StepCheck",
-      "LocationX": 105,
-      "LocationY": 10486,
+      "LocationX": 62,
+      "LocationY": 8789,
       "Properties": {
         "Compare Operation": {
           "Type": "TypeItemSwitch",
@@ -554,8 +554,8 @@
       "Key": "88DB3ACC3058A1A7",
       "Title": "Increment Cycle",
       "NodeType": "CycleIncrement",
-      "LocationX": -303,
-      "LocationY": 10723,
+      "LocationX": -346,
+      "LocationY": 9026,
       "Properties": {
         "Increment Amount": {
           "Type": "TypeInteger",
@@ -567,8 +567,8 @@
       "Key": "88DB3ACC47550C12",
       "Title": "Set Step",
       "NodeType": "StepSet",
-      "LocationX": -304,
-      "LocationY": 10888,
+      "LocationX": -347,
+      "LocationY": 9191,
       "Properties": {
         "Set Value": {
           "Type": "TypeInteger",
@@ -580,8 +580,8 @@
       "Key": "88DB3ACC771A8C8D",
       "Title": "Go To Entry Node",
       "NodeType": "GeneralGoToEntry",
-      "LocationX": 143,
-      "LocationY": 11080,
+      "LocationX": 100,
+      "LocationY": 9383,
       "Properties": {}
     },
     "88DB3B698FF9742A": {
@@ -610,52 +610,6 @@
         "Timeout Seconds": {
           "Type": "TypeInteger",
           "Value": 10
-        }
-      }
-    },
-    "88DB3C59971F43CE": {
-      "Key": "88DB3C59971F43CE",
-      "Title": "Check Drives Transfer Modes",
-      "NodeType": "DrivesCheckTransferMode",
-      "LocationX": 13,
-      "LocationY": 5367,
-      "Properties": {
-        "Only Check Found Drives": {
-          "Type": "TypeBoolean",
-          "Value": true
-        },
-        "Log Errors": {
-          "Type": "TypeBoolean",
-          "Value": true
-        }
-      }
-    },
-    "88DB3C59E8DDA06F": {
-      "Key": "88DB3C59E8DDA06F",
-      "Title": "Stop Flow With Status",
-      "NodeType": "GeneralStopFlowWithStatus",
-      "LocationX": 974,
-      "LocationY": 5368,
-      "Properties": {
-        "Status Message": {
-          "Type": "TypeString",
-          "Value": "At least one drive has transfer mode mismatch"
-        },
-        "Status Color": {
-          "Type": "TypeItemSwitch",
-          "Value": "RED"
-        },
-        "Send Email": {
-          "Type": "TypeBoolean",
-          "Value": true
-        },
-        "Recipients": {
-          "Type": "TypeString",
-          "Value": "[DEFAULT_RECIPIENTS]"
-        },
-        "Priority": {
-          "Type": "TypeItemSwitch",
-          "Value": "High"
         }
       }
     },
@@ -1044,19 +998,6 @@
         }
       }
     },
-    "88DB4B264A38689D": {
-      "Key": "88DB4B264A38689D",
-      "Title": "Create SMART Snapshot CSV",
-      "NodeType": "DrivesCreateSmartSnapshotCsv",
-      "LocationX": 498,
-      "LocationY": 5367,
-      "Properties": {
-        "Directory Suffix": {
-          "Type": "TypeString",
-          "Value": "transfer_mode_mismatch"
-        }
-      }
-    },
     "88DB4B265C268EA5": {
       "Key": "88DB4B265C268EA5",
       "Title": "Create SMART Snapshot CSV",
@@ -1106,86 +1047,6 @@
         "Timeout Seconds": {
           "Type": "TypeInteger",
           "Value": 45
-        }
-      }
-    },
-    "88DB4C26A5523F38": {
-      "Key": "88DB4C26A5523F38",
-      "Title": "Check If Step 0 For VU Data",
-      "NodeType": "StepCheck",
-      "LocationX": 20,
-      "LocationY": 8352,
-      "Properties": {
-        "Compare Operation": {
-          "Type": "TypeItemSwitch",
-          "Value": "="
-        },
-        "Compare Value": {
-          "Type": "TypeInteger",
-          "Value": 0
-        }
-      }
-    },
-    "88DB4C26CC979765": {
-      "Key": "88DB4C26CC979765",
-      "Title": "Send Rhoads ERS Vendor Command",
-      "NodeType": "MicronVendorCommandsRhoadsERS",
-      "LocationX": -1043,
-      "LocationY": 9279,
-      "Properties": {
-        "File Name Prefix": {
-          "Type": "TypeString",
-          "Value": "ERS"
-        },
-        "Save Header": {
-          "Type": "TypeBoolean",
-          "Value": false
-        },
-        "Timeout Seconds": {
-          "Type": "TypeInteger",
-          "Value": 120
-        }
-      }
-    },
-    "88DB4C26D107A4DF": {
-      "Key": "88DB4C26D107A4DF",
-      "Title": "Send Rhoads UEL Vendor Command",
-      "NodeType": "MicronVendorCommandsRhoadsUEL",
-      "LocationX": -1040,
-      "LocationY": 8895,
-      "Properties": {
-        "File Name Prefix": {
-          "Type": "TypeString",
-          "Value": "UEL"
-        },
-        "Save Header": {
-          "Type": "TypeBoolean",
-          "Value": false
-        },
-        "Timeout Seconds": {
-          "Type": "TypeInteger",
-          "Value": 120
-        }
-      }
-    },
-    "88DB4C26D27EBB8B": {
-      "Key": "88DB4C26D27EBB8B",
-      "Title": "Send Rhoads Background Scan Vendor Command",
-      "NodeType": "MicronVendorCommandsRhoadsBackgroundScan",
-      "LocationX": -1044,
-      "LocationY": 9647,
-      "Properties": {
-        "File Name Prefix": {
-          "Type": "TypeString",
-          "Value": "BS"
-        },
-        "Save Header": {
-          "Type": "TypeBoolean",
-          "Value": false
-        },
-        "Timeout Seconds": {
-          "Type": "TypeInteger",
-          "Value": 120
         }
       }
     },
@@ -1277,7 +1138,7 @@
         },
         "Timeout Seconds": {
           "Type": "TypeInteger",
-          "Value": 30
+          "Value": 60
         }
       }
     },
@@ -1328,35 +1189,6 @@
         "Timeout Seconds": {
           "Type": "TypeInteger",
           "Value": 120
-        }
-      }
-    },
-    "88DB5633A6DB7358": {
-      "Key": "88DB5633A6DB7358",
-      "Title": "Stop Flow With Status",
-      "NodeType": "GeneralStopFlowWithStatus",
-      "LocationX": -983,
-      "LocationY": -1511,
-      "Properties": {
-        "Status Message": {
-          "Type": "TypeString",
-          "Value": "Errors checking if the micron driver is installed"
-        },
-        "Status Color": {
-          "Type": "TypeItemSwitch",
-          "Value": "RED"
-        },
-        "Send Email": {
-          "Type": "TypeBoolean",
-          "Value": true
-        },
-        "Recipients": {
-          "Type": "TypeString",
-          "Value": "[DEFAULT_RECIPIENTS]"
-        },
-        "Priority": {
-          "Type": "TypeItemSwitch",
-          "Value": "High"
         }
       }
     },
@@ -1510,7 +1342,7 @@
       "Key": "88DB5885B80A6025",
       "Title": "Send Snapshot Email",
       "NodeType": "EmailSendSnapshot",
-      "LocationX": 558,
+      "LocationX": 556,
       "LocationY": 8005,
       "Properties": {
         "Recipients": {
@@ -1528,31 +1360,6 @@
         "Body": {
           "Type": "TypeString",
           "Value": "At least one drive has program fail count changed"
-        }
-      }
-    },
-    "88DB5ADF6FD5B042": {
-      "Key": "88DB5ADF6FD5B042",
-      "Title": "Send email about errors getting VU data",
-      "NodeType": "EmailSendSnapshot",
-      "LocationX": -652,
-      "LocationY": 8897,
-      "Properties": {
-        "Recipients": {
-          "Type": "TypeString",
-          "Value": "[DEFAULT_RECIPIENTS]"
-        },
-        "Priority": {
-          "Type": "TypeItemSwitch",
-          "Value": "Normal"
-        },
-        "Subject": {
-          "Type": "TypeString",
-          "Value": "Errors getting VU data (UEL)"
-        },
-        "Body": {
-          "Type": "TypeString",
-          "Value": "Errors getting VU data (UEL)"
         }
       }
     },
@@ -1635,7 +1442,7 @@
         },
         "Timeout Seconds": {
           "Type": "TypeInteger",
-          "Value": 30
+          "Value": 60
         }
       }
     },
@@ -1673,35 +1480,6 @@
         }
       }
     },
-    "88DB5ADFA59D0066": {
-      "Key": "88DB5ADFA59D0066",
-      "Title": "Stop Flow With Status",
-      "NodeType": "GeneralStopFlowWithStatus",
-      "LocationX": 263,
-      "LocationY": 3213,
-      "Properties": {
-        "Status Message": {
-          "Type": "TypeString",
-          "Value": "Errors checking if the micron driver is installed (after step)"
-        },
-        "Status Color": {
-          "Type": "TypeItemSwitch",
-          "Value": "RED"
-        },
-        "Send Email": {
-          "Type": "TypeBoolean",
-          "Value": true
-        },
-        "Recipients": {
-          "Type": "TypeString",
-          "Value": "[DEFAULT_RECIPIENTS]"
-        },
-        "Priority": {
-          "Type": "TypeItemSwitch",
-          "Value": "High"
-        }
-      }
-    },
     "88DB5ADFA59D4E85": {
       "Key": "88DB5ADFA59D4E85",
       "Title": "Check if we are using the Micron driver",
@@ -1733,56 +1511,6 @@
         "Go To Node Key": {
           "Type": "TypeString",
           "Value": "88DB5ADFA59D4E85"
-        }
-      }
-    },
-    "88DB5BA2F197C223": {
-      "Key": "88DB5BA2F197C223",
-      "Title": "Send email about errors getting VU data",
-      "NodeType": "EmailSendSnapshot",
-      "LocationX": -659,
-      "LocationY": 9275,
-      "Properties": {
-        "Recipients": {
-          "Type": "TypeString",
-          "Value": "[DEFAULT_RECIPIENTS]"
-        },
-        "Priority": {
-          "Type": "TypeItemSwitch",
-          "Value": "Normal"
-        },
-        "Subject": {
-          "Type": "TypeString",
-          "Value": "Errors getting VU data (ERS)"
-        },
-        "Body": {
-          "Type": "TypeString",
-          "Value": "Errors getting VU data (ERS)"
-        }
-      }
-    },
-    "88DB5BA2F5DBF337": {
-      "Key": "88DB5BA2F5DBF337",
-      "Title": "Send email about errors getting VU data",
-      "NodeType": "EmailSendSnapshot",
-      "LocationX": -593,
-      "LocationY": 9651,
-      "Properties": {
-        "Recipients": {
-          "Type": "TypeString",
-          "Value": "[DEFAULT_RECIPIENTS]"
-        },
-        "Priority": {
-          "Type": "TypeItemSwitch",
-          "Value": "Normal"
-        },
-        "Subject": {
-          "Type": "TypeString",
-          "Value": "Errors getting VU data (BS)"
-        },
-        "Body": {
-          "Type": "TypeString",
-          "Value": "Errors getting VU data (BS)"
         }
       }
     },
@@ -2558,28 +2286,53 @@
         }
       }
     },
-    "88DB6612A996A667": {
-      "Key": "88DB6612A996A667",
-      "Title": "Ensure Micron driver is installed",
-      "NodeType": "ClientSystemProcessStart",
-      "LocationX": -1042,
-      "LocationY": 8650,
+    "88DB6866DB9D8B8A": {
+      "Key": "88DB6866DB9D8B8A",
+      "Title": "Send Snapshot Email",
+      "NodeType": "EmailSendSnapshot",
+      "LocationX": 265,
+      "LocationY": 3210,
       "Properties": {
-        "Process Name": {
+        "Recipients": {
           "Type": "TypeString",
-          "Value": "C:\\temp\\microndriver\\rhoadsdriverupdate\\rhoads_mtdriver.bat"
+          "Value": "[DEFAULT_RECIPIENTS]"
         },
-        "Arguments": {
+        "Priority": {
+          "Type": "TypeItemSwitch",
+          "Value": "Normal"
+        },
+        "Subject": {
           "Type": "TypeString",
-          "Value": ""
+          "Value": "Errors checking if the micron driver is installed"
         },
-        "Wait For Exit": {
-          "Type": "TypeBoolean",
-          "Value": true
+        "Body": {
+          "Type": "TypeString",
+          "Value": "Continuing flow"
+        }
+      }
+    },
+    "88DB6866F5611FD2": {
+      "Key": "88DB6866F5611FD2",
+      "Title": "Send Snapshot Email",
+      "NodeType": "EmailSendSnapshot",
+      "LocationX": -983,
+      "LocationY": -1480,
+      "Properties": {
+        "Recipients": {
+          "Type": "TypeString",
+          "Value": "[DEFAULT_RECIPIENTS]"
         },
-        "Timeout Seconds": {
-          "Type": "TypeInteger",
-          "Value": 30
+        "Priority": {
+          "Type": "TypeItemSwitch",
+          "Value": "Normal"
+        },
+        "Subject": {
+          "Type": "TypeString",
+          "Value": "Errors checking if the micron driver is installed"
+        },
+        "Body": {
+          "Type": "TypeString",
+          "Value": "Continuing flow"
         }
       }
     }
@@ -2851,19 +2604,9 @@
       "ToNodeKey": "88DB4A635A5C4F38"
     },
     {
-      "FromNodeKey": "88DAFE2C0B639BE5",
-      "FromNodePort": "Success",
-      "ToNodeKey": "88DB3C59971F43CE"
-    },
-    {
       "FromNodeKey": "88DB4A60A0B9DC9D",
       "FromNodePort": "All Drive Checks True",
       "ToNodeKey": "88DB3D1D7B1C7E7D"
-    },
-    {
-      "FromNodeKey": "88DB3C59971F43CE",
-      "FromNodePort": "All Drive Transfer Modes Okay",
-      "ToNodeKey": "88DB4A60A0B9DC9D"
     },
     {
       "FromNodeKey": "88DB4A8A7C99B90F",
@@ -2889,21 +2632,6 @@
       "FromNodeKey": "88DB4B23587905BF",
       "FromNodePort": "Errors",
       "ToNodeKey": "88DB44E520018A55"
-    },
-    {
-      "FromNodeKey": "88DB4B264A38689D",
-      "FromNodePort": "Success",
-      "ToNodeKey": "88DB3C59E8DDA06F"
-    },
-    {
-      "FromNodeKey": "88DB4B264A38689D",
-      "FromNodePort": "Errors",
-      "ToNodeKey": "88DB3C59E8DDA06F"
-    },
-    {
-      "FromNodeKey": "88DB3C59971F43CE",
-      "FromNodePort": "Some Drive Transfer Modes Mismatch",
-      "ToNodeKey": "88DB4B264A38689D"
     },
     {
       "FromNodeKey": "88DB4B265C268EA5",
@@ -2966,31 +2694,6 @@
       "ToNodeKey": "88DAFE2C0B639BE5"
     },
     {
-      "FromNodeKey": "88DB4A8AED0B1BE8",
-      "FromNodePort": "All Drives Attribute Unchanged",
-      "ToNodeKey": "88DB4C26A5523F38"
-    },
-    {
-      "FromNodeKey": "88DB4C26A5523F38",
-      "FromNodePort": "False",
-      "ToNodeKey": "88DB3ACBB6902E82"
-    },
-    {
-      "FromNodeKey": "88DB4C26D107A4DF",
-      "FromNodePort": "Success",
-      "ToNodeKey": "88DB4C26CC979765"
-    },
-    {
-      "FromNodeKey": "88DB4C26CC979765",
-      "FromNodePort": "Success",
-      "ToNodeKey": "88DB4C26D27EBB8B"
-    },
-    {
-      "FromNodeKey": "88DB4C26D27EBB8B",
-      "FromNodePort": "Success",
-      "ToNodeKey": "88DB3ACBB6902E82"
-    },
-    {
       "FromNodeKey": "88DAFD9E409B4C4D",
       "FromNodePort": "Some Drives Not Found",
       "ToNodeKey": "88DAFE3107F3FB6F"
@@ -3034,11 +2737,6 @@
       "FromNodeKey": "88DB56333D2AE610",
       "FromNodePort": "Drivers Match",
       "ToNodeKey": "88DAFE2BC4161974"
-    },
-    {
-      "FromNodeKey": "88DB56333D2AE610",
-      "FromNodePort": "Errors",
-      "ToNodeKey": "88DB5633A6DB7358"
     },
     {
       "FromNodeKey": "88DB5633E94EE30F",
@@ -3126,29 +2824,9 @@
       "ToNodeKey": "88DB5885B80A6025"
     },
     {
-      "FromNodeKey": "88DB5885B80A6025",
-      "FromNodePort": "Success",
-      "ToNodeKey": "88DB4C26A5523F38"
-    },
-    {
-      "FromNodeKey": "88DB5885B80A6025",
-      "FromNodePort": "Errors",
-      "ToNodeKey": "88DB4C26A5523F38"
-    },
-    {
-      "FromNodeKey": "88DB4C26D107A4DF",
-      "FromNodePort": "Errors",
-      "ToNodeKey": "88DB5ADF6FD5B042"
-    },
-    {
       "FromNodeKey": "88DB5ADFA59B2B9D",
       "FromNodePort": "Errors",
       "ToNodeKey": "88DB5ADFA59ADD74"
-    },
-    {
-      "FromNodeKey": "88DB5ADFA59D4E85",
-      "FromNodePort": "Errors",
-      "ToNodeKey": "88DB5ADFA59D0066"
     },
     {
       "FromNodeKey": "88DB5ADFA59B79B3",
@@ -3209,46 +2887,6 @@
       "FromNodeKey": "88DB5ADFA59C15F3",
       "FromNodePort": "Connection Alive",
       "ToNodeKey": "88DB5B0CC1E6A977"
-    },
-    {
-      "FromNodeKey": "88DB5ADF6FD5B042",
-      "FromNodePort": "Success",
-      "ToNodeKey": "88DB4C26CC979765"
-    },
-    {
-      "FromNodeKey": "88DB5ADF6FD5B042",
-      "FromNodePort": "Errors",
-      "ToNodeKey": "88DB4C26CC979765"
-    },
-    {
-      "FromNodeKey": "88DB4C26CC979765",
-      "FromNodePort": "Errors",
-      "ToNodeKey": "88DB5BA2F197C223"
-    },
-    {
-      "FromNodeKey": "88DB4C26D27EBB8B",
-      "FromNodePort": "Errors",
-      "ToNodeKey": "88DB5BA2F5DBF337"
-    },
-    {
-      "FromNodeKey": "88DB5BA2F197C223",
-      "FromNodePort": "Success",
-      "ToNodeKey": "88DB4C26D27EBB8B"
-    },
-    {
-      "FromNodeKey": "88DB5BA2F197C223",
-      "FromNodePort": "Errors",
-      "ToNodeKey": "88DB4C26D27EBB8B"
-    },
-    {
-      "FromNodeKey": "88DB5BA2F5DBF337",
-      "FromNodePort": "Success",
-      "ToNodeKey": "88DB3ACBB6902E82"
-    },
-    {
-      "FromNodeKey": "88DB5BA2F5DBF337",
-      "FromNodePort": "Errors",
-      "ToNodeKey": "88DB3ACBB6902E82"
     },
     {
       "FromNodeKey": "88DB5D3421AA7AC8",
@@ -3496,19 +3134,54 @@
       "ToNodeKey": "88DB5D34C61965A4"
     },
     {
-      "FromNodeKey": "88DB4C26A5523F38",
-      "FromNodePort": "True",
-      "ToNodeKey": "88DB6612A996A667"
-    },
-    {
-      "FromNodeKey": "88DB6612A996A667",
+      "FromNodeKey": "88DAFE2C0B639BE5",
       "FromNodePort": "Success",
-      "ToNodeKey": "88DB4C26D107A4DF"
+      "ToNodeKey": "88DB4A60A0B9DC9D"
     },
     {
-      "FromNodeKey": "88DB6612A996A667",
+      "FromNodeKey": "88DB4A8AED0B1BE8",
+      "FromNodePort": "All Drives Attribute Unchanged",
+      "ToNodeKey": "88DB3ACBB6902E82"
+    },
+    {
+      "FromNodeKey": "88DB5885B80A6025",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DB3ACBB6902E82"
+    },
+    {
+      "FromNodeKey": "88DB5885B80A6025",
       "FromNodePort": "Errors",
-      "ToNodeKey": "88DB4C26D107A4DF"
+      "ToNodeKey": "88DB3ACBB6902E82"
+    },
+    {
+      "FromNodeKey": "88DB5ADFA59D4E85",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB6866DB9D8B8A"
+    },
+    {
+      "FromNodeKey": "88DB6866DB9D8B8A",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DAFE2BA9FB0B2F"
+    },
+    {
+      "FromNodeKey": "88DB6866DB9D8B8A",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DAFE2BA9FB0B2F"
+    },
+    {
+      "FromNodeKey": "88DB56333D2AE610",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB6866F5611FD2"
+    },
+    {
+      "FromNodeKey": "88DB6866F5611FD2",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DAFE2BC4161974"
+    },
+    {
+      "FromNodeKey": "88DB6866F5611FD2",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DAFE2BC4161974"
     }
   ]
 }

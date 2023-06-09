@@ -2204,8 +2204,8 @@
       "Key": "88DB5ADF6FD5B042",
       "Title": "Send email about errors getting VU data",
       "NodeType": "EmailSendSnapshot",
-      "LocationX": 1544,
-      "LocationY": 8817,
+      "LocationX": -648,
+      "LocationY": 8924,
       "Properties": {
         "Recipients": {
           "Type": "TypeString",
@@ -2380,8 +2380,8 @@
       "Key": "88DB5BA2F197C223",
       "Title": "Send email about errors getting VU data",
       "NodeType": "EmailSendSnapshot",
-      "LocationX": 1537,
-      "LocationY": 9195,
+      "LocationX": -655,
+      "LocationY": 9302,
       "Properties": {
         "Recipients": {
           "Type": "TypeString",
@@ -2405,8 +2405,8 @@
       "Key": "88DB5BA2F5DBF337",
       "Title": "Send email about errors getting VU data",
       "NodeType": "EmailSendSnapshot",
-      "LocationX": 1603,
-      "LocationY": 9571,
+      "LocationX": -589,
+      "LocationY": 9678,
       "Properties": {
         "Recipients": {
           "Type": "TypeString",
@@ -2448,35 +2448,6 @@
         "Timeout Seconds": {
           "Type": "TypeInteger",
           "Value": 30
-        }
-      }
-    },
-    "88DB683D8BF43664": {
-      "Key": "88DB683D8BF43664",
-      "Title": "Stop Flow With Status",
-      "NodeType": "GeneralStopFlowWithStatus",
-      "LocationX": -1881,
-      "LocationY": 10029,
-      "Properties": {
-        "Status Message": {
-          "Type": "TypeString",
-          "Value": "Errors getting VU data"
-        },
-        "Status Color": {
-          "Type": "TypeItemSwitch",
-          "Value": "RED"
-        },
-        "Send Email": {
-          "Type": "TypeBoolean",
-          "Value": true
-        },
-        "Recipients": {
-          "Type": "TypeString",
-          "Value": "[DEFAULT_RECIPIENTS]"
-        },
-        "Priority": {
-          "Type": "TypeItemSwitch",
-          "Value": "High"
         }
       }
     },
@@ -3423,21 +3394,6 @@
       "ToNodeKey": "88DB4C26D107A4DF"
     },
     {
-      "FromNodeKey": "88DB4C26D27EBB8B",
-      "FromNodePort": "Errors",
-      "ToNodeKey": "88DB683D8BF43664"
-    },
-    {
-      "FromNodeKey": "88DB4C26CC979765",
-      "FromNodePort": "Errors",
-      "ToNodeKey": "88DB683D8BF43664"
-    },
-    {
-      "FromNodeKey": "88DB4C26D107A4DF",
-      "FromNodePort": "Errors",
-      "ToNodeKey": "88DB683D8BF43664"
-    },
-    {
       "FromNodeKey": "88DB56333D2AE610",
       "FromNodePort": "Errors",
       "ToNodeKey": "88DB68662D287255"
@@ -3466,6 +3422,21 @@
       "FromNodeKey": "88DB6866431D8C07",
       "FromNodePort": "Errors",
       "ToNodeKey": "88DAFE2BA9FB0B2F"
+    },
+    {
+      "FromNodeKey": "88DB4C26D107A4DF",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB5ADF6FD5B042"
+    },
+    {
+      "FromNodeKey": "88DB4C26CC979765",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB5BA2F197C223"
+    },
+    {
+      "FromNodeKey": "88DB4C26D27EBB8B",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB5BA2F5DBF337"
     }
   ]
 }

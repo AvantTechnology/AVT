@@ -2437,56 +2437,6 @@
         }
       }
     },
-    "88DB5C8E34733A1F": {
-      "Key": "88DB5C8E34733A1F",
-      "Title": "Check Unsafe Shutdowns",
-      "NodeType": "DrivesCheckSmartAttributeValueChanged",
-      "LocationX": 239,
-      "LocationY": 7511,
-      "Properties": {
-        "Only Check Found Drives": {
-          "Type": "TypeBoolean",
-          "Value": true
-        },
-        "SMART Attribute ID": {
-          "Type": "TypeString",
-          "Value": "unsafe_shutdowns"
-        },
-        "Ignore Missing Attribute ID": {
-          "Type": "TypeBoolean",
-          "Value": true
-        },
-        "Log Errors (Changed/Missing Values)": {
-          "Type": "TypeBoolean",
-          "Value": true
-        }
-      }
-    },
-    "88DB5C8E3475AB23": {
-      "Key": "88DB5C8E3475AB23",
-      "Title": "Send email about unsafe shutdowns",
-      "NodeType": "EmailSendSnapshot",
-      "LocationX": 788,
-      "LocationY": 7514,
-      "Properties": {
-        "Recipients": {
-          "Type": "TypeString",
-          "Value": "[DEFAULT_RECIPIENTS]"
-        },
-        "Priority": {
-          "Type": "TypeItemSwitch",
-          "Value": "Normal"
-        },
-        "Subject": {
-          "Type": "TypeString",
-          "Value": "Unsafe shutdowns changed"
-        },
-        "Body": {
-          "Type": "TypeString",
-          "Value": "At least one drive has new unsafe shutdowns"
-        }
-      }
-    },
     "88DB5C8E34781C29": {
       "Key": "88DB5C8E34781C29",
       "Title": "Check SMART Critical Warning",
@@ -2712,8 +2662,8 @@
       "Key": "88DB5C8E34954438",
       "Title": "Go To Power Cycle",
       "NodeType": "GeneralGoToNode",
-      "LocationX": 488,
-      "LocationY": 5898,
+      "LocationX": 1013,
+      "LocationY": 5996,
       "Properties": {
         "Go To Node Key": {
           "Type": "TypeString",
@@ -2767,8 +2717,8 @@
       "Key": "88DB5C8E349C945A",
       "Title": "Send email about all not found recovery",
       "NodeType": "EmailSendSnapshot",
-      "LocationX": 489,
-      "LocationY": 5606,
+      "LocationX": 1014,
+      "LocationY": 5704,
       "Properties": {
         "Recipients": {
           "Type": "TypeString",
@@ -3037,6 +2987,64 @@
         "Body": {
           "Type": "TypeString",
           "Value": "Continuing flow"
+        }
+      }
+    },
+    "88DB692591B5D1F9": {
+      "Key": "88DB692591B5D1F9",
+      "Title": "Stop Flow With Status",
+      "NodeType": "GeneralStopFlowWithStatus",
+      "LocationX": 341,
+      "LocationY": 5705,
+      "Properties": {
+        "Status Message": {
+          "Type": "TypeString",
+          "Value": "One or more drives not found"
+        },
+        "Status Color": {
+          "Type": "TypeItemSwitch",
+          "Value": "RED"
+        },
+        "Send Email": {
+          "Type": "TypeBoolean",
+          "Value": true
+        },
+        "Recipients": {
+          "Type": "TypeString",
+          "Value": "[DEFAULT_RECIPIENTS]"
+        },
+        "Priority": {
+          "Type": "TypeItemSwitch",
+          "Value": "High"
+        }
+      }
+    },
+    "88DB69259E30AEC2": {
+      "Key": "88DB69259E30AEC2",
+      "Title": "Stop Flow With Status",
+      "NodeType": "GeneralStopFlowWithStatus",
+      "LocationX": -900,
+      "LocationY": -52,
+      "Properties": {
+        "Status Message": {
+          "Type": "TypeString",
+          "Value": "One or more drives not found"
+        },
+        "Status Color": {
+          "Type": "TypeItemSwitch",
+          "Value": "RED"
+        },
+        "Send Email": {
+          "Type": "TypeBoolean",
+          "Value": true
+        },
+        "Recipients": {
+          "Type": "TypeString",
+          "Value": "[DEFAULT_RECIPIENTS]"
+        },
+        "Priority": {
+          "Type": "TypeItemSwitch",
+          "Value": "High"
         }
       }
     }
@@ -3346,11 +3354,6 @@
       "FromNodeKey": "88DB404930BB1010",
       "FromNodePort": "Errors",
       "ToNodeKey": "88DB4B290F69512D"
-    },
-    {
-      "FromNodeKey": "88DAFD9E409B4C4D",
-      "FromNodePort": "Some Drives Not Found",
-      "ToNodeKey": "88DB403B4193F536"
     },
     {
       "FromNodeKey": "88DB4044B6DA003B",
@@ -3743,26 +3746,6 @@
       "ToNodeKey": "88DB5C8E34906271"
     },
     {
-      "FromNodeKey": "88DB5C8E34733A1F",
-      "FromNodePort": "Some Drives Attribute Changed",
-      "ToNodeKey": "88DB5C8E3475AB23"
-    },
-    {
-      "FromNodeKey": "88DB5C8E34733A1F",
-      "FromNodePort": "All Drives Attribute Unchanged",
-      "ToNodeKey": "88DB5C8E346BEA04"
-    },
-    {
-      "FromNodeKey": "88DB5C8E3475AB23",
-      "FromNodePort": "Success",
-      "ToNodeKey": "88DB5C8E346BEA04"
-    },
-    {
-      "FromNodeKey": "88DB5C8E3475AB23",
-      "FromNodePort": "Errors",
-      "ToNodeKey": "88DB5C8E346BEA04"
-    },
-    {
       "FromNodeKey": "88DB5C8E346BEA04",
       "FromNodePort": "All Drives Attribute Unchanged",
       "ToNodeKey": "88DB5C8E34670518"
@@ -3771,11 +3754,6 @@
       "FromNodeKey": "88DB5C8E34869B25",
       "FromNodePort": "Success",
       "ToNodeKey": "88DB5C8E3481B928"
-    },
-    {
-      "FromNodeKey": "88DB5C8E34781C29",
-      "FromNodePort": "All Drive Checks True",
-      "ToNodeKey": "88DB5C8E34733A1F"
     },
     {
       "FromNodeKey": "88DB5C8E3481B928",
@@ -3876,11 +3854,6 @@
       "FromNodeKey": "88DB5C8E3492D31F",
       "FromNodePort": "Success",
       "ToNodeKey": "88DB5C8E344CC61E"
-    },
-    {
-      "FromNodeKey": "88DB5C8E349F0563",
-      "FromNodePort": "Some Drives Not Found",
-      "ToNodeKey": "88DB5C8E34906271"
     },
     {
       "FromNodeKey": "88DB5C8E349C945A",
@@ -4136,6 +4109,21 @@
       "FromNodeKey": "88DB686665FD7F69",
       "FromNodePort": "Errors",
       "ToNodeKey": "88DAFE2BC4161974"
+    },
+    {
+      "FromNodeKey": "88DB5C8E34781C29",
+      "FromNodePort": "All Drive Checks True",
+      "ToNodeKey": "88DB5C8E346BEA04"
+    },
+    {
+      "FromNodeKey": "88DB5C8E349F0563",
+      "FromNodePort": "Some Drives Not Found",
+      "ToNodeKey": "88DB692591B5D1F9"
+    },
+    {
+      "FromNodeKey": "88DAFD9E409B4C4D",
+      "FromNodePort": "Some Drives Not Found",
+      "ToNodeKey": "88DB69259E30AEC2"
     }
   ]
 }

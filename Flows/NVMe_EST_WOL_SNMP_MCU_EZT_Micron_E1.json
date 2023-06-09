@@ -1166,7 +1166,7 @@
       "Properties": {
         "Target": {
           "Type": "TypeDouble",
-          "Value": -14.0
+          "Value": -5.0
         },
         "Threshold": {
           "Type": "TypeDouble",
@@ -1187,7 +1187,7 @@
       "Properties": {
         "Target": {
           "Type": "TypeDouble",
-          "Value": 42.0
+          "Value": 50.0
         },
         "Threshold": {
           "Type": "TypeDouble",
@@ -1832,7 +1832,7 @@
       "Properties": {
         "End Temperature Celsius": {
           "Type": "TypeDouble",
-          "Value": 42.0
+          "Value": 50.0
         },
         "Degrees Celsius Per Minute": {
           "Type": "TypeDouble",
@@ -1853,7 +1853,7 @@
       "Properties": {
         "End Temperature Celsius": {
           "Type": "TypeDouble",
-          "Value": -14.0
+          "Value": -5.0
         },
         "Degrees Celsius Per Minute": {
           "Type": "TypeDouble",

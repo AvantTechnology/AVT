@@ -2696,7 +2696,7 @@
       "Key": "88DB5C8E349A2634",
       "Title": "Send Rhoads ERS Vendor Command",
       "NodeType": "MicronVendorCommandsRhoadsERS",
-      "LocationX": -819,
+      "LocationX": -817,
       "LocationY": 10656,
       "Properties": {
         "File Name Prefix": {
@@ -3045,6 +3045,45 @@
         "Priority": {
           "Type": "TypeItemSwitch",
           "Value": "High"
+        }
+      }
+    },
+    "88DB6B6A80C59ABF": {
+      "Key": "88DB6B6A80C59ABF",
+      "Title": "General Wait",
+      "NodeType": "GeneralWait",
+      "LocationX": -817,
+      "LocationY": 10497,
+      "Properties": {
+        "Timeout Seconds": {
+          "Type": "TypeInteger",
+          "Value": 15
+        }
+      }
+    },
+    "88DB6B6A89CD5EB8": {
+      "Key": "88DB6B6A89CD5EB8",
+      "Title": "General Wait",
+      "NodeType": "GeneralWait",
+      "LocationX": -818,
+      "LocationY": 10883,
+      "Properties": {
+        "Timeout Seconds": {
+          "Type": "TypeInteger",
+          "Value": 15
+        }
+      }
+    },
+    "88DB6B6A91ECD880": {
+      "Key": "88DB6B6A91ECD880",
+      "Title": "General Wait",
+      "NodeType": "GeneralWait",
+      "LocationX": -819,
+      "LocationY": 11254,
+      "Properties": {
+        "Timeout Seconds": {
+          "Type": "TypeInteger",
+          "Value": 15
         }
       }
     }
@@ -3841,21 +3880,6 @@
       "ToNodeKey": "88DB5C8E344CC61E"
     },
     {
-      "FromNodeKey": "88DB5C8E3497B52C",
-      "FromNodePort": "Success",
-      "ToNodeKey": "88DB5C8E349A2634"
-    },
-    {
-      "FromNodeKey": "88DB5C8E349A2634",
-      "FromNodePort": "Success",
-      "ToNodeKey": "88DB5C8E3492D31F"
-    },
-    {
-      "FromNodeKey": "88DB5C8E3492D31F",
-      "FromNodePort": "Success",
-      "ToNodeKey": "88DB5C8E344CC61E"
-    },
-    {
       "FromNodeKey": "88DB5C8E349C945A",
       "FromNodePort": "Success",
       "ToNodeKey": "88DB5C8E34954438"
@@ -4111,19 +4135,49 @@
       "ToNodeKey": "88DB69259E30AEC2"
     },
     {
-      "FromNodeKey": "88DB5C8E3492D31F",
+      "FromNodeKey": "88DB5C8E3497B52C",
       "FromNodePort": "Errors",
-      "ToNodeKey": "88DB5C8E344CC61E"
+      "ToNodeKey": "88DB6B6A80C59ABF"
+    },
+    {
+      "FromNodeKey": "88DB5C8E3497B52C",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DB6B6A80C59ABF"
+    },
+    {
+      "FromNodeKey": "88DB6B6A80C59ABF",
+      "FromNodePort": "Time Elapsed",
+      "ToNodeKey": "88DB5C8E349A2634"
+    },
+    {
+      "FromNodeKey": "88DB5C8E349A2634",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DB6B6A89CD5EB8"
     },
     {
       "FromNodeKey": "88DB5C8E349A2634",
       "FromNodePort": "Errors",
+      "ToNodeKey": "88DB6B6A89CD5EB8"
+    },
+    {
+      "FromNodeKey": "88DB6B6A89CD5EB8",
+      "FromNodePort": "Time Elapsed",
       "ToNodeKey": "88DB5C8E3492D31F"
     },
     {
-      "FromNodeKey": "88DB5C8E3497B52C",
+      "FromNodeKey": "88DB5C8E3492D31F",
       "FromNodePort": "Errors",
-      "ToNodeKey": "88DB5C8E349A2634"
+      "ToNodeKey": "88DB6B6A91ECD880"
+    },
+    {
+      "FromNodeKey": "88DB5C8E3492D31F",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DB6B6A91ECD880"
+    },
+    {
+      "FromNodeKey": "88DB6B6A91ECD880",
+      "FromNodePort": "Time Elapsed",
+      "ToNodeKey": "88DB5C8E344CC61E"
     }
   ]
 }

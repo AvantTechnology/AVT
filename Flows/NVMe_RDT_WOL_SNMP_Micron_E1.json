@@ -2558,6 +2558,45 @@
           "Value": "High"
         }
       }
+    },
+    "88DB6B81E15154D9": {
+      "Key": "88DB6B81E15154D9",
+      "Title": "General Wait",
+      "NodeType": "GeneralWait",
+      "LocationX": -1047,
+      "LocationY": 9116,
+      "Properties": {
+        "Timeout Seconds": {
+          "Type": "TypeInteger",
+          "Value": 15
+        }
+      }
+    },
+    "88DB6B81E151A2F9": {
+      "Key": "88DB6B81E151A2F9",
+      "Title": "General Wait",
+      "NodeType": "GeneralWait",
+      "LocationX": -1059,
+      "LocationY": 9500,
+      "Properties": {
+        "Timeout Seconds": {
+          "Type": "TypeInteger",
+          "Value": 15
+        }
+      }
+    },
+    "88DB6B81E151F119": {
+      "Key": "88DB6B81E151F119",
+      "Title": "General Wait",
+      "NodeType": "GeneralWait",
+      "LocationX": -1057,
+      "LocationY": 9868,
+      "Properties": {
+        "Timeout Seconds": {
+          "Type": "TypeInteger",
+          "Value": 15
+        }
+      }
     }
   },
   "Connections": [
@@ -3072,21 +3111,6 @@
       "ToNodeKey": "88DB3ACBB6902E82"
     },
     {
-      "FromNodeKey": "88DB4C26D107A4DF",
-      "FromNodePort": "Success",
-      "ToNodeKey": "88DB4C26CC979765"
-    },
-    {
-      "FromNodeKey": "88DB4C26CC979765",
-      "FromNodePort": "Success",
-      "ToNodeKey": "88DB4C26D27EBB8B"
-    },
-    {
-      "FromNodeKey": "88DB4C26D27EBB8B",
-      "FromNodePort": "Success",
-      "ToNodeKey": "88DB3ACBB6902E82"
-    },
-    {
       "FromNodeKey": "88DB5243E90D4FF8",
       "FromNodePort": "Success",
       "ToNodeKey": "88DB524403C67AA5"
@@ -3482,19 +3506,49 @@
       "ToNodeKey": "88DB6B5602C308F1"
     },
     {
-      "FromNodeKey": "88DB4C26D27EBB8B",
-      "FromNodePort": "Errors",
-      "ToNodeKey": "88DB3ACBB6902E82"
-    },
-    {
-      "FromNodeKey": "88DB4C26CC979765",
-      "FromNodePort": "Errors",
-      "ToNodeKey": "88DB4C26D27EBB8B"
+      "FromNodeKey": "88DB4C26D107A4DF",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DB6B81E15154D9"
     },
     {
       "FromNodeKey": "88DB4C26D107A4DF",
       "FromNodePort": "Errors",
+      "ToNodeKey": "88DB6B81E15154D9"
+    },
+    {
+      "FromNodeKey": "88DB6B81E15154D9",
+      "FromNodePort": "Time Elapsed",
       "ToNodeKey": "88DB4C26CC979765"
+    },
+    {
+      "FromNodeKey": "88DB4C26CC979765",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DB6B81E151A2F9"
+    },
+    {
+      "FromNodeKey": "88DB4C26CC979765",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB6B81E151A2F9"
+    },
+    {
+      "FromNodeKey": "88DB6B81E151A2F9",
+      "FromNodePort": "Time Elapsed",
+      "ToNodeKey": "88DB4C26D27EBB8B"
+    },
+    {
+      "FromNodeKey": "88DB4C26D27EBB8B",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DB6B81E151F119"
+    },
+    {
+      "FromNodeKey": "88DB4C26D27EBB8B",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB6B81E151F119"
+    },
+    {
+      "FromNodeKey": "88DB6B81E151F119",
+      "FromNodePort": "Time Elapsed",
+      "ToNodeKey": "88DB3ACBB6902E82"
     }
   ]
 }

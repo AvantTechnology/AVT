@@ -6,7 +6,7 @@
       "Key": "88DAFD9E409B4C4D",
       "Title": "Verifying All Drives are Present",
       "NodeType": "DrivesCheckNotFound",
-      "LocationX": -4828,
+      "LocationX": -4826,
       "LocationY": -3688,
       "Properties": {
         "Log Errors": {
@@ -2933,12 +2933,12 @@
       "Key": "88DB5C884B4D7A2E",
       "Title": "Stop Flow With Status",
       "NodeType": "GeneralStopFlowWithStatus",
-      "LocationX": 204,
-      "LocationY": 5686,
+      "LocationX": 207,
+      "LocationY": 5789,
       "Properties": {
         "Status Message": {
           "Type": "TypeString",
-          "Value": "All drives not found. Unable to recover"
+          "Value": "One or more drives not found. Unable to recover"
         },
         "Status Color": {
           "Type": "TypeItemSwitch",
@@ -2967,7 +2967,7 @@
       "Properties": {
         "Status Message": {
           "Type": "TypeString",
-          "Value": "All drives not found. Unable to recover"
+          "Value": "One or more drives not found. Unable to recover"
         },
         "Status Color": {
           "Type": "TypeItemSwitch",
@@ -2991,8 +2991,8 @@
       "Key": "88DB66151BD13581",
       "Title": "Send email about errors getting VU data",
       "NodeType": "EmailSendSnapshot",
-      "LocationX": -662,
-      "LocationY": 11148,
+      "LocationX": 364,
+      "LocationY": 11142,
       "Properties": {
         "Recipients": {
           "Type": "TypeString",
@@ -3016,8 +3016,8 @@
       "Key": "88DB66151BD15C90",
       "Title": "Send email about errors getting VU data",
       "NodeType": "EmailSendSnapshot",
-      "LocationX": -728,
-      "LocationY": 10772,
+      "LocationX": 298,
+      "LocationY": 10766,
       "Properties": {
         "Recipients": {
           "Type": "TypeString",
@@ -3083,8 +3083,8 @@
       "Key": "88DB66151BD8AF92",
       "Title": "Send email about errors getting VU data",
       "NodeType": "EmailSendSnapshot",
-      "LocationX": -721,
-      "LocationY": 10394,
+      "LocationX": 305,
+      "LocationY": 10388,
       "Properties": {
         "Recipients": {
           "Type": "TypeString",
@@ -3765,11 +3765,6 @@
       "ToNodeKey": "88DB410A5FCB1E6E"
     },
     {
-      "FromNodeKey": "88DAFD9E409B4C4D",
-      "FromNodePort": "Some Drives Not Found",
-      "ToNodeKey": "88DB41131FFC4340"
-    },
-    {
       "FromNodeKey": "88DB5C78996F630A",
       "FromNodePort": "Dead",
       "ToNodeKey": "88DB5C78997420C0"
@@ -4175,11 +4170,6 @@
       "ToNodeKey": "88DB5C87B7E9633A"
     },
     {
-      "FromNodeKey": "88DB5C87B7F76C33",
-      "FromNodePort": "Some Drives Not Found",
-      "ToNodeKey": "88DB5C87B7F2B74D"
-    },
-    {
       "FromNodeKey": "88DB5C87B7EE0EAE",
       "FromNodePort": "Errors",
       "ToNodeKey": "88DB5C87B7EBB703"
@@ -4315,11 +4305,6 @@
       "ToNodeKey": "88DB66151BD3CD90"
     },
     {
-      "FromNodeKey": "88DB66151BDB2093",
-      "FromNodePort": "Errors",
-      "ToNodeKey": "88DB66151BD8AF92"
-    },
-    {
       "FromNodeKey": "88DB66151BD8AF92",
       "FromNodePort": "Success",
       "ToNodeKey": "88DB66151BD63E91"
@@ -4328,16 +4313,6 @@
       "FromNodeKey": "88DB66151BD8AF92",
       "FromNodePort": "Errors",
       "ToNodeKey": "88DB66151BD63E91"
-    },
-    {
-      "FromNodeKey": "88DB66151BD63E91",
-      "FromNodePort": "Errors",
-      "ToNodeKey": "88DB66151BD15C90"
-    },
-    {
-      "FromNodeKey": "88DB66151BD3CD90",
-      "FromNodePort": "Errors",
-      "ToNodeKey": "88DB66151BD13581"
     },
     {
       "FromNodeKey": "88DB66151BD15C90",
@@ -4428,6 +4403,31 @@
       "FromNodeKey": "88DB6866CCCE8F8A",
       "FromNodePort": "Errors",
       "ToNodeKey": "88DB5C87B7F9D113"
+    },
+    {
+      "FromNodeKey": "88DB5C87B7F76C33",
+      "FromNodePort": "Some Drives Not Found",
+      "ToNodeKey": "88DB5C884B4D7A2E"
+    },
+    {
+      "FromNodeKey": "88DAFD9E409B4C4D",
+      "FromNodePort": "Some Drives Not Found",
+      "ToNodeKey": "88DB5C88788B2E5C"
+    },
+    {
+      "FromNodeKey": "88DB66151BD3CD90",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB4112859CF3B8"
+    },
+    {
+      "FromNodeKey": "88DB66151BD63E91",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB66151BD3CD90"
+    },
+    {
+      "FromNodeKey": "88DB66151BDB2093",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB66151BD63E91"
     }
   ]
 }

@@ -2149,8 +2149,8 @@
       "Key": "88DB5C8E345614FB",
       "Title": "Send email about errors getting VU data",
       "NodeType": "EmailSendSnapshot",
-      "LocationX": -369,
-      "LocationY": 11028,
+      "LocationX": 663,
+      "LocationY": 11000,
       "Properties": {
         "Recipients": {
           "Type": "TypeString",
@@ -2224,8 +2224,8 @@
       "Key": "88DB5C8E345D40F1",
       "Title": "Send email about errors getting VU data",
       "NodeType": "EmailSendSnapshot",
-      "LocationX": -428,
-      "LocationY": 10274,
+      "LocationX": 604,
+      "LocationY": 10246,
       "Properties": {
         "Recipients": {
           "Type": "TypeString",
@@ -2249,8 +2249,8 @@
       "Key": "88DB5C8E345FB534",
       "Title": "Send email about errors getting VU data",
       "NodeType": "EmailSendSnapshot",
-      "LocationX": -435,
-      "LocationY": 10652,
+      "LocationX": 597,
+      "LocationY": 10624,
       "Properties": {
         "Recipients": {
           "Type": "TypeString",
@@ -3936,11 +3936,6 @@
       "ToNodeKey": "88DB5C8E345132F6"
     },
     {
-      "FromNodeKey": "88DB5C8E3497B52C",
-      "FromNodePort": "Errors",
-      "ToNodeKey": "88DB5C8E345D40F1"
-    },
-    {
       "FromNodeKey": "88DB5C8E34B01F50",
       "FromNodePort": "Errors",
       "ToNodeKey": "88DB5C8E34B74B7D"
@@ -3999,16 +3994,6 @@
       "FromNodeKey": "88DB5C8E345D40F1",
       "FromNodePort": "Errors",
       "ToNodeKey": "88DB5C8E349A2634"
-    },
-    {
-      "FromNodeKey": "88DB5C8E349A2634",
-      "FromNodePort": "Errors",
-      "ToNodeKey": "88DB5C8E345FB534"
-    },
-    {
-      "FromNodeKey": "88DB5C8E3492D31F",
-      "FromNodePort": "Errors",
-      "ToNodeKey": "88DB5C8E345614FB"
     },
     {
       "FromNodeKey": "88DB5C8E345FB534",
@@ -4124,6 +4109,21 @@
       "FromNodeKey": "88DAFD9E409B4C4D",
       "FromNodePort": "Some Drives Not Found",
       "ToNodeKey": "88DB69259E30AEC2"
+    },
+    {
+      "FromNodeKey": "88DB5C8E3492D31F",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB5C8E344CC61E"
+    },
+    {
+      "FromNodeKey": "88DB5C8E349A2634",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB5C8E3492D31F"
+    },
+    {
+      "FromNodeKey": "88DB5C8E3497B52C",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB5C8E349A2634"
     }
   ]
 }

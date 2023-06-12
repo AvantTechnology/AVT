@@ -1054,8 +1054,8 @@
       "Key": "88DB5243E90D4FF8",
       "Title": "Send email about all not found recovery",
       "NodeType": "EmailSendSnapshot",
-      "LocationX": 263,
-      "LocationY": 4191,
+      "LocationX": 788,
+      "LocationY": 4285,
       "Properties": {
         "Recipients": {
           "Type": "TypeString",
@@ -1079,8 +1079,8 @@
       "Key": "88DB524403C67AA5",
       "Title": "Go To Power Cycle",
       "NodeType": "GeneralGoToNode",
-      "LocationX": 262,
-      "LocationY": 4483,
+      "LocationX": 787,
+      "LocationY": 4577,
       "Properties": {
         "Go To Node Key": {
           "Type": "TypeString",
@@ -2335,6 +2335,64 @@
           "Value": "Continuing flow"
         }
       }
+    },
+    "88DB6B564DA9E692": {
+      "Key": "88DB6B564DA9E692",
+      "Title": "Stop Flow With Status",
+      "NodeType": "GeneralStopFlowWithStatus",
+      "LocationX": 113,
+      "LocationY": 4283,
+      "Properties": {
+        "Status Message": {
+          "Type": "TypeString",
+          "Value": "One or more drives not found"
+        },
+        "Status Color": {
+          "Type": "TypeItemSwitch",
+          "Value": "RED"
+        },
+        "Send Email": {
+          "Type": "TypeBoolean",
+          "Value": true
+        },
+        "Recipients": {
+          "Type": "TypeString",
+          "Value": "[DEFAULT_RECIPIENTS]"
+        },
+        "Priority": {
+          "Type": "TypeItemSwitch",
+          "Value": "High"
+        }
+      }
+    },
+    "88DB6B565481783F": {
+      "Key": "88DB6B565481783F",
+      "Title": "Stop Flow With Status",
+      "NodeType": "GeneralStopFlowWithStatus",
+      "LocationX": -1571,
+      "LocationY": 194,
+      "Properties": {
+        "Status Message": {
+          "Type": "TypeString",
+          "Value": "One or more drives not found"
+        },
+        "Status Color": {
+          "Type": "TypeItemSwitch",
+          "Value": "RED"
+        },
+        "Send Email": {
+          "Type": "TypeBoolean",
+          "Value": true
+        },
+        "Recipients": {
+          "Type": "TypeString",
+          "Value": "[DEFAULT_RECIPIENTS]"
+        },
+        "Priority": {
+          "Type": "TypeItemSwitch",
+          "Value": "High"
+        }
+      }
     }
   },
   "Connections": [
@@ -2692,16 +2750,6 @@
       "FromNodeKey": "88DB4C261A1DFD23",
       "FromNodePort": "Success",
       "ToNodeKey": "88DAFE2C0B639BE5"
-    },
-    {
-      "FromNodeKey": "88DAFD9E409B4C4D",
-      "FromNodePort": "Some Drives Not Found",
-      "ToNodeKey": "88DAFE3107F3FB6F"
-    },
-    {
-      "FromNodeKey": "88DB3C5B6D193B8D",
-      "FromNodePort": "Some Drives Not Found",
-      "ToNodeKey": "88DB3B698FF9742A"
     },
     {
       "FromNodeKey": "88DB5243E90D4FF8",
@@ -3182,6 +3230,16 @@
       "FromNodeKey": "88DB6866F5611FD2",
       "FromNodePort": "Errors",
       "ToNodeKey": "88DAFE2BC4161974"
+    },
+    {
+      "FromNodeKey": "88DB3C5B6D193B8D",
+      "FromNodePort": "Some Drives Not Found",
+      "ToNodeKey": "88DB6B564DA9E692"
+    },
+    {
+      "FromNodeKey": "88DAFD9E409B4C4D",
+      "FromNodePort": "Some Drives Not Found",
+      "ToNodeKey": "88DB6B565481783F"
     }
   ]
 }

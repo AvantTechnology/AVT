@@ -895,7 +895,7 @@
       "Title": "Stop Flow With Status",
       "NodeType": "GeneralStopFlowWithStatus",
       "LocationX": 5745,
-      "LocationY": 3280,
+      "LocationY": 3295,
       "Properties": {
         "Status Message": {
           "Type": "TypeString",
@@ -1010,25 +1010,12 @@
         }
       }
     },
-    "88DB4B2914B746FD": {
-      "Key": "88DB4B2914B746FD",
-      "Title": "SMARTCTL Get Extended SMART (0xC0, Phison)",
-      "NodeType": "SmartCtlGetExtSmartC0Phison",
-      "LocationX": 5744,
-      "LocationY": 2874,
-      "Properties": {
-        "Timeout Seconds": {
-          "Type": "TypeInteger",
-          "Value": 45
-        }
-      }
-    },
     "88DB4B291A58A772": {
       "Key": "88DB4B291A58A772",
       "Title": "Create SMART Snapshot CSV",
       "NodeType": "DrivesCreateSmartSnapshotCsv",
       "LocationX": 5744,
-      "LocationY": 3084,
+      "LocationY": 3099,
       "Properties": {
         "Directory Suffix": {
           "Type": "TypeString",
@@ -3086,6 +3073,19 @@
           "Value": 15
         }
       }
+    },
+    "88DB6DB96EA21CC7": {
+      "Key": "88DB6DB96EA21CC7",
+      "Title": "SMARTCTL Get Extended SMART (0xE1, Micron)",
+      "NodeType": "SmartCtlGetExtSmartE1Micron",
+      "LocationX": 5744,
+      "LocationY": 2874,
+      "Properties": {
+        "Timeout Seconds": {
+          "Type": "TypeInteger",
+          "Value": 45
+        }
+      }
     }
   },
   "Connections": [
@@ -3353,26 +3353,6 @@
       "FromNodeKey": "88DB4040431564A9",
       "FromNodePort": "Some Drives Failed",
       "ToNodeKey": "88DB4B28B73DE424"
-    },
-    {
-      "FromNodeKey": "88DB4B290F69512D",
-      "FromNodePort": "Success",
-      "ToNodeKey": "88DB4B2914B746FD"
-    },
-    {
-      "FromNodeKey": "88DB4B290F69512D",
-      "FromNodePort": "Errors",
-      "ToNodeKey": "88DB4B2914B746FD"
-    },
-    {
-      "FromNodeKey": "88DB4B2914B746FD",
-      "FromNodePort": "Success",
-      "ToNodeKey": "88DB4B291A58A772"
-    },
-    {
-      "FromNodeKey": "88DB4B2914B746FD",
-      "FromNodePort": "Errors",
-      "ToNodeKey": "88DB4B291A58A772"
     },
     {
       "FromNodeKey": "88DB4B291A58A772",
@@ -4178,6 +4158,21 @@
       "FromNodeKey": "88DB6B6A91ECD880",
       "FromNodePort": "Time Elapsed",
       "ToNodeKey": "88DB5C8E344CC61E"
+    },
+    {
+      "FromNodeKey": "88DB4B290F69512D",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DB6DB96EA21CC7"
+    },
+    {
+      "FromNodeKey": "88DB4B290F69512D",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB6DB96EA21CC7"
+    },
+    {
+      "FromNodeKey": "88DB6DB96EA21CC7",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DB4B291A58A772"
     }
   ]
 }

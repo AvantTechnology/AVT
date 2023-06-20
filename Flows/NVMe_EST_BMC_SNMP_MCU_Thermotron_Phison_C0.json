@@ -793,8 +793,8 @@
       "Key": "88DB403BFA3674ED",
       "Title": "Rescan Drives",
       "NodeType": "DrivesRescan",
-      "LocationX": -606,
-      "LocationY": 1623,
+      "LocationX": -988,
+      "LocationY": 1604,
       "Properties": {
         "Timeout Seconds": {
           "Type": "TypeInteger",
@@ -806,16 +806,16 @@
       "Key": "88DB403BFCDD9F71",
       "Title": "Drives Log Temperature",
       "NodeType": "DrivesLogTemperature",
-      "LocationX": -609,
-      "LocationY": 1764,
+      "LocationX": -991,
+      "LocationY": 1745,
       "Properties": {}
     },
     "88DB403C1C675289": {
       "Key": "88DB403C1C675289",
       "Title": "Stop Flow With Status",
       "NodeType": "GeneralStopFlowWithStatus",
-      "LocationX": -49,
-      "LocationY": 2160,
+      "LocationX": -431,
+      "LocationY": 2141,
       "Properties": {
         "Status Message": {
           "Type": "TypeString",
@@ -1206,8 +1206,8 @@
       "Key": "88DB410A50F24664",
       "Title": "Rescan Drives",
       "NodeType": "DrivesRescan",
-      "LocationX": 1144,
-      "LocationY": 1373,
+      "LocationX": 1129,
+      "LocationY": 1492,
       "Properties": {
         "Timeout Seconds": {
           "Type": "TypeInteger",
@@ -1219,8 +1219,8 @@
       "Key": "88DB410A554D55AB",
       "Title": "Drives Log Temperature",
       "NodeType": "DrivesLogTemperature",
-      "LocationX": 1144,
-      "LocationY": 1513,
+      "LocationX": 1129,
+      "LocationY": 1632,
       "Properties": {}
     },
     "88DB410A5FCB1E6E": {
@@ -2407,8 +2407,8 @@
       "Key": "88DB4B2BC4D38C83",
       "Title": "Rescan Drives",
       "NodeType": "DrivesRescan",
-      "LocationX": -47,
-      "LocationY": 1616,
+      "LocationX": -429,
+      "LocationY": 1597,
       "Properties": {
         "Timeout Seconds": {
           "Type": "TypeInteger",
@@ -2420,8 +2420,8 @@
       "Key": "88DB4B2BC7448748",
       "Title": "SMARTCTL Get Extended SMART (0xC0, Phison)",
       "NodeType": "SmartCtlGetExtSmartC0Phison",
-      "LocationX": -47,
-      "LocationY": 1757,
+      "LocationX": -429,
+      "LocationY": 1738,
       "Properties": {
         "Timeout Seconds": {
           "Type": "TypeInteger",
@@ -2433,8 +2433,8 @@
       "Key": "88DB4B2BCDC8A529",
       "Title": "Create SMART Snapshot CSV",
       "NodeType": "DrivesCreateSmartSnapshotCsv",
-      "LocationX": -47,
-      "LocationY": 1967,
+      "LocationX": -429,
+      "LocationY": 1948,
       "Properties": {
         "Directory Suffix": {
           "Type": "TypeString",
@@ -2717,6 +2717,93 @@
         "Status Message": {
           "Type": "TypeString",
           "Value": "All drives not found. Unable to recover"
+        },
+        "Status Color": {
+          "Type": "TypeItemSwitch",
+          "Value": "RED"
+        },
+        "Send Email": {
+          "Type": "TypeBoolean",
+          "Value": true
+        },
+        "Recipients": {
+          "Type": "TypeString",
+          "Value": "[DEFAULT_RECIPIENTS]"
+        },
+        "Priority": {
+          "Type": "TypeItemSwitch",
+          "Value": "High"
+        }
+      }
+    },
+    "88DB71D91077092F": {
+      "Key": "88DB71D91077092F",
+      "Title": "Stop Flow With Status",
+      "NodeType": "GeneralStopFlowWithStatus",
+      "LocationX": -5253,
+      "LocationY": 1188,
+      "Properties": {
+        "Status Message": {
+          "Type": "TypeString",
+          "Value": "Workload unresponsive"
+        },
+        "Status Color": {
+          "Type": "TypeItemSwitch",
+          "Value": "RED"
+        },
+        "Send Email": {
+          "Type": "TypeBoolean",
+          "Value": true
+        },
+        "Recipients": {
+          "Type": "TypeString",
+          "Value": "[DEFAULT_RECIPIENTS]"
+        },
+        "Priority": {
+          "Type": "TypeItemSwitch",
+          "Value": "High"
+        }
+      }
+    },
+    "88DB71D9254C2D51": {
+      "Key": "88DB71D9254C2D51",
+      "Title": "Stop Flow With Status",
+      "NodeType": "GeneralStopFlowWithStatus",
+      "LocationX": -3500,
+      "LocationY": 1599,
+      "Properties": {
+        "Status Message": {
+          "Type": "TypeString",
+          "Value": "Workload unresponsive"
+        },
+        "Status Color": {
+          "Type": "TypeItemSwitch",
+          "Value": "RED"
+        },
+        "Send Email": {
+          "Type": "TypeBoolean",
+          "Value": true
+        },
+        "Recipients": {
+          "Type": "TypeString",
+          "Value": "[DEFAULT_RECIPIENTS]"
+        },
+        "Priority": {
+          "Type": "TypeItemSwitch",
+          "Value": "High"
+        }
+      }
+    },
+    "88DB71D9321B890F": {
+      "Key": "88DB71D9321B890F",
+      "Title": "Stop Flow With Status",
+      "NodeType": "GeneralStopFlowWithStatus",
+      "LocationX": 295,
+      "LocationY": 1591,
+      "Properties": {
+        "Status Message": {
+          "Type": "TypeString",
+          "Value": "Workload unresponsive"
         },
         "Status Color": {
           "Type": "TypeItemSwitch",
@@ -3747,6 +3834,56 @@
       "FromNodeKey": "88DAFDA0A1DDF3A5",
       "FromNodePort": "Time Elapsed",
       "ToNodeKey": "88DB3CF4DF5EDA69"
+    },
+    {
+      "FromNodeKey": "88DB401EDDA231B7",
+      "FromNodePort": "Workload Unresponsive",
+      "ToNodeKey": "88DB71D91077092F"
+    },
+    {
+      "FromNodeKey": "88DB410FF7E9D030",
+      "FromNodePort": "Workload Unresponsive",
+      "ToNodeKey": "88DB71D9254C2D51"
+    },
+    {
+      "FromNodeKey": "88DB41100F1064E9",
+      "FromNodePort": "Workload Unresponsive",
+      "ToNodeKey": "88DB71D9254C2D51"
+    },
+    {
+      "FromNodeKey": "88DB41101F1646D0",
+      "FromNodePort": "Workload Unresponsive",
+      "ToNodeKey": "88DB71D9254C2D51"
+    },
+    {
+      "FromNodeKey": "88DB4110411C392C",
+      "FromNodePort": "Workload Unresponsive",
+      "ToNodeKey": "88DB71D9254C2D51"
+    },
+    {
+      "FromNodeKey": "88DB41087ECA154A",
+      "FromNodePort": "Workload Unresponsive",
+      "ToNodeKey": "88DB71D9321B890F"
+    },
+    {
+      "FromNodeKey": "88DB4108B38B2B7D",
+      "FromNodePort": "Workload Unresponsive",
+      "ToNodeKey": "88DB71D9321B890F"
+    },
+    {
+      "FromNodeKey": "88DB4108FD1D0827",
+      "FromNodePort": "Workload Unresponsive",
+      "ToNodeKey": "88DB71D9321B890F"
+    },
+    {
+      "FromNodeKey": "88DB41095778DDD9",
+      "FromNodePort": "Workload Unresponsive",
+      "ToNodeKey": "88DB71D9321B890F"
+    },
+    {
+      "FromNodeKey": "88DB410A22416A9B",
+      "FromNodePort": "Workload Unresponsive",
+      "ToNodeKey": "88DB71D9321B890F"
     }
   ]
 }

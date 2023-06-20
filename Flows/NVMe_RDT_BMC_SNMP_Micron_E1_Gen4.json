@@ -19,7 +19,7 @@
       "Key": "88DAFDA003B477D6",
       "Title": "Run IOMeter RDT",
       "NodeType": "WorkloadRunIOMeterRDTPreset",
-      "LocationX": 1682,
+      "LocationX": 1684,
       "LocationY": 1489,
       "Properties": {
         "Results File Prefix": {
@@ -2393,6 +2393,35 @@
           "Value": "High"
         }
       }
+    },
+    "88DB71DAC3741455": {
+      "Key": "88DB71DAC3741455",
+      "Title": "Stop Flow With Status",
+      "NodeType": "GeneralStopFlowWithStatus",
+      "LocationX": 1626,
+      "LocationY": 2342,
+      "Properties": {
+        "Status Message": {
+          "Type": "TypeString",
+          "Value": "Workload unresponsive (possible system crash)"
+        },
+        "Status Color": {
+          "Type": "TypeItemSwitch",
+          "Value": "RED"
+        },
+        "Send Email": {
+          "Type": "TypeBoolean",
+          "Value": true
+        },
+        "Recipients": {
+          "Type": "TypeString",
+          "Value": "[DEFAULT_RECIPIENTS]"
+        },
+        "Priority": {
+          "Type": "TypeItemSwitch",
+          "Value": "High"
+        }
+      }
     }
   },
   "Connections": [
@@ -3240,6 +3269,16 @@
       "FromNodeKey": "88DAFD9E409B4C4D",
       "FromNodePort": "Some Drives Not Found",
       "ToNodeKey": "88DB6B565481783F"
+    },
+    {
+      "FromNodeKey": "88DAFDA003B477D6",
+      "FromNodePort": "Workload Unresponsive",
+      "ToNodeKey": "88DB71DAC3741455"
+    },
+    {
+      "FromNodeKey": "88DAFE4CDE90BE6A",
+      "FromNodePort": "Workload Unresponsive",
+      "ToNodeKey": "88DB71DAC3741455"
     }
   ]
 }

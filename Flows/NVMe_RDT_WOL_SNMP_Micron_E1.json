@@ -2597,6 +2597,35 @@
           "Value": 15
         }
       }
+    },
+    "88DB71DA93D522C6": {
+      "Key": "88DB71DA93D522C6",
+      "Title": "Stop Flow With Status",
+      "NodeType": "GeneralStopFlowWithStatus",
+      "LocationX": 1611,
+      "LocationY": 2346,
+      "Properties": {
+        "Status Message": {
+          "Type": "TypeString",
+          "Value": "Workload unresponsive (possible system crash)"
+        },
+        "Status Color": {
+          "Type": "TypeItemSwitch",
+          "Value": "RED"
+        },
+        "Send Email": {
+          "Type": "TypeBoolean",
+          "Value": true
+        },
+        "Recipients": {
+          "Type": "TypeString",
+          "Value": "[DEFAULT_RECIPIENTS]"
+        },
+        "Priority": {
+          "Type": "TypeItemSwitch",
+          "Value": "High"
+        }
+      }
     }
   },
   "Connections": [
@@ -3549,6 +3578,16 @@
       "FromNodeKey": "88DB6B81E151F119",
       "FromNodePort": "Time Elapsed",
       "ToNodeKey": "88DB3ACBB6902E82"
+    },
+    {
+      "FromNodeKey": "88DAFDA003B477D6",
+      "FromNodePort": "Workload Unresponsive",
+      "ToNodeKey": "88DB71DA93D522C6"
+    },
+    {
+      "FromNodeKey": "88DAFE4CDE90BE6A",
+      "FromNodePort": "Workload Unresponsive",
+      "ToNodeKey": "88DB71DA93D522C6"
     }
   ]
 }

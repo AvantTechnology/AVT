@@ -1,0 +1,28 @@
+{
+  "EntryNodeKey": "88DB6B78A6D65267",
+  "CleanupEntryNodeKey": "",
+  "Nodes": {
+    "88DB6B78A6D65267": {
+      "Key": "88DB6B78A6D65267",
+      "Title": "Thermal Chamber EZT Send Ramp To HIGH",
+      "NodeType": "ThermalChamberEZTSendRamp",
+      "LocationX": 1053,
+      "LocationY": 635,
+      "Properties": {
+        "End Temperature Celsius": {
+          "Type": "TypeDouble",
+          "Value": 40.0
+        },
+        "Degrees Celsius Per Minute": {
+          "Type": "TypeDouble",
+          "Value": 1.0
+        },
+        "Timeout Milliseconds": {
+          "Type": "TypeInteger",
+          "Value": 5000
+        }
+      }
+    }
+  },
+  "Connections": []
+}

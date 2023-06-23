@@ -692,8 +692,8 @@
       "Key": "88DB4045CA56E9D2",
       "Title": "Disable regulators",
       "NodeType": "MCUSetPin",
-      "LocationX": 4184,
-      "LocationY": 1878,
+      "LocationX": 4181,
+      "LocationY": 1902,
       "Properties": {
         "Pin": {
           "Type": "TypeInteger",
@@ -713,8 +713,8 @@
       "Key": "88DB4046385485EB",
       "Title": "DevCon Remove Drive Models",
       "NodeType": "DevConRemoveDriveModels",
-      "LocationX": 4108,
-      "LocationY": 2087,
+      "LocationX": 4102,
+      "LocationY": 2135,
       "Properties": {
         "Timeout Seconds": {
           "Type": "TypeInteger",
@@ -726,8 +726,8 @@
       "Key": "88DB40464877A689",
       "Title": "DevCon Rescan",
       "NodeType": "DevConRescan",
-      "LocationX": 4108,
-      "LocationY": 2253,
+      "LocationX": 4102,
+      "LocationY": 2301,
       "Properties": {
         "Timeout Seconds": {
           "Type": "TypeInteger",
@@ -739,8 +739,8 @@
       "Key": "88DB40465FC1695C",
       "Title": "Wait 5 Seconds",
       "NodeType": "GeneralWait",
-      "LocationX": 4108,
-      "LocationY": 2422,
+      "LocationX": 4102,
+      "LocationY": 2470,
       "Properties": {
         "Timeout Seconds": {
           "Type": "TypeInteger",
@@ -752,8 +752,8 @@
       "Key": "88DB40466B527906",
       "Title": "Go To Clean Power Cycle",
       "NodeType": "GeneralGoToNode",
-      "LocationX": 4109,
-      "LocationY": 2568,
+      "LocationX": 4103,
+      "LocationY": 2616,
       "Properties": {
         "Go To Node Key": {
           "Type": "TypeString",
@@ -1035,8 +1035,8 @@
       "Key": "88DB5230B25F2420",
       "Title": "Send Snapshot Email",
       "NodeType": "EmailSendSnapshot",
-      "LocationX": 4608,
-      "LocationY": 1857,
+      "LocationX": 4606,
+      "LocationY": 2086,
       "Properties": {
         "Recipients": {
           "Type": "TypeString",
@@ -1060,8 +1060,8 @@
       "Key": "88DB5230DD310406",
       "Title": "Client Connection Wait Until Alive",
       "NodeType": "ClientConnectionWaitAlive",
-      "LocationX": 4608,
-      "LocationY": 2153,
+      "LocationX": 4606,
+      "LocationY": 2382,
       "Properties": {
         "Timeout Seconds": {
           "Type": "TypeInteger",
@@ -1073,8 +1073,8 @@
       "Key": "88DB5230EE34B8E0",
       "Title": "Stop Flow With Status",
       "NodeType": "GeneralStopFlowWithStatus",
-      "LocationX": 4718,
-      "LocationY": 2309,
+      "LocationX": 4716,
+      "LocationY": 2538,
       "Properties": {
         "Status Message": {
           "Type": "TypeString",
@@ -4280,6 +4280,21 @@
       "FromNodeKey": "88DB404930BB1010",
       "FromNodePort": "Workload Unresponsive",
       "ToNodeKey": "88DB71DA317EA916"
+    },
+    {
+      "FromNodeKey": "88DB4044B6DA003B",
+      "FromNodePort": "Workload Unresponsive",
+      "ToNodeKey": "88DB5230B25F2420"
+    },
+    {
+      "FromNodeKey": "88DB4046385485EB",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB5230B25F2420"
+    },
+    {
+      "FromNodeKey": "88DB40464877A689",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB5230B25F2420"
     }
   ]
 }

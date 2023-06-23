@@ -2433,8 +2433,8 @@
       "Key": "88DB5230B25F2420",
       "Title": "Send Snapshot Email",
       "NodeType": "EmailSendSnapshot",
-      "LocationX": 4608,
-      "LocationY": 1857,
+      "LocationX": 4612,
+      "LocationY": 1938,
       "Properties": {
         "Recipients": {
           "Type": "TypeString",
@@ -2458,8 +2458,8 @@
       "Key": "88DB5230DD310406",
       "Title": "Client Connection Wait Until Alive",
       "NodeType": "ClientConnectionWaitAlive",
-      "LocationX": 4608,
-      "LocationY": 2153,
+      "LocationX": 4612,
+      "LocationY": 2234,
       "Properties": {
         "Timeout Seconds": {
           "Type": "TypeInteger",
@@ -2471,8 +2471,8 @@
       "Key": "88DB5230EE34B8E0",
       "Title": "Stop Flow With Status",
       "NodeType": "GeneralStopFlowWithStatus",
-      "LocationX": 4717,
-      "LocationY": 2286,
+      "LocationX": 4721,
+      "LocationY": 2367,
       "Properties": {
         "Status Message": {
           "Type": "TypeString",
@@ -3648,6 +3648,21 @@
       "FromNodeKey": "88DB404930BB1010",
       "FromNodePort": "Workload Unresponsive",
       "ToNodeKey": "88DB71D9E465E0DE"
+    },
+    {
+      "FromNodeKey": "88DB4044B6DA003B",
+      "FromNodePort": "Workload Unresponsive",
+      "ToNodeKey": "88DB5230B25F2420"
+    },
+    {
+      "FromNodeKey": "88DB4046385485EB",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB5230B25F2420"
+    },
+    {
+      "FromNodeKey": "88DB40464877A689",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB5230B25F2420"
     }
   ]
 }

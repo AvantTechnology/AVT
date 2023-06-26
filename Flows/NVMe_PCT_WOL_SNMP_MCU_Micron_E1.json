@@ -713,8 +713,8 @@
       "Key": "88DB4046385485EB",
       "Title": "DevCon Remove Drive Models",
       "NodeType": "DevConRemoveDriveModels",
-      "LocationX": 4102,
-      "LocationY": 2135,
+      "LocationX": 4108,
+      "LocationY": 2277,
       "Properties": {
         "Timeout Seconds": {
           "Type": "TypeInteger",
@@ -726,8 +726,8 @@
       "Key": "88DB40464877A689",
       "Title": "DevCon Rescan",
       "NodeType": "DevConRescan",
-      "LocationX": 4102,
-      "LocationY": 2301,
+      "LocationX": 4108,
+      "LocationY": 2444,
       "Properties": {
         "Timeout Seconds": {
           "Type": "TypeInteger",
@@ -739,8 +739,8 @@
       "Key": "88DB40465FC1695C",
       "Title": "Wait 5 Seconds",
       "NodeType": "GeneralWait",
-      "LocationX": 4102,
-      "LocationY": 2470,
+      "LocationX": 4108,
+      "LocationY": 2612,
       "Properties": {
         "Timeout Seconds": {
           "Type": "TypeInteger",
@@ -752,8 +752,8 @@
       "Key": "88DB40466B527906",
       "Title": "Go To Clean Power Cycle",
       "NodeType": "GeneralGoToNode",
-      "LocationX": 4103,
-      "LocationY": 2616,
+      "LocationX": 4109,
+      "LocationY": 2758,
       "Properties": {
         "Go To Node Key": {
           "Type": "TypeString",
@@ -3173,6 +3173,19 @@
           "Value": "High"
         }
       }
+    },
+    "88DB7655FD6BDF44": {
+      "Key": "88DB7655FD6BDF44",
+      "Title": "Wait 5 seconds before DevCon remove",
+      "NodeType": "GeneralWait",
+      "LocationX": 4107,
+      "LocationY": 2134,
+      "Properties": {
+        "Timeout Seconds": {
+          "Type": "TypeInteger",
+          "Value": 5
+        }
+      }
     }
   },
   "Connections": [
@@ -3320,16 +3333,6 @@
       "FromNodeKey": "88DB404466E81AD1",
       "FromNodePort": "True",
       "ToNodeKey": "88DB4044B6DA003B"
-    },
-    {
-      "FromNodeKey": "88DB4044B6DA003B",
-      "FromNodePort": "All Drives Passed",
-      "ToNodeKey": "88DB4046385485EB"
-    },
-    {
-      "FromNodeKey": "88DB4044B6DA003B",
-      "FromNodePort": "Some Drives Failed",
-      "ToNodeKey": "88DB4046385485EB"
     },
     {
       "FromNodeKey": "88DB4046385485EB",
@@ -4287,14 +4290,29 @@
       "ToNodeKey": "88DB5230B25F2420"
     },
     {
+      "FromNodeKey": "88DB4044B6DA003B",
+      "FromNodePort": "All Drives Passed",
+      "ToNodeKey": "88DB7655FD6BDF44"
+    },
+    {
+      "FromNodeKey": "88DB4044B6DA003B",
+      "FromNodePort": "Some Drives Failed",
+      "ToNodeKey": "88DB7655FD6BDF44"
+    },
+    {
+      "FromNodeKey": "88DB7655FD6BDF44",
+      "FromNodePort": "Time Elapsed",
+      "ToNodeKey": "88DB4046385485EB"
+    },
+    {
       "FromNodeKey": "88DB4046385485EB",
       "FromNodePort": "Errors",
-      "ToNodeKey": "88DB5230B25F2420"
+      "ToNodeKey": "88DB5230DD310406"
     },
     {
       "FromNodeKey": "88DB40464877A689",
       "FromNodePort": "Errors",
-      "ToNodeKey": "88DB5230B25F2420"
+      "ToNodeKey": "88DB5230DD310406"
     }
   ]
 }

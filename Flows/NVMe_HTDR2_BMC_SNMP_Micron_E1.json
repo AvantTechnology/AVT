@@ -310,7 +310,7 @@
         },
         "Reporting Interval Seconds": {
           "Type": "TypeInteger",
-          "Value": 30
+          "Value": 10
         },
         "Timeout Minutes": {
           "Type": "TypeInteger",
@@ -375,7 +375,7 @@
         },
         "Reporting Interval Seconds": {
           "Type": "TypeInteger",
-          "Value": 30
+          "Value": 10
         },
         "Timeout Minutes": {
           "Type": "TypeInteger",

@@ -1166,7 +1166,7 @@
       "Properties": {
         "Target": {
           "Type": "TypeDouble",
-          "Value": -5.0
+          "Value": -3.0
         },
         "Threshold": {
           "Type": "TypeDouble",
@@ -1853,7 +1853,7 @@
       "Properties": {
         "End Temperature Celsius": {
           "Type": "TypeDouble",
-          "Value": -5.0
+          "Value": -3.0
         },
         "Degrees Celsius Per Minute": {
           "Type": "TypeDouble",

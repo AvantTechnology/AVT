@@ -379,7 +379,7 @@
         },
         "Timeout Minutes": {
           "Type": "TypeInteger",
-          "Value": 90
+          "Value": 3840
         },
         "Log Results": {
           "Type": "TypeBoolean",
@@ -612,14 +612,6 @@
           "Value": 1
         }
       }
-    },
-    "88DB5C9003C5534D": {
-      "Key": "88DB5C9003C5534D",
-      "Title": "Go To Entry Node",
-      "NodeType": "GeneralGoToEntry",
-      "LocationX": 879,
-      "LocationY": 14076,
-      "Properties": {}
     },
     "88DB5C9003C7C39A": {
       "Key": "88DB5C9003C7C39A",
@@ -1325,7 +1317,7 @@
         },
         "Timeout Minutes": {
           "Type": "TypeInteger",
-          "Value": 90
+          "Value": 3840
         },
         "Log Results": {
           "Type": "TypeBoolean",
@@ -2353,16 +2345,6 @@
       "FromNodeKey": "88DB5C9003DAC418",
       "FromNodePort": "Incremented",
       "ToNodeKey": "88DB5C9003EB9110"
-    },
-    {
-      "FromNodeKey": "88DB5C9003D86247",
-      "FromNodePort": "False",
-      "ToNodeKey": "88DB5C9003C5534D"
-    },
-    {
-      "FromNodeKey": "88DB5C9003EB9110",
-      "FromNodePort": "Set",
-      "ToNodeKey": "88DB5C9003C5534D"
     },
     {
       "FromNodeKey": "88DB5C9003FBE363",

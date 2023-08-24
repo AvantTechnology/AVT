@@ -374,7 +374,7 @@
         },
         "Log File Prefix": {
           "Type": "TypeString",
-          "Value": ""
+          "Value": "FOB_Write"
         },
         "Data Pattern File Path": {
           "Type": "TypeString",
@@ -439,7 +439,7 @@
         },
         "Log File Prefix": {
           "Type": "TypeString",
-          "Value": ""
+          "Value": "FOB_Read"
         },
         "Data Pattern File Path": {
           "Type": "TypeString",

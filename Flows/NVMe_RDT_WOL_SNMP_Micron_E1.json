@@ -19,8 +19,8 @@
       "Key": "88DAFDA003B477D6",
       "Title": "Run IOMeter RDT",
       "NodeType": "WorkloadRunIOMeterRDTPreset",
-      "LocationX": 1682,
-      "LocationY": 1489,
+      "LocationX": 1754,
+      "LocationY": 1483,
       "Properties": {
         "Results File Prefix": {
           "Type": "TypeString",
@@ -78,16 +78,16 @@
       "Key": "88DAFDA1E78B0DFE",
       "Title": "Drives Log Temperature",
       "NodeType": "DrivesLogTemperature",
-      "LocationX": 1759,
-      "LocationY": 2180,
+      "LocationX": 1831,
+      "LocationY": 2174,
       "Properties": {}
     },
     "88DAFE27D4F6252C": {
       "Key": "88DAFE27D4F6252C",
       "Title": "Rescan Drives",
       "NodeType": "DrivesRescan",
-      "LocationX": 1760,
-      "LocationY": 2038,
+      "LocationX": 1832,
+      "LocationY": 2032,
       "Properties": {
         "Timeout Seconds": {
           "Type": "TypeInteger",
@@ -99,8 +99,8 @@
       "Key": "88DAFE2B82C62D65",
       "Title": "Waiting after IOMeter Completed",
       "NodeType": "GeneralWait",
-      "LocationX": 1325,
-      "LocationY": 2044,
+      "LocationX": 784,
+      "LocationY": 2041,
       "Properties": {
         "Timeout Seconds": {
           "Type": "TypeInteger",
@@ -180,8 +180,8 @@
       "Key": "88DAFE311731DFFA",
       "Title": "Check if IOMeter Step",
       "NodeType": "StepCheck",
-      "LocationX": 1429,
-      "LocationY": 966,
+      "LocationX": 1501,
+      "LocationY": 960,
       "Properties": {
         "Compare Operation": {
           "Type": "TypeItemSwitch",
@@ -227,8 +227,8 @@
       "Key": "88DAFE4CDE90BE6A",
       "Title": "Run IOMeter RDT with longer timeout",
       "NodeType": "WorkloadRunIOMeterRDTPreset",
-      "LocationX": 935,
-      "LocationY": 1489,
+      "LocationX": 1007,
+      "LocationY": 1483,
       "Properties": {
         "Results File Prefix": {
           "Type": "TypeString",
@@ -252,8 +252,8 @@
       "Key": "88DAFE4CFA18BC77",
       "Title": "Check if Cycle 1",
       "NodeType": "CycleCheck",
-      "LocationX": 1429,
-      "LocationY": 1218,
+      "LocationX": 1501,
+      "LocationY": 1212,
       "Properties": {
         "Compare Operation": {
           "Type": "TypeItemSwitch",
@@ -999,8 +999,8 @@
       "Key": "88DB44E520018A55",
       "Title": "Stop Flow With Status",
       "NodeType": "GeneralStopFlowWithStatus",
-      "LocationX": 2312,
-      "LocationY": 2513,
+      "LocationX": 2363,
+      "LocationY": 3040,
       "Properties": {
         "Status Message": {
           "Type": "TypeString",
@@ -1120,8 +1120,8 @@
       "Key": "88DB4A635A5C4F38",
       "Title": "Rescan Drives",
       "NodeType": "DrivesRescan",
-      "LocationX": 2313,
-      "LocationY": 1955,
+      "LocationX": 2364,
+      "LocationY": 1991,
       "Properties": {
         "Timeout Seconds": {
           "Type": "TypeInteger",
@@ -1237,8 +1237,8 @@
       "Key": "88DB4B23587905BF",
       "Title": "Create SMART Snapshot CSV",
       "NodeType": "DrivesCreateSmartSnapshotCsv",
-      "LocationX": 2313,
-      "LocationY": 2313,
+      "LocationX": 2364,
+      "LocationY": 2840,
       "Properties": {
         "Directory Suffix": {
           "Type": "TypeString",
@@ -1434,8 +1434,8 @@
       "Key": "88DB4C260AF68E96",
       "Title": "SMARTCTL Get Extended SMART (0xE1, Micron)",
       "NodeType": "SmartCtlGetExtSmartE1Micron",
-      "LocationX": 2313,
-      "LocationY": 2092,
+      "LocationX": 2364,
+      "LocationY": 2619,
       "Properties": {
         "Timeout Seconds": {
           "Type": "TypeInteger",
@@ -2602,8 +2602,8 @@
       "Key": "88DB71DA93D522C6",
       "Title": "Stop Flow With Status",
       "NodeType": "GeneralStopFlowWithStatus",
-      "LocationX": 1611,
-      "LocationY": 2346,
+      "LocationX": 1683,
+      "LocationY": 2340,
       "Properties": {
         "Status Message": {
           "Type": "TypeString",
@@ -2626,6 +2626,80 @@
           "Value": "High"
         }
       }
+    },
+    "88DBA4E7D9FCEB12": {
+      "Key": "88DBA4E7D9FCEB12",
+      "Title": "Stop Flow With Status",
+      "NodeType": "GeneralStopFlowWithStatus",
+      "LocationX": 2610,
+      "LocationY": 2283,
+      "Properties": {
+        "Status Message": {
+          "Type": "TypeString",
+          "Value": "Some drives have invalid IOMeter test files. If all drives are found, reset test to cycle 0 step 0"
+        },
+        "Status Color": {
+          "Type": "TypeItemSwitch",
+          "Value": "RED"
+        },
+        "Send Email": {
+          "Type": "TypeBoolean",
+          "Value": true
+        },
+        "Recipients": {
+          "Type": "TypeString",
+          "Value": "[DEFAULT_RECIPIENTS]"
+        },
+        "Priority": {
+          "Type": "TypeItemSwitch",
+          "Value": "High"
+        }
+      }
+    },
+    "88DBA4E7D9FF6EF8": {
+      "Key": "88DBA4E7D9FF6EF8",
+      "Title": "Check IOMeter Test Files RDT Preset",
+      "NodeType": "WorkloadIOMeterCheckTestFilesRDTPreset",
+      "LocationX": 2362,
+      "LocationY": 2129,
+      "Properties": {}
+    },
+    "88DBA4E7F87AF7C2": {
+      "Key": "88DBA4E7F87AF7C2",
+      "Title": "Stop Flow With Status",
+      "NodeType": "GeneralStopFlowWithStatus",
+      "LocationX": 1032,
+      "LocationY": 2342,
+      "Properties": {
+        "Status Message": {
+          "Type": "TypeString",
+          "Value": "Some drives have invalid IOMeter test files. Recreate test file on drive(s)"
+        },
+        "Status Color": {
+          "Type": "TypeItemSwitch",
+          "Value": "RED"
+        },
+        "Send Email": {
+          "Type": "TypeBoolean",
+          "Value": true
+        },
+        "Recipients": {
+          "Type": "TypeString",
+          "Value": "[DEFAULT_RECIPIENTS]"
+        },
+        "Priority": {
+          "Type": "TypeItemSwitch",
+          "Value": "High"
+        }
+      }
+    },
+    "88DBA4E7F87C82B6": {
+      "Key": "88DBA4E7F87C82B6",
+      "Title": "Check IOMeter Test Files RDT Preset",
+      "NodeType": "WorkloadIOMeterCheckTestFilesRDTPreset",
+      "LocationX": 783,
+      "LocationY": 2188,
+      "Properties": {}
     }
   },
   "Connections": [
@@ -2910,26 +2984,6 @@
       "ToNodeKey": "88DB48067ABE8754"
     },
     {
-      "FromNodeKey": "88DAFE4CDE90BE6A",
-      "FromNodePort": "Some Drives Failed",
-      "ToNodeKey": "88DB4A635A5C4F38"
-    },
-    {
-      "FromNodeKey": "88DAFE4CDE90BE6A",
-      "FromNodePort": "Errors",
-      "ToNodeKey": "88DB4A635A5C4F38"
-    },
-    {
-      "FromNodeKey": "88DAFDA003B477D6",
-      "FromNodePort": "Some Drives Failed",
-      "ToNodeKey": "88DB4A635A5C4F38"
-    },
-    {
-      "FromNodeKey": "88DAFDA003B477D6",
-      "FromNodePort": "Errors",
-      "ToNodeKey": "88DB4A635A5C4F38"
-    },
-    {
       "FromNodeKey": "88DAFE2C0B639BE5",
       "FromNodePort": "Success",
       "ToNodeKey": "88DB3C59971F43CE"
@@ -3098,16 +3152,6 @@
       "FromNodeKey": "88DB4C259D103553",
       "FromNodePort": "Errors",
       "ToNodeKey": "88DB3B880D86146F"
-    },
-    {
-      "FromNodeKey": "88DB4A635A5C4F38",
-      "FromNodePort": "Success",
-      "ToNodeKey": "88DB4C260AF68E96"
-    },
-    {
-      "FromNodeKey": "88DB4A635A5C4F38",
-      "FromNodePort": "Errors",
-      "ToNodeKey": "88DB4C260AF68E96"
     },
     {
       "FromNodeKey": "88DB4C260AF68E96",
@@ -3420,11 +3464,6 @@
       "ToNodeKey": "88DB5ADFA59D4E85"
     },
     {
-      "FromNodeKey": "88DAFE2B82C62D65",
-      "FromNodePort": "Time Elapsed",
-      "ToNodeKey": "88DB5ADFA59D4E85"
-    },
-    {
       "FromNodeKey": "88DAFDA0C184F6DE",
       "FromNodePort": "Connection Alive",
       "ToNodeKey": "88DB5ADFA59D4E85"
@@ -3588,6 +3627,71 @@
       "FromNodeKey": "88DAFE4CDE90BE6A",
       "FromNodePort": "Workload Unresponsive",
       "ToNodeKey": "88DB71DA93D522C6"
+    },
+    {
+      "FromNodeKey": "88DBA4E7D9FF6EF8",
+      "FromNodePort": "Some Drives Test Files Incorrect",
+      "ToNodeKey": "88DBA4E7D9FCEB12"
+    },
+    {
+      "FromNodeKey": "88DBA4E7D9FF6EF8",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DBA4E7D9FCEB12"
+    },
+    {
+      "FromNodeKey": "88DBA4E7F87C82B6",
+      "FromNodePort": "Some Drives Test Files Incorrect",
+      "ToNodeKey": "88DBA4E7F87AF7C2"
+    },
+    {
+      "FromNodeKey": "88DBA4E7F87C82B6",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DBA4E7F87AF7C2"
+    },
+    {
+      "FromNodeKey": "88DAFE2B82C62D65",
+      "FromNodePort": "Time Elapsed",
+      "ToNodeKey": "88DBA4E7F87C82B6"
+    },
+    {
+      "FromNodeKey": "88DBA4E7F87C82B6",
+      "FromNodePort": "All Drives Test Files OK",
+      "ToNodeKey": "88DB5ADFA59D4E85"
+    },
+    {
+      "FromNodeKey": "88DB4A635A5C4F38",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DBA4E7D9FF6EF8"
+    },
+    {
+      "FromNodeKey": "88DB4A635A5C4F38",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DBA4E7D9FF6EF8"
+    },
+    {
+      "FromNodeKey": "88DBA4E7D9FF6EF8",
+      "FromNodePort": "All Drives Test Files OK",
+      "ToNodeKey": "88DB4C260AF68E96"
+    },
+    {
+      "FromNodeKey": "88DAFDA003B477D6",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB4A635A5C4F38"
+    },
+    {
+      "FromNodeKey": "88DAFDA003B477D6",
+      "FromNodePort": "Some Drives Failed",
+      "ToNodeKey": "88DB4A635A5C4F38"
+    },
+    {
+      "FromNodeKey": "88DAFE4CDE90BE6A",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB4A635A5C4F38"
+    },
+    {
+      "FromNodeKey": "88DAFE4CDE90BE6A",
+      "FromNodePort": "Some Drives Failed",
+      "ToNodeKey": "88DB4A635A5C4F38"
     }
   ]
 }

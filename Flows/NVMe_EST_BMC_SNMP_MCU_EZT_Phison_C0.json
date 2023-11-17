@@ -1670,63 +1670,12 @@
       "Key": "88DB411349F66920",
       "Title": "Check step for thermal chamber setpoint",
       "NodeType": "StepCheckList",
-      "LocationX": -5129,
-      "LocationY": -2419,
+      "LocationX": -5122,
+      "LocationY": -2512,
       "Properties": {
         "Compare List": {
           "Type": "TypeString",
           "Value": "0,1,2,3,4,5,6,7"
-        }
-      }
-    },
-    "88DB411377842451": {
-      "Key": "88DB411377842451",
-      "Title": "Thermal Chamber Thermotron Set Ramp Rate",
-      "NodeType": "ThermalChamberThermotronSetRampRate",
-      "LocationX": -5172,
-      "LocationY": -2775,
-      "Properties": {
-        "Degrees Celsius Per Minute": {
-          "Type": "TypeDouble",
-          "Value": 1.0
-        },
-        "Timeout Milliseconds": {
-          "Type": "TypeInteger",
-          "Value": 5000
-        }
-      }
-    },
-    "88DB411392152A05": {
-      "Key": "88DB411392152A05",
-      "Title": "Thermal Chamber Set High Temp",
-      "NodeType": "ThermalChamberSetSetPoint",
-      "LocationX": -5497,
-      "LocationY": -2189,
-      "Properties": {
-        "Set Point Celsius": {
-          "Type": "TypeDouble",
-          "Value": 42.0
-        },
-        "Timeout Milliseconds": {
-          "Type": "TypeInteger",
-          "Value": 5000
-        }
-      }
-    },
-    "88DB4113AFB0E795": {
-      "Key": "88DB4113AFB0E795",
-      "Title": "Thermal Chamber Set Low Temp",
-      "NodeType": "ThermalChamberSetSetPoint",
-      "LocationX": -4867,
-      "LocationY": -2203,
-      "Properties": {
-        "Set Point Celsius": {
-          "Type": "TypeDouble",
-          "Value": -14.0
-        },
-        "Timeout Milliseconds": {
-          "Type": "TypeInteger",
-          "Value": 5000
         }
       }
     },
@@ -1739,7 +1688,7 @@
       "Properties": {
         "Target": {
           "Type": "TypeDouble",
-          "Value": -14.0
+          "Value": -2.0
         },
         "Threshold": {
           "Type": "TypeDouble",
@@ -1953,8 +1902,8 @@
       "Key": "88DB412050B7E5D2",
       "Title": "Check Cycle",
       "NodeType": "CycleCheck",
-      "LocationX": -5169,
-      "LocationY": -2597,
+      "LocationX": -5162,
+      "LocationY": -2690,
       "Properties": {
         "Compare Operation": {
           "Type": "TypeItemSwitch",
@@ -2822,6 +2771,48 @@
           "Value": "High"
         }
       }
+    },
+    "88DBE5F0375A596D": {
+      "Key": "88DBE5F0375A596D",
+      "Title": "Thermal Chamber EZT Send Ramp To HIGH",
+      "NodeType": "ThermalChamberEZTSendRamp",
+      "LocationX": -5497,
+      "LocationY": -2250,
+      "Properties": {
+        "End Temperature Celsius": {
+          "Type": "TypeDouble",
+          "Value": 42.0
+        },
+        "Degrees Celsius Per Minute": {
+          "Type": "TypeDouble",
+          "Value": 1.0
+        },
+        "Timeout Milliseconds": {
+          "Type": "TypeInteger",
+          "Value": 5000
+        }
+      }
+    },
+    "88DBE5F04E5E82DA": {
+      "Key": "88DBE5F04E5E82DA",
+      "Title": "Thermal Chamber EZT Send Ramp To LOW",
+      "NodeType": "ThermalChamberEZTSendRamp",
+      "LocationX": -4867,
+      "LocationY": -2261,
+      "Properties": {
+        "End Temperature Celsius": {
+          "Type": "TypeDouble",
+          "Value": -2.0
+        },
+        "Degrees Celsius Per Minute": {
+          "Type": "TypeDouble",
+          "Value": 1.0
+        },
+        "Timeout Milliseconds": {
+          "Type": "TypeInteger",
+          "Value": 5000
+        }
+      }
     }
   },
   "Connections": [
@@ -3222,31 +3213,6 @@
     },
     {
       "FromNodeKey": "88DB41131FFC4340",
-      "FromNodePort": "Clients Synced (First)",
-      "ToNodeKey": "88DB411377842451"
-    },
-    {
-      "FromNodeKey": "88DB411349F66920",
-      "FromNodePort": "True",
-      "ToNodeKey": "88DB411392152A05"
-    },
-    {
-      "FromNodeKey": "88DB411349F66920",
-      "FromNodePort": "False",
-      "ToNodeKey": "88DB4113AFB0E795"
-    },
-    {
-      "FromNodeKey": "88DB4113AFB0E795",
-      "FromNodePort": "Success",
-      "ToNodeKey": "88DB411A73A08A3A"
-    },
-    {
-      "FromNodeKey": "88DB411392152A05",
-      "FromNodePort": "Success",
-      "ToNodeKey": "88DB411A986BE174"
-    },
-    {
-      "FromNodeKey": "88DB41131FFC4340",
       "FromNodePort": "Clients Synced (Others)",
       "ToNodeKey": "88DB411AAC95A0DE"
     },
@@ -3324,11 +3290,6 @@
       "FromNodeKey": "88DAFE2BC4161974",
       "FromNodePort": "Success",
       "ToNodeKey": "88DAFD9E409B4C4D"
-    },
-    {
-      "FromNodeKey": "88DB411377842451",
-      "FromNodePort": "Success",
-      "ToNodeKey": "88DB412050B7E5D2"
     },
     {
       "FromNodeKey": "88DB412050B7E5D2",
@@ -3884,6 +3845,31 @@
       "FromNodeKey": "88DB410A22416A9B",
       "FromNodePort": "Workload Unresponsive",
       "ToNodeKey": "88DB71D9321B890F"
+    },
+    {
+      "FromNodeKey": "88DB41131FFC4340",
+      "FromNodePort": "Clients Synced (First)",
+      "ToNodeKey": "88DB412050B7E5D2"
+    },
+    {
+      "FromNodeKey": "88DBE5F0375A596D",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DB411A986BE174"
+    },
+    {
+      "FromNodeKey": "88DB411349F66920",
+      "FromNodePort": "True",
+      "ToNodeKey": "88DBE5F0375A596D"
+    },
+    {
+      "FromNodeKey": "88DB411349F66920",
+      "FromNodePort": "False",
+      "ToNodeKey": "88DBE5F04E5E82DA"
+    },
+    {
+      "FromNodeKey": "88DBE5F04E5E82DA",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DB411A73A08A3A"
     }
   ]
 }

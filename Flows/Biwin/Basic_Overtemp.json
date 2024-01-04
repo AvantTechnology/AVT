@@ -1,0 +1,55 @@
+{
+  "EntryNodeKey": "88DBF4E84953D2BD",
+  "CleanupEntryNodeKey": "",
+  "Nodes": {
+    "88DBF4E84953D2BD": {
+      "Key": "88DBF4E84953D2BD",
+      "Title": "Client System Send Shutdown",
+      "NodeType": "ClientSystemSendShutdown",
+      "LocationX": 552,
+      "LocationY": 199,
+      "Properties": {}
+    },
+    "88DBF4E84F24AFAB": {
+      "Key": "88DBF4E84F24AFAB",
+      "Title": "Stop Flow With Status",
+      "NodeType": "GeneralStopFlowWithStatus",
+      "LocationX": 552,
+      "LocationY": 308,
+      "Properties": {
+        "Status Message": {
+          "Type": "TypeString",
+          "Value": "Thermal chamber overtemp!!!"
+        },
+        "Status Color": {
+          "Type": "TypeItemSwitch",
+          "Value": "RED"
+        },
+        "Send Email": {
+          "Type": "TypeBoolean",
+          "Value": false
+        },
+        "Recipients": {
+          "Type": "TypeString",
+          "Value": "[DEFAULT_RECIPIENTS]"
+        },
+        "Priority": {
+          "Type": "TypeItemSwitch",
+          "Value": "High"
+        }
+      }
+    }
+  },
+  "Connections": [
+    {
+      "FromNodeKey": "88DBF4E84953D2BD",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DBF4E84F24AFAB"
+    },
+    {
+      "FromNodeKey": "88DBF4E84953D2BD",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DBF4E84F24AFAB"
+    }
+  ]
+}

@@ -46,7 +46,7 @@
     },
     "88DBF04E4A354309": {
       "Key": "88DBF04E4A354309",
-      "Title": "Verify All Drives are Present",
+      "Title": "Verifying Drives are Identified",
       "NodeType": "DrivesCheckNotFound",
       "LocationX": 864,
       "LocationY": 1422,
@@ -59,7 +59,7 @@
     },
     "88DBF04E4A379759": {
       "Key": "88DBF04E4A379759",
-      "Title": "DiskPart Format",
+      "Title": "Formatting Drives",
       "NodeType": "DrivesDiskPartFormat",
       "LocationX": 864,
       "LocationY": 709,
@@ -106,7 +106,7 @@
     },
     "88DBF04E4A3EB81A": {
       "Key": "88DBF04E4A3EB81A",
-      "Title": "Creating Partitions",
+      "Title": "Creating Drive Partitions",
       "NodeType": "DrivesDiskPartCreatePartition",
       "LocationX": 864,
       "LocationY": 567,
@@ -165,7 +165,7 @@
     },
     "88DBF04EB547F535": {
       "Key": "88DBF04EB547F535",
-      "Title": "TODO SMART VALUE CHECKING!!!",
+      "Title": "Reserved for SMART checking",
       "NodeType": "GeneralWait",
       "LocationX": 863,
       "LocationY": 3321,
@@ -222,7 +222,7 @@
       "Properties": {
         "Status Message": {
           "Type": "TypeString",
-          "Value": "Some drives failed!"
+          "Value": "Test Complete - At least one drive had a failure"
         },
         "Status Color": {
           "Type": "TypeItemSwitch",
@@ -264,7 +264,7 @@
       "Properties": {
         "Status Message": {
           "Type": "TypeString",
-          "Value": "Passed!"
+          "Value": "Test Complete - All Drives Passed!!"
         },
         "Status Color": {
           "Type": "TypeItemSwitch",
@@ -417,7 +417,7 @@
       "Key": "88DBF69F260ACF43",
       "Title": "DevCon Remove Test Drives (again)",
       "NodeType": "DevConRemoveTestDrives",
-      "LocationX": 2005,
+      "LocationX": 2006,
       "LocationY": -389,
       "Properties": {
         "Timeout Seconds": {
@@ -428,7 +428,7 @@
     },
     "88DBF6A7F5FE987B": {
       "Key": "88DBF6A7F5FE987B",
-      "Title": "Thermal Chamber Set Chamber",
+      "Title": "Turn on Thermal Chamber",
       "NodeType": "ThermalChamberSetChamber",
       "LocationX": 864,
       "LocationY": 1804,
@@ -445,14 +445,14 @@
     },
     "88DBF6A80483ED5D": {
       "Key": "88DBF6A80483ED5D",
-      "Title": "Thermal Chamber Set SetPoint 50C",
+      "Title": "Set Thermal Chamber to 55C",
       "NodeType": "ThermalChamberSetSetPoint",
       "LocationX": 865,
       "LocationY": 2116,
       "Properties": {
         "Set Point Celsius": {
           "Type": "TypeDouble",
-          "Value": 50.0
+          "Value": 55.0
         },
         "Timeout Milliseconds": {
           "Type": "TypeInteger",
@@ -462,14 +462,14 @@
     },
     "88DBF6A80B541F58": {
       "Key": "88DBF6A80B541F58",
-      "Title": "Thermal Chamber Wait For 50C",
+      "Title": "Wating for Thermal Chamber to reach temperature",
       "NodeType": "ThermalChamberWaitForProcessVariable",
       "LocationX": 865,
       "LocationY": 2285,
       "Properties": {
         "Target": {
           "Type": "TypeDouble",
-          "Value": 50.0
+          "Value": 55.0
         },
         "Threshold": {
           "Type": "TypeDouble",
@@ -496,10 +496,10 @@
     },
     "88DBF6A866B26150": {
       "Key": "88DBF6A866B26150",
-      "Title": "Thermal Chamber Set SetPoint 25C",
+      "Title": "Set Thermal Chamber to 25C",
       "NodeType": "ThermalChamberSetSetPoint",
-      "LocationX": 2005,
-      "LocationY": -212,
+      "LocationX": 2035,
+      "LocationY": -42,
       "Properties": {
         "Set Point Celsius": {
           "Type": "TypeDouble",
@@ -539,6 +539,14 @@
           "Value": "High"
         }
       }
+    },
+    "88DC106988753D0B": {
+      "Key": "88DC106988753D0B",
+      "Title": "General Check If Last Client Running",
+      "NodeType": "GeneralCheckIfLastClientRunning",
+      "LocationX": 2036,
+      "LocationY": -204,
+      "Properties": {}
     }
   },
   "Connections": [
@@ -723,16 +731,6 @@
       "ToNodeKey": "88DBF6A80483ED5D"
     },
     {
-      "FromNodeKey": "88DBF69F260ACF43",
-      "FromNodePort": "Success",
-      "ToNodeKey": "88DBF6A866B26150"
-    },
-    {
-      "FromNodeKey": "88DBF69F260ACF43",
-      "FromNodePort": "Errors",
-      "ToNodeKey": "88DBF6A866B26150"
-    },
-    {
       "FromNodeKey": "88DBF6A7F5FE987B",
       "FromNodePort": "Errors",
       "ToNodeKey": "88DBF6A885276E27"
@@ -756,6 +754,21 @@
       "FromNodeKey": "88DBF6A80B541F58",
       "FromNodePort": "Success",
       "ToNodeKey": "88DBF04E9CBDDE2C"
+    },
+    {
+      "FromNodeKey": "88DBF69F260ACF43",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DC106988753D0B"
+    },
+    {
+      "FromNodeKey": "88DBF69F260ACF43",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DC106988753D0B"
+    },
+    {
+      "FromNodeKey": "88DC106988753D0B",
+      "FromNodePort": "Last Client Running",
+      "ToNodeKey": "88DBF6A866B26150"
     }
   ]
 }

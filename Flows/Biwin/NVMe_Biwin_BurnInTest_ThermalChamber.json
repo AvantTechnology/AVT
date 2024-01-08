@@ -46,7 +46,7 @@
     },
     "88DBF04E4A354309": {
       "Key": "88DBF04E4A354309",
-      "Title": "Verify All Drives are Present",
+      "Title": "Verifying Drives are Identified",
       "NodeType": "DrivesCheckNotFound",
       "LocationX": 864,
       "LocationY": 1422,
@@ -59,7 +59,7 @@
     },
     "88DBF04E4A379759": {
       "Key": "88DBF04E4A379759",
-      "Title": "DiskPart Format",
+      "Title": "Formatting Drives",
       "NodeType": "DrivesDiskPartFormat",
       "LocationX": 864,
       "LocationY": 709,
@@ -106,7 +106,7 @@
     },
     "88DBF04E4A3EB81A": {
       "Key": "88DBF04E4A3EB81A",
-      "Title": "Creating Partitions",
+      "Title": "Creating Drive Partitions",
       "NodeType": "DrivesDiskPartCreatePartition",
       "LocationX": 864,
       "LocationY": 567,
@@ -165,7 +165,7 @@
     },
     "88DBF04EB547F535": {
       "Key": "88DBF04EB547F535",
-      "Title": "TODO SMART VALUE CHECKING!!!",
+      "Title": "Reserved for SMART checking",
       "NodeType": "GeneralWait",
       "LocationX": 860,
       "LocationY": 3459,
@@ -222,7 +222,7 @@
       "Properties": {
         "Status Message": {
           "Type": "TypeString",
-          "Value": "Some drives failed!"
+          "Value": "Test Complete - At least one drive had a failure"
         },
         "Status Color": {
           "Type": "TypeItemSwitch",
@@ -264,7 +264,7 @@
       "Properties": {
         "Status Message": {
           "Type": "TypeString",
-          "Value": "Passed!"
+          "Value": "Test Complete - All Drives Passed!!"
         },
         "Status Color": {
           "Type": "TypeItemSwitch",
@@ -415,7 +415,7 @@
     },
     "88DBF1FBE023ABC4": {
       "Key": "88DBF1FBE023ABC4",
-      "Title": "Registry Enable Write Cache",
+      "Title": "Enabling Write Cache on Drives",
       "NodeType": "RegistryEnableWriteCache",
       "LocationX": 863,
       "LocationY": -1119,
@@ -440,7 +440,7 @@
     },
     "88DBF1FBE6F418E8": {
       "Key": "88DBF1FBE6F418E8",
-      "Title": "Client System Send Reboot",
+      "Title": "Reboot Client",
       "NodeType": "ClientSystemSendReboot",
       "LocationX": 865,
       "LocationY": -840,
@@ -448,7 +448,7 @@
     },
     "88DBF1FBEFD642DD": {
       "Key": "88DBF1FBEFD642DD",
-      "Title": "Client Connection Wait Until Alive",
+      "Title": "Waiting for Client to connect",
       "NodeType": "ClientConnectionWaitAlive",
       "LocationX": 862,
       "LocationY": -582,
@@ -487,7 +487,7 @@
     },
     "88DBF1FC3003A3D4": {
       "Key": "88DBF1FC3003A3D4",
-      "Title": "Check Drives Not Found",
+      "Title": "Verifying Drives are Identified",
       "NodeType": "DrivesCheckNotFound",
       "LocationX": 863,
       "LocationY": -292,
@@ -600,14 +600,14 @@
     },
     "88DBF6A94CFA8312": {
       "Key": "88DBF6A94CFA8312",
-      "Title": "Thermal Chamber Wait For 50C",
+      "Title": "Wating for Thermal Chamber to reach temperature",
       "NodeType": "ThermalChamberWaitForProcessVariable",
       "LocationX": 863,
       "LocationY": 2360,
       "Properties": {
         "Target": {
           "Type": "TypeDouble",
-          "Value": 50.0
+          "Value": 55.0
         },
         "Threshold": {
           "Type": "TypeDouble",
@@ -621,14 +621,14 @@
     },
     "88DBF6A94CFCE9B6": {
       "Key": "88DBF6A94CFCE9B6",
-      "Title": "Thermal Chamber Set SetPoint 50C",
+      "Title": "Set Thermal Chamber to 55C",
       "NodeType": "ThermalChamberSetSetPoint",
       "LocationX": 863,
       "LocationY": 2191,
       "Properties": {
         "Set Point Celsius": {
           "Type": "TypeDouble",
-          "Value": 50.0
+          "Value": 55.0
         },
         "Timeout Milliseconds": {
           "Type": "TypeInteger",
@@ -651,7 +651,7 @@
     },
     "88DBF6A94D01A817": {
       "Key": "88DBF6A94D01A817",
-      "Title": "Thermal Chamber Set Chamber",
+      "Title": "Turn on Thermal Chamber",
       "NodeType": "ThermalChamberSetChamber",
       "LocationX": 862,
       "LocationY": 1879,
@@ -668,10 +668,10 @@
     },
     "88DBF6A9616F3C0B": {
       "Key": "88DBF6A9616F3C0B",
-      "Title": "Thermal Chamber Set SetPoint 25C",
+      "Title": "Set Thermal Chamber to 25C",
       "NodeType": "ThermalChamberSetSetPoint",
-      "LocationX": 2020,
-      "LocationY": -1800,
+      "LocationX": 2050,
+      "LocationY": -1647,
       "Properties": {
         "Set Point Celsius": {
           "Type": "TypeDouble",
@@ -682,6 +682,14 @@
           "Value": 5000
         }
       }
+    },
+    "88DC1069541C37DF": {
+      "Key": "88DC1069541C37DF",
+      "Title": "General Check If Last Client Running",
+      "NodeType": "GeneralCheckIfLastClientRunning",
+      "LocationX": 2050,
+      "LocationY": -1810,
+      "Properties": {}
     }
   },
   "Connections": [
@@ -963,11 +971,16 @@
     {
       "FromNodeKey": "88DBF69F1B47B538",
       "FromNodePort": "Success",
-      "ToNodeKey": "88DBF6A9616F3C0B"
+      "ToNodeKey": "88DC1069541C37DF"
     },
     {
       "FromNodeKey": "88DBF69F1B47B538",
       "FromNodePort": "Errors",
+      "ToNodeKey": "88DC1069541C37DF"
+    },
+    {
+      "FromNodeKey": "88DC1069541C37DF",
+      "FromNodePort": "Last Client Running",
       "ToNodeKey": "88DBF6A9616F3C0B"
     }
   ]

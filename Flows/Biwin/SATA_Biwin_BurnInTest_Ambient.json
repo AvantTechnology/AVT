@@ -46,7 +46,7 @@
     },
     "88DBF04E4A354309": {
       "Key": "88DBF04E4A354309",
-      "Title": "Verify All Drives are Present",
+      "Title": "Verifying Drives are Identified",
       "NodeType": "DrivesCheckNotFound",
       "LocationX": 864,
       "LocationY": 1422,
@@ -59,7 +59,7 @@
     },
     "88DBF04E4A379759": {
       "Key": "88DBF04E4A379759",
-      "Title": "DiskPart Format",
+      "Title": "Formatting Drives",
       "NodeType": "DrivesDiskPartFormat",
       "LocationX": 864,
       "LocationY": 709,
@@ -106,7 +106,7 @@
     },
     "88DBF04E4A3EB81A": {
       "Key": "88DBF04E4A3EB81A",
-      "Title": "Creating Partitions",
+      "Title": "Creating Drive Partitions",
       "NodeType": "DrivesDiskPartCreatePartition",
       "LocationX": 864,
       "LocationY": 567,
@@ -165,7 +165,7 @@
     },
     "88DBF04EB547F535": {
       "Key": "88DBF04EB547F535",
-      "Title": "TODO SMART VALUE CHECKING!!!",
+      "Title": "Reserved for SMART checking",
       "NodeType": "GeneralWait",
       "LocationX": 859,
       "LocationY": 2651,
@@ -222,7 +222,7 @@
       "Properties": {
         "Status Message": {
           "Type": "TypeString",
-          "Value": "Some drives failed!"
+          "Value": "Test Complete - At least one drive had a failure"
         },
         "Status Color": {
           "Type": "TypeItemSwitch",
@@ -264,7 +264,7 @@
       "Properties": {
         "Status Message": {
           "Type": "TypeString",
-          "Value": "Passed!"
+          "Value": "Test Complete - All Drives Passed!!"
         },
         "Status Color": {
           "Type": "TypeItemSwitch",

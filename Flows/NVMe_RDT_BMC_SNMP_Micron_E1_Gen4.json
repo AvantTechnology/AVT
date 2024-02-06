@@ -2365,35 +2365,6 @@
         }
       }
     },
-    "88DB6B565481783F": {
-      "Key": "88DB6B565481783F",
-      "Title": "Stop Flow With Status",
-      "NodeType": "GeneralStopFlowWithStatus",
-      "LocationX": -1571,
-      "LocationY": 194,
-      "Properties": {
-        "Status Message": {
-          "Type": "TypeString",
-          "Value": "One or more drives not found"
-        },
-        "Status Color": {
-          "Type": "TypeItemSwitch",
-          "Value": "RED"
-        },
-        "Send Email": {
-          "Type": "TypeBoolean",
-          "Value": true
-        },
-        "Recipients": {
-          "Type": "TypeString",
-          "Value": "[DEFAULT_RECIPIENTS]"
-        },
-        "Priority": {
-          "Type": "TypeItemSwitch",
-          "Value": "High"
-        }
-      }
-    },
     "88DB71DAC3741455": {
       "Key": "88DB71DAC3741455",
       "Title": "Stop Flow With Status",
@@ -2496,6 +2467,35 @@
       "LocationX": 761,
       "LocationY": 2194,
       "Properties": {}
+    },
+    "88DC272AE55A0142": {
+      "Key": "88DC272AE55A0142",
+      "Title": "Stop flow if some drives not found",
+      "NodeType": "GeneralStopFlowWithStatus",
+      "LocationX": -1572,
+      "LocationY": 202,
+      "Properties": {
+        "Status Message": {
+          "Type": "TypeString",
+          "Value": "Some drives not found!"
+        },
+        "Status Color": {
+          "Type": "TypeItemSwitch",
+          "Value": "RED"
+        },
+        "Send Email": {
+          "Type": "TypeBoolean",
+          "Value": true
+        },
+        "Recipients": {
+          "Type": "TypeString",
+          "Value": "[DEFAULT_RECIPIENTS]"
+        },
+        "Priority": {
+          "Type": "TypeItemSwitch",
+          "Value": "High"
+        }
+      }
     }
   },
   "Connections": [
@@ -3325,11 +3325,6 @@
       "ToNodeKey": "88DB6B564DA9E692"
     },
     {
-      "FromNodeKey": "88DAFD9E409B4C4D",
-      "FromNodePort": "Some Drives Not Found",
-      "ToNodeKey": "88DB6B565481783F"
-    },
-    {
       "FromNodeKey": "88DAFDA003B477D6",
       "FromNodePort": "Workload Unresponsive",
       "ToNodeKey": "88DB71DAC3741455"
@@ -3383,6 +3378,11 @@
       "FromNodeKey": "88DBA4EBBFC9E48A",
       "FromNodePort": "All Drives Test Files OK",
       "ToNodeKey": "88DB5ADFA59D4E85"
+    },
+    {
+      "FromNodeKey": "88DAFD9E409B4C4D",
+      "FromNodePort": "Some Drives Not Found",
+      "ToNodeKey": "88DC272AE55A0142"
     }
   ]
 }

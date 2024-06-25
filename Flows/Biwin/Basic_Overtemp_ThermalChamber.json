@@ -1,0 +1,82 @@
+{
+  "EntryNodeKey": "88DC0239BA01988D",
+  "CleanupEntryNodeKey": "",
+  "Nodes": {
+    "88DBF4E84953D2BD": {
+      "Key": "88DBF4E84953D2BD",
+      "Title": "Client System Send Shutdown",
+      "NodeType": "ClientSystemSendShutdown",
+      "LocationX": 549,
+      "LocationY": 251,
+      "Properties": {}
+    },
+    "88DBF4E84F24AFAB": {
+      "Key": "88DBF4E84F24AFAB",
+      "Title": "Stop Flow With Status",
+      "NodeType": "GeneralStopFlowWithStatus",
+      "LocationX": 549,
+      "LocationY": 383,
+      "Properties": {
+        "Status Message": {
+          "Type": "TypeString",
+          "Value": "Thermal chamber overtemp!!!"
+        },
+        "Status Color": {
+          "Type": "TypeItemSwitch",
+          "Value": "RED"
+        },
+        "Send Email": {
+          "Type": "TypeBoolean",
+          "Value": false
+        },
+        "Recipients": {
+          "Type": "TypeString",
+          "Value": "[DEFAULT_RECIPIENTS]"
+        },
+        "Priority": {
+          "Type": "TypeItemSwitch",
+          "Value": "High"
+        }
+      }
+    },
+    "88DC0239BA01988D": {
+      "Key": "88DC0239BA01988D",
+      "Title": "Turn off Thermal Chamber",
+      "NodeType": "ThermalChamberSetChamber",
+      "LocationX": 553,
+      "LocationY": 26,
+      "Properties": {
+        "Chamber": {
+          "Type": "TypeBoolean",
+          "Value": false
+        },
+        "Timeout Milliseconds": {
+          "Type": "TypeInteger",
+          "Value": 5000
+        }
+      }
+    }
+  },
+  "Connections": [
+    {
+      "FromNodeKey": "88DBF4E84953D2BD",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DBF4E84F24AFAB"
+    },
+    {
+      "FromNodeKey": "88DBF4E84953D2BD",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DBF4E84F24AFAB"
+    },
+    {
+      "FromNodeKey": "88DC0239BA01988D",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DBF4E84953D2BD"
+    },
+    {
+      "FromNodeKey": "88DC0239BA01988D",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DBF4E84953D2BD"
+    }
+  ]
+}

@@ -167,8 +167,8 @@
       "Key": "88DBF04EB547F535",
       "Title": "Reserved for SMART checking",
       "NodeType": "GeneralWait",
-      "LocationX": 859,
-      "LocationY": 2651,
+      "LocationX": 862,
+      "LocationY": 2820,
       "Properties": {
         "Timeout Seconds": {
           "Type": "TypeInteger",
@@ -568,6 +568,14 @@
           "Value": 120
         }
       }
+    },
+    "88DC955EDF5F85AC": {
+      "Key": "88DC955EDF5F85AC",
+      "Title": "Log SMART",
+      "NodeType": "DrivesLogSmart",
+      "LocationX": 859,
+      "LocationY": 2644,
+      "Properties": {}
     }
   },
   "Connections": [
@@ -717,11 +725,6 @@
       "ToNodeKey": "88DBF1BE9BDA4ADA"
     },
     {
-      "FromNodeKey": "88DBF1BE9BDA4ADA",
-      "FromNodePort": "Success",
-      "ToNodeKey": "88DBF04EB547F535"
-    },
-    {
       "FromNodeKey": "88DBF1FBE023ABC4",
       "FromNodePort": "Success",
       "ToNodeKey": "88DBF1FBE6F418E8"
@@ -805,6 +808,16 @@
       "FromNodeKey": "88DBF04F3769319C",
       "FromNodePort": "Errors",
       "ToNodeKey": "88DBF69F1B47B538"
+    },
+    {
+      "FromNodeKey": "88DBF1BE9BDA4ADA",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DC955EDF5F85AC"
+    },
+    {
+      "FromNodeKey": "88DC955EDF5F85AC",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DBF04EB547F535"
     }
   ]
 }

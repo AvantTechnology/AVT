@@ -143,7 +143,7 @@
       "Properties": {
         "Timeout Minutes": {
           "Type": "TypeInteger",
-          "Value": 1440
+          "Value": 2880
         },
         "Small Capacity Duration Minutes": {
           "Type": "TypeInteger",

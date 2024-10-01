@@ -2780,7 +2780,7 @@
     },
     "88DB5C87B7FC124E": {
       "Key": "88DB5C87B7FC124E",
-      "Title": "Go To Check if we are using the Micron driver",
+      "Title": "Go To Check if we are using the Wilson driver",
       "NodeType": "GeneralGoToNode",
       "LocationX": 874,
       "LocationY": 5320,
@@ -2863,7 +2863,7 @@
       "Properties": {
         "Status Message": {
           "Type": "TypeString",
-          "Value": "Errors ensuring Micron driver is installed "
+          "Value": "Errors ensuring wilson driver is installed "
         },
         "Status Color": {
           "Type": "TypeItemSwitch",
@@ -2885,14 +2885,14 @@
     },
     "88DB5C87B80A4B4F": {
       "Key": "88DB5C87B80A4B4F",
-      "Title": "Ensure Micron driver is installed",
+      "Title": "Ensure Wilson driver is installed",
       "NodeType": "ClientSystemProcessStart",
       "LocationX": 876,
       "LocationY": 4654,
       "Properties": {
         "Process Name": {
           "Type": "TypeString",
-          "Value": "C:\\temp\\microndriver\\rhoadsdriverupdate\\rhoads_mtdriver.bat"
+          "Value": "C:\\temp\\microndriver\\wilsondriverupdate\\wilson_mtdriver.bat"
         },
         "Arguments": {
           "Type": "TypeString",
@@ -2910,14 +2910,14 @@
     },
     "88DB5C87B80CC3EC": {
       "Key": "88DB5C87B80CC3EC",
-      "Title": "Check if we are using the Micron driver",
+      "Title": "Check if we are using the Wilson driver",
       "NodeType": "DevConCheckDeviceDriver",
       "LocationX": -42,
       "LocationY": 4419,
       "Properties": {
         "Device ID": {
           "Type": "TypeString",
-          "Value": "pci\\ven_c0a9\"&\"dev_5419"
+          "Value": "pci\\ven_c0a9\"&\"dev_560a"
         },
         "Target Driver Name": {
           "Type": "TypeString",
@@ -3209,7 +3209,7 @@
         },
         "Subject": {
           "Type": "TypeString",
-          "Value": "Errors checking if the micron driver is installed"
+          "Value": "Errors checking if the wilson driver is installed"
         },
         "Body": {
           "Type": "TypeString",

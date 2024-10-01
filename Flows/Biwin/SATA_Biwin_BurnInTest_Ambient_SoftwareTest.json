@@ -1,13 +1,13 @@
 {
   "EntryNodeKey": "88DBF04E3D778600",
-  "CleanupEntryNodeKey": "88DBF04F3769319C",
+  "CleanupEntryNodeKey": "",
   "Nodes": {
     "88DBF04E3D79D67E": {
       "Key": "88DBF04E3D79D67E",
       "Title": "Rescan Drives",
       "NodeType": "DrivesRescan",
-      "LocationX": 864,
-      "LocationY": 114,
+      "LocationX": 867,
+      "LocationY": -468,
       "Properties": {
         "Timeout Seconds": {
           "Type": "TypeInteger",
@@ -19,8 +19,8 @@
       "Key": "88DBF04E4A3200B4",
       "Title": "Stop Flow With Status",
       "NodeType": "GeneralStopFlowWithStatus",
-      "LocationX": 1435,
-      "LocationY": 1410,
+      "LocationX": 597,
+      "LocationY": 1099,
       "Properties": {
         "Status Message": {
           "Type": "TypeString",
@@ -48,8 +48,8 @@
       "Key": "88DBF04E4A354309",
       "Title": "Verifying Drives are Identified",
       "NodeType": "DrivesCheckNotFound",
-      "LocationX": 864,
-      "LocationY": 1422,
+      "LocationX": 26,
+      "LocationY": 1111,
       "Properties": {
         "Log Errors": {
           "Type": "TypeBoolean",
@@ -61,8 +61,8 @@
       "Key": "88DBF04E4A379759",
       "Title": "Formatting Drives",
       "NodeType": "DrivesDiskPartFormat",
-      "LocationX": 864,
-      "LocationY": 709,
+      "LocationX": 26,
+      "LocationY": 551,
       "Properties": {
         "File System": {
           "Type": "TypeItemSwitch",
@@ -78,8 +78,8 @@
       "Key": "88DBF04E4A3A0D35",
       "Title": "Assigning Drive Letters",
       "NodeType": "DrivesDiskPartAssign",
-      "LocationX": 864,
-      "LocationY": 905,
+      "LocationX": 26,
+      "LocationY": 747,
       "Properties": {
         "Assign Type": {
           "Type": "TypeItemSwitch",
@@ -95,8 +95,8 @@
       "Key": "88DBF04E4A3C601B",
       "Title": "Rescan Drives",
       "NodeType": "DrivesRescan",
-      "LocationX": 864,
-      "LocationY": 1269,
+      "LocationX": 26,
+      "LocationY": 958,
       "Properties": {
         "Timeout Seconds": {
           "Type": "TypeInteger",
@@ -108,8 +108,8 @@
       "Key": "88DBF04E4A3EB81A",
       "Title": "Creating Drive Partitions",
       "NodeType": "DrivesDiskPartCreatePartition",
-      "LocationX": 864,
-      "LocationY": 567,
+      "LocationX": 26,
+      "LocationY": 409,
       "Properties": {
         "Timeout Minutes": {
           "Type": "TypeInteger",
@@ -121,8 +121,8 @@
       "Key": "88DBF04E4A411712",
       "Title": "Cleaning Drives",
       "NodeType": "DrivesDiskPartClean",
-      "LocationX": 864,
-      "LocationY": 394,
+      "LocationX": 26,
+      "LocationY": 236,
       "Properties": {
         "Clean Type": {
           "Type": "TypeItemSwitch",
@@ -134,41 +134,12 @@
         }
       }
     },
-    "88DBF04E9CBDDE2C": {
-      "Key": "88DBF04E9CBDDE2C",
-      "Title": "Run BurnInTest Biwin Preset",
-      "NodeType": "WorkloadBurnInTestBiwinPreset",
-      "LocationX": 866,
-      "LocationY": 2679,
-      "Properties": {
-        "Timeout Minutes": {
-          "Type": "TypeInteger",
-          "Value": 1440
-        },
-        "Small Capacity Duration Minutes": {
-          "Type": "TypeInteger",
-          "Value": 120
-        },
-        "Large Capacity Duration Cycles": {
-          "Type": "TypeInteger",
-          "Value": 20
-        },
-        "Log Results": {
-          "Type": "TypeBoolean",
-          "Value": true
-        },
-        "Interval Minutes": {
-          "Type": "TypeInteger",
-          "Value": 5
-        }
-      }
-    },
     "88DBF04EB547F535": {
       "Key": "88DBF04EB547F535",
       "Title": "Reserved for SMART checking",
       "NodeType": "GeneralWait",
-      "LocationX": 863,
-      "LocationY": 3321,
+      "LocationX": 837,
+      "LocationY": 2092,
       "Properties": {
         "Timeout Seconds": {
           "Type": "TypeInteger",
@@ -176,120 +147,12 @@
         }
       }
     },
-    "88DBF04ECE3D5279": {
-      "Key": "88DBF04ECE3D5279",
-      "Title": "Stop Flow With Status",
-      "NodeType": "GeneralStopFlowWithStatus",
-      "LocationX": 1563,
-      "LocationY": 2725,
-      "Properties": {
-        "Status Message": {
-          "Type": "TypeString",
-          "Value": "Error running BurnInTest"
-        },
-        "Status Color": {
-          "Type": "TypeItemSwitch",
-          "Value": "RED"
-        },
-        "Send Email": {
-          "Type": "TypeBoolean",
-          "Value": false
-        },
-        "Recipients": {
-          "Type": "TypeString",
-          "Value": "[DEFAULT_RECIPIENTS]"
-        },
-        "Priority": {
-          "Type": "TypeItemSwitch",
-          "Value": "High"
-        }
-      }
-    },
-    "88DBF04F0034A910": {
-      "Key": "88DBF04F0034A910",
-      "Title": "Check Logged Errors",
-      "NodeType": "DrivesCheckLoggedErrors",
-      "LocationX": 866,
-      "LocationY": 3659,
-      "Properties": {}
-    },
-    "88DBF04F169CF415": {
-      "Key": "88DBF04F169CF415",
-      "Title": "FAIL",
-      "NodeType": "GeneralStopFlowWithStatus",
-      "LocationX": 1162,
-      "LocationY": 3942,
-      "Properties": {
-        "Status Message": {
-          "Type": "TypeString",
-          "Value": "Test Complete - At least one drive had a failure"
-        },
-        "Status Color": {
-          "Type": "TypeItemSwitch",
-          "Value": "RED"
-        },
-        "Send Email": {
-          "Type": "TypeBoolean",
-          "Value": false
-        },
-        "Recipients": {
-          "Type": "TypeString",
-          "Value": "[DEFAULT_RECIPIENTS]"
-        },
-        "Priority": {
-          "Type": "TypeItemSwitch",
-          "Value": "High"
-        }
-      }
-    },
-    "88DBF04F3769319C": {
-      "Key": "88DBF04F3769319C",
-      "Title": "DevCon Remove Test Drives",
-      "NodeType": "DevConRemoveTestDrives",
-      "LocationX": 2005,
-      "LocationY": -573,
-      "Properties": {
-        "Timeout Seconds": {
-          "Type": "TypeInteger",
-          "Value": 120
-        }
-      }
-    },
-    "88DBF04F56522B23": {
-      "Key": "88DBF04F56522B23",
-      "Title": "PASS",
-      "NodeType": "GeneralStopFlowWithStatus",
-      "LocationX": 282,
-      "LocationY": 3945,
-      "Properties": {
-        "Status Message": {
-          "Type": "TypeString",
-          "Value": "Test Complete - All Drives Passed!!"
-        },
-        "Status Color": {
-          "Type": "TypeItemSwitch",
-          "Value": "GREEN"
-        },
-        "Send Email": {
-          "Type": "TypeBoolean",
-          "Value": false
-        },
-        "Recipients": {
-          "Type": "TypeString",
-          "Value": "[DEFAULT_RECIPIENTS]"
-        },
-        "Priority": {
-          "Type": "TypeItemSwitch",
-          "Value": "High"
-        }
-      }
-    },
     "88DBF1BB5D9A4936": {
       "Key": "88DBF1BB5D9A4936",
       "Title": "DevCon Rescan",
       "NodeType": "DevConRescan",
-      "LocationX": 865,
-      "LocationY": -57,
+      "LocationX": 868,
+      "LocationY": -639,
       "Properties": {
         "Timeout Seconds": {
           "Type": "TypeInteger",
@@ -301,8 +164,8 @@
       "Key": "88DBF04E4A3227B7",
       "Title": "Stop Flow With Status",
       "NodeType": "GeneralStopFlowWithStatus",
-      "LocationX": 1615,
-      "LocationY": 589,
+      "LocationX": 604,
+      "LocationY": 451,
       "Properties": {
         "Status Message": {
           "Type": "TypeString",
@@ -330,8 +193,8 @@
       "Key": "88DBF04E3D766C37",
       "Title": "Stop Flow With Status",
       "NodeType": "GeneralStopFlowWithStatus",
-      "LocationX": 1211,
-      "LocationY": -515,
+      "LocationX": 1214,
+      "LocationY": -944,
       "Properties": {
         "Status Message": {
           "Type": "TypeString",
@@ -357,26 +220,26 @@
     },
     "88DBF04E3D76935B": {
       "Key": "88DBF04E3D76935B",
-      "Title": "Client System Set Time",
+      "Title": "ClienSystem Set Time",
       "NodeType": "ClientSystemSetTime",
-      "LocationX": 864,
-      "LocationY": -430,
+      "LocationX": 868,
+      "LocationY": -860,
       "Properties": {}
     },
     "88DBF04E3D778600": {
       "Key": "88DBF04E3D778600",
       "Title": "Client Connection Check Status",
       "NodeType": "ClientConnectionCheckStatus",
-      "LocationX": 864,
-      "LocationY": -569,
+      "LocationX": 867,
+      "LocationY": -998,
       "Properties": {}
     },
     "88DBF1BCAE86EFD2": {
       "Key": "88DBF1BCAE86EFD2",
       "Title": "Stop Flow With Status",
       "NodeType": "GeneralStopFlowWithStatus",
-      "LocationX": 1297,
-      "LocationY": 68,
+      "LocationX": 1195,
+      "LocationY": -495,
       "Properties": {
         "Status Message": {
           "Type": "TypeString",
@@ -400,127 +263,70 @@
         }
       }
     },
-    "88DBF1BE9BDA4ADA": {
-      "Key": "88DBF1BE9BDA4ADA",
-      "Title": "Rescan Drives",
-      "NodeType": "DrivesRescan",
-      "LocationX": 863,
-      "LocationY": 3176,
+    "88DC323218729C24": {
+      "Key": "88DC323218729C24",
+      "Title": "Check Step",
+      "NodeType": "StepCheck",
+      "LocationX": 868,
+      "LocationY": -127,
       "Properties": {
-        "Timeout Seconds": {
-          "Type": "TypeInteger",
-          "Value": 30
-        }
-      }
-    },
-    "88DBF69F260ACF43": {
-      "Key": "88DBF69F260ACF43",
-      "Title": "DevCon Remove Test Drives (again)",
-      "NodeType": "DevConRemoveTestDrives",
-      "LocationX": 2006,
-      "LocationY": -389,
-      "Properties": {
-        "Timeout Seconds": {
-          "Type": "TypeInteger",
-          "Value": 120
-        }
-      }
-    },
-    "88DBF6A7F5FE987B": {
-      "Key": "88DBF6A7F5FE987B",
-      "Title": "Turn on Thermal Chamber",
-      "NodeType": "ThermalChamberSetChamber",
-      "LocationX": 864,
-      "LocationY": 1804,
-      "Properties": {
-        "Chamber": {
-          "Type": "TypeBoolean",
-          "Value": true
+        "Compare Operation": {
+          "Type": "TypeItemSwitch",
+          "Value": "="
         },
-        "Timeout Milliseconds": {
+        "Compare Value": {
           "Type": "TypeInteger",
-          "Value": 5000
+          "Value": 0
         }
       }
     },
-    "88DBF6A80483ED5D": {
-      "Key": "88DBF6A80483ED5D",
-      "Title": "Set Thermal Chamber to 55C",
-      "NodeType": "ThermalChamberSetSetPoint",
-      "LocationX": 865,
-      "LocationY": 2116,
+    "88DC32325CE68E0F": {
+      "Key": "88DC32325CE68E0F",
+      "Title": "Increment Step",
+      "NodeType": "StepIncrement",
+      "LocationX": 837,
+      "LocationY": 2242,
       "Properties": {
-        "Set Point Celsius": {
-          "Type": "TypeDouble",
-          "Value": 55.0
-        },
-        "Timeout Milliseconds": {
+        "Increment Amount": {
           "Type": "TypeInteger",
-          "Value": 5000
+          "Value": 1
         }
       }
     },
-    "88DBF6A80B541F58": {
-      "Key": "88DBF6A80B541F58",
-      "Title": "Wating for Thermal Chamber to reach temperature",
-      "NodeType": "ThermalChamberWaitForProcessVariable",
-      "LocationX": 865,
-      "LocationY": 2285,
-      "Properties": {
-        "Target": {
-          "Type": "TypeDouble",
-          "Value": 55.0
-        },
-        "Threshold": {
-          "Type": "TypeDouble",
-          "Value": 2.0
-        },
-        "Timeout Minutes": {
-          "Type": "TypeInteger",
-          "Value": 30
-        }
-      }
+    "88DC32326E980989": {
+      "Key": "88DC32326E980989",
+      "Title": "Go To Entry Node",
+      "NodeType": "GeneralGoToEntry",
+      "LocationX": 837,
+      "LocationY": 2411,
+      "Properties": {}
     },
-    "88DBF6A83413D857": {
-      "Key": "88DBF6A83413D857",
-      "Title": "Short Delay",
-      "NodeType": "GeneralWait",
-      "LocationX": 864,
-      "LocationY": 1975,
-      "Properties": {
-        "Timeout Seconds": {
-          "Type": "TypeInteger",
-          "Value": 2
-        }
-      }
+    "88DC323288D5D040": {
+      "Key": "88DC323288D5D040",
+      "Title": "Client System Send Reboot",
+      "NodeType": "ClientSystemSendReboot",
+      "LocationX": 1546,
+      "LocationY": 397,
+      "Properties": {}
     },
-    "88DBF6A866B26150": {
-      "Key": "88DBF6A866B26150",
-      "Title": "Set Thermal Chamber to 25C",
-      "NodeType": "ThermalChamberSetSetPoint",
-      "LocationX": 2035,
-      "LocationY": -42,
-      "Properties": {
-        "Set Point Celsius": {
-          "Type": "TypeDouble",
-          "Value": 25.0
-        },
-        "Timeout Milliseconds": {
-          "Type": "TypeInteger",
-          "Value": 5000
-        }
-      }
+    "88DC32329605EFA0": {
+      "Key": "88DC32329605EFA0",
+      "Title": "Check Test Drives Have Letters",
+      "NodeType": "DrivesCheckLetters",
+      "LocationX": 1546,
+      "LocationY": 217,
+      "Properties": {}
     },
-    "88DBF6A885276E27": {
-      "Key": "88DBF6A885276E27",
+    "88DC3232A4D0FB9E": {
+      "Key": "88DC3232A4D0FB9E",
       "Title": "Stop Flow With Status",
       "NodeType": "GeneralStopFlowWithStatus",
-      "LocationX": 1506,
-      "LocationY": 2021,
+      "LocationX": 1915,
+      "LocationY": 424,
       "Properties": {
         "Status Message": {
           "Type": "TypeString",
-          "Value": "Error setting thermal chamber"
+          "Value": "Some drives missing letters! (pre-reboot)"
         },
         "Status Color": {
           "Type": "TypeItemSwitch",
@@ -540,12 +346,122 @@
         }
       }
     },
-    "88DC106988753D0B": {
-      "Key": "88DC106988753D0B",
-      "Title": "General Check If Last Client Running",
-      "NodeType": "GeneralCheckIfLastClientRunning",
-      "LocationX": 2036,
-      "LocationY": -204,
+    "88DC3232B87A174E": {
+      "Key": "88DC3232B87A174E",
+      "Title": "Client Connection Wait Until Dead",
+      "NodeType": "ClientConnectionWaitDead",
+      "LocationX": 1546,
+      "LocationY": 525,
+      "Properties": {
+        "Timeout Seconds": {
+          "Type": "TypeInteger",
+          "Value": 120
+        }
+      }
+    },
+    "88DC3232C2E1EF9D": {
+      "Key": "88DC3232C2E1EF9D",
+      "Title": "Client Connection Wait Until Alive",
+      "NodeType": "ClientConnectionWaitAlive",
+      "LocationX": 1546,
+      "LocationY": 677,
+      "Properties": {
+        "Timeout Seconds": {
+          "Type": "TypeInteger",
+          "Value": 400
+        }
+      }
+    },
+    "88DC3232D11C42E0": {
+      "Key": "88DC3232D11C42E0",
+      "Title": "Stop Flow With Status",
+      "NodeType": "GeneralStopFlowWithStatus",
+      "LocationX": 1833,
+      "LocationY": 865,
+      "Properties": {
+        "Status Message": {
+          "Type": "TypeString",
+          "Value": "Error rescaning drives"
+        },
+        "Status Color": {
+          "Type": "TypeItemSwitch",
+          "Value": "RED"
+        },
+        "Send Email": {
+          "Type": "TypeBoolean",
+          "Value": false
+        },
+        "Recipients": {
+          "Type": "TypeString",
+          "Value": "[DEFAULT_RECIPIENTS]"
+        },
+        "Priority": {
+          "Type": "TypeItemSwitch",
+          "Value": "High"
+        }
+      }
+    },
+    "88DC3232D11C69F3": {
+      "Key": "88DC3232D11C69F3",
+      "Title": "Rescan Drives",
+      "NodeType": "DrivesRescan",
+      "LocationX": 1546,
+      "LocationY": 996,
+      "Properties": {
+        "Timeout Seconds": {
+          "Type": "TypeInteger",
+          "Value": 60
+        }
+      }
+    },
+    "88DC3232D11CB68A": {
+      "Key": "88DC3232D11CB68A",
+      "Title": "DevCon Rescan",
+      "NodeType": "DevConRescan",
+      "LocationX": 1546,
+      "LocationY": 830,
+      "Properties": {
+        "Timeout Seconds": {
+          "Type": "TypeInteger",
+          "Value": 120
+        }
+      }
+    },
+    "88DC3232DD1F588A": {
+      "Key": "88DC3232DD1F588A",
+      "Title": "Stop Flow With Status",
+      "NodeType": "GeneralStopFlowWithStatus",
+      "LocationX": 1688,
+      "LocationY": 1343,
+      "Properties": {
+        "Status Message": {
+          "Type": "TypeString",
+          "Value": "Some drives missing letters! (post-reboot)"
+        },
+        "Status Color": {
+          "Type": "TypeItemSwitch",
+          "Value": "RED"
+        },
+        "Send Email": {
+          "Type": "TypeBoolean",
+          "Value": false
+        },
+        "Recipients": {
+          "Type": "TypeString",
+          "Value": "[DEFAULT_RECIPIENTS]"
+        },
+        "Priority": {
+          "Type": "TypeItemSwitch",
+          "Value": "High"
+        }
+      }
+    },
+    "88DC3232DD1FACDA": {
+      "Key": "88DC3232DD1FACDA",
+      "Title": "Check Test Drives Have Letters",
+      "NodeType": "DrivesCheckLetters",
+      "LocationX": 1546,
+      "LocationY": 1210,
       "Properties": {}
     }
   },
@@ -586,44 +502,9 @@
       "ToNodeKey": "88DBF04E4A3200B4"
     },
     {
-      "FromNodeKey": "88DBF04E3D79D67E",
-      "FromNodePort": "Success",
-      "ToNodeKey": "88DBF04E4A411712"
-    },
-    {
-      "FromNodeKey": "88DBF04E9CBDDE2C",
-      "FromNodePort": "Workload Unresponsive",
-      "ToNodeKey": "88DBF04ECE3D5279"
-    },
-    {
-      "FromNodeKey": "88DBF04E9CBDDE2C",
-      "FromNodePort": "Errors",
-      "ToNodeKey": "88DBF04ECE3D5279"
-    },
-    {
-      "FromNodeKey": "88DBF04EB547F535",
-      "FromNodePort": "Time Elapsed",
-      "ToNodeKey": "88DBF04F0034A910"
-    },
-    {
-      "FromNodeKey": "88DBF04F0034A910",
-      "FromNodePort": "Some Drives Have Errors",
-      "ToNodeKey": "88DBF04F169CF415"
-    },
-    {
-      "FromNodeKey": "88DBF04F0034A910",
-      "FromNodePort": "Errors",
-      "ToNodeKey": "88DBF04F169CF415"
-    },
-    {
       "FromNodeKey": "88DBF1BB5D9A4936",
       "FromNodePort": "Success",
       "ToNodeKey": "88DBF04E3D79D67E"
-    },
-    {
-      "FromNodeKey": "88DBF04F0034A910",
-      "FromNodePort": "All Drives OK",
-      "ToNodeKey": "88DBF04F56522B23"
     },
     {
       "FromNodeKey": "88DBF04E4A3A0D35",
@@ -666,11 +547,6 @@
       "ToNodeKey": "88DBF04E3D76935B"
     },
     {
-      "FromNodeKey": "88DBF04E3D76935B",
-      "FromNodePort": "Success",
-      "ToNodeKey": "88DBF1BB5D9A4936"
-    },
-    {
       "FromNodeKey": "88DBF04E3D79D67E",
       "FromNodePort": "Errors",
       "ToNodeKey": "88DBF1BCAE86EFD2"
@@ -686,89 +562,94 @@
       "ToNodeKey": "88DBF04E4A3200B4"
     },
     {
-      "FromNodeKey": "88DBF04E9CBDDE2C",
-      "FromNodePort": "Some Drives Failed",
-      "ToNodeKey": "88DBF1BE9BDA4ADA"
-    },
-    {
-      "FromNodeKey": "88DBF04E9CBDDE2C",
-      "FromNodePort": "All Drives Passed",
-      "ToNodeKey": "88DBF1BE9BDA4ADA"
-    },
-    {
-      "FromNodeKey": "88DBF1BE9BDA4ADA",
+      "FromNodeKey": "88DBF04E3D76935B",
       "FromNodePort": "Success",
-      "ToNodeKey": "88DBF04EB547F535"
+      "ToNodeKey": "88DBF1BB5D9A4936"
     },
     {
-      "FromNodeKey": "88DBF04F3769319C",
+      "FromNodeKey": "88DBF04E3D79D67E",
       "FromNodePort": "Success",
-      "ToNodeKey": "88DBF69F260ACF43"
+      "ToNodeKey": "88DC323218729C24"
     },
     {
-      "FromNodeKey": "88DBF04F3769319C",
-      "FromNodePort": "Errors",
-      "ToNodeKey": "88DBF69F260ACF43"
+      "FromNodeKey": "88DC323218729C24",
+      "FromNodePort": "True",
+      "ToNodeKey": "88DBF04E4A411712"
     },
     {
-      "FromNodeKey": "88DBF6A80483ED5D",
-      "FromNodePort": "Success",
-      "ToNodeKey": "88DBF6A80B541F58"
-    },
-    {
-      "FromNodeKey": "88DBF6A7F5FE987B",
-      "FromNodePort": "Success",
-      "ToNodeKey": "88DBF6A83413D857"
-    },
-    {
-      "FromNodeKey": "88DBF6A83413D857",
+      "FromNodeKey": "88DBF04EB547F535",
       "FromNodePort": "Time Elapsed",
-      "ToNodeKey": "88DBF6A80483ED5D"
+      "ToNodeKey": "88DC32325CE68E0F"
     },
     {
-      "FromNodeKey": "88DBF6A83413D857",
-      "FromNodePort": "Errors",
-      "ToNodeKey": "88DBF6A80483ED5D"
+      "FromNodeKey": "88DC32325CE68E0F",
+      "FromNodePort": "Incremented",
+      "ToNodeKey": "88DC32326E980989"
     },
     {
-      "FromNodeKey": "88DBF6A7F5FE987B",
-      "FromNodePort": "Errors",
-      "ToNodeKey": "88DBF6A885276E27"
+      "FromNodeKey": "88DC32329605EFA0",
+      "FromNodePort": "All Drives Have Letters",
+      "ToNodeKey": "88DC323288D5D040"
     },
     {
-      "FromNodeKey": "88DBF6A80483ED5D",
-      "FromNodePort": "Errors",
-      "ToNodeKey": "88DBF6A885276E27"
+      "FromNodeKey": "88DC32329605EFA0",
+      "FromNodePort": "Some Drives Missing Letters",
+      "ToNodeKey": "88DC3232A4D0FB9E"
     },
     {
-      "FromNodeKey": "88DBF6A80B541F58",
+      "FromNodeKey": "88DC323288D5D040",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DC3232B87A174E"
+    },
+    {
+      "FromNodeKey": "88DC3232B87A174E",
+      "FromNodePort": "Connection Dead",
+      "ToNodeKey": "88DC3232C2E1EF9D"
+    },
+    {
+      "FromNodeKey": "88DC3232D11CB68A",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DC3232D11C69F3"
+    },
+    {
+      "FromNodeKey": "88DC3232D11C69F3",
       "FromNodePort": "Errors",
-      "ToNodeKey": "88DBF6A885276E27"
+      "ToNodeKey": "88DC3232D11C42E0"
+    },
+    {
+      "FromNodeKey": "88DC3232D11CB68A",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DC3232D11C42E0"
+    },
+    {
+      "FromNodeKey": "88DC3232C2E1EF9D",
+      "FromNodePort": "Connection Alive",
+      "ToNodeKey": "88DC3232D11CB68A"
+    },
+    {
+      "FromNodeKey": "88DC3232DD1FACDA",
+      "FromNodePort": "Some Drives Missing Letters",
+      "ToNodeKey": "88DC3232DD1F588A"
+    },
+    {
+      "FromNodeKey": "88DC3232D11C69F3",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DC3232DD1FACDA"
+    },
+    {
+      "FromNodeKey": "88DC3232DD1FACDA",
+      "FromNodePort": "All Drives Have Letters",
+      "ToNodeKey": "88DBF04EB547F535"
     },
     {
       "FromNodeKey": "88DBF04E4A354309",
       "FromNodePort": "All Drives Found",
-      "ToNodeKey": "88DBF6A7F5FE987B"
+      "ToNodeKey": "88DBF04EB547F535"
     },
     {
-      "FromNodeKey": "88DBF6A80B541F58",
-      "FromNodePort": "Success",
-      "ToNodeKey": "88DBF04E9CBDDE2C"
-    },
-    {
-      "FromNodeKey": "88DBF69F260ACF43",
-      "FromNodePort": "Success",
-      "ToNodeKey": "88DC106988753D0B"
-    },
-    {
-      "FromNodeKey": "88DBF69F260ACF43",
-      "FromNodePort": "Errors",
-      "ToNodeKey": "88DC106988753D0B"
-    },
-    {
-      "FromNodeKey": "88DC106988753D0B",
-      "FromNodePort": "Last Client Running",
-      "ToNodeKey": "88DBF6A866B26150"
+      "FromNodeKey": "88DC323218729C24",
+      "FromNodePort": "False",
+      "ToNodeKey": "88DC32329605EFA0"
     }
   ]
 }

@@ -1300,6 +1300,35 @@
           "Value": "High"
         }
       }
+    },
+    "88DC272B2658D948": {
+      "Key": "88DC272B2658D948",
+      "Title": "Stop flow if some drives not found",
+      "NodeType": "GeneralStopFlowWithStatus",
+      "LocationX": -1594,
+      "LocationY": 140,
+      "Properties": {
+        "Status Message": {
+          "Type": "TypeString",
+          "Value": "Some drives not found!"
+        },
+        "Status Color": {
+          "Type": "TypeItemSwitch",
+          "Value": "RED"
+        },
+        "Send Email": {
+          "Type": "TypeBoolean",
+          "Value": true
+        },
+        "Recipients": {
+          "Type": "TypeString",
+          "Value": "[DEFAULT_RECIPIENTS]"
+        },
+        "Priority": {
+          "Type": "TypeItemSwitch",
+          "Value": "High"
+        }
+      }
     }
   },
   "Connections": [
@@ -1619,11 +1648,6 @@
       "ToNodeKey": "88DB3B698FF9742A"
     },
     {
-      "FromNodeKey": "88DAFD9E409B4C4D",
-      "FromNodePort": "Some Drives Not Found",
-      "ToNodeKey": "88DAFE3107F3FB6F"
-    },
-    {
       "FromNodeKey": "88DB3D1DCEE3A24D",
       "FromNodePort": "All Drives Attribute Unchanged",
       "ToNodeKey": "88DB3D1E0BED74A9"
@@ -1797,6 +1821,11 @@
       "FromNodeKey": "88DB3C5B6D193B8D",
       "FromNodePort": "All Drives Not Found",
       "ToNodeKey": "88DC22A2D5FD3068"
+    },
+    {
+      "FromNodeKey": "88DAFD9E409B4C4D",
+      "FromNodePort": "Some Drives Not Found",
+      "ToNodeKey": "88DC272B2658D948"
     }
   ]
 }

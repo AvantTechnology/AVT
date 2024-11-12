@@ -1,0 +1,151 @@
+{
+  "EntryNodeKey": "88DCFEB23DE7B4F5",
+  "CleanupEntryNodeKey": "",
+  "Nodes": {
+    "88DCFEB23DE7B4F5": {
+      "Key": "88DCFEB23DE7B4F5",
+      "Title": "JustIO Full Write",
+      "NodeType": "WorkloadRunJustIO",
+      "LocationX": 1843,
+      "LocationY": 383,
+      "Properties": {
+        "Map File Prefix": {
+          "Type": "TypeString",
+          "Value": "FullWrite"
+        },
+        "Log File Prefix": {
+          "Type": "TypeString",
+          "Value": "FullWrite"
+        },
+        "Data Pattern File Path": {
+          "Type": "TypeString",
+          "Value": "C:\\JustIO\\pattern_8mb.bin"
+        },
+        "Transfer Type": {
+          "Type": "TypeItemSwitch",
+          "Value": "Write"
+        },
+        "Transfer Size Bytes": {
+          "Type": "TypeInteger",
+          "Value": 8388608
+        },
+        "Transfer Rate IOPS": {
+          "Type": "TypeString",
+          "Value": "MAX"
+        },
+        "Transfer Start Offset Bytes": {
+          "Type": "TypeString",
+          "Value": "0"
+        },
+        "Transfer End Offset Bytes": {
+          "Type": "TypeString",
+          "Value": "MAX"
+        },
+        "Random Data Seed": {
+          "Type": "TypeString",
+          "Value": "457237016880"
+        },
+        "Random Data Entropy": {
+          "Type": "TypeInteger",
+          "Value": 10
+        },
+        "Reporting Interval Seconds": {
+          "Type": "TypeInteger",
+          "Value": 120
+        },
+        "Timeout Minutes": {
+          "Type": "TypeInteger",
+          "Value": 720
+        },
+        "Log Results": {
+          "Type": "TypeBoolean",
+          "Value": true
+        },
+        "Interval Minutes": {
+          "Type": "TypeInteger",
+          "Value": 5
+        }
+      }
+    },
+    "88DCFF69B8F43DDE": {
+      "Key": "88DCFF69B8F43DDE",
+      "Title": "Stop Flow With Status",
+      "NodeType": "GeneralStopFlowWithStatus",
+      "LocationX": 1997,
+      "LocationY": 969,
+      "Properties": {
+        "Status Message": {
+          "Type": "TypeString",
+          "Value": "fail"
+        },
+        "Status Color": {
+          "Type": "TypeItemSwitch",
+          "Value": "RED"
+        },
+        "Send Email": {
+          "Type": "TypeBoolean",
+          "Value": false
+        },
+        "Recipients": {
+          "Type": "TypeString",
+          "Value": "[DEFAULT_RECIPIENTS]"
+        },
+        "Priority": {
+          "Type": "TypeItemSwitch",
+          "Value": "High"
+        }
+      }
+    },
+    "88DCFF69C5EB937A": {
+      "Key": "88DCFF69C5EB937A",
+      "Title": "Stop Flow With Status",
+      "NodeType": "GeneralStopFlowWithStatus",
+      "LocationX": 1627,
+      "LocationY": 1010,
+      "Properties": {
+        "Status Message": {
+          "Type": "TypeString",
+          "Value": "pass"
+        },
+        "Status Color": {
+          "Type": "TypeItemSwitch",
+          "Value": "GREEN"
+        },
+        "Send Email": {
+          "Type": "TypeBoolean",
+          "Value": false
+        },
+        "Recipients": {
+          "Type": "TypeString",
+          "Value": "[DEFAULT_RECIPIENTS]"
+        },
+        "Priority": {
+          "Type": "TypeItemSwitch",
+          "Value": "High"
+        }
+      }
+    }
+  },
+  "Connections": [
+    {
+      "FromNodeKey": "88DCFEB23DE7B4F5",
+      "FromNodePort": "Some Drives Failed",
+      "ToNodeKey": "88DCFF69B8F43DDE"
+    },
+    {
+      "FromNodeKey": "88DCFEB23DE7B4F5",
+      "FromNodePort": "Workload Unresponsive",
+      "ToNodeKey": "88DCFF69B8F43DDE"
+    },
+    {
+      "FromNodeKey": "88DCFEB23DE7B4F5",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DCFF69B8F43DDE"
+    },
+    {
+      "FromNodeKey": "88DCFEB23DE7B4F5",
+      "FromNodePort": "All Drives Passed",
+      "ToNodeKey": "88DCFF69C5EB937A"
+    }
+  ]
+}

@@ -102,6 +102,10 @@
         "Increment Amount": {
           "Type": "TypeInteger",
           "Value": 1
+        },
+        "Reset Step": {
+          "Type": "TypeBoolean",
+          "Value": false
         }
       }
     },
@@ -1027,8 +1031,8 @@
       "Key": "88DB4FE5515F0270",
       "Title": "Go To Entry Node",
       "NodeType": "GeneralGoToEntry",
-      "LocationX": 7483,
-      "LocationY": 2531,
+      "LocationX": 7480,
+      "LocationY": 2775,
       "Properties": {}
     },
     "88DB5230B25F2420": {
@@ -3186,6 +3190,61 @@
           "Value": 120
         }
       }
+    },
+    "88DD36459CF0AEA8": {
+      "Key": "88DD36459CF0AEA8",
+      "Title": "Verifying All Drives are Present",
+      "NodeType": "DrivesCheckNotFound",
+      "LocationX": 7481,
+      "LocationY": 2500,
+      "Properties": {
+        "Log Errors": {
+          "Type": "TypeBoolean",
+          "Value": true
+        }
+      }
+    },
+    "88DD3645B1048581": {
+      "Key": "88DD3645B1048581",
+      "Title": "Rescan Drives",
+      "NodeType": "DrivesRescan",
+      "LocationX": 7479,
+      "LocationY": 2360,
+      "Properties": {
+        "Timeout Seconds": {
+          "Type": "TypeInteger",
+          "Value": 60
+        }
+      }
+    },
+    "88DD3645CE39F8A1": {
+      "Key": "88DD3645CE39F8A1",
+      "Title": "Stop Flow With Status",
+      "NodeType": "GeneralStopFlowWithStatus",
+      "LocationX": 7940,
+      "LocationY": 2753,
+      "Properties": {
+        "Status Message": {
+          "Type": "TypeString",
+          "Value": "Unable to recover all drives not found"
+        },
+        "Status Color": {
+          "Type": "TypeItemSwitch",
+          "Value": "RED"
+        },
+        "Send Email": {
+          "Type": "TypeBoolean",
+          "Value": true
+        },
+        "Recipients": {
+          "Type": "TypeString",
+          "Value": "[DEFAULT_RECIPIENTS]"
+        },
+        "Priority": {
+          "Type": "TypeItemSwitch",
+          "Value": "High"
+        }
+      }
     }
   },
   "Connections": [
@@ -3755,11 +3814,6 @@
       "ToNodeKey": "88DB5C8C83913FA8"
     },
     {
-      "FromNodeKey": "88DB5C8C838FB788",
-      "FromNodePort": "Connection Alive",
-      "ToNodeKey": "88DB4FE5515F0270"
-    },
-    {
       "FromNodeKey": "88DAFD9E409B4C4D",
       "FromNodePort": "All Drives Not Found",
       "ToNodeKey": "88DB5C8C839314E2"
@@ -4313,6 +4367,31 @@
       "FromNodeKey": "88DCD9AEBA2A46B7",
       "FromNodePort": "Errors",
       "ToNodeKey": "88DAFE2BC4161974"
+    },
+    {
+      "FromNodeKey": "88DD3645B1048581",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DD36459CF0AEA8"
+    },
+    {
+      "FromNodeKey": "88DD36459CF0AEA8",
+      "FromNodePort": "All Drives Found",
+      "ToNodeKey": "88DB4FE5515F0270"
+    },
+    {
+      "FromNodeKey": "88DB5C8C838FB788",
+      "FromNodePort": "Connection Alive",
+      "ToNodeKey": "88DD3645B1048581"
+    },
+    {
+      "FromNodeKey": "88DD36459CF0AEA8",
+      "FromNodePort": "All Drives Not Found",
+      "ToNodeKey": "88DD3645CE39F8A1"
+    },
+    {
+      "FromNodeKey": "88DD36459CF0AEA8",
+      "FromNodePort": "Some Drives Not Found",
+      "ToNodeKey": "88DB4FE5515F0270"
     }
   ]
 }

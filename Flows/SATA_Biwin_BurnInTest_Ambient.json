@@ -145,6 +145,14 @@
           "Type": "TypeInteger",
           "Value": 600
         },
+        "Small Capacity Duration Minutes": {
+          "Type": "TypeInteger",
+          "Value": 120
+        },
+        "Large Capacity Duration Cycles": {
+          "Type": "TypeInteger",
+          "Value": 20
+        },
         "Log Results": {
           "Type": "TypeBoolean",
           "Value": true

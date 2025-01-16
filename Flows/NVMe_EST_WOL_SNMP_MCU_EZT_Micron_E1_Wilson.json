@@ -102,6 +102,10 @@
         "Increment Amount": {
           "Type": "TypeInteger",
           "Value": 1
+        },
+        "Reset Step": {
+          "Type": "TypeBoolean",
+          "Value": false
         }
       }
     },
@@ -1853,7 +1857,7 @@
       "Properties": {
         "End Temperature Celsius": {
           "Type": "TypeDouble",
-          "Value": -3.0
+          "Value": -5.0
         },
         "Degrees Celsius Per Minute": {
           "Type": "TypeDouble",

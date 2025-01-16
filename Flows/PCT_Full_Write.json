@@ -71,8 +71,8 @@
       "Key": "88DCFF69B8F43DDE",
       "Title": "Stop Flow With Status",
       "NodeType": "GeneralStopFlowWithStatus",
-      "LocationX": 1997,
-      "LocationY": 969,
+      "LocationX": 2345,
+      "LocationY": 960,
       "Properties": {
         "Status Message": {
           "Type": "TypeString",

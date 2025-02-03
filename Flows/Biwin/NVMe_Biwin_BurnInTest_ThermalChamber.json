@@ -574,7 +574,7 @@
       "Title": "Stop Flow With Status",
       "NodeType": "GeneralStopFlowWithStatus",
       "LocationX": 1504,
-      "LocationY": 2096,
+      "LocationY": 2282,
       "Properties": {
         "Status Message": {
           "Type": "TypeString",
@@ -603,7 +603,7 @@
       "Title": "Wating for Thermal Chamber to reach temperature",
       "NodeType": "ThermalChamberWaitForProcessVariable",
       "LocationX": 863,
-      "LocationY": 2360,
+      "LocationY": 2546,
       "Properties": {
         "Target": {
           "Type": "TypeDouble",
@@ -624,7 +624,7 @@
       "Title": "Set Thermal Chamber to 55C",
       "NodeType": "ThermalChamberSetSetPoint",
       "LocationX": 863,
-      "LocationY": 2191,
+      "LocationY": 2377,
       "Properties": {
         "Set Point Celsius": {
           "Type": "TypeDouble",
@@ -641,7 +641,7 @@
       "Title": "Short Delay",
       "NodeType": "GeneralWait",
       "LocationX": 862,
-      "LocationY": 2050,
+      "LocationY": 2236,
       "Properties": {
         "Timeout Seconds": {
           "Type": "TypeInteger",
@@ -654,7 +654,7 @@
       "Title": "Turn on Thermal Chamber",
       "NodeType": "ThermalChamberSetChamber",
       "LocationX": 862,
-      "LocationY": 1879,
+      "LocationY": 2065,
       "Properties": {
         "Chamber": {
           "Type": "TypeBoolean",
@@ -690,6 +690,48 @@
       "LocationX": 2050,
       "LocationY": -1810,
       "Properties": {}
+    },
+    "88DD4498220C204A": {
+      "Key": "88DD4498220C204A",
+      "Title": "Stop Flow With Status",
+      "NodeType": "GeneralStopFlowWithStatus",
+      "LocationX": 1516,
+      "LocationY": 1826,
+      "Properties": {
+        "Status Message": {
+          "Type": "TypeString",
+          "Value": "Error waiting for all clients to sync"
+        },
+        "Status Color": {
+          "Type": "TypeItemSwitch",
+          "Value": "RED"
+        },
+        "Send Email": {
+          "Type": "TypeBoolean",
+          "Value": false
+        },
+        "Recipients": {
+          "Type": "TypeString",
+          "Value": "[DEFAULT_RECIPIENTS]"
+        },
+        "Priority": {
+          "Type": "TypeItemSwitch",
+          "Value": "High"
+        }
+      }
+    },
+    "88DD4498220C4759": {
+      "Key": "88DD4498220C4759",
+      "Title": "Wait for other clients to catch up...",
+      "NodeType": "GeneralWaitForSync",
+      "LocationX": 864,
+      "LocationY": 1646,
+      "Properties": {
+        "Timeout Minutes": {
+          "Type": "TypeInteger",
+          "Value": 10
+        }
+      }
     }
   },
   "Connections": [
@@ -959,11 +1001,6 @@
       "ToNodeKey": "88DBF6A94CF93FC7"
     },
     {
-      "FromNodeKey": "88DBF04E4A354309",
-      "FromNodePort": "All Drives Found",
-      "ToNodeKey": "88DBF6A94D01A817"
-    },
-    {
       "FromNodeKey": "88DBF6A94CFA8312",
       "FromNodePort": "Success",
       "ToNodeKey": "88DBF04E9CBDDE2C"
@@ -982,6 +1019,31 @@
       "FromNodeKey": "88DC1069541C37DF",
       "FromNodePort": "Last Client Running",
       "ToNodeKey": "88DBF6A9616F3C0B"
+    },
+    {
+      "FromNodeKey": "88DD4498220C4759",
+      "FromNodePort": "Time Elapsed",
+      "ToNodeKey": "88DD4498220C204A"
+    },
+    {
+      "FromNodeKey": "88DD4498220C4759",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DD4498220C204A"
+    },
+    {
+      "FromNodeKey": "88DBF04E4A354309",
+      "FromNodePort": "All Drives Found",
+      "ToNodeKey": "88DD4498220C4759"
+    },
+    {
+      "FromNodeKey": "88DD4498220C4759",
+      "FromNodePort": "Clients Synced (First)",
+      "ToNodeKey": "88DBF6A94D01A817"
+    },
+    {
+      "FromNodeKey": "88DD4498220C4759",
+      "FromNodePort": "Clients Synced (Others)",
+      "ToNodeKey": "88DBF6A94CFA8312"
     }
   ]
 }

@@ -139,7 +139,7 @@
       "Title": "Run BurnInTest Biwin Preset",
       "NodeType": "WorkloadBurnInTestBiwinPreset",
       "LocationX": 863,
-      "LocationY": 2817,
+      "LocationY": 2924,
       "Properties": {
         "Timeout Minutes": {
           "Type": "TypeInteger",
@@ -168,7 +168,7 @@
       "Title": "Reserved for SMART checking",
       "NodeType": "GeneralWait",
       "LocationX": 863,
-      "LocationY": 3643,
+      "LocationY": 3750,
       "Properties": {
         "Timeout Seconds": {
           "Type": "TypeInteger",
@@ -181,7 +181,7 @@
       "Title": "Stop Flow With Status",
       "NodeType": "GeneralStopFlowWithStatus",
       "LocationX": 1560,
-      "LocationY": 2863,
+      "LocationY": 2970,
       "Properties": {
         "Status Message": {
           "Type": "TypeString",
@@ -210,7 +210,7 @@
       "Title": "Check Logged Errors",
       "NodeType": "DrivesCheckLoggedErrors",
       "LocationX": 863,
-      "LocationY": 3797,
+      "LocationY": 3904,
       "Properties": {}
     },
     "88DBF04F169CF415": {
@@ -218,7 +218,7 @@
       "Title": "FAIL",
       "NodeType": "GeneralStopFlowWithStatus",
       "LocationX": 1159,
-      "LocationY": 4080,
+      "LocationY": 4187,
       "Properties": {
         "Status Message": {
           "Type": "TypeString",
@@ -260,7 +260,7 @@
       "Title": "PASS",
       "NodeType": "GeneralStopFlowWithStatus",
       "LocationX": 279,
-      "LocationY": 4083,
+      "LocationY": 4190,
       "Properties": {
         "Status Message": {
           "Type": "TypeString",
@@ -405,7 +405,7 @@
       "Title": "Rescan Drives",
       "NodeType": "DrivesRescan",
       "LocationX": 860,
-      "LocationY": 3314,
+      "LocationY": 3421,
       "Properties": {
         "Timeout Seconds": {
           "Type": "TypeInteger",
@@ -574,7 +574,7 @@
       "Title": "Stop Flow With Status",
       "NodeType": "GeneralStopFlowWithStatus",
       "LocationX": 1504,
-      "LocationY": 2096,
+      "LocationY": 2203,
       "Properties": {
         "Status Message": {
           "Type": "TypeString",
@@ -603,7 +603,7 @@
       "Title": "Wating for Thermal Chamber to reach temperature",
       "NodeType": "ThermalChamberWaitForProcessVariable",
       "LocationX": 863,
-      "LocationY": 2360,
+      "LocationY": 2467,
       "Properties": {
         "Target": {
           "Type": "TypeDouble",
@@ -624,7 +624,7 @@
       "Title": "Set Thermal Chamber to 25C",
       "NodeType": "ThermalChamberSetSetPoint",
       "LocationX": 863,
-      "LocationY": 2191,
+      "LocationY": 2298,
       "Properties": {
         "Set Point Celsius": {
           "Type": "TypeDouble",
@@ -641,7 +641,7 @@
       "Title": "Short Delay",
       "NodeType": "GeneralWait",
       "LocationX": 862,
-      "LocationY": 2050,
+      "LocationY": 2157,
       "Properties": {
         "Timeout Seconds": {
           "Type": "TypeInteger",
@@ -654,7 +654,7 @@
       "Title": "Turn on Thermal Chamber",
       "NodeType": "ThermalChamberSetChamber",
       "LocationX": 862,
-      "LocationY": 1879,
+      "LocationY": 1986,
       "Properties": {
         "Chamber": {
           "Type": "TypeBoolean",
@@ -696,8 +696,50 @@
       "Title": "Log SMART",
       "NodeType": "DrivesLogSmart",
       "LocationX": 861,
-      "LocationY": 3456,
+      "LocationY": 3563,
       "Properties": {}
+    },
+    "88DD4497A03A7B92": {
+      "Key": "88DD4497A03A7B92",
+      "Title": "Wait for other clients to catch up...",
+      "NodeType": "GeneralWaitForSync",
+      "LocationX": 863,
+      "LocationY": 1646,
+      "Properties": {
+        "Timeout Minutes": {
+          "Type": "TypeInteger",
+          "Value": 10
+        }
+      }
+    },
+    "88DD4497E9EE5770": {
+      "Key": "88DD4497E9EE5770",
+      "Title": "Stop Flow With Status",
+      "NodeType": "GeneralStopFlowWithStatus",
+      "LocationX": 1515,
+      "LocationY": 1826,
+      "Properties": {
+        "Status Message": {
+          "Type": "TypeString",
+          "Value": "Error waiting for all clients to sync"
+        },
+        "Status Color": {
+          "Type": "TypeItemSwitch",
+          "Value": "RED"
+        },
+        "Send Email": {
+          "Type": "TypeBoolean",
+          "Value": false
+        },
+        "Recipients": {
+          "Type": "TypeString",
+          "Value": "[DEFAULT_RECIPIENTS]"
+        },
+        "Priority": {
+          "Type": "TypeItemSwitch",
+          "Value": "High"
+        }
+      }
     }
   },
   "Connections": [
@@ -962,11 +1004,6 @@
       "ToNodeKey": "88DBF6A94CF93FC7"
     },
     {
-      "FromNodeKey": "88DBF04E4A354309",
-      "FromNodePort": "All Drives Found",
-      "ToNodeKey": "88DBF6A94D01A817"
-    },
-    {
       "FromNodeKey": "88DBF6A94CFA8312",
       "FromNodePort": "Success",
       "ToNodeKey": "88DBF04E9CBDDE2C"
@@ -995,6 +1032,31 @@
       "FromNodeKey": "88DC955EF82CC9BF",
       "FromNodePort": "Success",
       "ToNodeKey": "88DBF04EB547F535"
+    },
+    {
+      "FromNodeKey": "88DBF04E4A354309",
+      "FromNodePort": "All Drives Found",
+      "ToNodeKey": "88DD4497A03A7B92"
+    },
+    {
+      "FromNodeKey": "88DD4497A03A7B92",
+      "FromNodePort": "Clients Synced (First)",
+      "ToNodeKey": "88DBF6A94D01A817"
+    },
+    {
+      "FromNodeKey": "88DD4497A03A7B92",
+      "FromNodePort": "Time Elapsed",
+      "ToNodeKey": "88DD4497E9EE5770"
+    },
+    {
+      "FromNodeKey": "88DD4497A03A7B92",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DD4497E9EE5770"
+    },
+    {
+      "FromNodeKey": "88DD4497A03A7B92",
+      "FromNodePort": "Clients Synced (Others)",
+      "ToNodeKey": "88DBF6A94CFA8312"
     }
   ]
 }

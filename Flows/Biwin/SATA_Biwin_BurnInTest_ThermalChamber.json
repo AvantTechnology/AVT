@@ -430,8 +430,8 @@
       "Key": "88DBF6A7F5FE987B",
       "Title": "Turn on Thermal Chamber",
       "NodeType": "ThermalChamberSetChamber",
-      "LocationX": 864,
-      "LocationY": 1804,
+      "LocationX": 865,
+      "LocationY": 1951,
       "Properties": {
         "Chamber": {
           "Type": "TypeBoolean",
@@ -447,8 +447,8 @@
       "Key": "88DBF6A80483ED5D",
       "Title": "Set Thermal Chamber to 55C",
       "NodeType": "ThermalChamberSetSetPoint",
-      "LocationX": 865,
-      "LocationY": 2116,
+      "LocationX": 866,
+      "LocationY": 2263,
       "Properties": {
         "Set Point Celsius": {
           "Type": "TypeDouble",
@@ -464,8 +464,8 @@
       "Key": "88DBF6A80B541F58",
       "Title": "Wating for Thermal Chamber to reach temperature",
       "NodeType": "ThermalChamberWaitForProcessVariable",
-      "LocationX": 865,
-      "LocationY": 2285,
+      "LocationX": 866,
+      "LocationY": 2432,
       "Properties": {
         "Target": {
           "Type": "TypeDouble",
@@ -485,8 +485,8 @@
       "Key": "88DBF6A83413D857",
       "Title": "Short Delay",
       "NodeType": "GeneralWait",
-      "LocationX": 864,
-      "LocationY": 1975,
+      "LocationX": 865,
+      "LocationY": 2122,
       "Properties": {
         "Timeout Seconds": {
           "Type": "TypeInteger",
@@ -515,8 +515,8 @@
       "Key": "88DBF6A885276E27",
       "Title": "Stop Flow With Status",
       "NodeType": "GeneralStopFlowWithStatus",
-      "LocationX": 1506,
-      "LocationY": 2021,
+      "LocationX": 1507,
+      "LocationY": 2168,
       "Properties": {
         "Status Message": {
           "Type": "TypeString",
@@ -547,6 +547,48 @@
       "LocationX": 2036,
       "LocationY": -204,
       "Properties": {}
+    },
+    "88DD4498703F48C6": {
+      "Key": "88DD4498703F48C6",
+      "Title": "Stop Flow With Status",
+      "NodeType": "GeneralStopFlowWithStatus",
+      "LocationX": 1517,
+      "LocationY": 1807,
+      "Properties": {
+        "Status Message": {
+          "Type": "TypeString",
+          "Value": "Error waiting for all clients to sync"
+        },
+        "Status Color": {
+          "Type": "TypeItemSwitch",
+          "Value": "RED"
+        },
+        "Send Email": {
+          "Type": "TypeBoolean",
+          "Value": false
+        },
+        "Recipients": {
+          "Type": "TypeString",
+          "Value": "[DEFAULT_RECIPIENTS]"
+        },
+        "Priority": {
+          "Type": "TypeItemSwitch",
+          "Value": "High"
+        }
+      }
+    },
+    "88DD4498703F9A72": {
+      "Key": "88DD4498703F9A72",
+      "Title": "Wait for other clients to catch up...",
+      "NodeType": "GeneralWaitForSync",
+      "LocationX": 865,
+      "LocationY": 1627,
+      "Properties": {
+        "Timeout Minutes": {
+          "Type": "TypeInteger",
+          "Value": 10
+        }
+      }
     }
   },
   "Connections": [
@@ -746,11 +788,6 @@
       "ToNodeKey": "88DBF6A885276E27"
     },
     {
-      "FromNodeKey": "88DBF04E4A354309",
-      "FromNodePort": "All Drives Found",
-      "ToNodeKey": "88DBF6A7F5FE987B"
-    },
-    {
       "FromNodeKey": "88DBF6A80B541F58",
       "FromNodePort": "Success",
       "ToNodeKey": "88DBF04E9CBDDE2C"
@@ -769,6 +806,31 @@
       "FromNodeKey": "88DC106988753D0B",
       "FromNodePort": "Last Client Running",
       "ToNodeKey": "88DBF6A866B26150"
+    },
+    {
+      "FromNodeKey": "88DD4498703F9A72",
+      "FromNodePort": "Time Elapsed",
+      "ToNodeKey": "88DD4498703F48C6"
+    },
+    {
+      "FromNodeKey": "88DD4498703F9A72",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DD4498703F48C6"
+    },
+    {
+      "FromNodeKey": "88DBF04E4A354309",
+      "FromNodePort": "All Drives Found",
+      "ToNodeKey": "88DD4498703F9A72"
+    },
+    {
+      "FromNodeKey": "88DD4498703F9A72",
+      "FromNodePort": "Clients Synced (First)",
+      "ToNodeKey": "88DBF6A7F5FE987B"
+    },
+    {
+      "FromNodeKey": "88DD4498703F9A72",
+      "FromNodePort": "Clients Synced (Others)",
+      "ToNodeKey": "88DBF6A80B541F58"
     }
   ]
 }

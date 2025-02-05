@@ -1,6 +1,6 @@
 {
   "EntryNodeKey": "88DBF04E3D778600",
-  "CleanupEntryNodeKey": "88DBF04F3769319C",
+  "CleanupEntryNodeKey": "88DD4610FF4037C3",
   "Nodes": {
     "88DBF04E3D79D67E": {
       "Key": "88DBF04E3D79D67E",
@@ -597,6 +597,19 @@
           "Value": 10
         }
       }
+    },
+    "88DD4610FF4037C3": {
+      "Key": "88DD4610FF4037C3",
+      "Title": "Kill All Spawned Processes",
+      "NodeType": "ClientSystemProcessKillAllSpawned",
+      "LocationX": 2006,
+      "LocationY": -765,
+      "Properties": {
+        "Timeout Seconds": {
+          "Type": "TypeInteger",
+          "Value": 10
+        }
+      }
     }
   },
   "Connections": [
@@ -844,6 +857,16 @@
       "FromNodeKey": "88DD449851B25401",
       "FromNodePort": "Clients Synced (Others)",
       "ToNodeKey": "88DBF6A80B541F58"
+    },
+    {
+      "FromNodeKey": "88DD4610FF4037C3",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DBF04F3769319C"
+    },
+    {
+      "FromNodeKey": "88DD4610FF4037C3",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DBF04F3769319C"
     }
   ]
 }

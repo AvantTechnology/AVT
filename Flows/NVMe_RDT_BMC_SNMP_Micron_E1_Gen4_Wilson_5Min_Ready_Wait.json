@@ -2761,9 +2761,13 @@
       "LocationX": 10,
       "LocationY": 5386,
       "Properties": {
+        "Transfer Mode Match Type": {
+          "Type": "TypeItemSwitch",
+          "Value": "Starts With"
+        },
         "Target Transfer Mode": {
           "Type": "TypeString",
-          "Value": "PCIe 4.0 x4 | PCIe 5.0 x4"
+          "Value": "PCIe 4.0 x4 |"
         },
         "Only Check Found Drives": {
           "Type": "TypeBoolean",

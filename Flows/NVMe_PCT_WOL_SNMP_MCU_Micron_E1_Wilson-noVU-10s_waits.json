@@ -1,0 +1,4397 @@
+{
+  "EntryNodeKey": "88DB5C8BB1D47F75",
+  "CleanupEntryNodeKey": "88DB3B898832CC1C",
+  "Nodes": {
+    "88DAFD9E409B4C4D": {
+      "Key": "88DAFD9E409B4C4D",
+      "Title": "Verifying All Drives are Present",
+      "NodeType": "DrivesCheckNotFound",
+      "LocationX": -1182,
+      "LocationY": -311,
+      "Properties": {
+        "Log Errors": {
+          "Type": "TypeBoolean",
+          "Value": true
+        }
+      }
+    },
+    "88DAFE2BC4161974": {
+      "Key": "88DAFE2BC4161974",
+      "Title": "Rescan Drives",
+      "NodeType": "DrivesRescan",
+      "LocationX": -1221,
+      "LocationY": -630,
+      "Properties": {
+        "Timeout Seconds": {
+          "Type": "TypeInteger",
+          "Value": 60
+        }
+      }
+    },
+    "88DAFE335BB7675B": {
+      "Key": "88DAFE335BB7675B",
+      "Title": "Check if Cycle 0",
+      "NodeType": "CycleCheck",
+      "LocationX": -1222,
+      "LocationY": -486,
+      "Properties": {
+        "Compare Operation": {
+          "Type": "TypeItemSwitch",
+          "Value": "="
+        },
+        "Compare Value": {
+          "Type": "TypeInteger",
+          "Value": 0
+        }
+      }
+    },
+    "88DAFF08969051E4": {
+      "Key": "88DAFF08969051E4",
+      "Title": "Cleaning Drives",
+      "NodeType": "DrivesDiskPartClean",
+      "LocationX": -2674,
+      "LocationY": 369,
+      "Properties": {
+        "Clean Type": {
+          "Type": "TypeItemSwitch",
+          "Value": "Clean"
+        },
+        "Timeout Minutes": {
+          "Type": "TypeInteger",
+          "Value": 10
+        }
+      }
+    },
+    "88DB3ACC0B12A29D": {
+      "Key": "88DB3ACC0B12A29D",
+      "Title": "Increment Step",
+      "NodeType": "StepIncrement",
+      "LocationX": 328,
+      "LocationY": 11706,
+      "Properties": {
+        "Increment Amount": {
+          "Type": "TypeInteger",
+          "Value": 1
+        }
+      }
+    },
+    "88DB3ACC1B4D7726": {
+      "Key": "88DB3ACC1B4D7726",
+      "Title": "Check if step out of range",
+      "NodeType": "StepCheck",
+      "LocationX": 328,
+      "LocationY": 11864,
+      "Properties": {
+        "Compare Operation": {
+          "Type": "TypeItemSwitch",
+          "Value": ">"
+        },
+        "Compare Value": {
+          "Type": "TypeInteger",
+          "Value": 12
+        }
+      }
+    },
+    "88DB3ACC3058A1A7": {
+      "Key": "88DB3ACC3058A1A7",
+      "Title": "Increment Cycle",
+      "NodeType": "CycleIncrement",
+      "LocationX": -83,
+      "LocationY": 12099,
+      "Properties": {
+        "Increment Amount": {
+          "Type": "TypeInteger",
+          "Value": 1
+        },
+        "Reset Step": {
+          "Type": "TypeBoolean",
+          "Value": false
+        }
+      }
+    },
+    "88DB3ACC47550C12": {
+      "Key": "88DB3ACC47550C12",
+      "Title": "Set Step",
+      "NodeType": "StepSet",
+      "LocationX": -82,
+      "LocationY": 12261,
+      "Properties": {
+        "Set Value": {
+          "Type": "TypeInteger",
+          "Value": 0
+        }
+      }
+    },
+    "88DB3ACC771A8C8D": {
+      "Key": "88DB3ACC771A8C8D",
+      "Title": "Go To Entry Node",
+      "NodeType": "GeneralGoToEntry",
+      "LocationX": 368,
+      "LocationY": 12456,
+      "Properties": {}
+    },
+    "88DB3B898832CC1C": {
+      "Key": "88DB3B898832CC1C",
+      "Title": "Kill All Spawned Processes",
+      "NodeType": "ClientSystemProcessKillAllSpawned",
+      "LocationX": 313,
+      "LocationY": -1843,
+      "Properties": {
+        "Timeout Seconds": {
+          "Type": "TypeInteger",
+          "Value": 10
+        }
+      }
+    },
+    "88DB401EDDA231B7": {
+      "Key": "88DB401EDDA231B7",
+      "Title": "JustIO Full Write",
+      "NodeType": "WorkloadRunJustIO",
+      "LocationX": -2674,
+      "LocationY": 549,
+      "Properties": {
+        "Map File Prefix": {
+          "Type": "TypeString",
+          "Value": "FullWrite"
+        },
+        "Log File Prefix": {
+          "Type": "TypeString",
+          "Value": "FullWrite"
+        },
+        "Data Pattern File Path": {
+          "Type": "TypeString",
+          "Value": "C:\\JustIO\\pattern_8mb.bin"
+        },
+        "Transfer Type": {
+          "Type": "TypeItemSwitch",
+          "Value": "Write"
+        },
+        "Transfer Size Bytes": {
+          "Type": "TypeInteger",
+          "Value": 8388608
+        },
+        "Transfer Rate IOPS": {
+          "Type": "TypeString",
+          "Value": "MAX"
+        },
+        "Transfer Start Offset Bytes": {
+          "Type": "TypeString",
+          "Value": "0"
+        },
+        "Transfer End Offset Bytes": {
+          "Type": "TypeString",
+          "Value": "MAX"
+        },
+        "Random Data Seed": {
+          "Type": "TypeString",
+          "Value": "457237016880"
+        },
+        "Random Data Entropy": {
+          "Type": "TypeInteger",
+          "Value": 10
+        },
+        "Reporting Interval Seconds": {
+          "Type": "TypeInteger",
+          "Value": 120
+        },
+        "Timeout Minutes": {
+          "Type": "TypeInteger",
+          "Value": 720
+        },
+        "Log Results": {
+          "Type": "TypeBoolean",
+          "Value": true
+        },
+        "Interval Minutes": {
+          "Type": "TypeInteger",
+          "Value": 5
+        }
+      }
+    },
+    "88DB402324802412": {
+      "Key": "88DB402324802412",
+      "Title": "Stop Flow With Status",
+      "NodeType": "GeneralStopFlowWithStatus",
+      "LocationX": -3093,
+      "LocationY": 1903,
+      "Properties": {
+        "Status Message": {
+          "Type": "TypeString",
+          "Value": "Unable to complete full drive write on all drives"
+        },
+        "Status Color": {
+          "Type": "TypeItemSwitch",
+          "Value": "RED"
+        },
+        "Send Email": {
+          "Type": "TypeBoolean",
+          "Value": true
+        },
+        "Recipients": {
+          "Type": "TypeString",
+          "Value": "[DEFAULT_RECIPIENTS]"
+        },
+        "Priority": {
+          "Type": "TypeItemSwitch",
+          "Value": "High"
+        }
+      }
+    },
+    "88DB40233EEE9DF8": {
+      "Key": "88DB40233EEE9DF8",
+      "Title": "Rescan Drives",
+      "NodeType": "DrivesRescan",
+      "LocationX": -2541,
+      "LocationY": 1168,
+      "Properties": {
+        "Timeout Seconds": {
+          "Type": "TypeInteger",
+          "Value": 60
+        }
+      }
+    },
+    "88DB402343398B2A": {
+      "Key": "88DB402343398B2A",
+      "Title": "Drives Log Temperature",
+      "NodeType": "DrivesLogTemperature",
+      "LocationX": -2540,
+      "LocationY": 1308,
+      "Properties": {}
+    },
+    "88DB40258828E15B": {
+      "Key": "88DB40258828E15B",
+      "Title": "Check If Clean Step",
+      "NodeType": "StepCheckList",
+      "LocationX": 750,
+      "LocationY": 352,
+      "Properties": {
+        "Compare List": {
+          "Type": "TypeString",
+          "Value": "1,2,4,5,7,8"
+        }
+      }
+    },
+    "88DB403B4193F536": {
+      "Key": "88DB403B4193F536",
+      "Title": "Check If Write 10GB Step",
+      "NodeType": "StepCheck",
+      "LocationX": -1280,
+      "LocationY": 137,
+      "Properties": {
+        "Compare Operation": {
+          "Type": "TypeItemSwitch",
+          "Value": "="
+        },
+        "Compare Value": {
+          "Type": "TypeInteger",
+          "Value": 0
+        }
+      }
+    },
+    "88DB403B53FE188A": {
+      "Key": "88DB403B53FE188A",
+      "Title": "JustIO Write 10GB Block",
+      "NodeType": "WorkloadRunJustIOPCTPreset10GBBlock",
+      "LocationX": -1279,
+      "LocationY": 701,
+      "Properties": {
+        "Map File Prefix": {
+          "Type": "TypeString",
+          "Value": "10GBWrite"
+        },
+        "Log File Prefix": {
+          "Type": "TypeString",
+          "Value": "10GBWrite"
+        },
+        "Data Pattern File Path": {
+          "Type": "TypeString",
+          "Value": "C:\\JustIO\\pattern_8mb.bin"
+        },
+        "Transfer Type": {
+          "Type": "TypeItemSwitch",
+          "Value": "Write"
+        },
+        "Transfer Size Bytes": {
+          "Type": "TypeInteger",
+          "Value": 8388608
+        },
+        "Transfer Rate IOPS": {
+          "Type": "TypeString",
+          "Value": "MAX"
+        },
+        "Random Data Seed": {
+          "Type": "TypeString",
+          "Value": "457237016880"
+        },
+        "Random Data Entropy": {
+          "Type": "TypeInteger",
+          "Value": 10
+        },
+        "Reporting Interval Seconds": {
+          "Type": "TypeInteger",
+          "Value": 120
+        },
+        "Timeout Minutes": {
+          "Type": "TypeInteger",
+          "Value": 30
+        },
+        "Log Results": {
+          "Type": "TypeBoolean",
+          "Value": true
+        },
+        "Interval Minutes": {
+          "Type": "TypeInteger",
+          "Value": 5
+        }
+      }
+    },
+    "88DB403BFA3674ED": {
+      "Key": "88DB403BFA3674ED",
+      "Title": "Rescan Drives",
+      "NodeType": "DrivesRescan",
+      "LocationX": -1147,
+      "LocationY": 1345,
+      "Properties": {
+        "Timeout Seconds": {
+          "Type": "TypeInteger",
+          "Value": 60
+        }
+      }
+    },
+    "88DB403BFCDD9F71": {
+      "Key": "88DB403BFCDD9F71",
+      "Title": "Drives Log Temperature",
+      "NodeType": "DrivesLogTemperature",
+      "LocationX": -1150,
+      "LocationY": 1486,
+      "Properties": {}
+    },
+    "88DB403C1C675289": {
+      "Key": "88DB403C1C675289",
+      "Title": "Stop Flow With Status",
+      "NodeType": "GeneralStopFlowWithStatus",
+      "LocationX": -700,
+      "LocationY": 1891,
+      "Properties": {
+        "Status Message": {
+          "Type": "TypeString",
+          "Value": "Error running JustIO write 10GB block"
+        },
+        "Status Color": {
+          "Type": "TypeItemSwitch",
+          "Value": "RED"
+        },
+        "Send Email": {
+          "Type": "TypeBoolean",
+          "Value": true
+        },
+        "Recipients": {
+          "Type": "TypeString",
+          "Value": "[DEFAULT_RECIPIENTS]"
+        },
+        "Priority": {
+          "Type": "TypeItemSwitch",
+          "Value": "High"
+        }
+      }
+    },
+    "88DB403D4F62058D": {
+      "Key": "88DB403D4F62058D",
+      "Title": "Check If Dirty Step",
+      "NodeType": "StepCheckList",
+      "LocationX": 1735,
+      "LocationY": 538,
+      "Properties": {
+        "Compare List": {
+          "Type": "TypeString",
+          "Value": "3,6,9"
+        }
+      }
+    },
+    "88DB403DA388B522": {
+      "Key": "88DB403DA388B522",
+      "Title": "Wait 10 seconds before dirty",
+      "NodeType": "GeneralWait",
+      "LocationX": 1733,
+      "LocationY": 918,
+      "Properties": {
+        "Timeout Seconds": {
+          "Type": "TypeInteger",
+          "Value": 10
+        }
+      }
+    },
+    "88DB403DBAD5618E": {
+      "Key": "88DB403DBAD5618E",
+      "Title": "Disable regulators",
+      "NodeType": "MCUSetPin",
+      "LocationX": 1734,
+      "LocationY": 1063,
+      "Properties": {
+        "Pin": {
+          "Type": "TypeInteger",
+          "ReferenceKey": "MCURegulatorEnablePin"
+        },
+        "Pin State": {
+          "Type": "TypeItemSwitch",
+          "Value": "LOW"
+        },
+        "Timeout Milliseconds": {
+          "Type": "TypeInteger",
+          "Value": 5000
+        }
+      }
+    },
+    "88DB403E4A67389B": {
+      "Key": "88DB403E4A67389B",
+      "Title": "DevCon Remove Drive Models",
+      "NodeType": "DevConRemoveDriveModels",
+      "LocationX": 1734,
+      "LocationY": 1274,
+      "Properties": {
+        "Timeout Seconds": {
+          "Type": "TypeInteger",
+          "Value": 120
+        }
+      }
+    },
+    "88DB403E5378C718": {
+      "Key": "88DB403E5378C718",
+      "Title": "DevCon Rescan",
+      "NodeType": "DevConRescan",
+      "LocationX": 1735,
+      "LocationY": 1439,
+      "Properties": {
+        "Timeout Seconds": {
+          "Type": "TypeInteger",
+          "Value": 120
+        }
+      }
+    },
+    "88DB403E6593DA83": {
+      "Key": "88DB403E6593DA83",
+      "Title": "Wait 5 seconds",
+      "NodeType": "GeneralWait",
+      "LocationX": 1735,
+      "LocationY": 1601,
+      "Properties": {
+        "Timeout Seconds": {
+          "Type": "TypeInteger",
+          "Value": 5
+        }
+      }
+    },
+    "88DB403F550C4B02": {
+      "Key": "88DB403F550C4B02",
+      "Title": "Go To Clean Power Cycle",
+      "NodeType": "GeneralGoToNode",
+      "LocationX": 1736,
+      "LocationY": 1743,
+      "Properties": {
+        "Go To Node Key": {
+          "Type": "TypeString",
+          "Value": "88DB5C8C2FC9FC29"
+        }
+      }
+    },
+    "88DB40402E8F2E24": {
+      "Key": "88DB40402E8F2E24",
+      "Title": "Check If Read 10GB Step",
+      "NodeType": "StepCheck",
+      "LocationX": 2858,
+      "LocationY": 669,
+      "Properties": {
+        "Compare Operation": {
+          "Type": "TypeItemSwitch",
+          "Value": "="
+        },
+        "Compare Value": {
+          "Type": "TypeInteger",
+          "Value": 10
+        }
+      }
+    },
+    "88DB4040431564A9": {
+      "Key": "88DB4040431564A9",
+      "Title": "JustIO Read 10GB Block",
+      "NodeType": "WorkloadRunJustIOPCTPreset10GBBlock",
+      "LocationX": 2849,
+      "LocationY": 1644,
+      "Properties": {
+        "Map File Prefix": {
+          "Type": "TypeString",
+          "Value": "10GBRead"
+        },
+        "Log File Prefix": {
+          "Type": "TypeString",
+          "Value": "10GBRead"
+        },
+        "Data Pattern File Path": {
+          "Type": "TypeString",
+          "Value": "C:\\JustIO\\pattern_8mb.bin"
+        },
+        "Transfer Type": {
+          "Type": "TypeItemSwitch",
+          "Value": "Read"
+        },
+        "Transfer Size Bytes": {
+          "Type": "TypeInteger",
+          "Value": 8388608
+        },
+        "Transfer Rate IOPS": {
+          "Type": "TypeString",
+          "Value": "MAX"
+        },
+        "Random Data Seed": {
+          "Type": "TypeString",
+          "Value": "457237016880"
+        },
+        "Random Data Entropy": {
+          "Type": "TypeInteger",
+          "Value": 10
+        },
+        "Reporting Interval Seconds": {
+          "Type": "TypeInteger",
+          "Value": 120
+        },
+        "Timeout Minutes": {
+          "Type": "TypeInteger",
+          "Value": 30
+        },
+        "Log Results": {
+          "Type": "TypeBoolean",
+          "Value": true
+        },
+        "Interval Minutes": {
+          "Type": "TypeInteger",
+          "Value": 5
+        }
+      }
+    },
+    "88DB404095BF0C60": {
+      "Key": "88DB404095BF0C60",
+      "Title": "Rescan Drives",
+      "NodeType": "DrivesRescan",
+      "LocationX": 2829,
+      "LocationY": 2724,
+      "Properties": {
+        "Timeout Seconds": {
+          "Type": "TypeInteger",
+          "Value": 60
+        }
+      }
+    },
+    "88DB40409A5323FF": {
+      "Key": "88DB40409A5323FF",
+      "Title": "Drives Log Temperature",
+      "NodeType": "DrivesLogTemperature",
+      "LocationX": 2829,
+      "LocationY": 2861,
+      "Properties": {}
+    },
+    "88DB4043727626F2": {
+      "Key": "88DB4043727626F2",
+      "Title": "Stop Flow With Status",
+      "NodeType": "GeneralStopFlowWithStatus",
+      "LocationX": 3272,
+      "LocationY": 3275,
+      "Properties": {
+        "Status Message": {
+          "Type": "TypeString",
+          "Value": "Error running JustIO read 10GB block"
+        },
+        "Status Color": {
+          "Type": "TypeItemSwitch",
+          "Value": "RED"
+        },
+        "Send Email": {
+          "Type": "TypeBoolean",
+          "Value": true
+        },
+        "Recipients": {
+          "Type": "TypeString",
+          "Value": "[DEFAULT_RECIPIENTS]"
+        },
+        "Priority": {
+          "Type": "TypeItemSwitch",
+          "Value": "High"
+        }
+      }
+    },
+    "88DB404466E81AD1": {
+      "Key": "88DB404466E81AD1",
+      "Title": "Check If Async Step",
+      "NodeType": "StepCheck",
+      "LocationX": 4055,
+      "LocationY": 977,
+      "Properties": {
+        "Compare Operation": {
+          "Type": "TypeItemSwitch",
+          "Value": "="
+        },
+        "Compare Value": {
+          "Type": "TypeInteger",
+          "Value": 11
+        }
+      }
+    },
+    "88DB4044B6DA003B": {
+      "Key": "88DB4044B6DA003B",
+      "Title": "JustIO Write 10GB Block For Async ",
+      "NodeType": "WorkloadRunJustIOPCTPreset10GBBlock",
+      "LocationX": 4055,
+      "LocationY": 1248,
+      "Properties": {
+        "Map File Prefix": {
+          "Type": "TypeString",
+          "Value": "10GBWriteAsync"
+        },
+        "Log File Prefix": {
+          "Type": "TypeString",
+          "Value": "10GBWriteAsync"
+        },
+        "Data Pattern File Path": {
+          "Type": "TypeString",
+          "Value": "C:\\JustIO\\pattern_512.bin"
+        },
+        "Transfer Type": {
+          "Type": "TypeItemSwitch",
+          "Value": "Write"
+        },
+        "Transfer Size Bytes": {
+          "Type": "TypeInteger",
+          "Value": 512
+        },
+        "Transfer Rate IOPS": {
+          "Type": "TypeString",
+          "Value": "MAX"
+        },
+        "Random Data Seed": {
+          "Type": "TypeString",
+          "Value": "457237016880"
+        },
+        "Random Data Entropy": {
+          "Type": "TypeInteger",
+          "Value": 10
+        },
+        "Reporting Interval Seconds": {
+          "Type": "TypeInteger",
+          "Value": 10
+        },
+        "Timeout Minutes": {
+          "Type": "TypeInteger",
+          "Value": 5
+        },
+        "Log Results": {
+          "Type": "TypeBoolean",
+          "Value": false
+        },
+        "Interval Minutes": {
+          "Type": "TypeInteger",
+          "Value": 1
+        }
+      }
+    },
+    "88DB4045CA56E9D2": {
+      "Key": "88DB4045CA56E9D2",
+      "Title": "Disable regulators",
+      "NodeType": "MCUSetPin",
+      "LocationX": 4181,
+      "LocationY": 1902,
+      "Properties": {
+        "Pin": {
+          "Type": "TypeInteger",
+          "ReferenceKey": "MCURegulatorEnablePin"
+        },
+        "Pin State": {
+          "Type": "TypeItemSwitch",
+          "Value": "LOW"
+        },
+        "Timeout Milliseconds": {
+          "Type": "TypeInteger",
+          "Value": 5000
+        }
+      }
+    },
+    "88DB4046385485EB": {
+      "Key": "88DB4046385485EB",
+      "Title": "DevCon Remove Drive Models",
+      "NodeType": "DevConRemoveDriveModels",
+      "LocationX": 4108,
+      "LocationY": 2277,
+      "Properties": {
+        "Timeout Seconds": {
+          "Type": "TypeInteger",
+          "Value": 120
+        }
+      }
+    },
+    "88DB40464877A689": {
+      "Key": "88DB40464877A689",
+      "Title": "DevCon Rescan",
+      "NodeType": "DevConRescan",
+      "LocationX": 4108,
+      "LocationY": 2444,
+      "Properties": {
+        "Timeout Seconds": {
+          "Type": "TypeInteger",
+          "Value": 120
+        }
+      }
+    },
+    "88DB40465FC1695C": {
+      "Key": "88DB40465FC1695C",
+      "Title": "Wait 5 Seconds",
+      "NodeType": "GeneralWait",
+      "LocationX": 4108,
+      "LocationY": 2612,
+      "Properties": {
+        "Timeout Seconds": {
+          "Type": "TypeInteger",
+          "Value": 5
+        }
+      }
+    },
+    "88DB40466B527906": {
+      "Key": "88DB40466B527906",
+      "Title": "Go To Clean Power Cycle",
+      "NodeType": "GeneralGoToNode",
+      "LocationX": 4109,
+      "LocationY": 2758,
+      "Properties": {
+        "Go To Node Key": {
+          "Type": "TypeString",
+          "Value": "88DB5C8C2FC9FC29"
+        }
+      }
+    },
+    "88DB4048B3C41159": {
+      "Key": "88DB4048B3C41159",
+      "Title": "Check If Full Verify Step",
+      "NodeType": "StepCheck",
+      "LocationX": 5444,
+      "LocationY": 1254,
+      "Properties": {
+        "Compare Operation": {
+          "Type": "TypeItemSwitch",
+          "Value": "="
+        },
+        "Compare Value": {
+          "Type": "TypeInteger",
+          "Value": 12
+        }
+      }
+    },
+    "88DB4048CFC240F4": {
+      "Key": "88DB4048CFC240F4",
+      "Title": "Only run full verify if cycle is multiple of 20",
+      "NodeType": "CycleCheckDivisible",
+      "LocationX": 5443,
+      "LocationY": 1429,
+      "Properties": {
+        "Divisor": {
+          "Type": "TypeInteger",
+          "Value": 40
+        }
+      }
+    },
+    "88DB404904954572": {
+      "Key": "88DB404904954572",
+      "Title": "Go To Increment Step",
+      "NodeType": "GeneralGoToNode",
+      "LocationX": 5482,
+      "LocationY": 1592,
+      "Properties": {
+        "Go To Node Key": {
+          "Type": "TypeString",
+          "Value": "88DB3ACC0B12A29D"
+        }
+      }
+    },
+    "88DB404930BB1010": {
+      "Key": "88DB404930BB1010",
+      "Title": "JustIO Full Read",
+      "NodeType": "WorkloadRunJustIO",
+      "LocationX": 5444,
+      "LocationY": 2076,
+      "Properties": {
+        "Map File Prefix": {
+          "Type": "TypeString",
+          "Value": "FullRead"
+        },
+        "Log File Prefix": {
+          "Type": "TypeString",
+          "Value": "FullRead"
+        },
+        "Data Pattern File Path": {
+          "Type": "TypeString",
+          "Value": "C:\\JustIO\\pattern_8mb.bin"
+        },
+        "Transfer Type": {
+          "Type": "TypeItemSwitch",
+          "Value": "Read"
+        },
+        "Transfer Size Bytes": {
+          "Type": "TypeInteger",
+          "Value": 8388608
+        },
+        "Transfer Rate IOPS": {
+          "Type": "TypeString",
+          "Value": "MAX"
+        },
+        "Transfer Start Offset Bytes": {
+          "Type": "TypeString",
+          "Value": "0"
+        },
+        "Transfer End Offset Bytes": {
+          "Type": "TypeString",
+          "Value": "MAX"
+        },
+        "Random Data Seed": {
+          "Type": "TypeString",
+          "Value": "457237016880"
+        },
+        "Random Data Entropy": {
+          "Type": "TypeInteger",
+          "Value": 10
+        },
+        "Reporting Interval Seconds": {
+          "Type": "TypeInteger",
+          "Value": 120
+        },
+        "Timeout Minutes": {
+          "Type": "TypeInteger",
+          "Value": 720
+        },
+        "Log Results": {
+          "Type": "TypeBoolean",
+          "Value": true
+        },
+        "Interval Minutes": {
+          "Type": "TypeInteger",
+          "Value": 5
+        }
+      }
+    },
+    "88DB404968A02654": {
+      "Key": "88DB404968A02654",
+      "Title": "Rescan Drives",
+      "NodeType": "DrivesRescan",
+      "LocationX": 5364,
+      "LocationY": 2760,
+      "Properties": {
+        "Timeout Seconds": {
+          "Type": "TypeInteger",
+          "Value": 60
+        }
+      }
+    },
+    "88DB404973A22AAE": {
+      "Key": "88DB404973A22AAE",
+      "Title": "Drives Log Temperature",
+      "NodeType": "DrivesLogTemperature",
+      "LocationX": 5364,
+      "LocationY": 2904,
+      "Properties": {}
+    },
+    "88DB4049B2F225D3": {
+      "Key": "88DB4049B2F225D3",
+      "Title": "Stop Flow With Status",
+      "NodeType": "GeneralStopFlowWithStatus",
+      "LocationX": 5806,
+      "LocationY": 3295,
+      "Properties": {
+        "Status Message": {
+          "Type": "TypeString",
+          "Value": "Error running full verify"
+        },
+        "Status Color": {
+          "Type": "TypeItemSwitch",
+          "Value": "RED"
+        },
+        "Send Email": {
+          "Type": "TypeBoolean",
+          "Value": true
+        },
+        "Recipients": {
+          "Type": "TypeString",
+          "Value": "[DEFAULT_RECIPIENTS]"
+        },
+        "Priority": {
+          "Type": "TypeItemSwitch",
+          "Value": "High"
+        }
+      }
+    },
+    "88DB4B281D4D46CA": {
+      "Key": "88DB4B281D4D46CA",
+      "Title": "Rescan Drives",
+      "NodeType": "DrivesRescan",
+      "LocationX": -3094,
+      "LocationY": 1335,
+      "Properties": {
+        "Timeout Seconds": {
+          "Type": "TypeInteger",
+          "Value": 60
+        }
+      }
+    },
+    "88DB4B282F1EDFEC": {
+      "Key": "88DB4B282F1EDFEC",
+      "Title": "Create SMART Snapshot CSV",
+      "NodeType": "DrivesCreateSmartSnapshotCsv",
+      "LocationX": -3093,
+      "LocationY": 1707,
+      "Properties": {
+        "Directory Suffix": {
+          "Type": "TypeString",
+          "Value": "justio_full_write_error"
+        }
+      }
+    },
+    "88DB4B28656D6079": {
+      "Key": "88DB4B28656D6079",
+      "Title": "Rescan Drives",
+      "NodeType": "DrivesRescan",
+      "LocationX": -701,
+      "LocationY": 1333,
+      "Properties": {
+        "Timeout Seconds": {
+          "Type": "TypeInteger",
+          "Value": 60
+        }
+      }
+    },
+    "88DB4B286EA6CBD0": {
+      "Key": "88DB4B286EA6CBD0",
+      "Title": "Create SMART Snapshot CSV",
+      "NodeType": "DrivesCreateSmartSnapshotCsv",
+      "LocationX": -699,
+      "LocationY": 1694,
+      "Properties": {
+        "Directory Suffix": {
+          "Type": "TypeString",
+          "Value": "justio_10gb_write_errors"
+        }
+      }
+    },
+    "88DB4B28B73DE424": {
+      "Key": "88DB4B28B73DE424",
+      "Title": "Rescan Drives",
+      "NodeType": "DrivesRescan",
+      "LocationX": 3271,
+      "LocationY": 2712,
+      "Properties": {
+        "Timeout Seconds": {
+          "Type": "TypeInteger",
+          "Value": 60
+        }
+      }
+    },
+    "88DB4B28C036EC45": {
+      "Key": "88DB4B28C036EC45",
+      "Title": "Create SMART Snapshot CSV",
+      "NodeType": "DrivesCreateSmartSnapshotCsv",
+      "LocationX": 3271,
+      "LocationY": 3081,
+      "Properties": {
+        "Directory Suffix": {
+          "Type": "TypeString",
+          "Value": "justio_10gb_read_fail"
+        }
+      }
+    },
+    "88DB4B290F69512D": {
+      "Key": "88DB4B290F69512D",
+      "Title": "Rescan Drives",
+      "NodeType": "DrivesRescan",
+      "LocationX": 5805,
+      "LocationY": 2733,
+      "Properties": {
+        "Timeout Seconds": {
+          "Type": "TypeInteger",
+          "Value": 60
+        }
+      }
+    },
+    "88DB4B291A58A772": {
+      "Key": "88DB4B291A58A772",
+      "Title": "Create SMART Snapshot CSV",
+      "NodeType": "DrivesCreateSmartSnapshotCsv",
+      "LocationX": 5805,
+      "LocationY": 3099,
+      "Properties": {
+        "Directory Suffix": {
+          "Type": "TypeString",
+          "Value": "justio_full_read_errors"
+        }
+      }
+    },
+    "88DB4FE5515F0270": {
+      "Key": "88DB4FE5515F0270",
+      "Title": "Go To Entry Node",
+      "NodeType": "GeneralGoToEntry",
+      "LocationX": 7480,
+      "LocationY": 2775,
+      "Properties": {}
+    },
+    "88DB5230B25F2420": {
+      "Key": "88DB5230B25F2420",
+      "Title": "Send Snapshot Email",
+      "NodeType": "EmailSendSnapshot",
+      "LocationX": 4606,
+      "LocationY": 2086,
+      "Properties": {
+        "Recipients": {
+          "Type": "TypeString",
+          "Value": "[DEFAULT_RECIPIENTS]"
+        },
+        "Priority": {
+          "Type": "TypeItemSwitch",
+          "Value": "Normal"
+        },
+        "Subject": {
+          "Type": "TypeString",
+          "Value": "Errors running async power cycle (bluescreen likely) "
+        },
+        "Body": {
+          "Type": "TypeString",
+          "Value": "Errors running async power cycle (bluescreen likely) attempting recovery"
+        }
+      }
+    },
+    "88DB5230DD310406": {
+      "Key": "88DB5230DD310406",
+      "Title": "Client Connection Wait Until Alive",
+      "NodeType": "ClientConnectionWaitAlive",
+      "LocationX": 4606,
+      "LocationY": 2382,
+      "Properties": {
+        "Timeout Seconds": {
+          "Type": "TypeInteger",
+          "Value": 180
+        }
+      }
+    },
+    "88DB5230EE34B8E0": {
+      "Key": "88DB5230EE34B8E0",
+      "Title": "Stop Flow With Status",
+      "NodeType": "GeneralStopFlowWithStatus",
+      "LocationX": 4716,
+      "LocationY": 2538,
+      "Properties": {
+        "Status Message": {
+          "Type": "TypeString",
+          "Value": "Unable to recover after async errors"
+        },
+        "Status Color": {
+          "Type": "TypeItemSwitch",
+          "Value": "RED"
+        },
+        "Send Email": {
+          "Type": "TypeBoolean",
+          "Value": false
+        },
+        "Recipients": {
+          "Type": "TypeString",
+          "Value": "[DEFAULT_RECIPIENTS]"
+        },
+        "Priority": {
+          "Type": "TypeItemSwitch",
+          "Value": "High"
+        }
+      }
+    },
+    "88DB5C8BB1CF9D76": {
+      "Key": "88DB5C8BB1CF9D76",
+      "Title": "Stop Flow With Status",
+      "NodeType": "GeneralStopFlowWithStatus",
+      "LocationX": -873,
+      "LocationY": -1765,
+      "Properties": {
+        "Status Message": {
+          "Type": "TypeString",
+          "Value": "Client not ready!"
+        },
+        "Status Color": {
+          "Type": "TypeItemSwitch",
+          "Value": "RED"
+        },
+        "Send Email": {
+          "Type": "TypeBoolean",
+          "Value": false
+        },
+        "Recipients": {
+          "Type": "TypeString",
+          "Value": "[DEFAULT_RECIPIENTS]"
+        },
+        "Priority": {
+          "Type": "TypeItemSwitch",
+          "Value": "High"
+        }
+      }
+    },
+    "88DB5C8BB1D20E71": {
+      "Key": "88DB5C8BB1D20E71",
+      "Title": "Client System Set Time",
+      "NodeType": "ClientSystemSetTime",
+      "LocationX": -1220,
+      "LocationY": -1680,
+      "Properties": {}
+    },
+    "88DB5C8BB1D47F75": {
+      "Key": "88DB5C8BB1D47F75",
+      "Title": "Client Connection Check Status",
+      "NodeType": "ClientConnectionCheckStatus",
+      "LocationX": -1220,
+      "LocationY": -1819,
+      "Properties": {}
+    },
+    "88DB5C8BCD734849": {
+      "Key": "88DB5C8BCD734849",
+      "Title": "SMARTCTL Get Extended SMART (0xE1, Micron)",
+      "NodeType": "SmartCtlGetExtSmartE1Micron",
+      "LocationX": -3093,
+      "LocationY": 1477,
+      "Properties": {
+        "Timeout Seconds": {
+          "Type": "TypeInteger",
+          "Value": 45
+        }
+      }
+    },
+    "88DB5C8BFAA9A083": {
+      "Key": "88DB5C8BFAA9A083",
+      "Title": "SMARTCTL Get Extended SMART (0xE1, Micron)",
+      "NodeType": "SmartCtlGetExtSmartE1Micron",
+      "LocationX": -698,
+      "LocationY": 1471,
+      "Properties": {
+        "Timeout Seconds": {
+          "Type": "TypeInteger",
+          "Value": 45
+        }
+      }
+    },
+    "88DB5C8C2FA583A5": {
+      "Key": "88DB5C8C2FA583A5",
+      "Title": "Waiting for client connection...",
+      "NodeType": "ClientConnectionWaitAlive",
+      "LocationX": 757,
+      "LocationY": 2942,
+      "Properties": {
+        "Timeout Seconds": {
+          "Type": "TypeInteger",
+          "Value": 900
+        }
+      }
+    },
+    "88DB5C8C2FA81E9D": {
+      "Key": "88DB5C8C2FA81E9D",
+      "Title": "Stop Flow With Status",
+      "NodeType": "GeneralStopFlowWithStatus",
+      "LocationX": 1094,
+      "LocationY": 2954,
+      "Properties": {
+        "Status Message": {
+          "Type": "TypeString",
+          "Value": "Errors running cold boot"
+        },
+        "Status Color": {
+          "Type": "TypeItemSwitch",
+          "Value": "RED"
+        },
+        "Send Email": {
+          "Type": "TypeBoolean",
+          "Value": true
+        },
+        "Recipients": {
+          "Type": "TypeString",
+          "Value": "[DEFAULT_RECIPIENTS]"
+        },
+        "Priority": {
+          "Type": "TypeItemSwitch",
+          "Value": "High"
+        }
+      }
+    },
+    "88DB5C8C2FAA8CC2": {
+      "Key": "88DB5C8C2FAA8CC2",
+      "Title": "SNMP Wait For System to Draw Power",
+      "NodeType": "SNMPWaitForOutletCurrentDrawCondition",
+      "LocationX": 756,
+      "LocationY": 2575,
+      "Properties": {
+        "SNMP Device IP": {
+          "Type": "TypeString",
+          "ReferenceKey": "SNMPIPSystem"
+        },
+        "Outlet Number": {
+          "Type": "TypeInteger",
+          "ReferenceKey": "SNMPOutletSystem"
+        },
+        "Current Draw Compare Operation": {
+          "Type": "TypeItemSwitch",
+          "Value": ">"
+        },
+        "Current Draw Compare Value": {
+          "Type": "TypeDouble",
+          "Value": 0.2
+        },
+        "Timeout Seconds": {
+          "Type": "TypeInteger",
+          "Value": 60
+        }
+      }
+    },
+    "88DB5C8C2FACFE0E": {
+      "Key": "88DB5C8C2FACFE0E",
+      "Title": "Client System Send WOL",
+      "NodeType": "ClientSystemSendWOL",
+      "LocationX": 756,
+      "LocationY": 2460,
+      "Properties": {}
+    },
+    "88DB5C8C2FAF7192": {
+      "Key": "88DB5C8C2FAF7192",
+      "Title": "Send email about issue turning on",
+      "NodeType": "EmailSendSnapshot",
+      "LocationX": 109,
+      "LocationY": 2942,
+      "Properties": {
+        "Recipients": {
+          "Type": "TypeString",
+          "Value": "[DEFAULT_RECIPIENTS]"
+        },
+        "Priority": {
+          "Type": "TypeItemSwitch",
+          "Value": "Normal"
+        },
+        "Subject": {
+          "Type": "TypeString",
+          "Value": "Unable to turn on system"
+        },
+        "Body": {
+          "Type": "TypeString",
+          "Value": "Sending power up command again"
+        }
+      }
+    },
+    "88DB5C8C2FB1E2E2": {
+      "Key": "88DB5C8C2FB1E2E2",
+      "Title": "Allow time for backplane to power on",
+      "NodeType": "GeneralWait",
+      "LocationX": 755,
+      "LocationY": 2306,
+      "Properties": {
+        "Timeout Seconds": {
+          "Type": "TypeInteger",
+          "Value": 5
+        }
+      }
+    },
+    "88DB5C8C2FB453BC": {
+      "Key": "88DB5C8C2FB453BC",
+      "Title": "Turn on backplane",
+      "NodeType": "SNMPSetOutletStatus",
+      "LocationX": 755,
+      "LocationY": 2069,
+      "Properties": {
+        "SNMP Device IP": {
+          "Type": "TypeString",
+          "ReferenceKey": "SNMPIPBackplane"
+        },
+        "Outlet Number": {
+          "Type": "TypeInteger",
+          "ReferenceKey": "SNMPOutletBackplane"
+        },
+        "Outlet Status": {
+          "Type": "TypeItemSwitch",
+          "Value": "On"
+        },
+        "Timeout Seconds": {
+          "Type": "TypeInteger",
+          "Value": 5
+        }
+      }
+    },
+    "88DB5C8C2FB6C4A6": {
+      "Key": "88DB5C8C2FB6C4A6",
+      "Title": "Go To Send WOL",
+      "NodeType": "GeneralGoToNode",
+      "LocationX": 108,
+      "LocationY": 3233,
+      "Properties": {
+        "Go To Node Key": {
+          "Type": "TypeString",
+          "Value": "88DB5C8C2FACFE0E"
+        }
+      }
+    },
+    "88DB5C8C2FB935AB": {
+      "Key": "88DB5C8C2FB935AB",
+      "Title": "Allow some time to force power down",
+      "NodeType": "GeneralWait",
+      "LocationX": 86,
+      "LocationY": 1855,
+      "Properties": {
+        "Timeout Seconds": {
+          "Type": "TypeInteger",
+          "Value": 10
+        }
+      }
+    },
+    "88DB5C8C2FBB7FA4": {
+      "Key": "88DB5C8C2FBB7FA4",
+      "Title": "System off for 10 seconds",
+      "NodeType": "GeneralWait",
+      "LocationX": 755,
+      "LocationY": 1739,
+      "Properties": {
+        "Timeout Seconds": {
+          "Type": "TypeInteger",
+          "Value": 10
+        }
+      }
+    },
+    "88DB5C8C2FBDF0BA": {
+      "Key": "88DB5C8C2FBDF0BA",
+      "Title": "SNMP Force System Off",
+      "NodeType": "SNMPSetOutletStatus",
+      "LocationX": 87,
+      "LocationY": 1619,
+      "Properties": {
+        "SNMP Device IP": {
+          "Type": "TypeString",
+          "ReferenceKey": "SNMPIPSystem"
+        },
+        "Outlet Number": {
+          "Type": "TypeInteger",
+          "ReferenceKey": "SNMPOutletSystem"
+        },
+        "Outlet Status": {
+          "Type": "TypeItemSwitch",
+          "Value": "Off"
+        },
+        "Timeout Seconds": {
+          "Type": "TypeInteger",
+          "Value": 5
+        }
+      }
+    },
+    "88DB5C8C2FC061A1": {
+      "Key": "88DB5C8C2FC061A1",
+      "Title": "SNMP Reapply System Power",
+      "NodeType": "SNMPSetOutletStatus",
+      "LocationX": 85,
+      "LocationY": 1998,
+      "Properties": {
+        "SNMP Device IP": {
+          "Type": "TypeString",
+          "ReferenceKey": "SNMPIPSystem"
+        },
+        "Outlet Number": {
+          "Type": "TypeInteger",
+          "ReferenceKey": "SNMPOutletSystem"
+        },
+        "Outlet Status": {
+          "Type": "TypeItemSwitch",
+          "Value": "On"
+        },
+        "Timeout Seconds": {
+          "Type": "TypeInteger",
+          "Value": 5
+        }
+      }
+    },
+    "88DB5C8C2FC2D2AE": {
+      "Key": "88DB5C8C2FC2D2AE",
+      "Title": "Send email about issue shutting down",
+      "NodeType": "EmailSendSnapshot",
+      "LocationX": 87,
+      "LocationY": 1321,
+      "Properties": {
+        "Recipients": {
+          "Type": "TypeString",
+          "Value": "[DEFAULT_RECIPIENTS]"
+        },
+        "Priority": {
+          "Type": "TypeItemSwitch",
+          "Value": "Normal"
+        },
+        "Subject": {
+          "Type": "TypeString",
+          "Value": "Unable to gracefully shutdown"
+        },
+        "Body": {
+          "Type": "TypeString",
+          "Value": "Forcing system off"
+        }
+      }
+    },
+    "88DB5C8C2FC543B0": {
+      "Key": "88DB5C8C2FC543B0",
+      "Title": "Turn off backplane",
+      "NodeType": "SNMPSetOutletStatus",
+      "LocationX": 752,
+      "LocationY": 1302,
+      "Properties": {
+        "SNMP Device IP": {
+          "Type": "TypeString",
+          "ReferenceKey": "SNMPIPBackplane"
+        },
+        "Outlet Number": {
+          "Type": "TypeInteger",
+          "ReferenceKey": "SNMPOutletBackplane"
+        },
+        "Outlet Status": {
+          "Type": "TypeItemSwitch",
+          "Value": "Off"
+        },
+        "Timeout Seconds": {
+          "Type": "TypeInteger",
+          "Value": 5
+        }
+      }
+    },
+    "88DB5C8C2FC78DB5": {
+      "Key": "88DB5C8C2FC78DB5",
+      "Title": "SNMP Wait For System To Power Off",
+      "NodeType": "SNMPWaitForOutletCurrentDrawCondition",
+      "LocationX": 752,
+      "LocationY": 943,
+      "Properties": {
+        "SNMP Device IP": {
+          "Type": "TypeString",
+          "ReferenceKey": "SNMPIPSystem"
+        },
+        "Outlet Number": {
+          "Type": "TypeInteger",
+          "ReferenceKey": "SNMPOutletSystem"
+        },
+        "Current Draw Compare Operation": {
+          "Type": "TypeItemSwitch",
+          "Value": "<"
+        },
+        "Current Draw Compare Value": {
+          "Type": "TypeDouble",
+          "Value": 0.2
+        },
+        "Timeout Seconds": {
+          "Type": "TypeInteger",
+          "Value": 60
+        }
+      }
+    },
+    "88DB5C8C2FC9FC29": {
+      "Key": "88DB5C8C2FC9FC29",
+      "Title": "Client System Send Shutdown",
+      "NodeType": "ClientSystemSendShutdown",
+      "LocationX": 751,
+      "LocationY": 832,
+      "Properties": {}
+    },
+    "88DB5C8C58CD4F65": {
+      "Key": "88DB5C8C58CD4F65",
+      "Title": "Enable regulators",
+      "NodeType": "MCUSetPin",
+      "LocationX": 755,
+      "LocationY": 1872,
+      "Properties": {
+        "Pin": {
+          "Type": "TypeInteger",
+          "ReferenceKey": "MCURegulatorEnablePin"
+        },
+        "Pin State": {
+          "Type": "TypeItemSwitch",
+          "Value": "FLOATING"
+        },
+        "Timeout Milliseconds": {
+          "Type": "TypeInteger",
+          "Value": 5000
+        }
+      }
+    },
+    "88DB5C8C58CD9D84": {
+      "Key": "88DB5C8C58CD9D84",
+      "Title": "Disable regulators",
+      "NodeType": "MCUSetPin",
+      "LocationX": 753,
+      "LocationY": 1536,
+      "Properties": {
+        "Pin": {
+          "Type": "TypeInteger",
+          "ReferenceKey": "MCURegulatorEnablePin"
+        },
+        "Pin State": {
+          "Type": "TypeItemSwitch",
+          "Value": "LOW"
+        },
+        "Timeout Milliseconds": {
+          "Type": "TypeInteger",
+          "Value": 5000
+        }
+      }
+    },
+    "88DB5C8C838F19F2": {
+      "Key": "88DB5C8C838F19F2",
+      "Title": "Stop Flow With Status",
+      "NodeType": "GeneralStopFlowWithStatus",
+      "LocationX": 7816,
+      "LocationY": 2132,
+      "Properties": {
+        "Status Message": {
+          "Type": "TypeString",
+          "Value": "Errors running cold boot"
+        },
+        "Status Color": {
+          "Type": "TypeItemSwitch",
+          "Value": "RED"
+        },
+        "Send Email": {
+          "Type": "TypeBoolean",
+          "Value": true
+        },
+        "Recipients": {
+          "Type": "TypeString",
+          "Value": "[DEFAULT_RECIPIENTS]"
+        },
+        "Priority": {
+          "Type": "TypeItemSwitch",
+          "Value": "High"
+        }
+      }
+    },
+    "88DB5C8C838F6B4C": {
+      "Key": "88DB5C8C838F6B4C",
+      "Title": "SNMP Wait For System to Draw Power",
+      "NodeType": "SNMPWaitForOutletCurrentDrawCondition",
+      "LocationX": 7478,
+      "LocationY": 1753,
+      "Properties": {
+        "SNMP Device IP": {
+          "Type": "TypeString",
+          "ReferenceKey": "SNMPIPSystem"
+        },
+        "Outlet Number": {
+          "Type": "TypeInteger",
+          "ReferenceKey": "SNMPOutletSystem"
+        },
+        "Current Draw Compare Operation": {
+          "Type": "TypeItemSwitch",
+          "Value": ">"
+        },
+        "Current Draw Compare Value": {
+          "Type": "TypeDouble",
+          "Value": 0.2
+        },
+        "Timeout Seconds": {
+          "Type": "TypeInteger",
+          "Value": 60
+        }
+      }
+    },
+    "88DB5C8C838FB788": {
+      "Key": "88DB5C8C838FB788",
+      "Title": "Waiting for client connection...",
+      "NodeType": "ClientConnectionWaitAlive",
+      "LocationX": 7479,
+      "LocationY": 2120,
+      "Properties": {
+        "Timeout Seconds": {
+          "Type": "TypeInteger",
+          "Value": 900
+        }
+      }
+    },
+    "88DB5C8C83900721": {
+      "Key": "88DB5C8C83900721",
+      "Title": "Client System Send WOL",
+      "NodeType": "ClientSystemSendWOL",
+      "LocationX": 7477,
+      "LocationY": 1638,
+      "Properties": {}
+    },
+    "88DB5C8C8390554B": {
+      "Key": "88DB5C8C8390554B",
+      "Title": "Allow time for backplane to power on",
+      "NodeType": "GeneralWait",
+      "LocationX": 7477,
+      "LocationY": 1484,
+      "Properties": {
+        "Timeout Seconds": {
+          "Type": "TypeInteger",
+          "Value": 5
+        }
+      }
+    },
+    "88DB5C8C8390A39A": {
+      "Key": "88DB5C8C8390A39A",
+      "Title": "Turn on backplane",
+      "NodeType": "SNMPSetOutletStatus",
+      "LocationX": 7477,
+      "LocationY": 1247,
+      "Properties": {
+        "SNMP Device IP": {
+          "Type": "TypeString",
+          "ReferenceKey": "SNMPIPBackplane"
+        },
+        "Outlet Number": {
+          "Type": "TypeInteger",
+          "ReferenceKey": "SNMPOutletBackplane"
+        },
+        "Outlet Status": {
+          "Type": "TypeItemSwitch",
+          "Value": "On"
+        },
+        "Timeout Seconds": {
+          "Type": "TypeInteger",
+          "Value": 5
+        }
+      }
+    },
+    "88DB5C8C8390F17A": {
+      "Key": "88DB5C8C8390F17A",
+      "Title": "Enable regulators",
+      "NodeType": "MCUSetPin",
+      "LocationX": 7477,
+      "LocationY": 1050,
+      "Properties": {
+        "Pin": {
+          "Type": "TypeInteger",
+          "ReferenceKey": "MCURegulatorEnablePin"
+        },
+        "Pin State": {
+          "Type": "TypeItemSwitch",
+          "Value": "FLOATING"
+        },
+        "Timeout Milliseconds": {
+          "Type": "TypeInteger",
+          "Value": 5000
+        }
+      }
+    },
+    "88DB5C8C83913FA8": {
+      "Key": "88DB5C8C83913FA8",
+      "Title": "System off for 10 seconds",
+      "NodeType": "GeneralWait",
+      "LocationX": 7477,
+      "LocationY": 917,
+      "Properties": {
+        "Timeout Seconds": {
+          "Type": "TypeInteger",
+          "Value": 10
+        }
+      }
+    },
+    "88DB5C8C83918DFD": {
+      "Key": "88DB5C8C83918DFD",
+      "Title": "Disable regulators",
+      "NodeType": "MCUSetPin",
+      "LocationX": 7475,
+      "LocationY": 714,
+      "Properties": {
+        "Pin": {
+          "Type": "TypeInteger",
+          "ReferenceKey": "MCURegulatorEnablePin"
+        },
+        "Pin State": {
+          "Type": "TypeItemSwitch",
+          "Value": "LOW"
+        },
+        "Timeout Milliseconds": {
+          "Type": "TypeInteger",
+          "Value": 5000
+        }
+      }
+    },
+    "88DB5C8C8391DBF2": {
+      "Key": "88DB5C8C8391DBF2",
+      "Title": "Turn off backplane",
+      "NodeType": "SNMPSetOutletStatus",
+      "LocationX": 7474,
+      "LocationY": 480,
+      "Properties": {
+        "SNMP Device IP": {
+          "Type": "TypeString",
+          "ReferenceKey": "SNMPIPBackplane"
+        },
+        "Outlet Number": {
+          "Type": "TypeInteger",
+          "ReferenceKey": "SNMPOutletBackplane"
+        },
+        "Outlet Status": {
+          "Type": "TypeItemSwitch",
+          "Value": "Off"
+        },
+        "Timeout Seconds": {
+          "Type": "TypeInteger",
+          "Value": 5
+        }
+      }
+    },
+    "88DB5C8C83922729": {
+      "Key": "88DB5C8C83922729",
+      "Title": "SNMP Wait For System To Power Off",
+      "NodeType": "SNMPWaitForOutletCurrentDrawCondition",
+      "LocationX": 7474,
+      "LocationY": 121,
+      "Properties": {
+        "SNMP Device IP": {
+          "Type": "TypeString",
+          "ReferenceKey": "SNMPIPSystem"
+        },
+        "Outlet Number": {
+          "Type": "TypeInteger",
+          "ReferenceKey": "SNMPOutletSystem"
+        },
+        "Current Draw Compare Operation": {
+          "Type": "TypeItemSwitch",
+          "Value": "<"
+        },
+        "Current Draw Compare Value": {
+          "Type": "TypeDouble",
+          "Value": 0.2
+        },
+        "Timeout Seconds": {
+          "Type": "TypeInteger",
+          "Value": 60
+        }
+      }
+    },
+    "88DB5C8C8392782E": {
+      "Key": "88DB5C8C8392782E",
+      "Title": "Send email about issue turning on",
+      "NodeType": "EmailSendSnapshot",
+      "LocationX": 6831,
+      "LocationY": 2120,
+      "Properties": {
+        "Recipients": {
+          "Type": "TypeString",
+          "Value": "[DEFAULT_RECIPIENTS]"
+        },
+        "Priority": {
+          "Type": "TypeItemSwitch",
+          "Value": "Normal"
+        },
+        "Subject": {
+          "Type": "TypeString",
+          "Value": "Unable to turn on system"
+        },
+        "Body": {
+          "Type": "TypeString",
+          "Value": "Sending power up command again"
+        }
+      }
+    },
+    "88DB5C8C8392C652": {
+      "Key": "88DB5C8C8392C652",
+      "Title": "Send email about issue shutting down",
+      "NodeType": "EmailSendSnapshot",
+      "LocationX": 6809,
+      "LocationY": 499,
+      "Properties": {
+        "Recipients": {
+          "Type": "TypeString",
+          "Value": "[DEFAULT_RECIPIENTS]"
+        },
+        "Priority": {
+          "Type": "TypeItemSwitch",
+          "Value": "Normal"
+        },
+        "Subject": {
+          "Type": "TypeString",
+          "Value": "Unable to gracefully shutdown"
+        },
+        "Body": {
+          "Type": "TypeString",
+          "Value": "Forcing system off"
+        }
+      }
+    },
+    "88DB5C8C839314E2": {
+      "Key": "88DB5C8C839314E2",
+      "Title": "Client System Send Shutdown",
+      "NodeType": "ClientSystemSendShutdown",
+      "LocationX": 7473,
+      "LocationY": 10,
+      "Properties": {}
+    },
+    "88DB5C8C8393628C": {
+      "Key": "88DB5C8C8393628C",
+      "Title": "Go To Send WOL",
+      "NodeType": "GeneralGoToNode",
+      "LocationX": 6830,
+      "LocationY": 2411,
+      "Properties": {
+        "Go To Node Key": {
+          "Type": "TypeString",
+          "Value": "88DB5C8C83900721"
+        }
+      }
+    },
+    "88DB5C8C8393ADD2": {
+      "Key": "88DB5C8C8393ADD2",
+      "Title": "Allow some time to force power down",
+      "NodeType": "GeneralWait",
+      "LocationX": 6808,
+      "LocationY": 1033,
+      "Properties": {
+        "Timeout Seconds": {
+          "Type": "TypeInteger",
+          "Value": 10
+        }
+      }
+    },
+    "88DB5C8C8393FEF3": {
+      "Key": "88DB5C8C8393FEF3",
+      "Title": "SNMP Reapply System Power",
+      "NodeType": "SNMPSetOutletStatus",
+      "LocationX": 6807,
+      "LocationY": 1176,
+      "Properties": {
+        "SNMP Device IP": {
+          "Type": "TypeString",
+          "ReferenceKey": "SNMPIPSystem"
+        },
+        "Outlet Number": {
+          "Type": "TypeInteger",
+          "ReferenceKey": "SNMPOutletSystem"
+        },
+        "Outlet Status": {
+          "Type": "TypeItemSwitch",
+          "Value": "On"
+        },
+        "Timeout Seconds": {
+          "Type": "TypeInteger",
+          "Value": 5
+        }
+      }
+    },
+    "88DB5C8C83944D17": {
+      "Key": "88DB5C8C83944D17",
+      "Title": "SNMP Force System Off",
+      "NodeType": "SNMPSetOutletStatus",
+      "LocationX": 6809,
+      "LocationY": 797,
+      "Properties": {
+        "SNMP Device IP": {
+          "Type": "TypeString",
+          "ReferenceKey": "SNMPIPSystem"
+        },
+        "Outlet Number": {
+          "Type": "TypeInteger",
+          "ReferenceKey": "SNMPOutletSystem"
+        },
+        "Outlet Status": {
+          "Type": "TypeItemSwitch",
+          "Value": "Off"
+        },
+        "Timeout Seconds": {
+          "Type": "TypeInteger",
+          "Value": 5
+        }
+      }
+    },
+    "88DB5C8D9A151196": {
+      "Key": "88DB5C8D9A151196",
+      "Title": "SMARTCTL Get Extended SMART (0xE1, Micron)",
+      "NodeType": "SmartCtlGetExtSmartE1Micron",
+      "LocationX": 3272,
+      "LocationY": 2854,
+      "Properties": {
+        "Timeout Seconds": {
+          "Type": "TypeInteger",
+          "Value": 45
+        }
+      }
+    },
+    "88DB5C8E344CC61E": {
+      "Key": "88DB5C8E344CC61E",
+      "Title": "Check if cycle 0",
+      "NodeType": "CycleCheck",
+      "LocationX": 290,
+      "LocationY": 11531,
+      "Properties": {
+        "Compare Operation": {
+          "Type": "TypeItemSwitch",
+          "Value": "="
+        },
+        "Compare Value": {
+          "Type": "TypeInteger",
+          "Value": 0
+        }
+      }
+    },
+    "88DB5C8E344EC1F1": {
+      "Key": "88DB5C8E344EC1F1",
+      "Title": "Check Ext SMART Program Fail Count",
+      "NodeType": "DrivesCheckSmartAttributeValueChanged",
+      "LocationX": 245,
+      "LocationY": 9400,
+      "Properties": {
+        "Only Check Found Drives": {
+          "Type": "TypeBoolean",
+          "Value": true
+        },
+        "SMART Attribute ID": {
+          "Type": "TypeString",
+          "Value": "ext_program_fail_count"
+        },
+        "Ignore Missing Attribute ID": {
+          "Type": "TypeBoolean",
+          "Value": true
+        },
+        "Log Errors (Changed/Missing Values)": {
+          "Type": "TypeBoolean",
+          "Value": true
+        }
+      }
+    },
+    "88DB5C8E345132F6": {
+      "Key": "88DB5C8E345132F6",
+      "Title": "Check If Step 0 For VU Data",
+      "NodeType": "StepCheck",
+      "LocationX": 246,
+      "LocationY": 9767,
+      "Properties": {
+        "Compare Operation": {
+          "Type": "TypeItemSwitch",
+          "Value": "="
+        },
+        "Compare Value": {
+          "Type": "TypeInteger",
+          "Value": 0
+        }
+      }
+    },
+    "88DB5C8E3453A3F8": {
+      "Key": "88DB5C8E3453A3F8",
+      "Title": "Send Snapshot Email",
+      "NodeType": "EmailSendSnapshot",
+      "LocationX": 784,
+      "LocationY": 9420,
+      "Properties": {
+        "Recipients": {
+          "Type": "TypeString",
+          "Value": "[DEFAULT_RECIPIENTS]"
+        },
+        "Priority": {
+          "Type": "TypeItemSwitch",
+          "Value": "Normal"
+        },
+        "Subject": {
+          "Type": "TypeString",
+          "Value": "At least one drive has program fail count changed"
+        },
+        "Body": {
+          "Type": "TypeString",
+          "Value": "At least one drive has program fail count changed"
+        }
+      }
+    },
+    "88DB5C8E345614FB": {
+      "Key": "88DB5C8E345614FB",
+      "Title": "Send email about errors getting VU data",
+      "NodeType": "EmailSendSnapshot",
+      "LocationX": 663,
+      "LocationY": 11000,
+      "Properties": {
+        "Recipients": {
+          "Type": "TypeString",
+          "Value": "[DEFAULT_RECIPIENTS]"
+        },
+        "Priority": {
+          "Type": "TypeItemSwitch",
+          "Value": "Normal"
+        },
+        "Subject": {
+          "Type": "TypeString",
+          "Value": "Errors getting VU data (BS)"
+        },
+        "Body": {
+          "Type": "TypeString",
+          "Value": "Errors getting VU data (BS)"
+        }
+      }
+    },
+    "88DB5C8E345885FF": {
+      "Key": "88DB5C8E345885FF",
+      "Title": "Check Ext SMART Erase Fail Count",
+      "NodeType": "DrivesCheckSmartAttributeValueChanged",
+      "LocationX": 245,
+      "LocationY": 9041,
+      "Properties": {
+        "Only Check Found Drives": {
+          "Type": "TypeBoolean",
+          "Value": true
+        },
+        "SMART Attribute ID": {
+          "Type": "TypeString",
+          "Value": "ext_erase_fail_count"
+        },
+        "Ignore Missing Attribute ID": {
+          "Type": "TypeBoolean",
+          "Value": true
+        },
+        "Log Errors (Changed/Missing Values)": {
+          "Type": "TypeBoolean",
+          "Value": true
+        }
+      }
+    },
+    "88DB5C8E345ACFF4": {
+      "Key": "88DB5C8E345ACFF4",
+      "Title": "Send Snapshot Email",
+      "NodeType": "EmailSendSnapshot",
+      "LocationX": 793,
+      "LocationY": 9063,
+      "Properties": {
+        "Recipients": {
+          "Type": "TypeString",
+          "Value": "[DEFAULT_RECIPIENTS]"
+        },
+        "Priority": {
+          "Type": "TypeItemSwitch",
+          "Value": "Normal"
+        },
+        "Subject": {
+          "Type": "TypeString",
+          "Value": "At least one drive has erase fail count changed"
+        },
+        "Body": {
+          "Type": "TypeString",
+          "Value": "At least one drive has erase fail count changed"
+        }
+      }
+    },
+    "88DB5C8E345D40F1": {
+      "Key": "88DB5C8E345D40F1",
+      "Title": "Send email about errors getting VU data",
+      "NodeType": "EmailSendSnapshot",
+      "LocationX": 604,
+      "LocationY": 10246,
+      "Properties": {
+        "Recipients": {
+          "Type": "TypeString",
+          "Value": "[DEFAULT_RECIPIENTS]"
+        },
+        "Priority": {
+          "Type": "TypeItemSwitch",
+          "Value": "Normal"
+        },
+        "Subject": {
+          "Type": "TypeString",
+          "Value": "Errors getting VU data (UEL)"
+        },
+        "Body": {
+          "Type": "TypeString",
+          "Value": "Errors getting VU data (UEL)"
+        }
+      }
+    },
+    "88DB5C8E345FB534": {
+      "Key": "88DB5C8E345FB534",
+      "Title": "Send email about errors getting VU data",
+      "NodeType": "EmailSendSnapshot",
+      "LocationX": 597,
+      "LocationY": 10624,
+      "Properties": {
+        "Recipients": {
+          "Type": "TypeString",
+          "Value": "[DEFAULT_RECIPIENTS]"
+        },
+        "Priority": {
+          "Type": "TypeItemSwitch",
+          "Value": "Normal"
+        },
+        "Subject": {
+          "Type": "TypeString",
+          "Value": "Errors getting VU data (ERS)"
+        },
+        "Body": {
+          "Type": "TypeString",
+          "Value": "Errors getting VU data (ERS)"
+        }
+      }
+    },
+    "88DB5C8E346225E1": {
+      "Key": "88DB5C8E346225E1",
+      "Title": "Check Ext SMART GBB",
+      "NodeType": "DrivesCheckSmartAttributeValueChanged",
+      "LocationX": 244,
+      "LocationY": 8675,
+      "Properties": {
+        "Only Check Found Drives": {
+          "Type": "TypeBoolean",
+          "Value": true
+        },
+        "SMART Attribute ID": {
+          "Type": "TypeString",
+          "Value": "ext_grown_bad_block_count"
+        },
+        "Ignore Missing Attribute ID": {
+          "Type": "TypeBoolean",
+          "Value": true
+        },
+        "Log Errors (Changed/Missing Values)": {
+          "Type": "TypeBoolean",
+          "Value": true
+        }
+      }
+    },
+    "88DB5C8E34649412": {
+      "Key": "88DB5C8E34649412",
+      "Title": "Send Snapshot Email",
+      "NodeType": "EmailSendSnapshot",
+      "LocationX": 778,
+      "LocationY": 8690,
+      "Properties": {
+        "Recipients": {
+          "Type": "TypeString",
+          "Value": "[DEFAULT_RECIPIENTS]"
+        },
+        "Priority": {
+          "Type": "TypeItemSwitch",
+          "Value": "Normal"
+        },
+        "Subject": {
+          "Type": "TypeString",
+          "Value": "At least one drive has GBB attribute changed"
+        },
+        "Body": {
+          "Type": "TypeString",
+          "Value": "At least one drive has GBB attribute changed"
+        }
+      }
+    },
+    "88DB5C8E34670518": {
+      "Key": "88DB5C8E34670518",
+      "Title": "Check Available Spare",
+      "NodeType": "DrivesCheckSmartAttributeValueChanged",
+      "LocationX": 239,
+      "LocationY": 8291,
+      "Properties": {
+        "Only Check Found Drives": {
+          "Type": "TypeBoolean",
+          "Value": true
+        },
+        "SMART Attribute ID": {
+          "Type": "TypeString",
+          "Value": "available_spare"
+        },
+        "Ignore Missing Attribute ID": {
+          "Type": "TypeBoolean",
+          "Value": true
+        },
+        "Log Errors (Changed/Missing Values)": {
+          "Type": "TypeBoolean",
+          "Value": true
+        }
+      }
+    },
+    "88DB5C8E346978F9": {
+      "Key": "88DB5C8E346978F9",
+      "Title": "Send Snapshot Email",
+      "NodeType": "EmailSendSnapshot",
+      "LocationX": 774,
+      "LocationY": 8322,
+      "Properties": {
+        "Recipients": {
+          "Type": "TypeString",
+          "Value": "[DEFAULT_RECIPIENTS]"
+        },
+        "Priority": {
+          "Type": "TypeItemSwitch",
+          "Value": "Normal"
+        },
+        "Subject": {
+          "Type": "TypeString",
+          "Value": "At least one drive has new available spare changes"
+        },
+        "Body": {
+          "Type": "TypeString",
+          "Value": "At least one drive has new available spare changes"
+        }
+      }
+    },
+    "88DB5C8E346BEA04": {
+      "Key": "88DB5C8E346BEA04",
+      "Title": "Check MDIE",
+      "NodeType": "DrivesCheckSmartAttributeValueChanged",
+      "LocationX": 240,
+      "LocationY": 7939,
+      "Properties": {
+        "Only Check Found Drives": {
+          "Type": "TypeBoolean",
+          "Value": true
+        },
+        "SMART Attribute ID": {
+          "Type": "TypeString",
+          "Value": "media_errors"
+        },
+        "Ignore Missing Attribute ID": {
+          "Type": "TypeBoolean",
+          "Value": true
+        },
+        "Log Errors (Changed/Missing Values)": {
+          "Type": "TypeBoolean",
+          "Value": true
+        }
+      }
+    },
+    "88DB5C8E346E5B0F": {
+      "Key": "88DB5C8E346E5B0F",
+      "Title": "Stop flow because of MDIE",
+      "NodeType": "GeneralStopFlowWithStatus",
+      "LocationX": 1266,
+      "LocationY": 7938,
+      "Properties": {
+        "Status Message": {
+          "Type": "TypeString",
+          "Value": "At least one drive has MDIE"
+        },
+        "Status Color": {
+          "Type": "TypeItemSwitch",
+          "Value": "RED"
+        },
+        "Send Email": {
+          "Type": "TypeBoolean",
+          "Value": true
+        },
+        "Recipients": {
+          "Type": "TypeString",
+          "Value": "[DEFAULT_RECIPIENTS]"
+        },
+        "Priority": {
+          "Type": "TypeItemSwitch",
+          "Value": "High"
+        }
+      }
+    },
+    "88DB5C8E3470CBFD": {
+      "Key": "88DB5C8E3470CBFD",
+      "Title": "Create SMART Snapshot CSV",
+      "NodeType": "DrivesCreateSmartSnapshotCsv",
+      "LocationX": 783,
+      "LocationY": 7939,
+      "Properties": {
+        "Directory Suffix": {
+          "Type": "TypeString",
+          "Value": "MDIE_changed"
+        }
+      }
+    },
+    "88DB5C8E34781C29": {
+      "Key": "88DB5C8E34781C29",
+      "Title": "Check SMART Critical Warning",
+      "NodeType": "DrivesCheckSmartAttributeBitwise",
+      "LocationX": 239,
+      "LocationY": 7116,
+      "Properties": {
+        "Only Check Found Drives": {
+          "Type": "TypeBoolean",
+          "Value": true
+        },
+        "SMART Attribute ID": {
+          "Type": "TypeString",
+          "Value": "critical_warning"
+        },
+        "Bitwise Operation": {
+          "Type": "TypeItemSwitch",
+          "Value": "AND"
+        },
+        "Operand": {
+          "Type": "TypeInteger",
+          "Value": 60
+        },
+        "Negate Result": {
+          "Type": "TypeBoolean",
+          "Value": true
+        },
+        "Log Errors (False Checks)": {
+          "Type": "TypeBoolean",
+          "Value": true
+        }
+      }
+    },
+    "88DB5C8E347A661D": {
+      "Key": "88DB5C8E347A661D",
+      "Title": "Stop Flow With Status",
+      "NodeType": "GeneralStopFlowWithStatus",
+      "LocationX": 1408,
+      "LocationY": 7123,
+      "Properties": {
+        "Status Message": {
+          "Type": "TypeString",
+          "Value": "At least one drive has critical warning bits set"
+        },
+        "Status Color": {
+          "Type": "TypeItemSwitch",
+          "Value": "RED"
+        },
+        "Send Email": {
+          "Type": "TypeBoolean",
+          "Value": true
+        },
+        "Recipients": {
+          "Type": "TypeString",
+          "Value": "[DEFAULT_RECIPIENTS]"
+        },
+        "Priority": {
+          "Type": "TypeItemSwitch",
+          "Value": "High"
+        }
+      }
+    },
+    "88DB5C8E347CD726": {
+      "Key": "88DB5C8E347CD726",
+      "Title": "Create SMART Snapshot CSV",
+      "NodeType": "DrivesCreateSmartSnapshotCsv",
+      "LocationX": 930,
+      "LocationY": 7122,
+      "Properties": {
+        "Directory Suffix": {
+          "Type": "TypeString",
+          "Value": "critical_warning"
+        }
+      }
+    },
+    "88DB5C8E347F4825": {
+      "Key": "88DB5C8E347F4825",
+      "Title": "Stop Flow With Status",
+      "NodeType": "GeneralStopFlowWithStatus",
+      "LocationX": 1200,
+      "LocationY": 6783,
+      "Properties": {
+        "Status Message": {
+          "Type": "TypeString",
+          "Value": "At least one drive has transfer mode mismatch"
+        },
+        "Status Color": {
+          "Type": "TypeItemSwitch",
+          "Value": "RED"
+        },
+        "Send Email": {
+          "Type": "TypeBoolean",
+          "Value": true
+        },
+        "Recipients": {
+          "Type": "TypeString",
+          "Value": "[DEFAULT_RECIPIENTS]"
+        },
+        "Priority": {
+          "Type": "TypeItemSwitch",
+          "Value": "High"
+        }
+      }
+    },
+    "88DB5C8E3481B928": {
+      "Key": "88DB5C8E3481B928",
+      "Title": "Check Drives Transfer Modes",
+      "NodeType": "DrivesCheckTransferMode",
+      "LocationX": 239,
+      "LocationY": 6782,
+      "Properties": {
+        "Only Check Found Drives": {
+          "Type": "TypeBoolean",
+          "Value": true
+        },
+        "Log Errors": {
+          "Type": "TypeBoolean",
+          "Value": true
+        }
+      }
+    },
+    "88DB5C8E34842A21": {
+      "Key": "88DB5C8E34842A21",
+      "Title": "Create SMART Snapshot CSV",
+      "NodeType": "DrivesCreateSmartSnapshotCsv",
+      "LocationX": 724,
+      "LocationY": 6782,
+      "Properties": {
+        "Directory Suffix": {
+          "Type": "TypeString",
+          "Value": "transfer_mode_mismatch"
+        }
+      }
+    },
+    "88DB5C8E34869B25": {
+      "Key": "88DB5C8E34869B25",
+      "Title": "Drives Log Temperature",
+      "NodeType": "DrivesLogTemperature",
+      "LocationX": 238,
+      "LocationY": 6636,
+      "Properties": {}
+    },
+    "88DB5C8E34890C2A": {
+      "Key": "88DB5C8E34890C2A",
+      "Title": "Stop Flow With Status",
+      "NodeType": "GeneralStopFlowWithStatus",
+      "LocationX": 887,
+      "LocationY": 6366,
+      "Properties": {
+        "Status Message": {
+          "Type": "TypeString",
+          "Value": "Unable to get extended SMART on all drives"
+        },
+        "Status Color": {
+          "Type": "TypeItemSwitch",
+          "Value": "RED"
+        },
+        "Send Email": {
+          "Type": "TypeBoolean",
+          "Value": true
+        },
+        "Recipients": {
+          "Type": "TypeString",
+          "Value": "[DEFAULT_RECIPIENTS]"
+        },
+        "Priority": {
+          "Type": "TypeItemSwitch",
+          "Value": "High"
+        }
+      }
+    },
+    "88DB5C8E348B7D3A": {
+      "Key": "88DB5C8E348B7D3A",
+      "Title": "SMARTCTL Get Extended SMART (0xE1, Micron)",
+      "NodeType": "SmartCtlGetExtSmartE1Micron",
+      "LocationX": 236,
+      "LocationY": 6363,
+      "Properties": {
+        "Timeout Seconds": {
+          "Type": "TypeInteger",
+          "Value": 45
+        }
+      }
+    },
+    "88DB5C8E348DEE40": {
+      "Key": "88DB5C8E348DEE40",
+      "Title": "Drives Log SMART",
+      "NodeType": "DrivesLogSmart",
+      "LocationX": 235,
+      "LocationY": 6224,
+      "Properties": {}
+    },
+    "88DB5C8E34906271": {
+      "Key": "88DB5C8E34906271",
+      "Title": "Drives Log Status",
+      "NodeType": "DrivesLogStatus",
+      "LocationX": 235,
+      "LocationY": 6075,
+      "Properties": {}
+    },
+    "88DB5C8E3492D31F": {
+      "Key": "88DB5C8E3492D31F",
+      "Title": "Send Rhoads Background Scan Vendor Command",
+      "NodeType": "MicronVendorCommandsRhoadsBackgroundScan",
+      "LocationX": -820,
+      "LocationY": 11024,
+      "Properties": {
+        "File Name Prefix": {
+          "Type": "TypeString",
+          "Value": "BS"
+        },
+        "Save Header": {
+          "Type": "TypeBoolean",
+          "Value": false
+        },
+        "Timeout Seconds": {
+          "Type": "TypeInteger",
+          "Value": 120
+        }
+      }
+    },
+    "88DB5C8E34954438": {
+      "Key": "88DB5C8E34954438",
+      "Title": "Go To Power Cycle",
+      "NodeType": "GeneralGoToNode",
+      "LocationX": 1013,
+      "LocationY": 5996,
+      "Properties": {
+        "Go To Node Key": {
+          "Type": "TypeString",
+          "Value": "88DB5C8C2FC9FC29"
+        }
+      }
+    },
+    "88DB5C8E3497B52C": {
+      "Key": "88DB5C8E3497B52C",
+      "Title": "Send Rhoads UEL Vendor Command",
+      "NodeType": "MicronVendorCommandsRhoadsUEL",
+      "LocationX": -816,
+      "LocationY": 10272,
+      "Properties": {
+        "File Name Prefix": {
+          "Type": "TypeString",
+          "Value": "UEL"
+        },
+        "Save Header": {
+          "Type": "TypeBoolean",
+          "Value": false
+        },
+        "Timeout Seconds": {
+          "Type": "TypeInteger",
+          "Value": 120
+        }
+      }
+    },
+    "88DB5C8E349A2634": {
+      "Key": "88DB5C8E349A2634",
+      "Title": "Send Rhoads ERS Vendor Command",
+      "NodeType": "MicronVendorCommandsRhoadsERS",
+      "LocationX": -817,
+      "LocationY": 10656,
+      "Properties": {
+        "File Name Prefix": {
+          "Type": "TypeString",
+          "Value": "ERS"
+        },
+        "Save Header": {
+          "Type": "TypeBoolean",
+          "Value": false
+        },
+        "Timeout Seconds": {
+          "Type": "TypeInteger",
+          "Value": 120
+        }
+      }
+    },
+    "88DB5C8E349C945A": {
+      "Key": "88DB5C8E349C945A",
+      "Title": "Send email about all not found recovery",
+      "NodeType": "EmailSendSnapshot",
+      "LocationX": 1014,
+      "LocationY": 5704,
+      "Properties": {
+        "Recipients": {
+          "Type": "TypeString",
+          "Value": "[DEFAULT_RECIPIENTS]"
+        },
+        "Priority": {
+          "Type": "TypeItemSwitch",
+          "Value": "Normal"
+        },
+        "Subject": {
+          "Type": "TypeString",
+          "Value": "All not found, attempting recovery"
+        },
+        "Body": {
+          "Type": "TypeString",
+          "Value": "Attempting to recover all not found drives with a power cycle"
+        }
+      }
+    },
+    "88DB5C8E349F0563": {
+      "Key": "88DB5C8E349F0563",
+      "Title": "Check Drives Not Found",
+      "NodeType": "DrivesCheckNotFound",
+      "LocationX": 234,
+      "LocationY": 5421,
+      "Properties": {
+        "Log Errors": {
+          "Type": "TypeBoolean",
+          "Value": true
+        }
+      }
+    },
+    "88DB5C8E34A1794B": {
+      "Key": "88DB5C8E34A1794B",
+      "Title": "Rescan Drives",
+      "NodeType": "DrivesRescan",
+      "LocationX": 234,
+      "LocationY": 5282,
+      "Properties": {
+        "Timeout Seconds": {
+          "Type": "TypeInteger",
+          "Value": 60
+        }
+      }
+    },
+    "88DB5C8E34A3E76E": {
+      "Key": "88DB5C8E34A3E76E",
+      "Title": "Go To Check if we are using the Wilson driver",
+      "NodeType": "GeneralGoToNode",
+      "LocationX": 1158,
+      "LocationY": 5238,
+      "Properties": {
+        "Go To Node Key": {
+          "Type": "TypeString",
+          "Value": "88DB5C8E34B26991"
+        }
+      }
+    },
+    "88DB5C8E34A65B51": {
+      "Key": "88DB5C8E34A65B51",
+      "Title": "Waiting for client connection...",
+      "NodeType": "ClientConnectionWaitAlive",
+      "LocationX": 1159,
+      "LocationY": 5071,
+      "Properties": {
+        "Timeout Seconds": {
+          "Type": "TypeInteger",
+          "Value": 900
+        }
+      }
+    },
+    "88DB5C8E34A8CC38": {
+      "Key": "88DB5C8E34A8CC38",
+      "Title": "Waiting for client to disconnect...",
+      "NodeType": "ClientConnectionWaitDead",
+      "LocationX": 1159,
+      "LocationY": 4934,
+      "Properties": {
+        "Timeout Seconds": {
+          "Type": "TypeInteger",
+          "Value": 60
+        }
+      }
+    },
+    "88DB5C8E34ADAE71": {
+      "Key": "88DB5C8E34ADAE71",
+      "Title": "Rebooting System",
+      "NodeType": "ClientSystemSendReboot",
+      "LocationX": 1159,
+      "LocationY": 4830,
+      "Properties": {}
+    },
+    "88DB5C8E34B01F50": {
+      "Key": "88DB5C8E34B01F50",
+      "Title": "Ensure Wilson driver is installed",
+      "NodeType": "ClientSystemProcessStart",
+      "LocationX": 1160,
+      "LocationY": 4572,
+      "Properties": {
+        "Process Name": {
+          "Type": "TypeString",
+          "Value": "C:\\temp\\microndriver\\wilsondriverupdate\\wilson_mtdriver.bat"
+        },
+        "Arguments": {
+          "Type": "TypeString",
+          "Value": ""
+        },
+        "Wait For Exit": {
+          "Type": "TypeBoolean",
+          "Value": true
+        },
+        "Timeout Seconds": {
+          "Type": "TypeInteger",
+          "Value": 30
+        }
+      }
+    },
+    "88DB5C8E34B26991": {
+      "Key": "88DB5C8E34B26991",
+      "Title": "Check if we are using the Wilson driver",
+      "NodeType": "DevConCheckDeviceDriver",
+      "LocationX": 249,
+      "LocationY": 4336,
+      "Properties": {
+        "Device ID": {
+          "Type": "TypeString",
+          "Value": "pci\\ven_c0a9\"&\"dev_560a"
+        },
+        "Target Driver Name": {
+          "Type": "TypeString",
+          "Value": "Micron NVMe Storage Controller"
+        },
+        "Timeout Seconds": {
+          "Type": "TypeInteger",
+          "Value": 120
+        }
+      }
+    },
+    "88DB5C8E34B4DA4A": {
+      "Key": "88DB5C8E34B4DA4A",
+      "Title": "Stop Flow With Status",
+      "NodeType": "GeneralStopFlowWithStatus",
+      "LocationX": 1642,
+      "LocationY": 4942,
+      "Properties": {
+        "Status Message": {
+          "Type": "TypeString",
+          "Value": "Errors running reboot after driver install"
+        },
+        "Status Color": {
+          "Type": "TypeItemSwitch",
+          "Value": "RED"
+        },
+        "Send Email": {
+          "Type": "TypeBoolean",
+          "Value": true
+        },
+        "Recipients": {
+          "Type": "TypeString",
+          "Value": "[DEFAULT_RECIPIENTS]"
+        },
+        "Priority": {
+          "Type": "TypeItemSwitch",
+          "Value": "High"
+        }
+      }
+    },
+    "88DB5C8E34B74B7D": {
+      "Key": "88DB5C8E34B74B7D",
+      "Title": "Stop Flow With Status",
+      "NodeType": "GeneralStopFlowWithStatus",
+      "LocationX": 1662,
+      "LocationY": 4573,
+      "Properties": {
+        "Status Message": {
+          "Type": "TypeString",
+          "Value": "Errors ensuring Wilson driver is installed "
+        },
+        "Status Color": {
+          "Type": "TypeItemSwitch",
+          "Value": "RED"
+        },
+        "Send Email": {
+          "Type": "TypeBoolean",
+          "Value": true
+        },
+        "Recipients": {
+          "Type": "TypeString",
+          "Value": "[DEFAULT_RECIPIENTS]"
+        },
+        "Priority": {
+          "Type": "TypeItemSwitch",
+          "Value": "High"
+        }
+      }
+    },
+    "88DB6613031781EE": {
+      "Key": "88DB6613031781EE",
+      "Title": "Ensure Wilson driver is installed",
+      "NodeType": "ClientSystemProcessStart",
+      "LocationX": -817,
+      "LocationY": 10019,
+      "Properties": {
+        "Process Name": {
+          "Type": "TypeString",
+          "Value": "C:\\temp\\microndriver\\wilsondriverupdate\\wilson_mtdriver.bat"
+        },
+        "Arguments": {
+          "Type": "TypeString",
+          "Value": ""
+        },
+        "Wait For Exit": {
+          "Type": "TypeBoolean",
+          "Value": true
+        },
+        "Timeout Seconds": {
+          "Type": "TypeInteger",
+          "Value": 30
+        }
+      }
+    },
+    "88DB68664EBA84C9": {
+      "Key": "88DB68664EBA84C9",
+      "Title": "Send Snapshot Email",
+      "NodeType": "EmailSendSnapshot",
+      "LocationX": 490,
+      "LocationY": 4644,
+      "Properties": {
+        "Recipients": {
+          "Type": "TypeString",
+          "Value": "[DEFAULT_RECIPIENTS]"
+        },
+        "Priority": {
+          "Type": "TypeItemSwitch",
+          "Value": "Normal"
+        },
+        "Subject": {
+          "Type": "TypeString",
+          "Value": "Errors checking if the wilson driver is installed"
+        },
+        "Body": {
+          "Type": "TypeString",
+          "Value": "Continuing flow"
+        }
+      }
+    },
+    "88DB692591B5D1F9": {
+      "Key": "88DB692591B5D1F9",
+      "Title": "Stop Flow With Status",
+      "NodeType": "GeneralStopFlowWithStatus",
+      "LocationX": 341,
+      "LocationY": 5705,
+      "Properties": {
+        "Status Message": {
+          "Type": "TypeString",
+          "Value": "One or more drives not found"
+        },
+        "Status Color": {
+          "Type": "TypeItemSwitch",
+          "Value": "RED"
+        },
+        "Send Email": {
+          "Type": "TypeBoolean",
+          "Value": true
+        },
+        "Recipients": {
+          "Type": "TypeString",
+          "Value": "[DEFAULT_RECIPIENTS]"
+        },
+        "Priority": {
+          "Type": "TypeItemSwitch",
+          "Value": "High"
+        }
+      }
+    },
+    "88DB69259E30AEC2": {
+      "Key": "88DB69259E30AEC2",
+      "Title": "Stop Flow With Status",
+      "NodeType": "GeneralStopFlowWithStatus",
+      "LocationX": -900,
+      "LocationY": -52,
+      "Properties": {
+        "Status Message": {
+          "Type": "TypeString",
+          "Value": "One or more drives not found"
+        },
+        "Status Color": {
+          "Type": "TypeItemSwitch",
+          "Value": "RED"
+        },
+        "Send Email": {
+          "Type": "TypeBoolean",
+          "Value": true
+        },
+        "Recipients": {
+          "Type": "TypeString",
+          "Value": "[DEFAULT_RECIPIENTS]"
+        },
+        "Priority": {
+          "Type": "TypeItemSwitch",
+          "Value": "High"
+        }
+      }
+    },
+    "88DB6B6A80C59ABF": {
+      "Key": "88DB6B6A80C59ABF",
+      "Title": "General Wait",
+      "NodeType": "GeneralWait",
+      "LocationX": -817,
+      "LocationY": 10497,
+      "Properties": {
+        "Timeout Seconds": {
+          "Type": "TypeInteger",
+          "Value": 15
+        }
+      }
+    },
+    "88DB6B6A89CD5EB8": {
+      "Key": "88DB6B6A89CD5EB8",
+      "Title": "General Wait",
+      "NodeType": "GeneralWait",
+      "LocationX": -818,
+      "LocationY": 10883,
+      "Properties": {
+        "Timeout Seconds": {
+          "Type": "TypeInteger",
+          "Value": 15
+        }
+      }
+    },
+    "88DB6B6A91ECD880": {
+      "Key": "88DB6B6A91ECD880",
+      "Title": "General Wait",
+      "NodeType": "GeneralWait",
+      "LocationX": -819,
+      "LocationY": 11254,
+      "Properties": {
+        "Timeout Seconds": {
+          "Type": "TypeInteger",
+          "Value": 15
+        }
+      }
+    },
+    "88DB6DB96EA21CC7": {
+      "Key": "88DB6DB96EA21CC7",
+      "Title": "SMARTCTL Get Extended SMART (0xE1, Micron)",
+      "NodeType": "SmartCtlGetExtSmartE1Micron",
+      "LocationX": 5805,
+      "LocationY": 2874,
+      "Properties": {
+        "Timeout Seconds": {
+          "Type": "TypeInteger",
+          "Value": 45
+        }
+      }
+    },
+    "88DB71DA0F5623FE": {
+      "Key": "88DB71DA0F5623FE",
+      "Title": "Stop Flow With Status",
+      "NodeType": "GeneralStopFlowWithStatus",
+      "LocationX": -1933,
+      "LocationY": 1354,
+      "Properties": {
+        "Status Message": {
+          "Type": "TypeString",
+          "Value": "Workload unresponsive"
+        },
+        "Status Color": {
+          "Type": "TypeItemSwitch",
+          "Value": "RED"
+        },
+        "Send Email": {
+          "Type": "TypeBoolean",
+          "Value": true
+        },
+        "Recipients": {
+          "Type": "TypeString",
+          "Value": "[DEFAULT_RECIPIENTS]"
+        },
+        "Priority": {
+          "Type": "TypeItemSwitch",
+          "Value": "High"
+        }
+      }
+    },
+    "88DB71DA1850D99B": {
+      "Key": "88DB71DA1850D99B",
+      "Title": "Stop Flow With Status",
+      "NodeType": "GeneralStopFlowWithStatus",
+      "LocationX": 3320,
+      "LocationY": 2266,
+      "Properties": {
+        "Status Message": {
+          "Type": "TypeString",
+          "Value": "Workload unresponsive"
+        },
+        "Status Color": {
+          "Type": "TypeItemSwitch",
+          "Value": "RED"
+        },
+        "Send Email": {
+          "Type": "TypeBoolean",
+          "Value": true
+        },
+        "Recipients": {
+          "Type": "TypeString",
+          "Value": "[DEFAULT_RECIPIENTS]"
+        },
+        "Priority": {
+          "Type": "TypeItemSwitch",
+          "Value": "High"
+        }
+      }
+    },
+    "88DB71DA317EA916": {
+      "Key": "88DB71DA317EA916",
+      "Title": "Stop Flow With Status",
+      "NodeType": "GeneralStopFlowWithStatus",
+      "LocationX": 6476,
+      "LocationY": 2736,
+      "Properties": {
+        "Status Message": {
+          "Type": "TypeString",
+          "Value": "Workload unresponsive"
+        },
+        "Status Color": {
+          "Type": "TypeItemSwitch",
+          "Value": "RED"
+        },
+        "Send Email": {
+          "Type": "TypeBoolean",
+          "Value": true
+        },
+        "Recipients": {
+          "Type": "TypeString",
+          "Value": "[DEFAULT_RECIPIENTS]"
+        },
+        "Priority": {
+          "Type": "TypeItemSwitch",
+          "Value": "High"
+        }
+      }
+    },
+    "88DB7655FD6BDF44": {
+      "Key": "88DB7655FD6BDF44",
+      "Title": "Wait 5 seconds before DevCon remove",
+      "NodeType": "GeneralWait",
+      "LocationX": 4107,
+      "LocationY": 2134,
+      "Properties": {
+        "Timeout Seconds": {
+          "Type": "TypeInteger",
+          "Value": 5
+        }
+      }
+    },
+    "88DCD9AEBA216188": {
+      "Key": "88DCD9AEBA216188",
+      "Title": "Stop Flow With Status",
+      "NodeType": "GeneralStopFlowWithStatus",
+      "LocationX": 177,
+      "LocationY": -753,
+      "Properties": {
+        "Status Message": {
+          "Type": "TypeString",
+          "Value": "Errors running reboot after driver install"
+        },
+        "Status Color": {
+          "Type": "TypeItemSwitch",
+          "Value": "RED"
+        },
+        "Send Email": {
+          "Type": "TypeBoolean",
+          "Value": true
+        },
+        "Recipients": {
+          "Type": "TypeString",
+          "Value": "[DEFAULT_RECIPIENTS]"
+        },
+        "Priority": {
+          "Type": "TypeItemSwitch",
+          "Value": "High"
+        }
+      }
+    },
+    "88DCD9AEBA2341A8": {
+      "Key": "88DCD9AEBA2341A8",
+      "Title": "Go To Entry Node",
+      "NodeType": "GeneralGoToEntry",
+      "LocationX": -305,
+      "LocationY": -460,
+      "Properties": {}
+    },
+    "88DCD9AEBA23A14C": {
+      "Key": "88DCD9AEBA23A14C",
+      "Title": "Waiting for client connection...",
+      "NodeType": "ClientConnectionWaitAlive",
+      "LocationX": -306,
+      "LocationY": -624,
+      "Properties": {
+        "Timeout Seconds": {
+          "Type": "TypeInteger",
+          "Value": 900
+        }
+      }
+    },
+    "88DCD9AEBA25A287": {
+      "Key": "88DCD9AEBA25A287",
+      "Title": "Waiting for client to disconnect...",
+      "NodeType": "ClientConnectionWaitDead",
+      "LocationX": -306,
+      "LocationY": -761,
+      "Properties": {
+        "Timeout Seconds": {
+          "Type": "TypeInteger",
+          "Value": 60
+        }
+      }
+    },
+    "88DCD9AEBA27F1FB": {
+      "Key": "88DCD9AEBA27F1FB",
+      "Title": "Rebooting System",
+      "NodeType": "ClientSystemSendReboot",
+      "LocationX": -306,
+      "LocationY": -865,
+      "Properties": {}
+    },
+    "88DCD9AEBA281568": {
+      "Key": "88DCD9AEBA281568",
+      "Title": "Stop Flow With Status",
+      "NodeType": "GeneralStopFlowWithStatus",
+      "LocationX": 197,
+      "LocationY": -1122,
+      "Properties": {
+        "Status Message": {
+          "Type": "TypeString",
+          "Value": "Errors ensuring Wilson driver is installed "
+        },
+        "Status Color": {
+          "Type": "TypeItemSwitch",
+          "Value": "RED"
+        },
+        "Send Email": {
+          "Type": "TypeBoolean",
+          "Value": true
+        },
+        "Recipients": {
+          "Type": "TypeString",
+          "Value": "[DEFAULT_RECIPIENTS]"
+        },
+        "Priority": {
+          "Type": "TypeItemSwitch",
+          "Value": "High"
+        }
+      }
+    },
+    "88DCD9AEBA2A46B7": {
+      "Key": "88DCD9AEBA2A46B7",
+      "Title": "Send Snapshot Email",
+      "NodeType": "EmailSendSnapshot",
+      "LocationX": -981,
+      "LocationY": -1076,
+      "Properties": {
+        "Recipients": {
+          "Type": "TypeString",
+          "Value": "[DEFAULT_RECIPIENTS]"
+        },
+        "Priority": {
+          "Type": "TypeItemSwitch",
+          "Value": "Normal"
+        },
+        "Subject": {
+          "Type": "TypeString",
+          "Value": "Errors checking if the wilson driver is installed"
+        },
+        "Body": {
+          "Type": "TypeString",
+          "Value": "Continuing flow"
+        }
+      }
+    },
+    "88DCD9AEBA2CB8FC": {
+      "Key": "88DCD9AEBA2CB8FC",
+      "Title": "Ensure Wilson driver is installed",
+      "NodeType": "ClientSystemProcessStart",
+      "LocationX": -305,
+      "LocationY": -1123,
+      "Properties": {
+        "Process Name": {
+          "Type": "TypeString",
+          "Value": "C:\\temp\\microndriver\\wilsondriverupdate\\wilson_mtdriver.bat"
+        },
+        "Arguments": {
+          "Type": "TypeString",
+          "Value": ""
+        },
+        "Wait For Exit": {
+          "Type": "TypeBoolean",
+          "Value": true
+        },
+        "Timeout Seconds": {
+          "Type": "TypeInteger",
+          "Value": 30
+        }
+      }
+    },
+    "88DCD9AEBA2F1A24": {
+      "Key": "88DCD9AEBA2F1A24",
+      "Title": "Check if we are using the Wilson driver",
+      "NodeType": "DevConCheckDeviceDriver",
+      "LocationX": -1222,
+      "LocationY": -1392,
+      "Properties": {
+        "Device ID": {
+          "Type": "TypeString",
+          "Value": "pci\\ven_c0a9\"&\"dev_560a"
+        },
+        "Target Driver Name": {
+          "Type": "TypeString",
+          "Value": "Micron NVMe Storage Controller"
+        },
+        "Timeout Seconds": {
+          "Type": "TypeInteger",
+          "Value": 120
+        }
+      }
+    },
+    "88DD36459CF0AEA8": {
+      "Key": "88DD36459CF0AEA8",
+      "Title": "Verifying All Drives are Present",
+      "NodeType": "DrivesCheckNotFound",
+      "LocationX": 7481,
+      "LocationY": 2500,
+      "Properties": {
+        "Log Errors": {
+          "Type": "TypeBoolean",
+          "Value": true
+        }
+      }
+    },
+    "88DD3645B1048581": {
+      "Key": "88DD3645B1048581",
+      "Title": "Rescan Drives",
+      "NodeType": "DrivesRescan",
+      "LocationX": 7479,
+      "LocationY": 2360,
+      "Properties": {
+        "Timeout Seconds": {
+          "Type": "TypeInteger",
+          "Value": 60
+        }
+      }
+    },
+    "88DD3645CE39F8A1": {
+      "Key": "88DD3645CE39F8A1",
+      "Title": "Stop Flow With Status",
+      "NodeType": "GeneralStopFlowWithStatus",
+      "LocationX": 7940,
+      "LocationY": 2753,
+      "Properties": {
+        "Status Message": {
+          "Type": "TypeString",
+          "Value": "Unable to recover all drives not found"
+        },
+        "Status Color": {
+          "Type": "TypeItemSwitch",
+          "Value": "RED"
+        },
+        "Send Email": {
+          "Type": "TypeBoolean",
+          "Value": true
+        },
+        "Recipients": {
+          "Type": "TypeString",
+          "Value": "[DEFAULT_RECIPIENTS]"
+        },
+        "Priority": {
+          "Type": "TypeItemSwitch",
+          "Value": "High"
+        }
+      }
+    }
+  },
+  "Connections": [
+    {
+      "FromNodeKey": "88DAFE335BB7675B",
+      "FromNodePort": "False",
+      "ToNodeKey": "88DAFD9E409B4C4D"
+    },
+    {
+      "FromNodeKey": "88DAFE335BB7675B",
+      "FromNodePort": "True",
+      "ToNodeKey": "88DAFF08969051E4"
+    },
+    {
+      "FromNodeKey": "88DAFE2BC4161974",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DAFE335BB7675B"
+    },
+    {
+      "FromNodeKey": "88DB3ACC0B12A29D",
+      "FromNodePort": "Incremented",
+      "ToNodeKey": "88DB3ACC1B4D7726"
+    },
+    {
+      "FromNodeKey": "88DB3ACC1B4D7726",
+      "FromNodePort": "True",
+      "ToNodeKey": "88DB3ACC3058A1A7"
+    },
+    {
+      "FromNodeKey": "88DB3ACC3058A1A7",
+      "FromNodePort": "Incremented",
+      "ToNodeKey": "88DB3ACC47550C12"
+    },
+    {
+      "FromNodeKey": "88DB3ACC1B4D7726",
+      "FromNodePort": "False",
+      "ToNodeKey": "88DB3ACC771A8C8D"
+    },
+    {
+      "FromNodeKey": "88DB3ACC47550C12",
+      "FromNodePort": "Set",
+      "ToNodeKey": "88DB3ACC771A8C8D"
+    },
+    {
+      "FromNodeKey": "88DAFF08969051E4",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DB401EDDA231B7"
+    },
+    {
+      "FromNodeKey": "88DB40233EEE9DF8",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DB402343398B2A"
+    },
+    {
+      "FromNodeKey": "88DB401EDDA231B7",
+      "FromNodePort": "Interval",
+      "ToNodeKey": "88DB40233EEE9DF8"
+    },
+    {
+      "FromNodeKey": "88DB403B4193F536",
+      "FromNodePort": "True",
+      "ToNodeKey": "88DB403B53FE188A"
+    },
+    {
+      "FromNodeKey": "88DB403BFA3674ED",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DB403BFCDD9F71"
+    },
+    {
+      "FromNodeKey": "88DB403B53FE188A",
+      "FromNodePort": "Interval",
+      "ToNodeKey": "88DB403BFA3674ED"
+    },
+    {
+      "FromNodeKey": "88DAFD9E409B4C4D",
+      "FromNodePort": "All Drives Found",
+      "ToNodeKey": "88DB403B4193F536"
+    },
+    {
+      "FromNodeKey": "88DB403B4193F536",
+      "FromNodePort": "False",
+      "ToNodeKey": "88DB40258828E15B"
+    },
+    {
+      "FromNodeKey": "88DB40258828E15B",
+      "FromNodePort": "False",
+      "ToNodeKey": "88DB403D4F62058D"
+    },
+    {
+      "FromNodeKey": "88DB403D4F62058D",
+      "FromNodePort": "True",
+      "ToNodeKey": "88DB403DA388B522"
+    },
+    {
+      "FromNodeKey": "88DB403DA388B522",
+      "FromNodePort": "Time Elapsed",
+      "ToNodeKey": "88DB403DBAD5618E"
+    },
+    {
+      "FromNodeKey": "88DB403DBAD5618E",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DB403E4A67389B"
+    },
+    {
+      "FromNodeKey": "88DB403E4A67389B",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DB403E5378C718"
+    },
+    {
+      "FromNodeKey": "88DB403E5378C718",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DB403E6593DA83"
+    },
+    {
+      "FromNodeKey": "88DB403E6593DA83",
+      "FromNodePort": "Time Elapsed",
+      "ToNodeKey": "88DB403F550C4B02"
+    },
+    {
+      "FromNodeKey": "88DB403D4F62058D",
+      "FromNodePort": "False",
+      "ToNodeKey": "88DB40402E8F2E24"
+    },
+    {
+      "FromNodeKey": "88DB40402E8F2E24",
+      "FromNodePort": "True",
+      "ToNodeKey": "88DB4040431564A9"
+    },
+    {
+      "FromNodeKey": "88DB404095BF0C60",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DB40409A5323FF"
+    },
+    {
+      "FromNodeKey": "88DB4040431564A9",
+      "FromNodePort": "Interval",
+      "ToNodeKey": "88DB404095BF0C60"
+    },
+    {
+      "FromNodeKey": "88DB4044B6DA003B",
+      "FromNodePort": "Interval",
+      "ToNodeKey": "88DB4045CA56E9D2"
+    },
+    {
+      "FromNodeKey": "88DB404466E81AD1",
+      "FromNodePort": "True",
+      "ToNodeKey": "88DB4044B6DA003B"
+    },
+    {
+      "FromNodeKey": "88DB4046385485EB",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DB40464877A689"
+    },
+    {
+      "FromNodeKey": "88DB40464877A689",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DB40465FC1695C"
+    },
+    {
+      "FromNodeKey": "88DB40465FC1695C",
+      "FromNodePort": "Time Elapsed",
+      "ToNodeKey": "88DB40466B527906"
+    },
+    {
+      "FromNodeKey": "88DB40402E8F2E24",
+      "FromNodePort": "False",
+      "ToNodeKey": "88DB404466E81AD1"
+    },
+    {
+      "FromNodeKey": "88DB404466E81AD1",
+      "FromNodePort": "False",
+      "ToNodeKey": "88DB4048B3C41159"
+    },
+    {
+      "FromNodeKey": "88DB4048B3C41159",
+      "FromNodePort": "True",
+      "ToNodeKey": "88DB4048CFC240F4"
+    },
+    {
+      "FromNodeKey": "88DB4048CFC240F4",
+      "FromNodePort": "False",
+      "ToNodeKey": "88DB404904954572"
+    },
+    {
+      "FromNodeKey": "88DB4048CFC240F4",
+      "FromNodePort": "True",
+      "ToNodeKey": "88DB404930BB1010"
+    },
+    {
+      "FromNodeKey": "88DB404968A02654",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DB404973A22AAE"
+    },
+    {
+      "FromNodeKey": "88DB404930BB1010",
+      "FromNodePort": "Interval",
+      "ToNodeKey": "88DB404968A02654"
+    },
+    {
+      "FromNodeKey": "88DB4B282F1EDFEC",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DB402324802412"
+    },
+    {
+      "FromNodeKey": "88DB4B282F1EDFEC",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB402324802412"
+    },
+    {
+      "FromNodeKey": "88DB401EDDA231B7",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB4B281D4D46CA"
+    },
+    {
+      "FromNodeKey": "88DB401EDDA231B7",
+      "FromNodePort": "Some Drives Failed",
+      "ToNodeKey": "88DB4B281D4D46CA"
+    },
+    {
+      "FromNodeKey": "88DB4B286EA6CBD0",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DB403C1C675289"
+    },
+    {
+      "FromNodeKey": "88DB4B286EA6CBD0",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB403C1C675289"
+    },
+    {
+      "FromNodeKey": "88DB403B53FE188A",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB4B28656D6079"
+    },
+    {
+      "FromNodeKey": "88DB403B53FE188A",
+      "FromNodePort": "Some Drives Failed",
+      "ToNodeKey": "88DB4B28656D6079"
+    },
+    {
+      "FromNodeKey": "88DB4B28C036EC45",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DB4043727626F2"
+    },
+    {
+      "FromNodeKey": "88DB4B28C036EC45",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB4043727626F2"
+    },
+    {
+      "FromNodeKey": "88DB4040431564A9",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB4B28B73DE424"
+    },
+    {
+      "FromNodeKey": "88DB4040431564A9",
+      "FromNodePort": "Some Drives Failed",
+      "ToNodeKey": "88DB4B28B73DE424"
+    },
+    {
+      "FromNodeKey": "88DB4B291A58A772",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DB4049B2F225D3"
+    },
+    {
+      "FromNodeKey": "88DB4B291A58A772",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB4049B2F225D3"
+    },
+    {
+      "FromNodeKey": "88DB404930BB1010",
+      "FromNodePort": "Some Drives Failed",
+      "ToNodeKey": "88DB4B290F69512D"
+    },
+    {
+      "FromNodeKey": "88DB404930BB1010",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB4B290F69512D"
+    },
+    {
+      "FromNodeKey": "88DB4044B6DA003B",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB5230B25F2420"
+    },
+    {
+      "FromNodeKey": "88DB5230B25F2420",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DB5230DD310406"
+    },
+    {
+      "FromNodeKey": "88DB5230B25F2420",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB5230DD310406"
+    },
+    {
+      "FromNodeKey": "88DB5230DD310406",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB5230EE34B8E0"
+    },
+    {
+      "FromNodeKey": "88DB5230DD310406",
+      "FromNodePort": "Connection Alive",
+      "ToNodeKey": "88DB40466B527906"
+    },
+    {
+      "FromNodeKey": "88DB5C8BB1D47F75",
+      "FromNodePort": "Dead",
+      "ToNodeKey": "88DB5C8BB1CF9D76"
+    },
+    {
+      "FromNodeKey": "88DB5C8BB1D47F75",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB5C8BB1CF9D76"
+    },
+    {
+      "FromNodeKey": "88DB5C8BB1D20E71",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB5C8BB1CF9D76"
+    },
+    {
+      "FromNodeKey": "88DB5C8BB1D47F75",
+      "FromNodePort": "Alive",
+      "ToNodeKey": "88DB5C8BB1D20E71"
+    },
+    {
+      "FromNodeKey": "88DB5C8BCD734849",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DB4B282F1EDFEC"
+    },
+    {
+      "FromNodeKey": "88DB5C8BCD734849",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB4B282F1EDFEC"
+    },
+    {
+      "FromNodeKey": "88DB4B281D4D46CA",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DB5C8BCD734849"
+    },
+    {
+      "FromNodeKey": "88DB4B281D4D46CA",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB5C8BCD734849"
+    },
+    {
+      "FromNodeKey": "88DB4B28656D6079",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DB5C8BFAA9A083"
+    },
+    {
+      "FromNodeKey": "88DB4B28656D6079",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB5C8BFAA9A083"
+    },
+    {
+      "FromNodeKey": "88DB5C8BFAA9A083",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DB4B286EA6CBD0"
+    },
+    {
+      "FromNodeKey": "88DB5C8BFAA9A083",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB4B286EA6CBD0"
+    },
+    {
+      "FromNodeKey": "88DB5C8C2FAF7192",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DB5C8C2FB6C4A6"
+    },
+    {
+      "FromNodeKey": "88DB5C8C2FAF7192",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB5C8C2FB6C4A6"
+    },
+    {
+      "FromNodeKey": "88DB5C8C2FA583A5",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB5C8C2FA81E9D"
+    },
+    {
+      "FromNodeKey": "88DB5C8C2FB453BC",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DB5C8C2FB1E2E2"
+    },
+    {
+      "FromNodeKey": "88DB5C8C2FB1E2E2",
+      "FromNodePort": "Time Elapsed",
+      "ToNodeKey": "88DB5C8C2FACFE0E"
+    },
+    {
+      "FromNodeKey": "88DB5C8C2FACFE0E",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DB5C8C2FAA8CC2"
+    },
+    {
+      "FromNodeKey": "88DB5C8C2FAA8CC2",
+      "FromNodePort": "Condition Met",
+      "ToNodeKey": "88DB5C8C2FA583A5"
+    },
+    {
+      "FromNodeKey": "88DB5C8C2FAA8CC2",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB5C8C2FAF7192"
+    },
+    {
+      "FromNodeKey": "88DB5C8C2FC2D2AE",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DB5C8C2FBDF0BA"
+    },
+    {
+      "FromNodeKey": "88DB5C8C2FC2D2AE",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB5C8C2FBDF0BA"
+    },
+    {
+      "FromNodeKey": "88DB5C8C2FBDF0BA",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DB5C8C2FB935AB"
+    },
+    {
+      "FromNodeKey": "88DB5C8C2FB935AB",
+      "FromNodePort": "Time Elapsed",
+      "ToNodeKey": "88DB5C8C2FC061A1"
+    },
+    {
+      "FromNodeKey": "88DB5C8C2FC78DB5",
+      "FromNodePort": "Condition Met",
+      "ToNodeKey": "88DB5C8C2FC543B0"
+    },
+    {
+      "FromNodeKey": "88DB5C8C2FC9FC29",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DB5C8C2FC78DB5"
+    },
+    {
+      "FromNodeKey": "88DB5C8C2FC061A1",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DB5C8C2FC78DB5"
+    },
+    {
+      "FromNodeKey": "88DB5C8C2FC78DB5",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB5C8C2FC2D2AE"
+    },
+    {
+      "FromNodeKey": "88DB40258828E15B",
+      "FromNodePort": "True",
+      "ToNodeKey": "88DB5C8C2FC9FC29"
+    },
+    {
+      "FromNodeKey": "88DB5C8C58CD4F65",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DB5C8C2FB453BC"
+    },
+    {
+      "FromNodeKey": "88DB5C8C2FBB7FA4",
+      "FromNodePort": "Time Elapsed",
+      "ToNodeKey": "88DB5C8C58CD4F65"
+    },
+    {
+      "FromNodeKey": "88DB5C8C2FC543B0",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DB5C8C58CD9D84"
+    },
+    {
+      "FromNodeKey": "88DB5C8C58CD9D84",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DB5C8C2FBB7FA4"
+    },
+    {
+      "FromNodeKey": "88DB5C8C8392782E",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DB5C8C8393628C"
+    },
+    {
+      "FromNodeKey": "88DB5C8C8392782E",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB5C8C8393628C"
+    },
+    {
+      "FromNodeKey": "88DB5C8C838FB788",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB5C8C838F19F2"
+    },
+    {
+      "FromNodeKey": "88DB5C8C8390A39A",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DB5C8C8390554B"
+    },
+    {
+      "FromNodeKey": "88DB5C8C8390554B",
+      "FromNodePort": "Time Elapsed",
+      "ToNodeKey": "88DB5C8C83900721"
+    },
+    {
+      "FromNodeKey": "88DB5C8C83900721",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DB5C8C838F6B4C"
+    },
+    {
+      "FromNodeKey": "88DB5C8C838F6B4C",
+      "FromNodePort": "Condition Met",
+      "ToNodeKey": "88DB5C8C838FB788"
+    },
+    {
+      "FromNodeKey": "88DB5C8C838F6B4C",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB5C8C8392782E"
+    },
+    {
+      "FromNodeKey": "88DB5C8C8392C652",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DB5C8C83944D17"
+    },
+    {
+      "FromNodeKey": "88DB5C8C8392C652",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB5C8C83944D17"
+    },
+    {
+      "FromNodeKey": "88DB5C8C83944D17",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DB5C8C8393ADD2"
+    },
+    {
+      "FromNodeKey": "88DB5C8C8393ADD2",
+      "FromNodePort": "Time Elapsed",
+      "ToNodeKey": "88DB5C8C8393FEF3"
+    },
+    {
+      "FromNodeKey": "88DB5C8C83922729",
+      "FromNodePort": "Condition Met",
+      "ToNodeKey": "88DB5C8C8391DBF2"
+    },
+    {
+      "FromNodeKey": "88DB5C8C839314E2",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DB5C8C83922729"
+    },
+    {
+      "FromNodeKey": "88DB5C8C8393FEF3",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DB5C8C83922729"
+    },
+    {
+      "FromNodeKey": "88DB5C8C83922729",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB5C8C8392C652"
+    },
+    {
+      "FromNodeKey": "88DB5C8C8390F17A",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DB5C8C8390A39A"
+    },
+    {
+      "FromNodeKey": "88DB5C8C83913FA8",
+      "FromNodePort": "Time Elapsed",
+      "ToNodeKey": "88DB5C8C8390F17A"
+    },
+    {
+      "FromNodeKey": "88DB5C8C8391DBF2",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DB5C8C83918DFD"
+    },
+    {
+      "FromNodeKey": "88DB5C8C83918DFD",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DB5C8C83913FA8"
+    },
+    {
+      "FromNodeKey": "88DAFD9E409B4C4D",
+      "FromNodePort": "All Drives Not Found",
+      "ToNodeKey": "88DB5C8C839314E2"
+    },
+    {
+      "FromNodeKey": "88DB4B28B73DE424",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DB5C8D9A151196"
+    },
+    {
+      "FromNodeKey": "88DB4B28B73DE424",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB5C8D9A151196"
+    },
+    {
+      "FromNodeKey": "88DB5C8D9A151196",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DB4B28C036EC45"
+    },
+    {
+      "FromNodeKey": "88DB5C8D9A151196",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB4B28C036EC45"
+    },
+    {
+      "FromNodeKey": "88DB5C8E34906271",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DB5C8E348DEE40"
+    },
+    {
+      "FromNodeKey": "88DB5C8E34A1794B",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DB5C8E349F0563"
+    },
+    {
+      "FromNodeKey": "88DB5C8E349F0563",
+      "FromNodePort": "All Drives Found",
+      "ToNodeKey": "88DB5C8E34906271"
+    },
+    {
+      "FromNodeKey": "88DB5C8E346BEA04",
+      "FromNodePort": "All Drives Attribute Unchanged",
+      "ToNodeKey": "88DB5C8E34670518"
+    },
+    {
+      "FromNodeKey": "88DB5C8E34869B25",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DB5C8E3481B928"
+    },
+    {
+      "FromNodeKey": "88DB5C8E3481B928",
+      "FromNodePort": "All Drive Transfer Modes Okay",
+      "ToNodeKey": "88DB5C8E34781C29"
+    },
+    {
+      "FromNodeKey": "88DB5C8E346225E1",
+      "FromNodePort": "All Drives Attribute Unchanged",
+      "ToNodeKey": "88DB5C8E345885FF"
+    },
+    {
+      "FromNodeKey": "88DB5C8E345885FF",
+      "FromNodePort": "All Drives Attribute Unchanged",
+      "ToNodeKey": "88DB5C8E344EC1F1"
+    },
+    {
+      "FromNodeKey": "88DB5C8E34670518",
+      "FromNodePort": "All Drives Attribute Unchanged",
+      "ToNodeKey": "88DB5C8E346225E1"
+    },
+    {
+      "FromNodeKey": "88DB5C8E34842A21",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DB5C8E347F4825"
+    },
+    {
+      "FromNodeKey": "88DB5C8E34842A21",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB5C8E347F4825"
+    },
+    {
+      "FromNodeKey": "88DB5C8E3481B928",
+      "FromNodePort": "Some Drive Transfer Modes Mismatch",
+      "ToNodeKey": "88DB5C8E34842A21"
+    },
+    {
+      "FromNodeKey": "88DB5C8E347CD726",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DB5C8E347A661D"
+    },
+    {
+      "FromNodeKey": "88DB5C8E347CD726",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB5C8E347A661D"
+    },
+    {
+      "FromNodeKey": "88DB5C8E34781C29",
+      "FromNodePort": "Some Drive Checks False",
+      "ToNodeKey": "88DB5C8E347CD726"
+    },
+    {
+      "FromNodeKey": "88DB5C8E3470CBFD",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DB5C8E346E5B0F"
+    },
+    {
+      "FromNodeKey": "88DB5C8E3470CBFD",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB5C8E346E5B0F"
+    },
+    {
+      "FromNodeKey": "88DB5C8E346BEA04",
+      "FromNodePort": "Some Drives Attribute Changed",
+      "ToNodeKey": "88DB5C8E3470CBFD"
+    },
+    {
+      "FromNodeKey": "88DB5C8E348DEE40",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DB5C8E348B7D3A"
+    },
+    {
+      "FromNodeKey": "88DB5C8E348B7D3A",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DB5C8E34869B25"
+    },
+    {
+      "FromNodeKey": "88DB5C8E344EC1F1",
+      "FromNodePort": "All Drives Attribute Unchanged",
+      "ToNodeKey": "88DB5C8E345132F6"
+    },
+    {
+      "FromNodeKey": "88DB5C8E345132F6",
+      "FromNodePort": "False",
+      "ToNodeKey": "88DB5C8E344CC61E"
+    },
+    {
+      "FromNodeKey": "88DB5C8E349C945A",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DB5C8E34954438"
+    },
+    {
+      "FromNodeKey": "88DB5C8E349C945A",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB5C8E34954438"
+    },
+    {
+      "FromNodeKey": "88DB5C8E349F0563",
+      "FromNodePort": "All Drives Not Found",
+      "ToNodeKey": "88DB5C8E349C945A"
+    },
+    {
+      "FromNodeKey": "88DB5C8E348B7D3A",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB5C8E34890C2A"
+    },
+    {
+      "FromNodeKey": "88DB5C8E34649412",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DB5C8E345885FF"
+    },
+    {
+      "FromNodeKey": "88DB5C8E34649412",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB5C8E345885FF"
+    },
+    {
+      "FromNodeKey": "88DB5C8E346225E1",
+      "FromNodePort": "Some Drives Attribute Changed",
+      "ToNodeKey": "88DB5C8E34649412"
+    },
+    {
+      "FromNodeKey": "88DB5C8E34670518",
+      "FromNodePort": "Some Drives Attribute Changed",
+      "ToNodeKey": "88DB5C8E346978F9"
+    },
+    {
+      "FromNodeKey": "88DB5C8E346978F9",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DB5C8E346225E1"
+    },
+    {
+      "FromNodeKey": "88DB5C8E346978F9",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB5C8E346225E1"
+    },
+    {
+      "FromNodeKey": "88DB5C8E345885FF",
+      "FromNodePort": "Some Drives Attribute Changed",
+      "ToNodeKey": "88DB5C8E345ACFF4"
+    },
+    {
+      "FromNodeKey": "88DB5C8E345ACFF4",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DB5C8E344EC1F1"
+    },
+    {
+      "FromNodeKey": "88DB5C8E345ACFF4",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB5C8E344EC1F1"
+    },
+    {
+      "FromNodeKey": "88DB5C8E344EC1F1",
+      "FromNodePort": "Some Drives Attribute Changed",
+      "ToNodeKey": "88DB5C8E3453A3F8"
+    },
+    {
+      "FromNodeKey": "88DB5C8E3453A3F8",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DB5C8E345132F6"
+    },
+    {
+      "FromNodeKey": "88DB5C8E3453A3F8",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB5C8E345132F6"
+    },
+    {
+      "FromNodeKey": "88DB5C8E34B01F50",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB5C8E34B74B7D"
+    },
+    {
+      "FromNodeKey": "88DB5C8E34ADAE71",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DB5C8E34A8CC38"
+    },
+    {
+      "FromNodeKey": "88DB5C8E34A8CC38",
+      "FromNodePort": "Connection Dead",
+      "ToNodeKey": "88DB5C8E34A65B51"
+    },
+    {
+      "FromNodeKey": "88DB5C8E34B01F50",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DB5C8E34ADAE71"
+    },
+    {
+      "FromNodeKey": "88DB5C8E34A8CC38",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB5C8E34B4DA4A"
+    },
+    {
+      "FromNodeKey": "88DB5C8E34A65B51",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB5C8E34B4DA4A"
+    },
+    {
+      "FromNodeKey": "88DB5C8E34ADAE71",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB5C8E34B4DA4A"
+    },
+    {
+      "FromNodeKey": "88DB5C8E34B26991",
+      "FromNodePort": "Drivers Match",
+      "ToNodeKey": "88DB5C8E34A1794B"
+    },
+    {
+      "FromNodeKey": "88DB5C8E34B26991",
+      "FromNodePort": "Some Drivers Mismatch",
+      "ToNodeKey": "88DB5C8E34B01F50"
+    },
+    {
+      "FromNodeKey": "88DB5C8E34A65B51",
+      "FromNodePort": "Connection Alive",
+      "ToNodeKey": "88DB5C8E34A3E76E"
+    },
+    {
+      "FromNodeKey": "88DB5C8E345D40F1",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DB5C8E349A2634"
+    },
+    {
+      "FromNodeKey": "88DB5C8E345D40F1",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB5C8E349A2634"
+    },
+    {
+      "FromNodeKey": "88DB5C8E345FB534",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DB5C8E3492D31F"
+    },
+    {
+      "FromNodeKey": "88DB5C8E345FB534",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB5C8E3492D31F"
+    },
+    {
+      "FromNodeKey": "88DB5C8E345614FB",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DB5C8E344CC61E"
+    },
+    {
+      "FromNodeKey": "88DB5C8E345614FB",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB5C8E344CC61E"
+    },
+    {
+      "FromNodeKey": "88DB5C8E344CC61E",
+      "FromNodePort": "True",
+      "ToNodeKey": "88DB3ACC3058A1A7"
+    },
+    {
+      "FromNodeKey": "88DB5C8E344CC61E",
+      "FromNodePort": "False",
+      "ToNodeKey": "88DB3ACC0B12A29D"
+    },
+    {
+      "FromNodeKey": "88DB404930BB1010",
+      "FromNodePort": "All Drives Passed",
+      "ToNodeKey": "88DB5C8E34B26991"
+    },
+    {
+      "FromNodeKey": "88DB4040431564A9",
+      "FromNodePort": "All Drives Passed",
+      "ToNodeKey": "88DB5C8E34B26991"
+    },
+    {
+      "FromNodeKey": "88DB5C8C2FA583A5",
+      "FromNodePort": "Connection Alive",
+      "ToNodeKey": "88DB5C8E34B26991"
+    },
+    {
+      "FromNodeKey": "88DB403B53FE188A",
+      "FromNodePort": "All Drives Passed",
+      "ToNodeKey": "88DB5C8E34B26991"
+    },
+    {
+      "FromNodeKey": "88DB401EDDA231B7",
+      "FromNodePort": "All Drives Passed",
+      "ToNodeKey": "88DB5C8E34B26991"
+    },
+    {
+      "FromNodeKey": "88DB6613031781EE",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DB5C8E3497B52C"
+    },
+    {
+      "FromNodeKey": "88DB6613031781EE",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB5C8E3497B52C"
+    },
+    {
+      "FromNodeKey": "88DB5C8E34B26991",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB68664EBA84C9"
+    },
+    {
+      "FromNodeKey": "88DB68664EBA84C9",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DB5C8E34A1794B"
+    },
+    {
+      "FromNodeKey": "88DB68664EBA84C9",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB5C8E34A1794B"
+    },
+    {
+      "FromNodeKey": "88DB5C8E34781C29",
+      "FromNodePort": "All Drive Checks True",
+      "ToNodeKey": "88DB5C8E346BEA04"
+    },
+    {
+      "FromNodeKey": "88DB5C8E349F0563",
+      "FromNodePort": "Some Drives Not Found",
+      "ToNodeKey": "88DB692591B5D1F9"
+    },
+    {
+      "FromNodeKey": "88DAFD9E409B4C4D",
+      "FromNodePort": "Some Drives Not Found",
+      "ToNodeKey": "88DB69259E30AEC2"
+    },
+    {
+      "FromNodeKey": "88DB5C8E3497B52C",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB6B6A80C59ABF"
+    },
+    {
+      "FromNodeKey": "88DB5C8E3497B52C",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DB6B6A80C59ABF"
+    },
+    {
+      "FromNodeKey": "88DB6B6A80C59ABF",
+      "FromNodePort": "Time Elapsed",
+      "ToNodeKey": "88DB5C8E349A2634"
+    },
+    {
+      "FromNodeKey": "88DB5C8E349A2634",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DB6B6A89CD5EB8"
+    },
+    {
+      "FromNodeKey": "88DB5C8E349A2634",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB6B6A89CD5EB8"
+    },
+    {
+      "FromNodeKey": "88DB6B6A89CD5EB8",
+      "FromNodePort": "Time Elapsed",
+      "ToNodeKey": "88DB5C8E3492D31F"
+    },
+    {
+      "FromNodeKey": "88DB5C8E3492D31F",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB6B6A91ECD880"
+    },
+    {
+      "FromNodeKey": "88DB5C8E3492D31F",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DB6B6A91ECD880"
+    },
+    {
+      "FromNodeKey": "88DB6B6A91ECD880",
+      "FromNodePort": "Time Elapsed",
+      "ToNodeKey": "88DB5C8E344CC61E"
+    },
+    {
+      "FromNodeKey": "88DB4B290F69512D",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DB6DB96EA21CC7"
+    },
+    {
+      "FromNodeKey": "88DB4B290F69512D",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB6DB96EA21CC7"
+    },
+    {
+      "FromNodeKey": "88DB6DB96EA21CC7",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DB4B291A58A772"
+    },
+    {
+      "FromNodeKey": "88DB401EDDA231B7",
+      "FromNodePort": "Workload Unresponsive",
+      "ToNodeKey": "88DB71DA0F5623FE"
+    },
+    {
+      "FromNodeKey": "88DB403B53FE188A",
+      "FromNodePort": "Workload Unresponsive",
+      "ToNodeKey": "88DB71DA0F5623FE"
+    },
+    {
+      "FromNodeKey": "88DB4040431564A9",
+      "FromNodePort": "Workload Unresponsive",
+      "ToNodeKey": "88DB71DA1850D99B"
+    },
+    {
+      "FromNodeKey": "88DB404930BB1010",
+      "FromNodePort": "Workload Unresponsive",
+      "ToNodeKey": "88DB71DA317EA916"
+    },
+    {
+      "FromNodeKey": "88DB4044B6DA003B",
+      "FromNodePort": "Workload Unresponsive",
+      "ToNodeKey": "88DB5230B25F2420"
+    },
+    {
+      "FromNodeKey": "88DB4044B6DA003B",
+      "FromNodePort": "All Drives Passed",
+      "ToNodeKey": "88DB7655FD6BDF44"
+    },
+    {
+      "FromNodeKey": "88DB4044B6DA003B",
+      "FromNodePort": "Some Drives Failed",
+      "ToNodeKey": "88DB7655FD6BDF44"
+    },
+    {
+      "FromNodeKey": "88DB7655FD6BDF44",
+      "FromNodePort": "Time Elapsed",
+      "ToNodeKey": "88DB4046385485EB"
+    },
+    {
+      "FromNodeKey": "88DB4046385485EB",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB5230DD310406"
+    },
+    {
+      "FromNodeKey": "88DB40464877A689",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DB5230DD310406"
+    },
+    {
+      "FromNodeKey": "88DCD9AEBA27F1FB",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DCD9AEBA25A287"
+    },
+    {
+      "FromNodeKey": "88DCD9AEBA25A287",
+      "FromNodePort": "Connection Dead",
+      "ToNodeKey": "88DCD9AEBA23A14C"
+    },
+    {
+      "FromNodeKey": "88DCD9AEBA25A287",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DCD9AEBA216188"
+    },
+    {
+      "FromNodeKey": "88DCD9AEBA23A14C",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DCD9AEBA216188"
+    },
+    {
+      "FromNodeKey": "88DCD9AEBA23A14C",
+      "FromNodePort": "Connection Alive",
+      "ToNodeKey": "88DCD9AEBA2341A8"
+    },
+    {
+      "FromNodeKey": "88DCD9AEBA27F1FB",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DCD9AEBA216188"
+    },
+    {
+      "FromNodeKey": "88DCD9AEBA2CB8FC",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DCD9AEBA281568"
+    },
+    {
+      "FromNodeKey": "88DCD9AEBA2CB8FC",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DCD9AEBA27F1FB"
+    },
+    {
+      "FromNodeKey": "88DCD9AEBA2F1A24",
+      "FromNodePort": "Some Drivers Mismatch",
+      "ToNodeKey": "88DCD9AEBA2CB8FC"
+    },
+    {
+      "FromNodeKey": "88DCD9AEBA2F1A24",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DCD9AEBA2A46B7"
+    },
+    {
+      "FromNodeKey": "88DB5C8BB1D20E71",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DCD9AEBA2F1A24"
+    },
+    {
+      "FromNodeKey": "88DCD9AEBA2F1A24",
+      "FromNodePort": "Drivers Match",
+      "ToNodeKey": "88DAFE2BC4161974"
+    },
+    {
+      "FromNodeKey": "88DCD9AEBA2A46B7",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DAFE2BC4161974"
+    },
+    {
+      "FromNodeKey": "88DCD9AEBA2A46B7",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DAFE2BC4161974"
+    },
+    {
+      "FromNodeKey": "88DD3645B1048581",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DD36459CF0AEA8"
+    },
+    {
+      "FromNodeKey": "88DD36459CF0AEA8",
+      "FromNodePort": "All Drives Found",
+      "ToNodeKey": "88DB4FE5515F0270"
+    },
+    {
+      "FromNodeKey": "88DB5C8C838FB788",
+      "FromNodePort": "Connection Alive",
+      "ToNodeKey": "88DD3645B1048581"
+    },
+    {
+      "FromNodeKey": "88DD36459CF0AEA8",
+      "FromNodePort": "All Drives Not Found",
+      "ToNodeKey": "88DD3645CE39F8A1"
+    },
+    {
+      "FromNodeKey": "88DD36459CF0AEA8",
+      "FromNodePort": "Some Drives Not Found",
+      "ToNodeKey": "88DB4FE5515F0270"
+    },
+    {
+      "FromNodeKey": "88DB5C8E345132F6",
+      "FromNodePort": "True",
+      "ToNodeKey": "88DB5C8E344CC61E"
+    }
+  ]
+}

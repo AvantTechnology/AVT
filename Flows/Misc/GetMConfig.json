@@ -1,0 +1,196 @@
+{
+  "EntryNodeKey": "88DD408E9A2B6BEA",
+  "CleanupEntryNodeKey": "",
+  "Nodes": {
+    "88DD3FC70EB76BAA": {
+      "Key": "88DD3FC70EB76BAA",
+      "Title": "Get MConfig",
+      "NodeType": "MicronVendorCommandsGeneric",
+      "LocationX": 1505,
+      "LocationY": 603,
+      "Properties": {
+        "File Name Prefix": {
+          "Type": "TypeString",
+          "Value": "MConfig"
+        },
+        "Command Buffer": {
+          "Type": "TypeString",
+          "Value": "00,00,04,00,4c,00,00,00,00,00,00,00"
+        },
+        "Payload File Path": {
+          "Type": "TypeString",
+          "Value": ""
+        },
+        "Save Header": {
+          "Type": "TypeBoolean",
+          "Value": false
+        },
+        "Timeout Seconds": {
+          "Type": "TypeInteger",
+          "Value": 45
+        }
+      }
+    },
+    "88DD408E9A2B6BEA": {
+      "Key": "88DD408E9A2B6BEA",
+      "Title": "Update MicronVendorCommands.exe On Client",
+      "NodeType": "ClientFileOperationsFileCopy",
+      "LocationX": 1506,
+      "LocationY": 68,
+      "Properties": {
+        "Source Path": {
+          "Type": "TypeString",
+          "Value": "\\\\AUST-ENG8\\Reliability\\AVTSuite\\NVMeVU\\MicronVendorCommands.exe"
+        },
+        "Destination Path": {
+          "Type": "TypeString",
+          "Value": "C:\\NVMeVU\\MicronVendorCommands.exe"
+        },
+        "Overwrite": {
+          "Type": "TypeBoolean",
+          "Value": true
+        },
+        "Create Directories": {
+          "Type": "TypeBoolean",
+          "Value": true
+        },
+        "Timeout Seconds": {
+          "Type": "TypeInteger",
+          "Value": 30
+        }
+      }
+    },
+    "88DD408E9EE8D8CB": {
+      "Key": "88DD408E9EE8D8CB",
+      "Title": "Stop Flow With Status",
+      "NodeType": "GeneralStopFlowWithStatus",
+      "LocationX": 2127,
+      "LocationY": 355,
+      "Properties": {
+        "Status Message": {
+          "Type": "TypeString",
+          "Value": "Errors preparing to get MConfig"
+        },
+        "Status Color": {
+          "Type": "TypeItemSwitch",
+          "Value": "RED"
+        },
+        "Send Email": {
+          "Type": "TypeBoolean",
+          "Value": false
+        },
+        "Recipients": {
+          "Type": "TypeString",
+          "Value": "[DEFAULT_RECIPIENTS]"
+        },
+        "Priority": {
+          "Type": "TypeItemSwitch",
+          "Value": "High"
+        }
+      }
+    },
+    "88DD408EB4E40D2F": {
+      "Key": "88DD408EB4E40D2F",
+      "Title": "Rescan Drives",
+      "NodeType": "DrivesRescan",
+      "LocationX": 1505,
+      "LocationY": 379,
+      "Properties": {
+        "Timeout Seconds": {
+          "Type": "TypeInteger",
+          "Value": 30
+        }
+      }
+    },
+    "88DD408EBF07AA57": {
+      "Key": "88DD408EBF07AA57",
+      "Title": "Stop Flow With Status",
+      "NodeType": "GeneralStopFlowWithStatus",
+      "LocationX": 1035,
+      "LocationY": 1119,
+      "Properties": {
+        "Status Message": {
+          "Type": "TypeString",
+          "Value": "Get MConfig success! "
+        },
+        "Status Color": {
+          "Type": "TypeItemSwitch",
+          "Value": "GREEN"
+        },
+        "Send Email": {
+          "Type": "TypeBoolean",
+          "Value": false
+        },
+        "Recipients": {
+          "Type": "TypeString",
+          "Value": "[DEFAULT_RECIPIENTS]"
+        },
+        "Priority": {
+          "Type": "TypeItemSwitch",
+          "Value": "High"
+        }
+      }
+    },
+    "88DD408EBF081B14": {
+      "Key": "88DD408EBF081B14",
+      "Title": "Stop Flow With Status",
+      "NodeType": "GeneralStopFlowWithStatus",
+      "LocationX": 1716,
+      "LocationY": 1120,
+      "Properties": {
+        "Status Message": {
+          "Type": "TypeString",
+          "Value": "Get MConfig failed"
+        },
+        "Status Color": {
+          "Type": "TypeItemSwitch",
+          "Value": "RED"
+        },
+        "Send Email": {
+          "Type": "TypeBoolean",
+          "Value": false
+        },
+        "Recipients": {
+          "Type": "TypeString",
+          "Value": "[DEFAULT_RECIPIENTS]"
+        },
+        "Priority": {
+          "Type": "TypeItemSwitch",
+          "Value": "High"
+        }
+      }
+    }
+  },
+  "Connections": [
+    {
+      "FromNodeKey": "88DD408E9A2B6BEA",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DD408E9EE8D8CB"
+    },
+    {
+      "FromNodeKey": "88DD408E9A2B6BEA",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DD408EB4E40D2F"
+    },
+    {
+      "FromNodeKey": "88DD408EB4E40D2F",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DD408E9EE8D8CB"
+    },
+    {
+      "FromNodeKey": "88DD408EB4E40D2F",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DD3FC70EB76BAA"
+    },
+    {
+      "FromNodeKey": "88DD3FC70EB76BAA",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DD408EBF07AA57"
+    },
+    {
+      "FromNodeKey": "88DD3FC70EB76BAA",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DD408EBF081B14"
+    }
+  ]
+}

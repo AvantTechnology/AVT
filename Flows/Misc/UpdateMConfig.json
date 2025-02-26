@@ -1,0 +1,285 @@
+{
+  "EntryNodeKey": "88DD408368C73FC0",
+  "CleanupEntryNodeKey": "",
+  "Nodes": {
+    "88DD40830FCB90C4": {
+      "Key": "88DD40830FCB90C4",
+      "Title": "Copy MConfig File To Client",
+      "NodeType": "ClientFileOperationsFileCopy",
+      "LocationX": 1435,
+      "LocationY": 552,
+      "Properties": {
+        "Source Path": {
+          "Type": "TypeString",
+          "Value": "\\\\AUST-ENG8\\Reliability\\MConfigUpdate\\SpringsteenV_mconfig_v3_3_41.bin"
+        },
+        "Destination Path": {
+          "Type": "TypeString",
+          "Value": "C:\\Temp\\MConfigUpdate\\mconfig.bin"
+        },
+        "Overwrite": {
+          "Type": "TypeBoolean",
+          "Value": true
+        },
+        "Create Directories": {
+          "Type": "TypeBoolean",
+          "Value": true
+        },
+        "Timeout Seconds": {
+          "Type": "TypeInteger",
+          "Value": 30
+        }
+      }
+    },
+    "88DD408368C73FC0": {
+      "Key": "88DD408368C73FC0",
+      "Title": "Update MicronVendorCommands.exe On Client",
+      "NodeType": "ClientFileOperationsFileCopy",
+      "LocationX": 1434,
+      "LocationY": 253,
+      "Properties": {
+        "Source Path": {
+          "Type": "TypeString",
+          "Value": "\\\\AUST-ENG8\\Reliability\\AVTSuite\\NVMeVU\\MicronVendorCommands.exe"
+        },
+        "Destination Path": {
+          "Type": "TypeString",
+          "Value": "C:\\NVMeVU\\MicronVendorCommands.exe"
+        },
+        "Overwrite": {
+          "Type": "TypeBoolean",
+          "Value": true
+        },
+        "Create Directories": {
+          "Type": "TypeBoolean",
+          "Value": true
+        },
+        "Timeout Seconds": {
+          "Type": "TypeInteger",
+          "Value": 30
+        }
+      }
+    },
+    "88DD4083D7F6B99A": {
+      "Key": "88DD4083D7F6B99A",
+      "Title": "Rescan Drives",
+      "NodeType": "DrivesRescan",
+      "LocationX": 1432,
+      "LocationY": 850,
+      "Properties": {
+        "Timeout Seconds": {
+          "Type": "TypeInteger",
+          "Value": 30
+        }
+      }
+    },
+    "88DD4083DD228C08": {
+      "Key": "88DD4083DD228C08",
+      "Title": "Set MConfig Vendor Command",
+      "NodeType": "MicronVendorCommandsSetMConfig",
+      "LocationX": 1420,
+      "LocationY": 1362,
+      "Properties": {
+        "MConfig File Path": {
+          "Type": "TypeString",
+          "Value": "C:\\Temp\\MConfigUpdate\\mconfig.bin"
+        },
+        "Timeout Seconds": {
+          "Type": "TypeInteger",
+          "Value": 45
+        }
+      }
+    },
+    "88DD4083E450E63F": {
+      "Key": "88DD4083E450E63F",
+      "Title": "Stop Flow With Status",
+      "NodeType": "GeneralStopFlowWithStatus",
+      "LocationX": 1157,
+      "LocationY": 1658,
+      "Properties": {
+        "Status Message": {
+          "Type": "TypeString",
+          "Value": "MConfig update success! "
+        },
+        "Status Color": {
+          "Type": "TypeItemSwitch",
+          "Value": "GREEN"
+        },
+        "Send Email": {
+          "Type": "TypeBoolean",
+          "Value": false
+        },
+        "Recipients": {
+          "Type": "TypeString",
+          "Value": "[DEFAULT_RECIPIENTS]"
+        },
+        "Priority": {
+          "Type": "TypeItemSwitch",
+          "Value": "High"
+        }
+      }
+    },
+    "88DD4083F167D051": {
+      "Key": "88DD4083F167D051",
+      "Title": "Stop Flow With Status",
+      "NodeType": "GeneralStopFlowWithStatus",
+      "LocationX": 1845,
+      "LocationY": 1654,
+      "Properties": {
+        "Status Message": {
+          "Type": "TypeString",
+          "Value": "MConfig update failed"
+        },
+        "Status Color": {
+          "Type": "TypeItemSwitch",
+          "Value": "RED"
+        },
+        "Send Email": {
+          "Type": "TypeBoolean",
+          "Value": false
+        },
+        "Recipients": {
+          "Type": "TypeString",
+          "Value": "[DEFAULT_RECIPIENTS]"
+        },
+        "Priority": {
+          "Type": "TypeItemSwitch",
+          "Value": "High"
+        }
+      }
+    },
+    "88DD4083FE0BF444": {
+      "Key": "88DD4083FE0BF444",
+      "Title": "Stop Flow With Status",
+      "NodeType": "GeneralStopFlowWithStatus",
+      "LocationX": 2121,
+      "LocationY": 813,
+      "Properties": {
+        "Status Message": {
+          "Type": "TypeString",
+          "Value": "Errors preparing to set MConfig"
+        },
+        "Status Color": {
+          "Type": "TypeItemSwitch",
+          "Value": "RED"
+        },
+        "Send Email": {
+          "Type": "TypeBoolean",
+          "Value": false
+        },
+        "Recipients": {
+          "Type": "TypeString",
+          "Value": "[DEFAULT_RECIPIENTS]"
+        },
+        "Priority": {
+          "Type": "TypeItemSwitch",
+          "Value": "High"
+        }
+      }
+    },
+    "88DD420EDC19533A": {
+      "Key": "88DD420EDC19533A",
+      "Title": "Check Drives Not Found",
+      "NodeType": "DrivesCheckNotFound",
+      "LocationX": 1431,
+      "LocationY": 1032,
+      "Properties": {
+        "Log Errors": {
+          "Type": "TypeBoolean",
+          "Value": false
+        }
+      }
+    },
+    "88DD420EE62ACE86": {
+      "Key": "88DD420EE62ACE86",
+      "Title": "Stop Flow With Status",
+      "NodeType": "GeneralStopFlowWithStatus",
+      "LocationX": 2051,
+      "LocationY": 1278,
+      "Properties": {
+        "Status Message": {
+          "Type": "TypeString",
+          "Value": "Some drives not found"
+        },
+        "Status Color": {
+          "Type": "TypeItemSwitch",
+          "Value": "RED"
+        },
+        "Send Email": {
+          "Type": "TypeBoolean",
+          "Value": false
+        },
+        "Recipients": {
+          "Type": "TypeString",
+          "Value": "[DEFAULT_RECIPIENTS]"
+        },
+        "Priority": {
+          "Type": "TypeItemSwitch",
+          "Value": "High"
+        }
+      }
+    }
+  },
+  "Connections": [
+    {
+      "FromNodeKey": "88DD408368C73FC0",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DD40830FCB90C4"
+    },
+    {
+      "FromNodeKey": "88DD40830FCB90C4",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DD4083D7F6B99A"
+    },
+    {
+      "FromNodeKey": "88DD4083DD228C08",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DD4083E450E63F"
+    },
+    {
+      "FromNodeKey": "88DD4083DD228C08",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DD4083F167D051"
+    },
+    {
+      "FromNodeKey": "88DD4083D7F6B99A",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DD4083FE0BF444"
+    },
+    {
+      "FromNodeKey": "88DD40830FCB90C4",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DD4083FE0BF444"
+    },
+    {
+      "FromNodeKey": "88DD408368C73FC0",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DD4083FE0BF444"
+    },
+    {
+      "FromNodeKey": "88DD4083D7F6B99A",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DD420EDC19533A"
+    },
+    {
+      "FromNodeKey": "88DD420EDC19533A",
+      "FromNodePort": "All Drives Found",
+      "ToNodeKey": "88DD4083DD228C08"
+    },
+    {
+      "FromNodeKey": "88DD420EDC19533A",
+      "FromNodePort": "Some Drives Not Found",
+      "ToNodeKey": "88DD420EE62ACE86"
+    },
+    {
+      "FromNodeKey": "88DD420EDC19533A",
+      "FromNodePort": "All Drives Not Found",
+      "ToNodeKey": "88DD420EE62ACE86"
+    },
+    {
+      "FromNodeKey": "88DD420EDC19533A",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DD420EE62ACE86"
+    }
+  ]
+}

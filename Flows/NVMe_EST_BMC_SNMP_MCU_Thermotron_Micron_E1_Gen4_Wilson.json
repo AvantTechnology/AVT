@@ -1170,7 +1170,7 @@
       "Properties": {
         "Target": {
           "Type": "TypeDouble",
-          "Value": -5.0
+          "Value": -13.0
         },
         "Threshold": {
           "Type": "TypeDouble",
@@ -3351,7 +3351,7 @@
       "Properties": {
         "Set Point Celsius": {
           "Type": "TypeDouble",
-          "Value": -5.0
+          "Value": -13.0
         },
         "Timeout Milliseconds": {
           "Type": "TypeInteger",

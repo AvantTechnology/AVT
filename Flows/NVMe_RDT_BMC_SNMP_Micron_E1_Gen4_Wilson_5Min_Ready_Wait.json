@@ -104,7 +104,7 @@
       "Properties": {
         "Timeout Seconds": {
           "Type": "TypeInteger",
-          "Value": 60
+          "Value": 120
         }
       }
     },
@@ -851,7 +851,7 @@
       "Properties": {
         "Go To Node Key": {
           "Type": "TypeString",
-          "Value": "88DB46659735F522"
+          "Value": "88DCFD10B174DF68"
         }
       }
     },

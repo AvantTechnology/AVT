@@ -669,7 +669,7 @@
         },
         "Log Results": {
           "Type": "TypeBoolean",
-          "Value": true
+          "Value": false
         },
         "Interval Minutes": {
           "Type": "TypeInteger",

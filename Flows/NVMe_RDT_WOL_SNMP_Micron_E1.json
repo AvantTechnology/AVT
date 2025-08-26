@@ -2013,7 +2013,7 @@
       "Properties": {
         "Device ID": {
           "Type": "TypeString",
-          "Value": "pci\\ven_c0a9\"&\"dev_5419"
+          "Value": "pci\\ven_c0a9\"&\"dev_542B"
         },
         "Target Driver Name": {
           "Type": "TypeString",
@@ -2347,7 +2347,7 @@
       "Properties": {
         "Device ID": {
           "Type": "TypeString",
-          "Value": "pci\\ven_c0a9\"&\"dev_5419"
+          "Value": "pci\\ven_c0a9\"&\"dev_542B"
         },
         "Target Driver Name": {
           "Type": "TypeString",

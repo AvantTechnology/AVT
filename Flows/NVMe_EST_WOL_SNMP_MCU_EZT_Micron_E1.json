@@ -6,8 +6,8 @@
       "Key": "88DAFD9E409B4C4D",
       "Title": "Verifying All Drives are Present",
       "NodeType": "DrivesCheckNotFound",
-      "LocationX": -4826,
-      "LocationY": -3688,
+      "LocationX": -4824,
+      "LocationY": -3754,
       "Properties": {
         "Log Errors": {
           "Type": "TypeBoolean",
@@ -19,8 +19,8 @@
       "Key": "88DAFE2BC4161974",
       "Title": "Rescan Drives",
       "NodeType": "DrivesRescan",
-      "LocationX": -4828,
-      "LocationY": -3831,
+      "LocationX": -4826,
+      "LocationY": -3897,
       "Properties": {
         "Timeout Seconds": {
           "Type": "TypeInteger",
@@ -172,7 +172,7 @@
         },
         "Transfer Rate IOPS": {
           "Type": "TypeString",
-          "Value": "MAX"
+          "Value": "40"
         },
         "Transfer Start Offset Bytes": {
           "Type": "TypeString",
@@ -1139,8 +1139,8 @@
       "Key": "88DB41131FFC4340",
       "Title": "Wait For Sync",
       "NodeType": "GeneralWaitForSync",
-      "LocationX": -4830,
-      "LocationY": -3081,
+      "LocationX": -4845,
+      "LocationY": -2948,
       "Properties": {
         "Timeout Minutes": {
           "Type": "TypeInteger",
@@ -1170,7 +1170,7 @@
       "Properties": {
         "Target": {
           "Type": "TypeDouble",
-          "Value": -3.0
+          "Value": -10.0
         },
         "Threshold": {
           "Type": "TypeDouble",
@@ -1661,7 +1661,7 @@
       "Properties": {
         "Device ID": {
           "Type": "TypeString",
-          "Value": "pci\\ven_c0a9\"&\"dev_5419"
+          "Value": "pci\\ven_c0a9\"&\"dev_542B"
         },
         "Target Driver Name": {
           "Type": "TypeString",
@@ -1857,7 +1857,7 @@
       "Properties": {
         "End Temperature Celsius": {
           "Type": "TypeDouble",
-          "Value": -3.0
+          "Value": -10.0
         },
         "Degrees Celsius Per Minute": {
           "Type": "TypeDouble",
@@ -2921,7 +2921,7 @@
       "Properties": {
         "Device ID": {
           "Type": "TypeString",
-          "Value": "pci\\ven_c0a9\"&\"dev_5419"
+          "Value": "pci\\ven_c0a9\"&\"dev_542B"
         },
         "Target Driver Name": {
           "Type": "TypeString",
@@ -2966,8 +2966,8 @@
       "Key": "88DB5C88788B2E5C",
       "Title": "Stop Flow With Status",
       "NodeType": "GeneralStopFlowWithStatus",
-      "LocationX": -4572,
-      "LocationY": -3495,
+      "LocationX": -4570,
+      "LocationY": -3561,
       "Properties": {
         "Status Message": {
           "Type": "TypeString",
@@ -3346,6 +3346,94 @@
           "Value": "High"
         }
       }
+    },
+    "88DDB3F8BD4CD728": {
+      "Key": "88DDB3F8BD4CD728",
+      "Title": "Stop Flow With Status",
+      "NodeType": "GeneralStopFlowWithStatus",
+      "LocationX": -3855,
+      "LocationY": -3207,
+      "Properties": {
+        "Status Message": {
+          "Type": "TypeString",
+          "Value": "At least one drive has transfer mode mismatch"
+        },
+        "Status Color": {
+          "Type": "TypeItemSwitch",
+          "Value": "RED"
+        },
+        "Send Email": {
+          "Type": "TypeBoolean",
+          "Value": true
+        },
+        "Recipients": {
+          "Type": "TypeString",
+          "Value": "[DEFAULT_RECIPIENTS]"
+        },
+        "Priority": {
+          "Type": "TypeItemSwitch",
+          "Value": "High"
+        }
+      }
+    },
+    "88DDB3F8BD4F0D4E": {
+      "Key": "88DDB3F8BD4F0D4E",
+      "Title": "Create SMART Snapshot CSV",
+      "NodeType": "DrivesCreateSmartSnapshotCsv",
+      "LocationX": -4331,
+      "LocationY": -3208,
+      "Properties": {
+        "Directory Suffix": {
+          "Type": "TypeString",
+          "Value": "transfer_mode_mismatch"
+        }
+      }
+    },
+    "88DDB3F8BD51778B": {
+      "Key": "88DDB3F8BD51778B",
+      "Title": "Check Drives Transfer Modes",
+      "NodeType": "DrivesCheckTransferMode",
+      "LocationX": -4816,
+      "LocationY": -3208,
+      "Properties": {
+        "Only Check Found Drives": {
+          "Type": "TypeBoolean",
+          "Value": true
+        },
+        "Log Errors": {
+          "Type": "TypeBoolean",
+          "Value": true
+        }
+      }
+    },
+    "88DDB3F8DE0CABDE": {
+      "Key": "88DDB3F8DE0CABDE",
+      "Title": "Stop Flow With Status",
+      "NodeType": "GeneralStopFlowWithStatus",
+      "LocationX": -5513,
+      "LocationY": -3673,
+      "Properties": {
+        "Status Message": {
+          "Type": "TypeString",
+          "Value": "Error rescanning drives"
+        },
+        "Status Color": {
+          "Type": "TypeItemSwitch",
+          "Value": "RED"
+        },
+        "Send Email": {
+          "Type": "TypeBoolean",
+          "Value": true
+        },
+        "Recipients": {
+          "Type": "TypeString",
+          "Value": "[DEFAULT_RECIPIENTS]"
+        },
+        "Priority": {
+          "Type": "TypeItemSwitch",
+          "Value": "High"
+        }
+      }
     }
   },
   "Connections": [
@@ -3618,11 +3706,6 @@
       "FromNodeKey": "88DB4112859CF3B8",
       "FromNodePort": "Clients Synced (Others)",
       "ToNodeKey": "88DB3ACBB6902E82"
-    },
-    {
-      "FromNodeKey": "88DAFD9E409B4C4D",
-      "FromNodePort": "All Drives Found",
-      "ToNodeKey": "88DB41131FFC4340"
     },
     {
       "FromNodeKey": "88DB41131FFC4340",
@@ -4623,6 +4706,36 @@
       "FromNodeKey": "88DB410A22416A9B",
       "FromNodePort": "Workload Unresponsive",
       "ToNodeKey": "88DB71D978EF1FBC"
+    },
+    {
+      "FromNodeKey": "88DDB3F8BD4F0D4E",
+      "FromNodePort": "Success",
+      "ToNodeKey": "88DDB3F8BD4CD728"
+    },
+    {
+      "FromNodeKey": "88DDB3F8BD4F0D4E",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DDB3F8BD4CD728"
+    },
+    {
+      "FromNodeKey": "88DDB3F8BD51778B",
+      "FromNodePort": "Some Drive Transfer Modes Mismatch",
+      "ToNodeKey": "88DDB3F8BD4F0D4E"
+    },
+    {
+      "FromNodeKey": "88DAFD9E409B4C4D",
+      "FromNodePort": "All Drives Found",
+      "ToNodeKey": "88DDB3F8BD51778B"
+    },
+    {
+      "FromNodeKey": "88DDB3F8BD51778B",
+      "FromNodePort": "All Drive Transfer Modes Okay",
+      "ToNodeKey": "88DB41131FFC4340"
+    },
+    {
+      "FromNodeKey": "88DAFE2BC4161974",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DDB3F8DE0CABDE"
     }
   ]
 }

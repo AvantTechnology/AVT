@@ -442,8 +442,8 @@
       "Key": "88DBF1FBE6F418E8",
       "Title": "Reboot Client",
       "NodeType": "ClientSystemSendReboot",
-      "LocationX": 865,
-      "LocationY": -840,
+      "LocationX": 862,
+      "LocationY": -839,
       "Properties": {}
     },
     "88DBF1FBEFD642DD": {
@@ -451,7 +451,7 @@
       "Title": "Waiting for Client to connect",
       "NodeType": "ClientConnectionWaitAlive",
       "LocationX": 862,
-      "LocationY": -582,
+      "LocationY": -581,
       "Properties": {
         "Timeout Seconds": {
           "Type": "TypeInteger",
@@ -502,8 +502,8 @@
       "Key": "88DBF1FE18466325",
       "Title": "Stop Flow With Status",
       "NodeType": "GeneralStopFlowWithStatus",
-      "LocationX": 1438,
-      "LocationY": -725,
+      "LocationX": 1426,
+      "LocationY": -1063,
       "Properties": {
         "Status Message": {
           "Type": "TypeString",
@@ -711,6 +711,35 @@
           "Value": 10
         }
       }
+    },
+    "88DDEA43E09B1E74": {
+      "Key": "88DDEA43E09B1E74",
+      "Title": "Stop Flow With Status",
+      "NodeType": "GeneralStopFlowWithStatus",
+      "LocationX": 1417,
+      "LocationY": -667,
+      "Properties": {
+        "Status Message": {
+          "Type": "TypeString",
+          "Value": "Error while rebooting"
+        },
+        "Status Color": {
+          "Type": "TypeItemSwitch",
+          "Value": "RED"
+        },
+        "Send Email": {
+          "Type": "TypeBoolean",
+          "Value": false
+        },
+        "Recipients": {
+          "Type": "TypeString",
+          "Value": "[DEFAULT_RECIPIENTS]"
+        },
+        "Priority": {
+          "Type": "TypeItemSwitch",
+          "Value": "High"
+        }
+      }
     }
   },
   "Connections": [
@@ -895,26 +924,6 @@
       "ToNodeKey": "88DBF1FE18466325"
     },
     {
-      "FromNodeKey": "88DBF1FBE6F418E8",
-      "FromNodePort": "Errors",
-      "ToNodeKey": "88DBF1FE18466325"
-    },
-    {
-      "FromNodeKey": "88DBF1FBF42BD378",
-      "FromNodePort": "Errors",
-      "ToNodeKey": "88DBF1FE18466325"
-    },
-    {
-      "FromNodeKey": "88DBF1FBEFD642DD",
-      "FromNodePort": "Errors",
-      "ToNodeKey": "88DBF1FE18466325"
-    },
-    {
-      "FromNodeKey": "88DBF1FC0CE1DA98",
-      "FromNodePort": "Errors",
-      "ToNodeKey": "88DBF1FE18466325"
-    },
-    {
       "FromNodeKey": "88DBF1FC3003A3D4",
       "FromNodePort": "Some Drives Not Found",
       "ToNodeKey": "88DBF1FE42C0D2CE"
@@ -1018,6 +1027,26 @@
       "FromNodeKey": "88DBF04E4A354309",
       "FromNodePort": "All Drives Found",
       "ToNodeKey": "88DBF6A94D01A817"
+    },
+    {
+      "FromNodeKey": "88DBF1FBE6F418E8",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DDEA43E09B1E74"
+    },
+    {
+      "FromNodeKey": "88DBF1FBF42BD378",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DDEA43E09B1E74"
+    },
+    {
+      "FromNodeKey": "88DBF1FBEFD642DD",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DDEA43E09B1E74"
+    },
+    {
+      "FromNodeKey": "88DBF1FC0CE1DA98",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DDEA43E09B1E74"
     }
   ]
 }

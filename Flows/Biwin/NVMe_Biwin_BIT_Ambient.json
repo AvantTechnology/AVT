@@ -502,8 +502,8 @@
       "Key": "88DBF1FE18466325",
       "Title": "Stop Flow With Status",
       "NodeType": "GeneralStopFlowWithStatus",
-      "LocationX": 1438,
-      "LocationY": -725,
+      "LocationX": 1422,
+      "LocationY": -1073,
       "Properties": {
         "Status Message": {
           "Type": "TypeString",
@@ -579,6 +579,35 @@
         "Timeout Seconds": {
           "Type": "TypeInteger",
           "Value": 10
+        }
+      }
+    },
+    "88DDEA43CDCFAABB": {
+      "Key": "88DDEA43CDCFAABB",
+      "Title": "Stop Flow With Status",
+      "NodeType": "GeneralStopFlowWithStatus",
+      "LocationX": 1414,
+      "LocationY": -700,
+      "Properties": {
+        "Status Message": {
+          "Type": "TypeString",
+          "Value": "Error while rebooting"
+        },
+        "Status Color": {
+          "Type": "TypeItemSwitch",
+          "Value": "RED"
+        },
+        "Send Email": {
+          "Type": "TypeBoolean",
+          "Value": false
+        },
+        "Recipients": {
+          "Type": "TypeString",
+          "Value": "[DEFAULT_RECIPIENTS]"
+        },
+        "Priority": {
+          "Type": "TypeItemSwitch",
+          "Value": "High"
         }
       }
     }
@@ -775,26 +804,6 @@
       "ToNodeKey": "88DBF1FE18466325"
     },
     {
-      "FromNodeKey": "88DBF1FBE6F418E8",
-      "FromNodePort": "Errors",
-      "ToNodeKey": "88DBF1FE18466325"
-    },
-    {
-      "FromNodeKey": "88DBF1FBF42BD378",
-      "FromNodePort": "Errors",
-      "ToNodeKey": "88DBF1FE18466325"
-    },
-    {
-      "FromNodeKey": "88DBF1FBEFD642DD",
-      "FromNodePort": "Errors",
-      "ToNodeKey": "88DBF1FE18466325"
-    },
-    {
-      "FromNodeKey": "88DBF1FC0CE1DA98",
-      "FromNodePort": "Errors",
-      "ToNodeKey": "88DBF1FE18466325"
-    },
-    {
       "FromNodeKey": "88DBF1FC3003A3D4",
       "FromNodePort": "Some Drives Not Found",
       "ToNodeKey": "88DBF1FE42C0D2CE"
@@ -828,6 +837,26 @@
       "FromNodeKey": "88DD4610D1469376",
       "FromNodePort": "Errors",
       "ToNodeKey": "88DBF04F3769319C"
+    },
+    {
+      "FromNodeKey": "88DBF1FBE6F418E8",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DDEA43CDCFAABB"
+    },
+    {
+      "FromNodeKey": "88DBF1FBF42BD378",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DDEA43CDCFAABB"
+    },
+    {
+      "FromNodeKey": "88DBF1FBEFD642DD",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DDEA43CDCFAABB"
+    },
+    {
+      "FromNodeKey": "88DBF1FC0CE1DA98",
+      "FromNodePort": "Errors",
+      "ToNodeKey": "88DDEA43CDCFAABB"
     }
   ]
 }
